@@ -3,7 +3,7 @@ using Geecku.GlobalMangers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Master.Daniel
+namespace Daniel.Master
 {
     public class InputManager : PersistantDSingleton<InputManager>
     {
