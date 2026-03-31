@@ -615,8 +615,8 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   SceneList:
-  - 
   - Game
+  - 
   - Main Menu
   - Connect_M
 --- !u!4 &453830236
@@ -1326,22 +1326,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2017635637}
   - component: {fileID: 2017635636}
-  - component: {fileID: 2017635635}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: SettingsCam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2017635635
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017635634}
-  m_Enabled: 1
 --- !u!20 &2017635636
 Camera:
   m_ObjectHideFlags: 0
