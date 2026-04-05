@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections.Generic;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,39 +9,74 @@ namespace Daniel.Master
 {
     public class PlayerScript : MonoBehaviour
     {
-        private float playerSpeed = 5.0f;
+        private float PlayerSpeed = 5.0f;
 
         public CharacterController Controller;
         public CinemachineCamera CinCam;
-        private Vector3 PlayerVelocity;
 
 
         void Update()
         {
-            Vector3 move = new Vector3(Movement.x, 0f, Movement.y);
-            move = Vector3.ClampMagnitude(move, 1f);
-
-            if (move != Vector3.zero)
-            {
-                transform.forward = move;
-                CinCam.transform.forward = move;
-            }
-
-            // Move
-            Vector3 finalMove = move * playerSpeed + Vector3.up * PlayerVelocity.y;
-            Controller.Move(finalMove * Time.deltaTime);
+            RotateCharacter();
+            MoveCharacter();
         }
 
         #region Movement
         //- in InputManager auslagern (ToDo)
-        public void OnLook(InputValue value)
-        {
-            Vector2 lookDelta = value.Get<Vector2>();
-        }
         private Vector2 Movement = new();
         public void OnMove(InputValue value)
         {
             Movement = value.Get<Vector2>();
+        }
+        private Vector2 LookDir = new();
+        public void OnLook(InputValue value)
+        {
+            LookDir = value.Get<Vector2>();
+        }
+        private void MoveCharacter()
+        {
+            Vector3 move = new Vector3(Movement.x, 0f, Movement.y);
+            move = Vector3.ClampMagnitude(move, 1f);
+
+
+            move = CinCam.transform.rotation * move;
+            move.y = 0f; // safety — keep movement flat
+
+            // Move
+            Vector3 finalMove = move * PlayerSpeed;
+            Controller.Move(finalMove * Time.deltaTime);
+        }
+
+        private List<Quaternion> LookDirList = new()
+        {
+            Quaternion.Euler(0, 0, 0), Quaternion.Euler(0, 90, 0),
+            Quaternion.Euler(0, 180, 0), Quaternion.Euler(0, 270, 0)
+        };
+        private int CurRotationIdx = 0;
+        private bool LookWasActive = false;
+        private void RotateCharacter()
+        {
+            //- prevent rotation triggering multiple times when moving the stick
+            bool look_is_active = LookDir != Vector2.zero;
+            if (look_is_active && !LookWasActive)
+            {
+                if (Mathf.Abs(LookDir.x) >= Mathf.Abs(LookDir.y))
+                {
+                    if (LookDir.x > 0)
+                        CurRotationIdx++;
+                    else
+                        CurRotationIdx--;
+                }
+                else
+                    if (LookDir.y <= 0)
+                    CurRotationIdx = CurRotationIdx + 2;
+
+                if (CurRotationIdx < 0)
+                    CurRotationIdx = LookDirList.Count - 1;
+                CinCam.transform.rotation = LookDirList[CurRotationIdx % LookDirList.Count];
+                transform.rotation = CinCam.transform.rotation;
+            }
+            LookWasActive = look_is_active;
         }
         #endregion
     }

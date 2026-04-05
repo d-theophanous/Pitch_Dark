@@ -183,7 +183,7 @@ Transform:
   m_GameObject: {fileID: 68033094}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.9, y: 1.5, z: -9.94}
+  m_LocalPosition: {x: -33.9, y: 4.64, z: -9.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -295,7 +295,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -3440,7 +3440,7 @@ Transform:
   m_GameObject: {fileID: 866957313}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.9, y: 1.5, z: -9.94}
+  m_LocalPosition: {x: -33.9, y: 4.64, z: -9.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4245,7 +4245,7 @@ Transform:
   m_GameObject: {fileID: 1102024776}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.9, y: 1.5, z: -9.94}
+  m_LocalPosition: {x: -33.9, y: 4.64, z: -9.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
