@@ -311,7 +311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36b70e827ee77f44a624c729ce5a12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 68033101}
+  Controller: {fileID: 68033101}
+  CinCam: {fileID: 866957315}
 --- !u!143 &68033101
 CharacterController:
   m_ObjectHideFlags: 0

@@ -124,7 +124,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3ef86d3e-1b30-473a-a42f-27fcc184cd4a"",
-                    ""path"": ""<Joystick>/stick/left"",
+                    ""path"": ""<Gamepad>/dpad"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -243,6 +243,15 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveMagnify"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""291be747-9efb-46fd-93dc-ce6907a23ca6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -278,6 +287,17 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""action"": ""Magnify"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e232ed8b-0b62-4272-957c-6ac39c44a45e"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveMagnify"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -293,6 +313,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_Rest = asset.FindActionMap("Rest", throwIfNotFound: true);
         m_Rest_Settings = m_Rest.FindAction("Settings", throwIfNotFound: true);
         m_Rest_Magnify = m_Rest.FindAction("Magnify", throwIfNotFound: true);
+        m_Rest_MoveMagnify = m_Rest.FindAction("MoveMagnify", throwIfNotFound: true);
     }
 
     ~@BaseAction()
@@ -494,6 +515,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     private List<IRestActions> m_RestActionsCallbackInterfaces = new List<IRestActions>();
     private readonly InputAction m_Rest_Settings;
     private readonly InputAction m_Rest_Magnify;
+    private readonly InputAction m_Rest_MoveMagnify;
     /// <summary>
     /// Provides access to input actions defined in input action map "Rest".
     /// </summary>
@@ -513,6 +535,10 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Rest/Magnify".
         /// </summary>
         public InputAction @Magnify => m_Wrapper.m_Rest_Magnify;
+        /// <summary>
+        /// Provides access to the underlying input action "Rest/MoveMagnify".
+        /// </summary>
+        public InputAction @MoveMagnify => m_Wrapper.m_Rest_MoveMagnify;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -545,6 +571,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Magnify.started += instance.OnMagnify;
             @Magnify.performed += instance.OnMagnify;
             @Magnify.canceled += instance.OnMagnify;
+            @MoveMagnify.started += instance.OnMoveMagnify;
+            @MoveMagnify.performed += instance.OnMoveMagnify;
+            @MoveMagnify.canceled += instance.OnMoveMagnify;
         }
 
         /// <summary>
@@ -562,6 +591,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Magnify.started -= instance.OnMagnify;
             @Magnify.performed -= instance.OnMagnify;
             @Magnify.canceled -= instance.OnMagnify;
+            @MoveMagnify.started -= instance.OnMoveMagnify;
+            @MoveMagnify.performed -= instance.OnMoveMagnify;
+            @MoveMagnify.canceled -= instance.OnMoveMagnify;
         }
 
         /// <summary>
@@ -645,5 +677,12 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMagnify(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MoveMagnify" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMoveMagnify(InputAction.CallbackContext context);
     }
 }

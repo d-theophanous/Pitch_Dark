@@ -12,9 +12,15 @@ namespace Daniel.Master
         {
             GlobalUIManager.Instance.ToggleSettings();
         }
+        //- Magnifier
         public void OnMagnify(InputValue value)
         {
             AccessibilityManager.Instance.ToggleMagnifier();
+        }
+        public Vector2 MoveMagnifyDelta { get; private set; }
+        public void OnMoveMagnify(InputValue value)
+        {
+            MoveMagnifyDelta = value.Get<Vector2>();
         }
 
         #endregion

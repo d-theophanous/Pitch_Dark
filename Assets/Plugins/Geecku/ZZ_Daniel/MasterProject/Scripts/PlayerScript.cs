@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,8 +10,9 @@ namespace Daniel.Master
     {
         private float playerSpeed = 5.0f;
 
-        public CharacterController controller;
-        private Vector3 playerVelocity;
+        public CharacterController Controller;
+        public CinemachineCamera CinCam;
+        private Vector3 PlayerVelocity;
 
 
         void Update()
@@ -19,19 +21,21 @@ namespace Daniel.Master
             move = Vector3.ClampMagnitude(move, 1f);
 
             if (move != Vector3.zero)
+            {
                 transform.forward = move;
+                CinCam.transform.forward = move;
+            }
 
             // Move
-            Vector3 finalMove = move * playerSpeed + Vector3.up * playerVelocity.y;
-            controller.Move(finalMove * Time.deltaTime);
+            Vector3 finalMove = move * playerSpeed + Vector3.up * PlayerVelocity.y;
+            Controller.Move(finalMove * Time.deltaTime);
         }
 
         #region Movement
-        //- in INputManager auslagern
+        //- in InputManager auslagern (ToDo)
         public void OnLook(InputValue value)
         {
             Vector2 lookDelta = value.Get<Vector2>();
-            Debug.Log(lookDelta);
         }
         private Vector2 Movement = new();
         public void OnMove(InputValue value)

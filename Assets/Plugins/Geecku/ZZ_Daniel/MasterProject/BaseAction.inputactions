@@ -38,7 +38,7 @@
                 {
                     "name": "",
                     "id": "3ef86d3e-1b30-473a-a42f-27fcc184cd4a",
-                    "path": "<Joystick>/stick/left",
+                    "path": "<Gamepad>/dpad",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -157,6 +157,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "MoveMagnify",
+                    "type": "PassThrough",
+                    "id": "291be747-9efb-46fd-93dc-ce6907a23ca6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -190,6 +199,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Magnify",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e232ed8b-0b62-4272-957c-6ac39c44a45e",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveMagnify",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

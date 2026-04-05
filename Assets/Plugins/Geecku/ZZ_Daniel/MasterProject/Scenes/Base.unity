@@ -692,6 +692,7 @@ MonoBehaviour:
   MainCamera: {fileID: 2017635636}
   UICamera: {fileID: 431464747}
   MagTexture: {fileID: 8400000, guid: 7f53748a1e4b43340be7c019faedee52, type: 2}
+  Settings: {fileID: 2090360789}
   MagnifierSize: 0
   MagnifierZoom: 0
 --- !u!1 &876770770
@@ -1023,7 +1024,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: d725981c-8ee4-44d5-978b-1f5377ae191d
+  m_DefaultActionMap: Rest
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &1608329792
