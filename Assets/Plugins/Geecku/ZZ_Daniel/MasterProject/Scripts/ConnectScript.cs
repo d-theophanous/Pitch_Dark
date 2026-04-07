@@ -5,6 +5,7 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Daniel.Master
@@ -84,8 +85,10 @@ namespace Daniel.Master
         {
             LocalClientCount = NetworkManager.Client.GetClientInfos().Length + 1;
             StopAllCoroutines();
-            //TikTakToeManager.LoadTTT(this);
-            Engine.SwitchScene("TikTakToeScene");
+
+            //- if client connected to server, do:
+            //- for now ToDo
+            SceneManager.LoadScene("Game", LoadSceneMode.Additive);
         }
 
         private void OnDestroy()

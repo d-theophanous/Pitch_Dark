@@ -10,11 +10,10 @@ namespace Daniel.Master
         [SerializeField] private Camera UICamera;
         [SerializeField] private Camera MagCamera;
 
-        [SerializeField] private Canvas SettingsCanvas;
+        [SerializeField] private Canvas Canvas;
 
-        [SerializeField] private GameObject WaitingForPlayer;
-        [SerializeField] private GameObject HostDisconnected;
         [SerializeField] private GameObject Settings;
+        [SerializeField] private GameObject Networking;
 
         private Camera CurCamera;
  
@@ -33,11 +32,38 @@ namespace Daniel.Master
         }
         public void ToggleSettings()
         {
-            SettingsCanvas.gameObject.SetActive(!SettingsCanvas.gameObject.activeSelf);
-            if (SettingsCanvas.gameObject.activeSelf)
+            ToggleUI(UI.SETTINGS);
+        }
+        public void ToggleNetworking()
+        {
+            ToggleUI(UI.NETWORKING);
+        }
+        private void ToggleUI(UI ui)
+        {
+            Canvas.gameObject.SetActive(!Canvas.gameObject.activeSelf);
+            if (Canvas.gameObject.activeSelf)
                 ChangeMainCamera(UICamera);
             else
                 ChangeMainCamera();
+            switch (ui)
+            {
+                case UI.MAIN_MENU:
+                    break;
+                case UI.SETTINGS:
+                    Settings.SetActive(!Settings.gameObject.activeSelf);
+                    break;
+                case UI.LANGUAGE:
+                    break;
+                case UI.NETWORKING:
+                    Networking.SetActive(!Networking.gameObject.activeSelf);
+                    break;
+                default:
+                    break;
+            }
         }
+    }
+    public enum UI
+    {
+        MAIN_MENU, SETTINGS, LANGUAGE, NETWORKING
     }
 }

@@ -11,17 +11,27 @@ namespace Daniel.Master
     {
         [SerializeField] List<string> SceneList;
 
+        public int PlayerNumber;
+
         protected override void Awake()
         {
             base.Awake();
             if (WillBeDestroyed) return;
 
-            if (SceneList.Count == 0 || SceneList[0] == "") return;
-            StartCoroutine(SwitchScene(SceneList[0]));
 
             //- Setup languages and everything for debug to be able to skip things
         }
-        public IEnumerator SwitchScene(string scene_name)
+        protected override void Start()
+        {
+            base.Start();
+            GlobalUIManager.Instance.ToggleNetworking();
+        }
+        private void SwitchSceneToFirstInList()
+        {
+            if (SceneList.Count == 0 || SceneList[0] == "") return;
+            StartCoroutine(SwitchScene(SceneList[0]));
+        }
+        private IEnumerator SwitchScene(string scene_name)
         {
             SceneManager.LoadScene(scene_name, LoadSceneMode.Additive);
             yield return new WaitForEndOfFrame();

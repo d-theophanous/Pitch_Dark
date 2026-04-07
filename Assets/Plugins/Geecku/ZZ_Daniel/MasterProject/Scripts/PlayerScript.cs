@@ -9,16 +9,34 @@ namespace Daniel.Master
 {
     public class PlayerScript : MonoBehaviour
     {
-        private float PlayerSpeed = 5.0f;
-
+        [SerializeField] private Transform Player1Spawn;
+        [SerializeField] private Transform Player2Spawn;
         public CharacterController Controller;
         public CinemachineCamera CinCam;
 
+        private float PlayerSpeed = 5.0f;
+
+        private void Start()
+        {
+            SpawnPlayer();
+        }
 
         void Update()
         {
             RotateCharacter();
             MoveCharacter();
+        }
+
+        private void SpawnPlayer()
+        {
+            Transform tmp;
+            if (GameManager.Instance.PlayerNumber == 1)
+                tmp = Player1Spawn;
+            else
+                tmp = Player2Spawn;
+            transform.position = tmp.position;
+            transform.forward = tmp.forward;
+            CinCam.transform.forward = tmp.forward;
         }
 
         #region Movement
