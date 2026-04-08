@@ -24,6 +24,7 @@ namespace Daniel.Master
 
         public void Host()
         {
+            Debug.Log("Host");
             NetworkManager.Instance.IP_Address = LOCALHOST;
             NetworkManager.StartServer();
             NetworkManager.StartClient();
@@ -88,7 +89,7 @@ namespace Daniel.Master
 
             //- if client connected to server, do:
             //- for now ToDo
-            SceneManager.LoadScene("Game", LoadSceneMode.Additive);
+            GameManager.Instance.SetUpNetworking();
         }
 
         private void OnDestroy()
@@ -131,7 +132,6 @@ namespace Daniel.Master
         {
             LocalClientCount--;
         }
-
 
         private void Update()
         {

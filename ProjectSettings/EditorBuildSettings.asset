@@ -14,13 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Plugins/Geecku/DefaultNetworking/Runtime/Scenes/Network Scene.unity
     guid: 6a3927e84840dd2428039edf18b6fea9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Z_Games/SimpleQuizGame/Scenes/Simple Quiz Game MainMenu.unity
     guid: 3418a7c9514844a49aa71d45614b43fe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Z_Games/SimpleQuizGame/Scenes/Simple Quiz Game GameScene.unity
     guid: bc963fc2a0a263d47a6940c26c304c59
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Geecku/ZZ_Daniel/Scene/Z_Minigames/TikTakToe/TikTakToeScene.unity
     guid: a26437df9e37dba4490aa167b338eb44
   - enabled: 1

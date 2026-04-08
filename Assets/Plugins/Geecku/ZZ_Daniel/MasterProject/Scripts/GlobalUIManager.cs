@@ -1,4 +1,5 @@
 using Geecku.GlobalMangers;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,18 +29,23 @@ namespace Daniel.Master
         }
         public void ChangeMainCamera()
         {
+            var tmp = GameObject.FindGameObjectWithTag("MainCamera");
+            if (tmp == null)
+                Debug.Log("bin null");
+            //- ToDo
             ChangeMainCamera(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>());
         }
         public void ToggleSettings()
         {
-            ToggleUI(UI.SETTINGS);
+            StartCoroutine(ToggleUI(UI.SETTINGS));
         }
         public void ToggleNetworking()
         {
-            ToggleUI(UI.NETWORKING);
+            StartCoroutine(ToggleUI(UI.NETWORKING));
         }
-        private void ToggleUI(UI ui)
+        private IEnumerator ToggleUI(UI ui)
         {
+            yield return new WaitForEndOfFrame();
             Canvas.gameObject.SetActive(!Canvas.gameObject.activeSelf);
             if (Canvas.gameObject.activeSelf)
                 ChangeMainCamera(UICamera);
