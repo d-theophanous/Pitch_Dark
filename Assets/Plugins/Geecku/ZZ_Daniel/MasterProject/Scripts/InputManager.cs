@@ -12,7 +12,6 @@ namespace Daniel.Master
         public void OnSettings(InputValue value)
         {
             GlobalUIManager.Instance.ToggleSettings();
-            TTSManager.Instance.Speak("Your dialogue text here");
         }
         //- Magnifier
         public void OnMagnify(InputValue value)
