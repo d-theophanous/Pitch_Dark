@@ -1,7 +1,9 @@
 using Geecku.DefaultNetworking;
+using Geecku.DefaultNetworking.Common.MessageHandlers;
 using Geecku.GlobalMangers;
 using NUnit.Framework;
 using Riptide;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -43,12 +45,30 @@ namespace Daniel.Master
         }
 
         #region Game Logic
-        private void StartGame()
+        public void StartGame()
         {
-            SceneManager.LoadScene("Game", LoadSceneMode.Additive);
+            StartCoroutine(AsyncStartGame());
             Content.transform.parent.gameObject.SetActive(false);
-            GlobalUIManager.Instance.ToggleNetworking();
             Debug.Log("Game started :))");
+        }
+        private IEnumerator AsyncStartGame()
+        {
+            yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
+            GlobalUIManager.Instance.ToggleNetworking();
+
+        }
+        public bool OtherPlayerIsGateReady { get; private set; }
+        private void OtherPlayerGateReady()
+        {
+            OtherPlayerIsGateReady = true;
+            Debug.Log("other player ready");
+        }
+        public bool PlayerIsGateReady { get; private set; }
+        private void PlayerGateReady()
+        {
+            PlayerIsGateReady = true;
+            //- ToDo UI
+            Debug.Log("player gate ready");
         }
         #endregion
 
@@ -58,6 +78,8 @@ namespace Daniel.Master
         [SerializeField] private TMP_Text Content;
         private int PlayerCountWaiting;
         private GameState State;
+
+        #region Connect
         public void SetUpNetworking()
         {
             PlayerCountWaiting = NetworkManager.Client.GetClientInfos().Length + 1;
@@ -92,6 +114,45 @@ namespace Daniel.Master
             }
             Content.text = "Waiting for player: " + PlayerCountWaiting + "/" + MaxPlayerCount + "...";
         }
+        #endregion
+
+        #region Messages
+        //- Player ready at door
+        public void ClientSend_PlayerAtGate()
+        {
+            Message msg = Message.Create(MessageSendMode.Reliable, 1000);
+            NetworkManager.Client.Send(msg);
+        }
+        [MessageHandler(1000)]
+        private static void ServerReceive_PlayerAtGate(ushort client_id, Message msg)
+        {
+            Message new_msg = Message.Create(MessageSendMode.Reliable, 1001);
+            NetworkManager.Server.MsgHandler.MessageIndex++;
+            new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
+            NetworkManager.Server.SendToAll(new_msg);
+        }
+        [MessageHandler(1001)]
+        private static void ClientReceive_PlayerAtGate(ushort client_id, Message msg)
+        {
+
+            Action action;
+            if (client_id == NetworkManager.Client.LocalClient.ID)
+            {
+                action = () =>
+                {
+                    Instance.PlayerGateReady();
+                };
+            }
+            else
+            {
+                action = () =>
+                {
+                    Instance.OtherPlayerGateReady();
+                };
+            }
+            ClientMessageHandler.Handle(msg, action);
+        }
+        #endregion
 
         #region Events
 

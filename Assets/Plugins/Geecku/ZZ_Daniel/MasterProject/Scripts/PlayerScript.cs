@@ -34,9 +34,14 @@ namespace Daniel.Master
                 tmp = Player1Spawn;
             else
                 tmp = Player2Spawn;
+
+            Controller.enabled = false;
+
             transform.position = tmp.position;
             transform.forward = tmp.forward;
             CinCam.transform.forward = tmp.forward;
+
+            Controller.enabled = true;
         }
 
         #region Movement

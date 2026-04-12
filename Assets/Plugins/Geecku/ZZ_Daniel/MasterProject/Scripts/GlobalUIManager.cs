@@ -16,7 +16,8 @@ namespace Daniel.Master
         [SerializeField] private GameObject Settings;
         [SerializeField] private GameObject Networking;
 
-        private Camera CurCamera;
+        //- for debugging public
+        public Camera CurCamera;
  
         public void ChangeMainCamera(Camera new_main)
         {
@@ -29,23 +30,18 @@ namespace Daniel.Master
         }
         public void ChangeMainCamera()
         {
-            var tmp = GameObject.FindGameObjectWithTag("MainCamera");
-            if (tmp == null)
-                Debug.Log("bin null");
-            //- ToDo
             ChangeMainCamera(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>());
         }
         public void ToggleSettings()
         {
-            StartCoroutine(ToggleUI(UI.SETTINGS));
+            ToggleUI(UI.SETTINGS);
         }
         public void ToggleNetworking()
         {
-            StartCoroutine(ToggleUI(UI.NETWORKING));
+            ToggleUI(UI.NETWORKING);
         }
-        private IEnumerator ToggleUI(UI ui)
+        private void ToggleUI(UI ui)
         {
-            yield return new WaitForEndOfFrame();
             Canvas.gameObject.SetActive(!Canvas.gameObject.activeSelf);
             if (Canvas.gameObject.activeSelf)
                 ChangeMainCamera(UICamera);
