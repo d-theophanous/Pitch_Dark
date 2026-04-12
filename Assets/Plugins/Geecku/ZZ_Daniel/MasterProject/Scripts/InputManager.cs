@@ -8,9 +8,11 @@ namespace Daniel.Master
     public class InputManager : PersistantDSingleton<InputManager>
     {
         #region Input Triggers
+        //- default = TAB
         public void OnSettings(InputValue value)
         {
             GlobalUIManager.Instance.ToggleSettings();
+            TTSManager.Instance.Speak("Your dialogue text here");
         }
         //- Magnifier
         public void OnMagnify(InputValue value)
