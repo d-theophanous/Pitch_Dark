@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SettingsCam
   - Interactable
+  - Outline
   layers:
   - Default
   - TransparentFX
