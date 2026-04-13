@@ -17,9 +17,11 @@ public class Interactable : MonoBehaviour
     public virtual void EnterInteractionRange()
     {
         GameManager.Instance.Player.CurrentInteractable = this;
+        ToggleHighlight(true);
     }
     public virtual void ExitInteractionRange()
     {
+        ToggleHighlight(false);
         GameManager.Instance.Player.CurrentInteractable = null;
     }
 
@@ -41,9 +43,22 @@ public class Interactable : MonoBehaviour
 
         //player.SetDestination(transform.position);
     }
-    public void ToggleHighlight()
+    public void ToggleHighlight(bool turn_on)
     {
-
+        if (turn_on)
+        { 
+            foreach (GameObject item in GetHighlightableObjects())
+            {
+                item.layer = LayerMask.NameToLayer("Outline");
+            }
+        }
+        else
+        {
+            foreach (GameObject item in GetHighlightableObjects())
+            {
+                item.layer = LayerMask.NameToLayer("Interactable");
+            }        
+        }
     }
     private void OnMouseEnter()
     {

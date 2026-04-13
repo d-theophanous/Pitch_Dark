@@ -10,6 +10,7 @@ public class InteractionColliderScript : MonoBehaviour
 
         if (other.gameObject.activeSelf)
         {
+            Debug.Log("in ontrgigger enter");
             Interactable tmp = other.GetComponent<Interactable>();
             tmp.EnterInteractionRange();
         }

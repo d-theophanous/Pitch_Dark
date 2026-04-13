@@ -13,8 +13,8 @@ TagManager:
   - Magnify
   - Water
   - UI
-  - 
-  - 
+  - Outline
+  - Interactable
   - 
   - 
   - 
@@ -45,4 +45,5 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  - Outline
   m_MigratedRenderPipelines: []

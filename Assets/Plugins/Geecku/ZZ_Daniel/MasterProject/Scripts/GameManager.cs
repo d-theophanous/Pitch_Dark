@@ -24,7 +24,7 @@ namespace Daniel.Master
         protected override void Awake()
         {
             base.Awake();
-            if (WillBeDestroyed) return;
+
 
             //- Setup languages and everything for debug to be able to skip things
             State = GameState.WAITING;

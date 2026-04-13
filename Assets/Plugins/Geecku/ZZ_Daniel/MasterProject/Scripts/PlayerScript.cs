@@ -17,6 +17,10 @@ namespace Daniel.Master
 
         private float PlayerSpeed = 5.0f;
 
+        private void Awake()
+        {
+            GameManager.Instance.Player = this;
+        }
         private void Start()
         {
             SpawnPlayer();
