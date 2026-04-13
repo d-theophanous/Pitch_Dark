@@ -15,7 +15,8 @@ namespace Daniel.Master
     public class GameManager : PersistantDSingleton<GameManager>
     {
         [SerializeField] List<string> SceneList;
-        [SerializeField] private PlayerScript Player;
+        public PlayerScript Player;
+        private GameState State;
 
         public int PlayerNumber => PlayerIdx + 1;
         public int PlayerIdx = 0;
@@ -26,12 +27,30 @@ namespace Daniel.Master
             if (WillBeDestroyed) return;
 
             //- Setup languages and everything for debug to be able to skip things
+            State = GameState.WAITING;
         }
         protected override void Start()
         {
             base.Start();
             GlobalUIManager.Instance.ToggleNetworking();
         }
+
+        protected override void Update()
+        {
+            switch (State)
+            {
+                case GameState.PLAYING:
+                    Player.UpdatePlayer();
+                    break;
+                case GameState.CONNECT:
+                    break;
+                case GameState.WAITING:
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void SwitchSceneToFirstInList()
         {
             if (SceneList.Count == 0 || SceneList[0] == "") return;
@@ -54,6 +73,7 @@ namespace Daniel.Master
         private IEnumerator AsyncStartGame()
         {
             yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
+            State = GameState.PLAYING;
             GlobalUIManager.Instance.ToggleNetworking();
 
         }
@@ -77,7 +97,6 @@ namespace Daniel.Master
         [SerializeField] private int MaxPlayerCount;
         [SerializeField] private TMP_Text Content;
         private int PlayerCountWaiting;
-        private GameState State;
 
         #region Connect
         public void SetUpNetworking()
@@ -233,6 +252,6 @@ namespace Daniel.Master
     }
     public enum GameState
     {
-        PLAYING, CONNECT
+        PLAYING, CONNECT, WAITING
     }
 }

@@ -13,6 +13,7 @@ namespace Daniel.Master
         [SerializeField] private Transform Player2Spawn;
         public CharacterController Controller;
         public CinemachineCamera CinCam;
+        public Interactable CurrentInteractable;
 
         private float PlayerSpeed = 5.0f;
 
@@ -21,7 +22,7 @@ namespace Daniel.Master
             SpawnPlayer();
         }
 
-        void Update()
+        public void UpdatePlayer()
         {
             RotateCharacter();
             MoveCharacter();
@@ -42,6 +43,12 @@ namespace Daniel.Master
             CinCam.transform.forward = tmp.forward;
 
             Controller.enabled = true;
+        }
+
+        private void OnInteract()
+        {
+            if (CurrentInteractable == null) return;
+            CurrentInteractable.ActivatePrompt();
         }
 
         #region Movement
