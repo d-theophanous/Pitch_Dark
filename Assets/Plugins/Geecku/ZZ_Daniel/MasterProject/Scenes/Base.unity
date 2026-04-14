@@ -2392,6 +2392,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2516810237364552308, guid: 0b77b2e60e477d8459be565ad92765e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6149339545099982363, guid: 0b77b2e60e477d8459be565ad92765e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 542.27716
