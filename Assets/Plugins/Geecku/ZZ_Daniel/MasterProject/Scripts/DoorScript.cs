@@ -12,5 +12,10 @@ namespace Geecku
             //- Display waiting UI
             GlobalUIManager.Instance.ToggleUI(UI.GATE_NET);
         }
+        public override void EnterInteractionRange()
+        {
+            base.EnterInteractionRange();
+            Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 3f);
+        }
     }
 }

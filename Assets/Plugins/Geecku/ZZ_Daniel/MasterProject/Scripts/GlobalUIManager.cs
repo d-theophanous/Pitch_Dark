@@ -37,9 +37,15 @@ namespace Daniel.Master
         {
             Canvas.gameObject.SetActive(!Canvas.gameObject.activeSelf);
             if (Canvas.gameObject.activeSelf)
+            {
                 ChangeMainCamera(UICamera);
+                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Rest");
+            }
             else
+            {
                 ChangeMainCamera();
+                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
+            }
             GameObject tmp = null;
             switch (ui)
             {

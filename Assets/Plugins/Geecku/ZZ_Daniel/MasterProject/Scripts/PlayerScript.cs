@@ -50,7 +50,7 @@ namespace Daniel.Master
             Controller.enabled = true;
         }
 
-        public void OnInteract(InputValue value)
+        public void Interact()
         {
             if (CurrentInteractable == null)
             {
@@ -61,16 +61,15 @@ namespace Daniel.Master
         }
 
         #region Movement
-        //- in InputManager auslagern (ToDo)
         private Vector2 Movement = new();
-        public void OnMove(InputValue value)
+        public void Move(Vector2 value)
         {
-            Movement = value.Get<Vector2>();
+            Movement = value;
         }
         private Vector2 LookDir = new();
-        public void OnLook(InputValue value)
+        public void Look(Vector2 value)
         {
-            LookDir = value.Get<Vector2>();
+            LookDir = value;
         }
         private void MoveCharacter()
         {

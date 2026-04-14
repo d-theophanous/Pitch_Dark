@@ -2767,6 +2767,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  PlayerInput: {fileID: 0}
 --- !u!4 &1433731247
 Transform:
   m_ObjectHideFlags: 0
@@ -2808,8 +2809,8 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Rest
+  m_DefaultControlScheme: Controller
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &1436920401
