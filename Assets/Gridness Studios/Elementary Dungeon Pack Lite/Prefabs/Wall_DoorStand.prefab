@@ -166,11 +166,64 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8581543194017382735, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 4294967295
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5915041321441941656, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
+    - {fileID: 6016081648519709851, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5721723476799238222, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7837409248943529138}
+    - targetCorrespondingSourceObject: {fileID: 5721723476799238222, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6379473852384688255}
   m_SourcePrefab: {fileID: 100100000, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
+--- !u!1 &650682149939800212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5721723476799238222, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
+  m_PrefabInstance: {fileID: 5071065103809960154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7837409248943529138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650682149939800212}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6388175, y: 3.2974682, z: 0.39488146}
+  m_Center: {x: -0.6579491, y: 1.647625, z: 0.00000003725293}
+--- !u!114 &6379473852384688255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650682149939800212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9eb34fd5a94a044fbc49a9107c0916d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Geecku.DoorScript
+  IsOneTimeUse: 0
+  ObjectsToBeOutlined:
+  - {fileID: 650682149939800212}
 --- !u!4 &2901804479087725220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7936834669806457470, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}

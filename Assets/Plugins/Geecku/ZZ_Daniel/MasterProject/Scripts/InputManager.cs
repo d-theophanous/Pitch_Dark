@@ -11,7 +11,7 @@ namespace Daniel.Master
         //- default = TAB
         public void OnSettings(InputValue value)
         {
-            GlobalUIManager.Instance.ToggleSettings();
+            GlobalUIManager.Instance.ToggleUI(UI.SETTINGS);
         }
         //- Magnifier
         public void OnMagnify(InputValue value)

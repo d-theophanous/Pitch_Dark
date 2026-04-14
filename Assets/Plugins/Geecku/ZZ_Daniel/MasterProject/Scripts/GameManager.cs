@@ -15,7 +15,10 @@ namespace Daniel.Master
     public class GameManager : PersistantDSingleton<GameManager>
     {
         [SerializeField] List<string> SceneList;
+
+        [Header("References")]
         public PlayerScript Player;
+
         private GameState State;
 
         public int PlayerNumber => PlayerIdx + 1;
@@ -32,7 +35,7 @@ namespace Daniel.Master
         protected override void Start()
         {
             base.Start();
-            GlobalUIManager.Instance.ToggleNetworking();
+            GlobalUIManager.Instance.ToggleUI(UI.NETWORKING);
         }
 
         protected override void Update()
@@ -74,8 +77,21 @@ namespace Daniel.Master
         {
             yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
             State = GameState.PLAYING;
-            GlobalUIManager.Instance.ToggleNetworking();
-
+            GlobalUIManager.Instance.ToggleUI(UI.NETWORKING);
+        }
+        public void StartPuzzle()
+        {
+            if (PuzzleManager.Instance == null)
+            {
+                Debug.LogWarning("Puzzle Manager is null");
+                return;
+            }
+            PuzzleManager.Instance.StartPuzzle();
+        }
+        public void QuitWaitingForPuzzle()
+        {
+            GlobalUIManager.Instance.ToggleUI(UI.GATE_NET);
+            //- Send other player message of cancelation
         }
         public bool OtherPlayerIsGateReady { get; private set; }
         private void OtherPlayerGateReady()
@@ -97,6 +113,10 @@ namespace Daniel.Master
         [SerializeField] private int MaxPlayerCount;
         [SerializeField] private TMP_Text Content;
         private int PlayerCountWaiting;
+
+        #region Gate Logic
+        [SerializeField] private TMP_Text WaitingPlayerText;
+        #endregion
 
         #region Connect
         public void SetUpNetworking()

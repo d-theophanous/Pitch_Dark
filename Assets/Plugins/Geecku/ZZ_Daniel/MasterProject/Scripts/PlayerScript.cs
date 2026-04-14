@@ -45,13 +45,18 @@ namespace Daniel.Master
             transform.position = tmp.position;
             transform.forward = tmp.forward;
             CinCam.transform.forward = tmp.forward;
+            CurRotationIdx = 1;
 
             Controller.enabled = true;
         }
 
-        private void OnInteract()
+        public void OnInteract(InputValue value)
         {
-            if (CurrentInteractable == null) return;
+            if (CurrentInteractable == null)
+            {
+                Debug.Log("bin null");
+                return;
+            }
             CurrentInteractable.ActivatePrompt();
         }
 

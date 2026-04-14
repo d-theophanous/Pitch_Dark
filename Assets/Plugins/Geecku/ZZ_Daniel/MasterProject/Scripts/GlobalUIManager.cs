@@ -15,6 +15,7 @@ namespace Daniel.Master
 
         [SerializeField] private GameObject Settings;
         [SerializeField] private GameObject Networking;
+        [SerializeField] private GameObject Gate_Net;
 
         //- for debugging public
         public Camera CurCamera;
@@ -32,40 +33,39 @@ namespace Daniel.Master
         {
             ChangeMainCamera(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>());
         }
-        public void ToggleSettings()
-        {
-            ToggleUI(UI.SETTINGS);
-        }
-        public void ToggleNetworking()
-        {
-            ToggleUI(UI.NETWORKING);
-        }
-        private void ToggleUI(UI ui)
+        public void ToggleUI(UI ui)
         {
             Canvas.gameObject.SetActive(!Canvas.gameObject.activeSelf);
             if (Canvas.gameObject.activeSelf)
                 ChangeMainCamera(UICamera);
             else
                 ChangeMainCamera();
+            GameObject tmp = null;
             switch (ui)
             {
                 case UI.MAIN_MENU:
                     break;
                 case UI.SETTINGS:
-                    Settings.SetActive(!Settings.gameObject.activeSelf);
+                    tmp = Settings;
+                    //Settings.SetActive(!Settings.gameObject.activeSelf);
                     break;
                 case UI.LANGUAGE:
                     break;
                 case UI.NETWORKING:
-                    Networking.SetActive(!Networking.gameObject.activeSelf);
+                    tmp = Networking;
+                    //Networking.SetActive(!Networking.gameObject.activeSelf);
+                    break;
+                case UI.GATE_NET:
+                    tmp = Gate_Net;
                     break;
                 default:
                     break;
             }
+            tmp.SetActive(!tmp.gameObject.activeSelf);
         }
     }
     public enum UI
     {
-        MAIN_MENU, SETTINGS, LANGUAGE, NETWORKING
+        MAIN_MENU, SETTINGS, LANGUAGE, NETWORKING, GATE_NET
     }
 }
