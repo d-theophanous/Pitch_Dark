@@ -56,6 +56,7 @@ namespace Daniel.Master
         {
             RuntimeManager.PlayOneShot(reference, world_pos);
         }
+        
         public EventInstance CreateEventInstance(EventReference reference)
         {
             EventInstance instance = RuntimeManager.CreateInstance(reference);

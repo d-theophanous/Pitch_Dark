@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Language String Table Shared Data
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
   m_TableCollectionName: Language String Table
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
+  m_TableCollectionNameGuidString: c60aea9eee49086468801da01885ae41
   m_Entries: []
   m_Metadata:
     m_Items: []

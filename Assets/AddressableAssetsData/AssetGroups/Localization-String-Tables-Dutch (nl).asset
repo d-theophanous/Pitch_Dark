@@ -14,8 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Localization-String-Tables-Dutch (nl)
   m_GUID: 8240e9647b0cb09419679971eade3f0d
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: c3880b4bd55f71746a9e0c209aea24ae
+    m_Address: Language String Table_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: b5542c45fe0d0074b884bea8f458ea8a, type: 2}
   m_SchemaSet:
-    m_Schemas: []
+    m_Schemas:
+    - {fileID: 11400000, guid: 753e9d0eb7eacba428c549e3239f1b26, type: 2}
+    - {fileID: 11400000, guid: 4aa4245f0cab4b341bfb2b492ee3acea, type: 2}
