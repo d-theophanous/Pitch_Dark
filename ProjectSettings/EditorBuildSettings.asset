@@ -33,4 +33,6 @@ EditorBuildSettings:
     path: Assets/Plugins/Geecku/ZZ_Daniel/MasterProject/Scenes/Main Menu.unity
     guid: b317e19ce83a3ce4d97acbef16a5911d
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: af2a23fd366c7e34dbc738af6cc6d215, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 0be9242338f9abb43a90d16e9f9d2ea0, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: 166e86ddc66c61543a4fa930d2af906f, type: 2}
