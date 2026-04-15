@@ -17,13 +17,17 @@ namespace Daniel.Master
     {
         [SerializeField] List<string> SceneList;
 
-        [Header("References")]
-        public PlayerScript Player;
+        //[Header("References")]
+        [HideInInspector] public PlayerScript Player;
 
         private GameState State;
 
         public int PlayerNumber => PlayerIdx + 1;
         public int PlayerIdx = 0;
+
+        //- Testing
+        public Genre Genre;
+        public int InstrumentCount;
 
         protected override void Awake()
         {
@@ -53,6 +57,10 @@ namespace Daniel.Master
                 default:
                     break;
             }
+            AudioManager.Instance.UpdateAudio();
+            //- Testing
+            AudioManager.Instance.SetGenre(Genre);
+            AudioManager.Instance.SetInstrumentCount(InstrumentCount);
         }
 
         private void SwitchSceneToFirstInList()

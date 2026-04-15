@@ -127,6 +127,15 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ImprovTest"",
+                    ""type"": ""Button"",
+                    ""id"": ""6ce3192b-3f07-47d3-b243-4784d4049682"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -239,6 +248,28 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""action"": ""Settings"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0b8a717d-f640-4c0e-aa28-2e231023e9cc"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""ImprovTest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d32d4e9-ae26-478a-aa0b-0e0f6481f5fd"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""ImprovTest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -342,6 +373,136 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Improvisation"",
+            ""id"": ""4beb871d-3162-4f11-af5a-b82de80112e0"",
+            ""actions"": [
+                {
+                    ""name"": ""PlayRoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""85b056f2-6f22-4e35-9066-dc4a532386a1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ImprovTest"",
+                    ""type"": ""Button"",
+                    ""id"": ""74d67e87-9498-4371-abd4-aaaf0a063048"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PlayThird"",
+                    ""type"": ""Button"",
+                    ""id"": ""94d7b248-71ee-44f3-ab9e-414b00b2002c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PlayFifth"",
+                    ""type"": ""Button"",
+                    ""id"": ""9237756f-61c2-462c-8c97-45aae7615b07"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PlayOctave"",
+                    ""type"": ""Button"",
+                    ""id"": ""e31a62f5-fe78-4303-a91d-2689a5e37e0f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""f5232b73-5029-4ac2-a20a-60a8da19da23"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""PlayRoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4b8bf45c-815d-4100-b46c-8eac970ad668"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""ImprovTest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b587d2a3-7592-4805-b49d-26e85fbc02be"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""ImprovTest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""56a8a41b-e0c9-4275-9236-a698287ad7d9"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""PlayThird"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2990ad37-ede4-40ef-9b56-5d726df4a506"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""PlayFifth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3aaaa957-1a4b-4e67-9121-f49d10ebb869"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""PlayOctave"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b36daf53-9b3d-4a4b-970c-d52556103673"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayOctave"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -375,17 +536,26 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Settings = m_Player.FindAction("Settings", throwIfNotFound: true);
+        m_Player_ImprovTest = m_Player.FindAction("ImprovTest", throwIfNotFound: true);
         // Rest
         m_Rest = asset.FindActionMap("Rest", throwIfNotFound: true);
         m_Rest_Settings = m_Rest.FindAction("Settings", throwIfNotFound: true);
         m_Rest_Magnify = m_Rest.FindAction("Magnify", throwIfNotFound: true);
         m_Rest_MoveMagnify = m_Rest.FindAction("MoveMagnify", throwIfNotFound: true);
+        // Improvisation
+        m_Improvisation = asset.FindActionMap("Improvisation", throwIfNotFound: true);
+        m_Improvisation_PlayRoot = m_Improvisation.FindAction("PlayRoot", throwIfNotFound: true);
+        m_Improvisation_ImprovTest = m_Improvisation.FindAction("ImprovTest", throwIfNotFound: true);
+        m_Improvisation_PlayThird = m_Improvisation.FindAction("PlayThird", throwIfNotFound: true);
+        m_Improvisation_PlayFifth = m_Improvisation.FindAction("PlayFifth", throwIfNotFound: true);
+        m_Improvisation_PlayOctave = m_Improvisation.FindAction("PlayOctave", throwIfNotFound: true);
     }
 
     ~@BaseAction()
     {
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, BaseAction.Player.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Rest.enabled, "This will cause a leak and performance issues, BaseAction.Rest.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Improvisation.enabled, "This will cause a leak and performance issues, BaseAction.Improvisation.Disable() has not been called.");
     }
 
     /// <summary>
@@ -465,6 +635,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Settings;
+    private readonly InputAction m_Player_ImprovTest;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -492,6 +663,10 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Settings".
         /// </summary>
         public InputAction @Settings => m_Wrapper.m_Player_Settings;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ImprovTest".
+        /// </summary>
+        public InputAction @ImprovTest => m_Wrapper.m_Player_ImprovTest;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -530,6 +705,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Settings.started += instance.OnSettings;
             @Settings.performed += instance.OnSettings;
             @Settings.canceled += instance.OnSettings;
+            @ImprovTest.started += instance.OnImprovTest;
+            @ImprovTest.performed += instance.OnImprovTest;
+            @ImprovTest.canceled += instance.OnImprovTest;
         }
 
         /// <summary>
@@ -553,6 +731,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Settings.started -= instance.OnSettings;
             @Settings.performed -= instance.OnSettings;
             @Settings.canceled -= instance.OnSettings;
+            @ImprovTest.started -= instance.OnImprovTest;
+            @ImprovTest.performed -= instance.OnImprovTest;
+            @ImprovTest.canceled -= instance.OnImprovTest;
         }
 
         /// <summary>
@@ -704,6 +885,146 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="RestActions" /> instance referencing this action map.
     /// </summary>
     public RestActions @Rest => new RestActions(this);
+
+    // Improvisation
+    private readonly InputActionMap m_Improvisation;
+    private List<IImprovisationActions> m_ImprovisationActionsCallbackInterfaces = new List<IImprovisationActions>();
+    private readonly InputAction m_Improvisation_PlayRoot;
+    private readonly InputAction m_Improvisation_ImprovTest;
+    private readonly InputAction m_Improvisation_PlayThird;
+    private readonly InputAction m_Improvisation_PlayFifth;
+    private readonly InputAction m_Improvisation_PlayOctave;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Improvisation".
+    /// </summary>
+    public struct ImprovisationActions
+    {
+        private @BaseAction m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public ImprovisationActions(@BaseAction wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Improvisation/PlayRoot".
+        /// </summary>
+        public InputAction @PlayRoot => m_Wrapper.m_Improvisation_PlayRoot;
+        /// <summary>
+        /// Provides access to the underlying input action "Improvisation/ImprovTest".
+        /// </summary>
+        public InputAction @ImprovTest => m_Wrapper.m_Improvisation_ImprovTest;
+        /// <summary>
+        /// Provides access to the underlying input action "Improvisation/PlayThird".
+        /// </summary>
+        public InputAction @PlayThird => m_Wrapper.m_Improvisation_PlayThird;
+        /// <summary>
+        /// Provides access to the underlying input action "Improvisation/PlayFifth".
+        /// </summary>
+        public InputAction @PlayFifth => m_Wrapper.m_Improvisation_PlayFifth;
+        /// <summary>
+        /// Provides access to the underlying input action "Improvisation/PlayOctave".
+        /// </summary>
+        public InputAction @PlayOctave => m_Wrapper.m_Improvisation_PlayOctave;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Improvisation; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="ImprovisationActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(ImprovisationActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="ImprovisationActions" />
+        public void AddCallbacks(IImprovisationActions instance)
+        {
+            if (instance == null || m_Wrapper.m_ImprovisationActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ImprovisationActionsCallbackInterfaces.Add(instance);
+            @PlayRoot.started += instance.OnPlayRoot;
+            @PlayRoot.performed += instance.OnPlayRoot;
+            @PlayRoot.canceled += instance.OnPlayRoot;
+            @ImprovTest.started += instance.OnImprovTest;
+            @ImprovTest.performed += instance.OnImprovTest;
+            @ImprovTest.canceled += instance.OnImprovTest;
+            @PlayThird.started += instance.OnPlayThird;
+            @PlayThird.performed += instance.OnPlayThird;
+            @PlayThird.canceled += instance.OnPlayThird;
+            @PlayFifth.started += instance.OnPlayFifth;
+            @PlayFifth.performed += instance.OnPlayFifth;
+            @PlayFifth.canceled += instance.OnPlayFifth;
+            @PlayOctave.started += instance.OnPlayOctave;
+            @PlayOctave.performed += instance.OnPlayOctave;
+            @PlayOctave.canceled += instance.OnPlayOctave;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="ImprovisationActions" />
+        private void UnregisterCallbacks(IImprovisationActions instance)
+        {
+            @PlayRoot.started -= instance.OnPlayRoot;
+            @PlayRoot.performed -= instance.OnPlayRoot;
+            @PlayRoot.canceled -= instance.OnPlayRoot;
+            @ImprovTest.started -= instance.OnImprovTest;
+            @ImprovTest.performed -= instance.OnImprovTest;
+            @ImprovTest.canceled -= instance.OnImprovTest;
+            @PlayThird.started -= instance.OnPlayThird;
+            @PlayThird.performed -= instance.OnPlayThird;
+            @PlayThird.canceled -= instance.OnPlayThird;
+            @PlayFifth.started -= instance.OnPlayFifth;
+            @PlayFifth.performed -= instance.OnPlayFifth;
+            @PlayFifth.canceled -= instance.OnPlayFifth;
+            @PlayOctave.started -= instance.OnPlayOctave;
+            @PlayOctave.performed -= instance.OnPlayOctave;
+            @PlayOctave.canceled -= instance.OnPlayOctave;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="ImprovisationActions.UnregisterCallbacks(IImprovisationActions)" />.
+        /// </summary>
+        /// <seealso cref="ImprovisationActions.UnregisterCallbacks(IImprovisationActions)" />
+        public void RemoveCallbacks(IImprovisationActions instance)
+        {
+            if (m_Wrapper.m_ImprovisationActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="ImprovisationActions.AddCallbacks(IImprovisationActions)" />
+        /// <seealso cref="ImprovisationActions.RemoveCallbacks(IImprovisationActions)" />
+        /// <seealso cref="ImprovisationActions.UnregisterCallbacks(IImprovisationActions)" />
+        public void SetCallbacks(IImprovisationActions instance)
+        {
+            foreach (var item in m_Wrapper.m_ImprovisationActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_ImprovisationActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="ImprovisationActions" /> instance referencing this action map.
+    /// </summary>
+    public ImprovisationActions @Improvisation => new ImprovisationActions(this);
     private int m_KeyboardSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -765,6 +1086,13 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSettings(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ImprovTest" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnImprovTest(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Rest" which allows adding and removing callbacks.
@@ -794,5 +1122,48 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMoveMagnify(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Improvisation" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="ImprovisationActions.AddCallbacks(IImprovisationActions)" />
+    /// <seealso cref="ImprovisationActions.RemoveCallbacks(IImprovisationActions)" />
+    public interface IImprovisationActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "PlayRoot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPlayRoot(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ImprovTest" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnImprovTest(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "PlayThird" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPlayThird(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "PlayFifth" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPlayFifth(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "PlayOctave" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPlayOctave(InputAction.CallbackContext context);
     }
 }

@@ -41,6 +41,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ImprovTest",
+                    "type": "Button",
+                    "id": "6ce3192b-3f07-47d3-b243-4784d4049682",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -153,6 +162,28 @@
                     "action": "Settings",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b8a717d-f640-4c0e-aa28-2e231023e9cc",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "ImprovTest",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d32d4e9-ae26-478a-aa0b-0e0f6481f5fd",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "ImprovTest",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -252,6 +283,136 @@
                     "processors": "",
                     "groups": ";Controller",
                     "action": "MoveMagnify",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Improvisation",
+            "id": "4beb871d-3162-4f11-af5a-b82de80112e0",
+            "actions": [
+                {
+                    "name": "PlayRoot",
+                    "type": "Button",
+                    "id": "85b056f2-6f22-4e35-9066-dc4a532386a1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ImprovTest",
+                    "type": "Button",
+                    "id": "74d67e87-9498-4371-abd4-aaaf0a063048",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PlayThird",
+                    "type": "Button",
+                    "id": "94d7b248-71ee-44f3-ab9e-414b00b2002c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PlayFifth",
+                    "type": "Button",
+                    "id": "9237756f-61c2-462c-8c97-45aae7615b07",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PlayOctave",
+                    "type": "Button",
+                    "id": "e31a62f5-fe78-4303-a91d-2689a5e37e0f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f5232b73-5029-4ac2-a20a-60a8da19da23",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "PlayRoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4b8bf45c-815d-4100-b46c-8eac970ad668",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "ImprovTest",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b587d2a3-7592-4805-b49d-26e85fbc02be",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "ImprovTest",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56a8a41b-e0c9-4275-9236-a698287ad7d9",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "PlayThird",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2990ad37-ede4-40ef-9b56-5d726df4a506",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "PlayFifth",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3aaaa957-1a4b-4e67-9121-f49d10ebb869",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "PlayOctave",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b36daf53-9b3d-4a4b-970c-d52556103673",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayOctave",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

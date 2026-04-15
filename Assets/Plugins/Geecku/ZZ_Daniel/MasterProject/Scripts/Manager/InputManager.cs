@@ -14,8 +14,51 @@ namespace Daniel.Master
             base.Awake();
             PlayerInput = GetComponent<PlayerInput>();
         }
+        protected override void Start()
+        {
+            base.Start();
+            foreach (var action_map in PlayerInput.actions.actionMaps)
+            {
+                action_map.Disable();
+            }
+            PlayerInput.actions.FindActionMap("Player").Enable();
+        }
 
         #region Input Triggers
+
+        #region Music and Improvisation
+        public void OnImprovTest(InputValue value)
+        {
+            Debug.Log("in improv test");
+            if (PlayerInput.currentActionMap.name == "Improvisation")
+            {
+                PlayerInput.SwitchCurrentActionMap("Player");
+                AudioManager.Instance.StopImprovisation();
+            }
+            else
+            {
+                PlayerInput.SwitchCurrentActionMap("Improvisation");
+                AudioManager.Instance.StartImprovisation();
+            }
+        }
+        public void OnPlayRoot()
+        {
+            Debug.Log("in play root");
+            AudioManager.Instance.PlayNote(Note.LOW_C);
+        }
+        public void OnPlayThird()
+        {
+            AudioManager.Instance.PlayNote(Note.LOW_E);
+        }
+        public void OnPlayFifth()
+        {
+            AudioManager.Instance.PlayNote(Note.LOW_G);
+        }
+        public void OnPlayOctave()
+        {
+            AudioManager.Instance.PlayNote(Note.HIGH_C);
+        }
+        #endregion
 
         #region Settings and UI
         //- default = TAB
