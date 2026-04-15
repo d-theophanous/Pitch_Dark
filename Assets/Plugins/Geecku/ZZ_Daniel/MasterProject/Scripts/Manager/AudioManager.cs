@@ -44,6 +44,7 @@ namespace Daniel.Master
         }
         public void UpdateAudio()
         {
+            //- better only do when value changes?
             MasterBus.setVolume(MasterVolume);
             SFXBus.setVolume(SFXVolume);
             ImprovisationTrackBus.setVolume(ImprovisationTrackVolume);
@@ -72,7 +73,6 @@ namespace Daniel.Master
         }
         public void StartImprovisation()
         {
-            Debug.Log("in  start improvisation");
             ImprovTrackEventInstance.start();
         }
         public void StopImprovisation()
@@ -99,7 +99,7 @@ namespace Daniel.Master
         }
         #endregion
 
-        #region CleanUP
+        #region CleanUp
         private void CleanUp()
         {
             foreach (var instance in EventInstanceList)

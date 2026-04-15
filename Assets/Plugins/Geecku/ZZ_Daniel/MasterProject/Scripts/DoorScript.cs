@@ -15,6 +15,7 @@ namespace Geecku
         public override void EnterInteractionRange()
         {
             base.EnterInteractionRange();
+            //- mode dependent here I think
             Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 3f);
         }
     }

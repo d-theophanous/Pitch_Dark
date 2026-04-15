@@ -29,7 +29,6 @@ namespace Daniel.Master
         #region Music and Improvisation
         public void OnImprovTest(InputValue value)
         {
-            Debug.Log("in improv test");
             if (PlayerInput.currentActionMap.name == "Improvisation")
             {
                 PlayerInput.SwitchCurrentActionMap("Player");
@@ -43,7 +42,6 @@ namespace Daniel.Master
         }
         public void OnPlayRoot()
         {
-            Debug.Log("in play root");
             AudioManager.Instance.PlayNote(Note.LOW_C);
         }
         public void OnPlayThird()

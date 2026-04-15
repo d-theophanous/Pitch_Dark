@@ -53,13 +53,11 @@ namespace Daniel.Master
                     break;
                 case UI.SETTINGS:
                     tmp = Settings;
-                    //Settings.SetActive(!Settings.gameObject.activeSelf);
                     break;
                 case UI.LANGUAGE:
                     break;
                 case UI.NETWORKING:
                     tmp = Networking;
-                    //Networking.SetActive(!Networking.gameObject.activeSelf);
                     break;
                 case UI.GATE_NET:
                     tmp = Gate_Net;

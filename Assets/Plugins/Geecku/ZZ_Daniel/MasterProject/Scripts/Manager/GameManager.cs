@@ -58,6 +58,7 @@ namespace Daniel.Master
                     break;
             }
             AudioManager.Instance.UpdateAudio();
+
             //- Testing
             AudioManager.Instance.SetGenre(Genre);
             AudioManager.Instance.SetInstrumentCount(InstrumentCount);
