@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
   m_TableCollectionName: Language String Table
   m_TableCollectionNameGuidString: c60aea9eee49086468801da01885ae41
-  m_Entries: []
+  m_Entries:
+  - m_Id: 642347589353472
+    m_Key: host_network_connect
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

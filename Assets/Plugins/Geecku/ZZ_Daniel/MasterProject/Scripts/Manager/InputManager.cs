@@ -1,5 +1,6 @@
 using Daniel.Master;
 using Geecku.GlobalMangers;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,7 +22,7 @@ namespace Daniel.Master
             {
                 action_map.Disable();
             }
-            PlayerInput.actions.FindActionMap("Player").Enable();
+            PlayerInput.actions.FindActionMap("UI").Enable();
         }
 
         #region Input Triggers
@@ -59,11 +60,40 @@ namespace Daniel.Master
         #endregion
 
         #region Settings and UI
+
+        public void OnClick()
+        {
+            TTSManager.Instance.ActivateCurElement();
+        }
+        public void OnBack()
+        {
+            TTSManager.Instance.ReturnCurElement();
+        }
+        public void OnNavigate(InputValue value)
+        {
+            Vector2 input = value.Get<Vector2>();
+            if (input == Vector2.zero) return;
+            if (Mathf.Abs(input.x) >= Mathf.Abs(input.y))
+            {
+                if (input.x > 0)
+                    TTSManager.Instance.ActivateCurElement();
+                else
+                    TTSManager.Instance.ReturnCurElement();
+            }
+            else
+            {
+                if (input.y <= 0)
+                    TTSManager.Instance.SwitchToNextElement();
+                else
+                    TTSManager.Instance.SwitchToPreviousElement();
+            }
+        }
+
+
         //- default = TAB
         public void OnSettings(InputValue value)
         {
-            Debug.Log("settings");
-            GlobalUIManager.Instance.ToggleUI(UI.SETTINGS);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.SETTINGS_GENERAL);
         }
         //- Magnifier
         public void OnMagnify(InputValue value)

@@ -33,13 +33,15 @@ namespace Daniel.Master
         {
             ChangeMainCamera(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>());
         }
-        public void ToggleUI(UI ui)
+        public void ToggleUI(UI_Group ui)
         {
             Canvas.gameObject.SetActive(!Canvas.gameObject.activeSelf);
+
+            //- switch action maps
             if (Canvas.gameObject.activeSelf)
             {
                 ChangeMainCamera(UICamera);
-                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Rest");
+                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("UI");
             }
             else
             {
@@ -49,27 +51,36 @@ namespace Daniel.Master
             GameObject tmp = null;
             switch (ui)
             {
-                case UI.MAIN_MENU:
+                case UI_Group.MAIN_MENU:
                     break;
-                case UI.SETTINGS:
+                case UI_Group.SETTINGS_GENERAL:
                     tmp = Settings;
                     break;
-                case UI.LANGUAGE:
+                case UI_Group.LANGUAGE_SELECTION:
                     break;
-                case UI.NETWORKING:
+                case UI_Group.NETWORK_CONNECT:
                     tmp = Networking;
                     break;
-                case UI.GATE_NET:
+                case UI_Group.NETWORK_GATE:
                     tmp = Gate_Net;
                     break;
                 default:
                     break;
             }
             tmp.SetActive(!tmp.gameObject.activeSelf);
+            StartCoroutine(ToggleReadableElementGroup(ui));
+        }
+        private IEnumerator ToggleReadableElementGroup(UI_Group ui)
+        {
+            yield return new WaitForEndOfFrame();
+            if (Canvas.gameObject.activeSelf)
+            {
+                TTSManager.Instance.SwitchReadableElementGroup(ui);
+            }
         }
     }
-    public enum UI
+    public enum UI_Group
     {
-        MAIN_MENU, SETTINGS, LANGUAGE, NETWORKING, GATE_NET
+        LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL, NETWORK_GATE
     }
 }

@@ -1,18 +1,17 @@
-using Daniel.Master;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Geecku
+namespace Daniel.Master
 {
     public class ReadableElementGroup : MonoBehaviour
     {
-        [SerializeField] private ReadableElementGroup Parent;
-        [SerializeField] private ReadableElementGroup SubGroup;
         [SerializeField] private List<ReadableElement> ElementList;
-        [SerializeField] private UI_Group Group;
+        [field: SerializeField] public UI_Group Group {  get; private set; }
 
         private int CurElementIdx = 0;
 
+        //- vlt jedem Element mitgeben, zu welcher Group es gehört und dann alle einmal
+        //- in der Szene finden
         public void ActivateGroup()
         {
             ElementList.Sort();
@@ -26,20 +25,19 @@ namespace Geecku
             ElementList[CurElementIdx].ToggleHighlight();
             CurElementIdx = 0;
         }
-        public void SwitchToSubGroup()
+        public void ActivateCurElement()
         {
-            DeactivateGroup();
-            TTSManager.Instance.CurrentGroup = SubGroup;
+            ElementList[CurElementIdx].Activate();
         }
-        public void SwitchToParentGroup()
+        public void ReturnCurElement()
         {
-            DeactivateGroup();
-            TTSManager.Instance.CurrentGroup = Parent;
+            ElementList[CurElementIdx].Return();
         }
         public void SwitchToPreviousElement()
         {
             if (CurElementIdx - 1 < 0)
             {
+                Debug.Log("no more previous elements");
                 //- Maybe play sound (ToDo)
                 return;
             }
@@ -52,6 +50,7 @@ namespace Geecku
             if (CurElementIdx + 1 >= ElementList.Count)
             {
                 //- Maybe play sound (ToDo)
+                Debug.Log("no more next elements");
                 return;
             }
             ElementList[CurElementIdx].ToggleHighlight();

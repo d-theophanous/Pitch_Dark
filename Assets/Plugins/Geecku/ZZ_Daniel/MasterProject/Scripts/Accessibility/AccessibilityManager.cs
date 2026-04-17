@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Accessibility;
 using Geecku.GlobalMangers;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Daniel.Master
@@ -45,7 +41,7 @@ namespace Daniel.Master
             if (IsMagnify)
             {
                 //Vector3 world_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector3 world_pos = GlobalUIManager.Instance.CurCamera.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 world_pos = GlobalUIManager.Instance.CurCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
                 Vector3 new_pos = new Vector3(world_pos.x, world_pos.y, 
                     MagGlasses.gameObject.transform.position.z);
                 MagGlasses.gameObject.transform.localPosition = new_pos;
@@ -56,8 +52,9 @@ namespace Daniel.Master
             //- ToDo scaling problem persists Problem ist dass Magnifier glasses -266 z value
             //- for now only mouse position?
             Vector3 currentWorldPoint;
+            //- ToDo switch to new INput system
             RectTransformUtility.ScreenPointToWorldPointInRectangle(
-                Settings.GetComponent<RectTransform>(), Input.mousePosition, UICamera, out currentWorldPoint
+                Settings.GetComponent<RectTransform>(), Mouse.current.position.ReadValue(), UICamera, out currentWorldPoint
             );
 
             MagCamera.transform.position = new Vector3(currentWorldPoint.x,

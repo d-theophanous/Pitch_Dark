@@ -33,14 +33,13 @@ namespace Daniel.Master
         {
             base.Awake();
 
-
             //- Setup languages and everything for debug to be able to skip things
             State = GameState.WAITING;
         }
         protected override void Start()
         {
             base.Start();
-            GlobalUIManager.Instance.ToggleUI(UI.NETWORKING);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
         }
 
         protected override void Update()
@@ -87,7 +86,7 @@ namespace Daniel.Master
         {
             yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
             State = GameState.PLAYING;
-            GlobalUIManager.Instance.ToggleUI(UI.NETWORKING);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
         }
         public void StartPuzzle()
         {
@@ -100,7 +99,7 @@ namespace Daniel.Master
         }
         public void QuitWaitingForPuzzle()
         {
-            GlobalUIManager.Instance.ToggleUI(UI.GATE_NET);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
             //- Send other player message of cancelation
         }
         public bool OtherPlayerIsGateReady { get; private set; }

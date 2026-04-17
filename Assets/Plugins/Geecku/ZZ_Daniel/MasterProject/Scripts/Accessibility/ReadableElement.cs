@@ -6,27 +6,44 @@ namespace Daniel.Master
 {
     public class ReadableElement : MonoBehaviour, IComparable<ReadableElement>
     {
-        [SerializeField] private TMP_Text Text;
-        [SerializeField] private UI_Label Label;
-        [SerializeField] private UI_Element Element;
-        private bool IsHighlighted;
+        [SerializeField] protected ReadableElementGroup Child;
+        [SerializeField] protected ReadableElementGroup Parent;
+        [SerializeField] protected TMP_Text Text;
+        [SerializeField] protected UI_Label Label;
+        protected UI_Element Element;
+        protected bool IsHighlighted = false;
 
         public int Ordernumber;
 
-
-        public void ToggleHighlight()
+        public virtual void ToggleHighlight()
         {
-            Debug.Log("ToggleHighlight");
             if (IsHighlighted)
             {
-                //- ToDo
+                OnDeselect();
+                IsHighlighted = false;
             }
             else
             {
-                //- ToDo
+                OnSelect();
+                IsHighlighted = true;
             }
         }
-        private void ReadText()
+        protected virtual void OnSelect() { }
+        protected virtual void OnDeselect() { }
+        public virtual void Activate() { }
+        public virtual void Return()
+        {
+            if (Parent != null)
+            {
+                TTSManager.Instance.SwitchReadableElementGroup(Parent.Group);
+            }
+            else
+            {
+                //- ToDo play Sound
+                Debug.Log("readable element doesnt have a parent");
+            }
+        }
+        protected void ReadText()
         {
             //- ToDo
             Debug.Log("Reading text");

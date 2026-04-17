@@ -42,19 +42,36 @@ namespace Daniel.Master
             }
             CurrentGroup = new_group;
             CurrentGroup.ActivateGroup();
+            Debug.Log(CurrentGroup);
         }
+
+        #region Element Interaction
+        public void ActivateCurElement()
+        {
+            CurrentGroup.ActivateCurElement();
+        }
+        public void ReturnCurElement()
+        {
+            CurrentGroup.ReturnCurElement();
+        }
+        public void SwitchToPreviousElement()
+        {
+            CurrentGroup.SwitchToPreviousElement();
+        }
+        public void SwitchToNextElement()
+        {
+            CurrentGroup.SwitchToNextElement();
+        }
+        #endregion
     }
     //- idk about this, but for now...
     public enum UI_Label
     {
-        START, SETTINGS, EXIT, CONNECT, HOST, QUIT
+        START, SETTINGS, EXIT, CONNECT, HOST, QUIT, DEBUG
     }
+    //- for narration of what the person is hovering over
     public enum UI_Element
     {
         BUTTON, TEXT
-    }
-    public enum UI_Group
-    {
-        LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL
     }
 }

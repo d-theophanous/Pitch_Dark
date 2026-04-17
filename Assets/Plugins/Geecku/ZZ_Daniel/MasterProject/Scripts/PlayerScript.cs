@@ -65,6 +65,7 @@ namespace Daniel.Master
         public void Move(Vector2 value)
         {
             Movement = value;
+            Debug.Log(Movement);
         }
         private Vector2 LookDir = new();
         public void Look(Vector2 value)
