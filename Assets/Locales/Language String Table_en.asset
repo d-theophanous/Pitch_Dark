@@ -22,6 +22,14 @@ MonoBehaviour:
     m_Localized: Host
     m_Metadata:
       m_Items: []
+  - m_Id: 677412906123264
+    m_Localized: Connect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 677417935093760
+    m_Localized: Debug
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

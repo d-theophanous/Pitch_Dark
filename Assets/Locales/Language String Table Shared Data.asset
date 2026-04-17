@@ -19,6 +19,16 @@ MonoBehaviour:
     m_Key: host_network_connect
     m_Metadata:
       m_Items: []
+  - m_Id: 677412906123264
+    m_Key: 'connect_network_connect
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 677417935093760
+    m_Key: debug_network_connect
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
