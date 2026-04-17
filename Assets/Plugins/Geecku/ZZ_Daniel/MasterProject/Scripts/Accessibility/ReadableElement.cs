@@ -9,7 +9,8 @@ namespace Daniel.Master
         [SerializeField] protected ReadableElementGroup Child;
         [SerializeField] protected ReadableElementGroup Parent;
         [SerializeField] protected TMP_Text Text;
-        [SerializeField] protected UI_Label Label;
+        //- anstelle von Label vlt Dictonary mit englishem Text als Key
+        //- sprach triple oder so als value
         protected UI_Element Element;
         protected bool IsHighlighted = false;
 

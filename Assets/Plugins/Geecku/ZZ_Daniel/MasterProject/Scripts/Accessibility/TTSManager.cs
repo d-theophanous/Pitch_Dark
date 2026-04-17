@@ -64,11 +64,6 @@ namespace Daniel.Master
         }
         #endregion
     }
-    //- idk about this, but for now...
-    public enum UI_Label
-    {
-        START, SETTINGS, EXIT, CONNECT, HOST, QUIT, DEBUG
-    }
     //- for narration of what the person is hovering over
     public enum UI_Element
     {
