@@ -36,7 +36,7 @@ namespace Daniel.Master
         {
             if (Parent != null)
             {
-                TTSManager.Instance.SwitchReadableElementGroup(Parent.Group);
+                TTSManager.Instance.SwitchReadableElementGroup(Parent);
             }
             else
             {

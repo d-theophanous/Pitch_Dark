@@ -30,6 +30,26 @@ MonoBehaviour:
     m_Localized: Debug
     m_Metadata:
       m_Items: []
+  - m_Id: 1060412344942592
+    m_Localized: Accessibility
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060476224192512
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060507719221248
+    m_Localized: Genre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060603970109440
+    m_Localized: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1061658204225536
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

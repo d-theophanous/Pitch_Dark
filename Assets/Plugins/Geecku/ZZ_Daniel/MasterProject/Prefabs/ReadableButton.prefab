@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9547169, g: 0.48096114, b: 0.48096114, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.93207544, g: 0.37107146, b: 0.37107146, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -149,7 +149,6 @@ MonoBehaviour:
   Child: {fileID: 0}
   Parent: {fileID: 0}
   Text: {fileID: 941090838819056049}
-  Label: 4
   Ordernumber: 0
 --- !u!1 &7611242135282711977
 GameObject:

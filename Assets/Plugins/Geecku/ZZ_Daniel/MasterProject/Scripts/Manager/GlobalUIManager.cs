@@ -17,6 +17,13 @@ namespace Daniel.Master
         [SerializeField] private GameObject Networking;
         [SerializeField] private GameObject Gate_Net;
 
+        [Header("Settings References")]
+        [SerializeField] private GameObject Accessibility_Settings;
+        [SerializeField] private GameObject Audio_Settings;
+        [SerializeField] private GameObject Genre_Settings;
+        [SerializeField] private GameObject Language_Settings;
+        [SerializeField] private GameObject Controls_Settings;
+
         //- for debugging public
         public Camera CurCamera;
  
@@ -70,6 +77,46 @@ namespace Daniel.Master
             tmp.SetActive(!tmp.gameObject.activeSelf);
             StartCoroutine(ToggleReadableElementGroup(ui));
         }
+        #region Settings
+        private GameObject CurSettings;
+        public void SetSettings(Settings settings)
+        {
+            if (CurSettings != null)
+            {
+                CurSettings.SetActive(false);
+            }
+            switch (settings)
+            {
+                case Master.Settings.LANGUAGE:
+                    CurSettings = Language_Settings;
+                    break;
+                case Master.Settings.CONTROLS:
+                    CurSettings = Controls_Settings;
+                    break;
+                case Master.Settings.AUDIO:
+                    CurSettings = Audio_Settings;
+                    break;
+                case Master.Settings.ACCESSIBILITY:
+                    CurSettings = Accessibility_Settings;
+                    break;
+                case Master.Settings.GENRE:
+                    CurSettings = Genre_Settings;
+                    break;
+                case Master.Settings.CLOSE:
+                    CurSettings.SetActive(false);
+                    CurSettings = null;
+                    return;
+                default:
+                    break;
+            }
+            CurSettings.SetActive(true);
+        }
+        public void SetAccessibility() { SetSettings(Master.Settings.ACCESSIBILITY); }
+        public void SetAudio() { SetSettings(Master.Settings.AUDIO); }
+        public void SetGenre() { SetSettings(Master.Settings.GENRE); }
+        public void SetControls() { SetSettings(Master.Settings.CONTROLS); }
+        public void SetLanguage() { SetSettings(Master.Settings.LANGUAGE); }
+        #endregion
         private IEnumerator ToggleReadableElementGroup(UI_Group ui)
         {
             yield return new WaitForEndOfFrame();
@@ -79,8 +126,13 @@ namespace Daniel.Master
             }
         }
     }
+    //- this is not very efficient but oh well...
     public enum UI_Group
     {
         LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL, NETWORK_GATE
+    }
+    public enum Settings
+    {
+        LANGUAGE, CONTROLS, AUDIO, ACCESSIBILITY, GENRE, CLOSE
     }
 }

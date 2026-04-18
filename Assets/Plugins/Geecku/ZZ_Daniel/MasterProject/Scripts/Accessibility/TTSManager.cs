@@ -16,7 +16,7 @@ namespace Daniel.Master
 
         public void SwitchReadableElementGroup(UI_Group group)
         {
-            ReadableElementGroup new_group; 
+            ReadableElementGroup new_group;
             switch (group)
             {
                 case UI_Group.LANGUAGE_SELECTION:
@@ -41,6 +41,16 @@ namespace Daniel.Master
                 CurrentGroup.DeactivateGroup();
             }
             CurrentGroup = new_group;
+            CurrentGroup.ActivateGroup();
+            Debug.Log(CurrentGroup);
+        }
+        public void SwitchReadableElementGroup(ReadableElementGroup group)
+        {
+            if (CurrentGroup != null)
+            {
+                CurrentGroup.DeactivateGroup();
+            }
+            CurrentGroup = group;
             CurrentGroup.ActivateGroup();
             Debug.Log(CurrentGroup);
         }

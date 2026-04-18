@@ -29,6 +29,26 @@ MonoBehaviour:
     m_Key: debug_network_connect
     m_Metadata:
       m_Items: []
+  - m_Id: 1060412344942592
+    m_Key: accessibility_settings_general
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060476224192512
+    m_Key: audio_settings_general
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060507719221248
+    m_Key: genre_settings_general
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060603970109440
+    m_Key: controls_settings_general
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1061658204225536
+    m_Key: language_settings_general
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

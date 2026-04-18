@@ -30,6 +30,26 @@ MonoBehaviour:
     m_Localized: Debug
     m_Metadata:
       m_Items: []
+  - m_Id: 1060412344942592
+    m_Localized: Toegankelijkheid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060476224192512
+    m_Localized: "Audio\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060507719221248
+    m_Localized: Genre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060603970109440
+    m_Localized: Bedieningselementen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1061658204225536
+    m_Localized: Taal
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
