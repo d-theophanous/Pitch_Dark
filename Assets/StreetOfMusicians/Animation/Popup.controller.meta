@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dfc4df38d3111344b82819c7a54f579d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Animation/Popup.controller
+  uploadId: 392031

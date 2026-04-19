@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: f3d4f53f3c88d314183e1ebffccae217
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: armL
+    100002: armR
+    100004: bass_guitar
+    100006: body
+    100008: Bone001
+    100010: Bone002
+    100012: Bone003
+    100014: Bone004
+    100016: Bone005
+    100018: Bone006
+    100020: Bone006(mirrored)
+    100022: Bone007
+    100024: Bone007(mirrored)
+    100026: Bone008
+    100028: Bone008(mirrored)
+    100030: Bone009
+    100032: Bone009(mirrored)
+    100034: Bone010
+    100036: Bone010(mirrored)
+    100038: Bone011
+    100040: Bone011(mirrored)
+    100042: Bone012
+    100044: Bone012(mirrored)
+    100046: Bone013
+    100048: Bone013(mirrored)
+    100050: Bone014
+    100052: Bone014(mirrored)
+    100054: Bone015
+    100056: Bone015(mirrored)
+    100058: Bone016
+    100060: Bone016(mirrored)
+    100062: extra_ani_listen_effect01
+    100064: extra_ani_listen_effect02
+    100066: face
+    100068: face_angry
+    100070: face_sad
+    100072: face_smile
+    100074: face_surprise
+    100076: hair_03
+    100078: //RootNode
+    100080: Henry_01_Dummy001
+    100082: legL
+    100084: legR
+    100086: pants_02
+    100088: pants_02_leg
+    100090: shoes_03
+    100092: top_04
+    100094: top_04_retail
+    400000: armL
+    400002: armR
+    400004: bass_guitar
+    400006: body
+    400008: Bone001
+    400010: Bone002
+    400012: Bone003
+    400014: Bone004
+    400016: Bone005
+    400018: Bone006
+    400020: Bone006(mirrored)
+    400022: Bone007
+    400024: Bone007(mirrored)
+    400026: Bone008
+    400028: Bone008(mirrored)
+    400030: Bone009
+    400032: Bone009(mirrored)
+    400034: Bone010
+    400036: Bone010(mirrored)
+    400038: Bone011
+    400040: Bone011(mirrored)
+    400042: Bone012
+    400044: Bone012(mirrored)
+    400046: Bone013
+    400048: Bone013(mirrored)
+    400050: Bone014
+    400052: Bone014(mirrored)
+    400054: Bone015
+    400056: Bone015(mirrored)
+    400058: Bone016
+    400060: Bone016(mirrored)
+    400062: extra_ani_listen_effect01
+    400064: extra_ani_listen_effect02
+    400066: face
+    400068: face_angry
+    400070: face_sad
+    400072: face_smile
+    400074: face_surprise
+    400076: hair_03
+    400078: //RootNode
+    400080: Henry_01_Dummy001
+    400082: legL
+    400084: legR
+    400086: pants_02
+    400088: pants_02_leg
+    400090: shoes_03
+    400092: top_04
+    400094: top_04_retail
+    2100000: color_texture
+    2300000: bass_guitar
+    2300002: extra_ani_listen_effect01
+    2300004: extra_ani_listen_effect02
+    2300006: face_angry
+    2300008: face_sad
+    2300010: face_smile
+    2300012: face_surprise
+    2300014: hair_03
+    3300000: bass_guitar
+    3300002: extra_ani_listen_effect01
+    3300004: extra_ani_listen_effect02
+    3300006: face_angry
+    3300008: face_sad
+    3300010: face_smile
+    3300012: face_surprise
+    3300014: hair_03
+    4300000: face_smile
+    4300002: face_sad
+    4300004: face
+    4300006: extra_ani_listen_effect01
+    4300008: extra_ani_listen_effect02
+    4300010: hair_03
+    4300012: bass_guitar
+    4300014: face_angry
+    4300016: body
+    4300018: armR
+    4300020: armL
+    4300022: legL
+    4300024: legR
+    4300026: face_surprise
+    4300028: pants_02
+    4300030: pants_02_leg
+    4300032: shoes_03
+    4300034: top_04
+    4300036: top_04_retail
+    7400000: Henry_walk
+    7400002: Henry_play_ready
+    7400004: Henry_play
+    7400006: Henry_select
+    9500000: //RootNode
+    13700000: armL
+    13700002: armR
+    13700004: body
+    13700006: face
+    13700008: legL
+    13700010: legR
+    13700012: pants_02
+    13700014: pants_02_leg
+    13700016: shoes_03
+    13700018: top_04
+    13700020: top_04_retail
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Henry_walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Henry_play_ready
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Henry_play
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Henry_select
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 135
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Models/Characters/Henry.FBX
+  uploadId: 392031

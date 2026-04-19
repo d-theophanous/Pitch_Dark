@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3e11c96ce61e0544497ff25bead9804b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Materials/skybox.mat
+  uploadId: 392031

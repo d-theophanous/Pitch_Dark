@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ddab6c5e2f205cc44a97bce67c619fb5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Textures/Characters_Popup.renderTexture
+  uploadId: 392031

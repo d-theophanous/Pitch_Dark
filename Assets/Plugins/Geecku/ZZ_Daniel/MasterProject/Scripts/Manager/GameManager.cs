@@ -22,6 +22,7 @@ namespace Daniel.Master
 
         private GameState State;
 
+        //- Player 1 and Player 2
         public int PlayerNumber => PlayerIdx + 1;
         public int PlayerIdx = 0;
 

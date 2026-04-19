@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d7195156cc58abe43b384c2894f1cc42
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Prefabs/Man01.prefab
+  uploadId: 392031

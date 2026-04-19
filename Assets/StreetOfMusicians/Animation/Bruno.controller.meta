@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a88df64178f11604f9c883ec0e65496b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Animation/Bruno.controller
+  uploadId: 392031

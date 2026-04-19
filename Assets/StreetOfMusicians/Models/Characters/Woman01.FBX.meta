@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: e010ef136ec45f946a2bb4b6f3a8052f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: armL
+    100002: armR
+    100004: body
+    100006: Bone001
+    100008: Bone002
+    100010: Bone003
+    100012: Bone004
+    100014: Bone005
+    100016: Bone006
+    100018: Bone006(mirrored)
+    100020: Bone007
+    100022: Bone007(mirrored)
+    100024: Bone008
+    100026: Bone008(mirrored)
+    100028: Bone009
+    100030: Bone009(mirrored)
+    100032: Bone010
+    100034: Bone010(mirrored)
+    100036: Bone011
+    100038: Bone011(mirrored)
+    100040: Bone012
+    100042: Bone012(mirrored)
+    100044: Bone013
+    100046: Bone013(mirrored)
+    100048: Bone014
+    100050: Bone014(mirrored)
+    100052: Bone015
+    100054: Bone015(mirrored)
+    100056: Bone016
+    100058: Bone016(mirrored)
+    100060: face
+    100062: hair03
+    100064: legL
+    100066: legR
+    100068: shoes_02
+    100070: top_retail_001
+    100072: top_retail_002
+    100074: top_retail_003
+    100076: womam_top_001
+    100078: womam_top_002
+    100080: womam_top_003
+    100082: //RootNode
+    100084: Woman_01_Dummy001
+    400000: armL
+    400002: armR
+    400004: body
+    400006: Bone001
+    400008: Bone002
+    400010: Bone003
+    400012: Bone004
+    400014: Bone005
+    400016: Bone006
+    400018: Bone006(mirrored)
+    400020: Bone007
+    400022: Bone007(mirrored)
+    400024: Bone008
+    400026: Bone008(mirrored)
+    400028: Bone009
+    400030: Bone009(mirrored)
+    400032: Bone010
+    400034: Bone010(mirrored)
+    400036: Bone011
+    400038: Bone011(mirrored)
+    400040: Bone012
+    400042: Bone012(mirrored)
+    400044: Bone013
+    400046: Bone013(mirrored)
+    400048: Bone014
+    400050: Bone014(mirrored)
+    400052: Bone015
+    400054: Bone015(mirrored)
+    400056: Bone016
+    400058: Bone016(mirrored)
+    400060: face
+    400062: hair03
+    400064: legL
+    400066: legR
+    400068: shoes_02
+    400070: top_retail_001
+    400072: top_retail_002
+    400074: top_retail_003
+    400076: womam_top_001
+    400078: womam_top_002
+    400080: womam_top_003
+    400082: //RootNode
+    400084: Woman_01_Dummy001
+    2100000: color_texture
+    2300000: face
+    2300002: hair03
+    3300000: face
+    3300002: hair03
+    4300000: face
+    4300002: hair03
+    4300004: body
+    4300006: armR
+    4300008: armL
+    4300010: legL
+    4300012: legR
+    4300014: womam_top_001
+    4300016: top_retail_001
+    4300018: shoes_02
+    4300020: womam_top_002
+    4300022: top_retail_002
+    4300024: womam_top_003
+    4300026: top_retail_003
+    7400000: Woman_walk
+    9500000: //RootNode
+    13700000: armL
+    13700002: armR
+    13700004: body
+    13700006: legL
+    13700008: legR
+    13700010: shoes_02
+    13700012: top_retail_001
+    13700014: top_retail_002
+    13700016: top_retail_003
+    13700018: womam_top_001
+    13700020: womam_top_002
+    13700022: womam_top_003
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Woman_walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Models/Characters/Woman01.FBX
+  uploadId: 392031

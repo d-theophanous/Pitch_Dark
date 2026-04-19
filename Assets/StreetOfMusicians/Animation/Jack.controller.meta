@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3b8f34424ff8a7e4b83903e2f7ea24e8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Animation/Jack.controller
+  uploadId: 392031

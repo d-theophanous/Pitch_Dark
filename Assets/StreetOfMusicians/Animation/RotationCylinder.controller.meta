@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 71bae6d1f92435743aa19db3db0f69b4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Animation/RotationCylinder.controller
+  uploadId: 392031

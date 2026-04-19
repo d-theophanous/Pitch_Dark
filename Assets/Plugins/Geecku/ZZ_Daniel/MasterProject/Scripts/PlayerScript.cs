@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 namespace Daniel.Master
@@ -11,7 +12,8 @@ namespace Daniel.Master
     {
         [SerializeField] private Transform Player1Spawn;
         [SerializeField] private Transform Player2Spawn;
-        public CharacterController Controller;
+        [SerializeField] private NavMeshAgent NavMeshAgent;
+
         public CinemachineCamera CinCam;
         public Interactable CurrentInteractable;
 
@@ -40,14 +42,12 @@ namespace Daniel.Master
             else
                 tmp = Player2Spawn;
 
-            Controller.enabled = false;
 
             transform.position = tmp.position;
             transform.forward = tmp.forward;
             CinCam.transform.forward = tmp.forward;
             CurRotationIdx = 1;
 
-            Controller.enabled = true;
         }
 
         public void Interact()
@@ -65,7 +65,6 @@ namespace Daniel.Master
         public void Move(Vector2 value)
         {
             Movement = value;
-            Debug.Log(Movement);
         }
         private Vector2 LookDir = new();
         public void Look(Vector2 value)
@@ -83,7 +82,7 @@ namespace Daniel.Master
 
             // Move
             Vector3 finalMove = move * PlayerSpeed;
-            Controller.Move(finalMove * Time.deltaTime);
+            NavMeshAgent.Move(finalMove * Time.deltaTime);
         }
 
         private List<Quaternion> LookDirList = new()

@@ -16,7 +16,8 @@ namespace Geecku
         {
             base.EnterInteractionRange();
             //- mode dependent here I think
-            Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 3f);
+            //- ToDo (HP)
+            //Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 3f);
         }
     }
 }

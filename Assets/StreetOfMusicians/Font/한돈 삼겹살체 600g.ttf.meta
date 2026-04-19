@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 5a99cad1b4d3a89498ccf8c0269ad396
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Handon 3gyeopsal
+  fontNames:
+  - Handon 3gyeopsal
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: "Assets/StreetOfMusicians/Font/\uD55C\uB3C8 \uC0BC\uACB9\uC0B4\uCCB4
+    600g.ttf"
+  uploadId: 392031

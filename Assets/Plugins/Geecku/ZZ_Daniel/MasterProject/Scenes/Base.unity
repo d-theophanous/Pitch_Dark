@@ -559,6 +559,7 @@ MonoBehaviour:
   - {fileID: 1274890061}
   - {fileID: 2098842254}
   <Group>k__BackingField: 3
+  Parent: {fileID: 0}
 --- !u!1 &136856121
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +793,7 @@ MonoBehaviour:
   - {fileID: 1848827299}
   - {fileID: 1359342417}
   <Group>k__BackingField: 0
+  Parent: {fileID: 0}
 --- !u!4 &175965371
 Transform:
   m_ObjectHideFlags: 0
@@ -3809,6 +3811,7 @@ MonoBehaviour:
   - {fileID: 1079945646}
   - {fileID: 909636438}
   <Group>k__BackingField: 1
+  Parent: {fileID: 0}
 --- !u!1 &1356758106
 GameObject:
   m_ObjectHideFlags: 0

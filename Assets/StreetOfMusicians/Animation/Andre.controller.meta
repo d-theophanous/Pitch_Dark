@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 920357e22c722564c9c17567496cdbdf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Animation/Andre.controller
+  uploadId: 392031

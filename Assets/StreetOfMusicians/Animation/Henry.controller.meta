@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 682eda0ca7da9be4ebec682d3a78accd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 178216
+  packageName: Street of Musicians
+  packageVersion: 1.0
+  assetPath: Assets/StreetOfMusicians/Animation/Henry.controller
+  uploadId: 392031
