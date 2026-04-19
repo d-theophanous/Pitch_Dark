@@ -16,6 +16,13 @@ namespace Daniel.Master
 
         public int Ordernumber;
 
+        private void Start()
+        {
+            if (Child != null)
+            {
+                Child.Parent = Parent;
+            }
+        }
         public virtual void ToggleHighlight()
         {
             if (IsHighlighted)
@@ -36,7 +43,7 @@ namespace Daniel.Master
         {
             if (Parent != null)
             {
-                TTSManager.Instance.SwitchReadableElementGroup(Parent);
+                TTSManager.Instance.SwitchReadableElementGroup(Parent.Parent);
             }
             else
             {
@@ -49,6 +56,7 @@ namespace Daniel.Master
             //- ToDo
             Debug.Log("Reading text");
         }
+        public void SetParent(ReadableElementGroup parent) { Parent = parent; }
 
         public int CompareTo(ReadableElement other)
         {

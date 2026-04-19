@@ -8,10 +8,17 @@ namespace Daniel.Master
         [SerializeField] private List<ReadableElement> ElementList;
         [field: SerializeField] public UI_Group Group {  get; private set; }
 
+        //- this is a mess
+        public ReadableElementGroup Parent;
         private int CurElementIdx = 0;
 
-        //- vlt jedem Element mitgeben, zu welcher Group es gehört und dann alle einmal
-        //- in der Szene finden
+        private void Awake()
+        {
+            foreach (ReadableElement element in ElementList) 
+            {
+                element.SetParent(this);
+            }
+        }
         public void ActivateGroup()
         {
             ElementList.Sort();

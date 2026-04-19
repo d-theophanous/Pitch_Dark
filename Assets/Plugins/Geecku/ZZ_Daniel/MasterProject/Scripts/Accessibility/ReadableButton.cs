@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -16,17 +17,24 @@ namespace Daniel.Master
         }
         public override void Activate()
         {
+            StartCoroutine(ActivateCoroutine());
+        }
+        private IEnumerator ActivateCoroutine()
+        {
+            Button.onClick.Invoke();
+            yield return new WaitForEndOfFrame();
             if (Child != null)
             {
                 TTSManager.Instance.SwitchReadableElementGroup(Child);
             }
-            else
-            {
-                Button.onClick.Invoke();
-            }
+
         }
         protected override void OnSelect()
         {
+            if (Button == null)
+            {
+                Debug.Log("Button ist null");
+            }
             Button.OnPointerEnter(new PointerEventData(EventSystem.current));
         }
         protected override void OnDeselect()
