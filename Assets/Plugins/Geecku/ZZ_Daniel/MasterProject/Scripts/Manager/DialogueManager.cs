@@ -8,6 +8,7 @@ namespace Daniel.Master
 {
     public class DialogueManager : Singleton<DialogueManager>
     {
+        [SerializeField] private GameObject SecondPlayerCam;
         public float TextSpeed;
         private ReadableDialogue Dialogue;
 
@@ -15,6 +16,7 @@ namespace Daniel.Master
         {
             base.Awake();
             Dialogue = GlobalUIManager.Instance.GetReadableDialogue();
+            GlobalUIManager.Instance.SecondPlayerCam = SecondPlayerCam;
         }
         public void StartDialogue(DialogueData data)
         {

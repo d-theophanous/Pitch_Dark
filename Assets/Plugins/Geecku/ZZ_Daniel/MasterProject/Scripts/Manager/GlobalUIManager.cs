@@ -9,12 +9,15 @@ namespace Daniel.Master
 {
     public class GlobalUIManager : PersistantDSingleton<GlobalUIManager>
     {
+        [Header ("Camera Stuff")]
         [SerializeField] private Camera UICamera;
         [SerializeField] private Camera MagCamera;
+        [SerializeField] private RenderTexture PlayerCam;
+        public GameObject SecondPlayerCam;
 
         [Header("Canvas References")]
         [SerializeField] private Canvas Canvas;
-        [SerializeField] private Image Background;
+        [SerializeField] private RawImage Background;
 
         [Header("UI References")]
         [SerializeField] private GameObject Settings;
@@ -80,10 +83,18 @@ namespace Daniel.Master
                 case UI_Group.DIALOGUE:
                     tmp = Dialogue;
                     if (Canvas.gameObject.activeSelf)
-                        ChangeUIBackgroundTransparency(130f);
+                    {
+                        SecondPlayerCam.gameObject.SetActive(true);
+                        Background.texture = PlayerCam;
+                        Background.color = Color.white;
+                    }
                     else
-                        ChangeUIBackgroundTransparency(255f);
-                        break;
+                    {
+                        SecondPlayerCam.gameObject.SetActive(false);
+                        Background.texture = null;
+                        Background.color = Color.black;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -141,14 +152,6 @@ namespace Daniel.Master
                 return null;
             }
             return Dialogue.GetComponentInChildren<ReadableDialogue>();
-        }
-        private void ChangeUIBackgroundTransparency(float alpha)
-        {
-            Color new_color = new Color(Background.color.r,
-                Background.color.g,
-                Background.color.b,
-                alpha/255f);
-            Background.color = new_color;
         }
         #endregion
 

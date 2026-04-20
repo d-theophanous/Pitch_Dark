@@ -45,9 +45,9 @@ namespace Daniel.Master
 
             transform.position = tmp.position;
             transform.forward = tmp.forward;
-            CinCam.transform.forward = tmp.forward;
-            CurRotationIdx = 1;
 
+            CurRotationIdx = 1;
+            CinCam.transform.rotation = LookDirList[CurRotationIdx];
         }
 
         public void Interact()
@@ -87,8 +87,8 @@ namespace Daniel.Master
 
         private List<Quaternion> LookDirList = new()
         {
-            Quaternion.Euler(0, 0, 0), Quaternion.Euler(0, 90, 0),
-            Quaternion.Euler(0, 180, 0), Quaternion.Euler(0, 270, 0)
+            Quaternion.Euler(10, 0, 0), Quaternion.Euler(10, 90, 0),
+            Quaternion.Euler(10, 180, 0), Quaternion.Euler(10, 270, 0)
         };
         private int CurRotationIdx = 0;
         private bool LookWasActive = false;
