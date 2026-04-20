@@ -15,6 +15,7 @@ namespace Daniel.Master
         public bool IsFollowing = false;
 
         [SerializeField] private NavMeshAgent Agent;
+        [SerializeField] private DialogueData Dialogue;
         private float UpdateTimer;
         private Transform Player;
 
@@ -82,6 +83,7 @@ namespace Daniel.Master
         public override void ActivatePrompt()
         {
             Debug.Log("NPC interaction");
+            DialogueManager.Instance.StartDialogue(Dialogue);
             ToggleFollowing();
         }
         public void StartPlay()

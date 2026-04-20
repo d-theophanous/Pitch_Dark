@@ -22,7 +22,7 @@ namespace Daniel.Master
             {
                 action_map.Disable();
             }
-            PlayerInput.actions.FindActionMap("UI").Enable();
+            PlayerInput.actions.FindActionMap("UI").Enable();            
         }
 
         #region Input Triggers

@@ -11,6 +11,7 @@ namespace Daniel.Master
         [SerializeField] private ReadableElementGroup NetworkConnectGroup;
         [SerializeField] private ReadableElementGroup MainMenuGroup;
         [SerializeField] private ReadableElementGroup SettingsGeneralGroup;
+        [SerializeField] private ReadableElementGroup DialogueGroup;
 
         public ReadableElementGroup CurrentGroup;
 
@@ -30,6 +31,9 @@ namespace Daniel.Master
                     break;
                 case UI_Group.SETTINGS_GENERAL:
                     new_group = SettingsGeneralGroup;
+                    break;
+                case UI_Group.DIALOGUE:
+                    new_group = DialogueGroup;
                     break;
                 default:
                     new_group = null;

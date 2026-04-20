@@ -54,6 +54,9 @@ namespace Daniel.Master
                     break;
                 case GameState.WAITING:
                     break;
+                case GameState.DIALOGUE:
+                    DialogueManager.Instance.UpdateDialogue();
+                    break;
                 default:
                     break;
             }
@@ -63,6 +66,7 @@ namespace Daniel.Master
             AudioManager.Instance.SetGenre(Genre);
             AudioManager.Instance.SetInstrumentCount(InstrumentCount);
         }
+        public void SetGameState(GameState state) { State = state; }
 
         private void SwitchSceneToFirstInList()
         {
@@ -282,6 +286,6 @@ namespace Daniel.Master
     }
     public enum GameState
     {
-        PLAYING, CONNECT, WAITING
+        PLAYING, CONNECT, WAITING, DIALOGUE
     }
 }

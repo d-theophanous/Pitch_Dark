@@ -1,5 +1,6 @@
 using Geecku.GlobalMangers;
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,11 +12,15 @@ namespace Daniel.Master
         [SerializeField] private Camera UICamera;
         [SerializeField] private Camera MagCamera;
 
+        [Header("Canvas References")]
         [SerializeField] private Canvas Canvas;
+        [SerializeField] private Image Background;
 
+        [Header("UI References")]
         [SerializeField] private GameObject Settings;
         [SerializeField] private GameObject Networking;
         [SerializeField] private GameObject Gate_Net;
+        [SerializeField] private GameObject Dialogue;
 
         [Header("Settings References")]
         [SerializeField] private GameObject Accessibility_Settings;
@@ -42,6 +47,7 @@ namespace Daniel.Master
         }
         public void ToggleUI(UI_Group ui)
         {
+            //- ToDo wenn man z.B: im Dialog ist und dann zu settings switch regeln
             Canvas.gameObject.SetActive(!Canvas.gameObject.activeSelf);
 
             //- switch action maps
@@ -71,12 +77,20 @@ namespace Daniel.Master
                 case UI_Group.NETWORK_GATE:
                     tmp = Gate_Net;
                     break;
+                case UI_Group.DIALOGUE:
+                    tmp = Dialogue;
+                    if (Canvas.gameObject.activeSelf)
+                        ChangeUIBackgroundTransparency(130f);
+                    else
+                        ChangeUIBackgroundTransparency(255f);
+                        break;
                 default:
                     break;
             }
             tmp.SetActive(!tmp.gameObject.activeSelf);
             StartCoroutine(ToggleReadableElementGroup(ui));
         }
+
         #region Settings
         private GameObject CurSettings;
         public void SetSettings(Settings settings)
@@ -117,6 +131,27 @@ namespace Daniel.Master
         public void SetControls() { SetSettings(Master.Settings.CONTROLS); }
         public void SetLanguage() { SetSettings(Master.Settings.LANGUAGE); }
         #endregion
+
+        #region Dialogue
+        public ReadableDialogue GetReadableDialogue()
+        {
+            if (Dialogue == null)
+            {
+                Debug.LogWarning("Dialogue is null");
+                return null;
+            }
+            return Dialogue.GetComponentInChildren<ReadableDialogue>();
+        }
+        private void ChangeUIBackgroundTransparency(float alpha)
+        {
+            Color new_color = new Color(Background.color.r,
+                Background.color.g,
+                Background.color.b,
+                alpha/255f);
+            Background.color = new_color;
+        }
+        #endregion
+
         private IEnumerator ToggleReadableElementGroup(UI_Group ui)
         {
             yield return new WaitForEndOfFrame();
@@ -129,7 +164,8 @@ namespace Daniel.Master
     //- this is not very efficient but oh well...
     public enum UI_Group
     {
-        LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL, NETWORK_GATE
+        LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL, NETWORK_GATE,
+        DIALOGUE
     }
     public enum Settings
     {

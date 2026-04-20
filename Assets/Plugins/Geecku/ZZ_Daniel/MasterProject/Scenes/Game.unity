@@ -5076,6 +5076,7 @@ MonoBehaviour:
   UpdateRate: 0.1
   IsFollowing: 0
   Agent: {fileID: 344319279}
+  Dialogue: {fileID: 11400000, guid: 1b3955a20ea5418428399f8cd1cdff3f, type: 2}
 --- !u!1 &698094637 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1966115925928858, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
@@ -14070,6 +14071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647985906}
   - component: {fileID: 1647985905}
+  - component: {fileID: 1647985907}
   m_Layer: 0
   m_Name: Other Managers
   m_TagString: Untagged
@@ -14113,6 +14115,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1647985907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647985904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4482bad2bb88c449b032abe11abc9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueManager
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  TextSpeed: 0.1
 --- !u!1001 &1651490320
 PrefabInstance:
   m_ObjectHideFlags: 0
