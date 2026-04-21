@@ -41,7 +41,7 @@ namespace Daniel.Master
         protected override void Start()
         {
             base.Start();
-            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.LANGUAGE_SELECTION);
         }
 
         protected override void Update()
@@ -68,7 +68,15 @@ namespace Daniel.Master
             AudioManager.Instance.SetInstrumentCount(InstrumentCount);
         }
         public void SetGameState(GameState state) { State = state; }
-
+        public void SetGameLanguage(int language) 
+        { 
+            Language = (Language)language;
+        }
+        public void SetInitialLanguage(int language)
+        {
+            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT, false);
+            SetGameLanguage(language);
+        }
         private void SwitchSceneToFirstInList()
         {
             if (SceneList.Count == 0 || SceneList[0] == "") return;

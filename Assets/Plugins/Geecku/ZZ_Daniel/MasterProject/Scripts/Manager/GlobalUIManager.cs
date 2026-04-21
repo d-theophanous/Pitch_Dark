@@ -24,6 +24,7 @@ namespace Daniel.Master
         [SerializeField] private GameObject Networking;
         [SerializeField] private GameObject Gate_Net;
         [SerializeField] private GameObject Dialogue;
+        [SerializeField] private GameObject Language_Selection;
 
         [Header("Settings References")]
         [SerializeField] private GameObject Accessibility_Settings;
@@ -48,21 +49,24 @@ namespace Daniel.Master
         {
             ChangeMainCamera(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>());
         }
-        public void ToggleUI(UI_Group ui)
+        public void ToggleUI(UI_Group ui, bool toggle_whole_canvas = true)
         {
-            //- ToDo wenn man z.B: im Dialog ist und dann zu settings switch regeln
-            Canvas.gameObject.SetActive(!Canvas.gameObject.activeSelf);
+            //- Either settings are newly opened or should completely be closed
+            if (toggle_whole_canvas)
+            {
+                Canvas.gameObject.SetActive(!Canvas.gameObject.activeSelf);
 
-            //- switch action maps
-            if (Canvas.gameObject.activeSelf)
-            {
-                ChangeMainCamera(UICamera);
-                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("UI");
-            }
-            else
-            {
-                ChangeMainCamera();
-                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
+                //- switch action maps
+                if (Canvas.gameObject.activeSelf)
+                {
+                    ChangeMainCamera(UICamera);
+                    InputManager.Instance.PlayerInput.SwitchCurrentActionMap("UI");
+                }
+                else
+                {
+                    ChangeMainCamera();
+                    InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
+                }
             }
             GameObject tmp = null;
             switch (ui)
@@ -73,6 +77,7 @@ namespace Daniel.Master
                     tmp = Settings;
                     break;
                 case UI_Group.LANGUAGE_SELECTION:
+                    tmp = Language_Selection;
                     break;
                 case UI_Group.NETWORK_CONNECT:
                     tmp = Networking;
