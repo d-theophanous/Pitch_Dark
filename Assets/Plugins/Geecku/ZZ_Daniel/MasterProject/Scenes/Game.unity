@@ -5124,7 +5124,7 @@ MonoBehaviour:
   UpdateRate: 0.1
   IsFollowing: 0
   Agent: {fileID: 344319279}
-  Dialogue: {fileID: 11400000, guid: 1b3955a20ea5418428399f8cd1cdff3f, type: 2}
+  DialogueList: []
 --- !u!1 &698094637 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1966115925928858, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}

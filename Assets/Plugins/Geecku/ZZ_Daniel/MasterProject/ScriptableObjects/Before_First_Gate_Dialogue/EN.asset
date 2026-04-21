@@ -13,5 +13,16 @@ MonoBehaviour:
   m_Name: EN
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
   Language: EN
-  Lines: []
-  Audio: []
+  Lines:
+  - Hey you, I know you, you were with the labyrinth expedition earlier
+  - Good to see that you are not hurt.
+  - After the earthquake that happened earlier I lost everyone from the group.
+  - Me and my band just wanted to go on a fun adventure but now they are lost somewhere
+    in this labyrinth
+  - I hope they are alright...
+  Audio:
+  - {fileID: 8300000, guid: e8d7b6db195bf324db25bd36ad313aa6, type: 3}
+  - {fileID: 8300000, guid: e8d7b6db195bf324db25bd36ad313aa6, type: 3}
+  - {fileID: 8300000, guid: e8d7b6db195bf324db25bd36ad313aa6, type: 3}
+  - {fileID: 8300000, guid: e8d7b6db195bf324db25bd36ad313aa6, type: 3}
+  - {fileID: 8300000, guid: e8d7b6db195bf324db25bd36ad313aa6, type: 3}
