@@ -18,7 +18,7 @@ namespace Daniel.Master
             Dialogue = GlobalUIManager.Instance.GetReadableDialogue();
             GlobalUIManager.Instance.SecondPlayerCam = SecondPlayerCam;
         }
-        public void StartDialogue(DialogueData data)
+        public void StartDialogue(DialogueContainer data)
         {
             Dialogue.SetUp(data, TextSpeed);
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);

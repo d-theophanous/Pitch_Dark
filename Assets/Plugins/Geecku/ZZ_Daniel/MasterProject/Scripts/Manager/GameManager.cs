@@ -21,6 +21,7 @@ namespace Daniel.Master
         [HideInInspector] public PlayerScript Player;
 
         private GameState State;
+        public static Language Language;
 
         //- Player 1 and Player 2
         public int PlayerNumber => PlayerIdx + 1;
@@ -287,5 +288,9 @@ namespace Daniel.Master
     public enum GameState
     {
         PLAYING, CONNECT, WAITING, DIALOGUE
+    }
+    public enum Language
+    {
+        ENGLISH, GERMAN, DUTCH
     }
 }

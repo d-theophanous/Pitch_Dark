@@ -11,11 +11,15 @@ namespace Daniel.Master
         private float TextSpeed;
         private int index;
         private bool ContinuePressed;
+        private DialogueContainer CurDialog;
+        private DialogueData CurDialogData;
 
-        public void SetUp(DialogueData data, float text_speed)
+        public void SetUp(DialogueContainer data, float text_speed)
         {
+            CurDialog = data;
+            CurDialogData = CurDialog.DialogueList[(int)GameManager.Language];
             Text.text = String.Empty;
-            Lines = data.lines.ToArray();
+            Lines = CurDialogData.Lines.ToArray();
             TextSpeed = text_speed;
         }
         public override void Activate()
@@ -55,6 +59,7 @@ namespace Daniel.Master
         private IEnumerator TypeLine()
         {
             yield return new WaitForEndOfFrame();
+            //CurDialogData.Audio[index]. ToDo
             foreach (char c in Lines[index].ToCharArray())
             {
                 Text.text += c;

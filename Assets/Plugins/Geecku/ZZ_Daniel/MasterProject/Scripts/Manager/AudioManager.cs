@@ -129,4 +129,8 @@ namespace Daniel.Master
     {
         LOW_C, LOW_E, LOW_G, HIGH_C
     }
+    public enum Message_Tone
+    {
+        CONTINUE
+    }
 }

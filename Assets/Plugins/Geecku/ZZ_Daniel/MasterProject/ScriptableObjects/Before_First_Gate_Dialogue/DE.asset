@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
-  m_Name: DE_DialogueData
+  m_Name: DE
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
-  language: DE
-  lines:
-  - Hallo, ich freue mich sehr dich zu sehen, ich bin schon seit langem in diesem
-    Labyrinth verschollen
+  Language: EN
+  Lines: []
+  Audio: []

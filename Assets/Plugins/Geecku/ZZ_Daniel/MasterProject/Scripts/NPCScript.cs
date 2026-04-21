@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,7 +17,7 @@ namespace Daniel.Master
         public bool IsFollowing = false;
 
         [SerializeField] private NavMeshAgent Agent;
-        [SerializeField] private DialogueData Dialogue;
+        [SerializeField] private List<DialogueContainer> DialogueList;
         private float UpdateTimer;
         private Transform Player;
 
@@ -83,7 +85,8 @@ namespace Daniel.Master
         public override void ActivatePrompt()
         {
             Debug.Log("NPC interaction");
-            DialogueManager.Instance.StartDialogue(Dialogue);
+            DialogueManager.Instance.StartDialogue(
+                DialogueList[0]);
             ToggleFollowing();
         }
         public void StartPlay()

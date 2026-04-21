@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
-  m_Name: EN_DialogueData
+  m_Name: EN
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
-  language: EN
-  lines:
-  - Hello, I'm so glad to see you, I've been lost in this labyrinth for a long time.
+  Language: EN
+  Lines: []
+  Audio: []
