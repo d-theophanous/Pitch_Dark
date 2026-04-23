@@ -114,7 +114,8 @@ namespace Geecku.DefaultNetworking
         /// </summary>
         [ReadOnly]  //- only readonly to say 'dont change the ports!'
         [BoxGroup("Connection Info")]
-        public ushort TCP_Port = 50112;
+        //50112
+        public ushort TCP_Port = 64000;
         /// <summary>
         /// The default UDP port to use when <see cref="ProtocolTypes.Double"/> is selected.
         /// <br/><br/>
@@ -122,7 +123,8 @@ namespace Geecku.DefaultNetworking
         /// </summary>
         [ReadOnly]  //- only readonly to say 'dont change the ports!'
         [BoxGroup("Connection Info")]
-        public ushort UDP_Port = 50113;
+        //50113
+        public ushort UDP_Port = 64000;
         [ReadOnly, BoxGroup("Connection Info")]
         public ushort MaxPlayers = 16;
         #endregion

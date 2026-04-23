@@ -37,16 +37,20 @@ namespace Daniel.Master
         private void SpawnPlayer()
         {
             Transform tmp;
+            //- CurRotationIdx is very unflexible this way
             if (GameManager.Instance.PlayerNumber == 1)
+            {
                 tmp = Player1Spawn;
+                CurRotationIdx = 1;
+            }
             else
+            {
                 tmp = Player2Spawn;
-
+                CurRotationIdx = 3;
+            }
 
             transform.position = tmp.position;
             transform.forward = tmp.forward;
-
-            CurRotationIdx = 1;
             CinCam.transform.rotation = LookDirList[CurRotationIdx];
         }
 
