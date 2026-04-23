@@ -100,12 +100,12 @@ namespace Geecku.DefaultNetworking
         #endregion
 
         #region Inspector
-        [BoxGroup("Connection Info")]
+        [ShowInInspector, BoxGroup("Connection Info")]
         public ProtocolTypes ProtocolType = ProtocolTypes.Single;
         /// <summary>
         /// The default IP-address to connect when <see cref="AutoConnectClient"/> is enabled.
         /// </summary>
-        [BoxGroup("Connection Info")]
+        [ShowInInspector, BoxGroup("Connection Info")]
         public string IP_Address = "127.0.0.1";
         /// <summary>
         /// The default TCP port to use.
@@ -113,20 +113,20 @@ namespace Geecku.DefaultNetworking
         /// Common free ports: 49152 – 65535
         /// </summary>
         [ReadOnly]  //- only readonly to say 'dont change the ports!'
-        [BoxGroup("Connection Info")]
+        [ShowInInspector, BoxGroup("Connection Info")]
         //50112
-        public ushort TCP_Port = 64000;
+        public ushort TCP_Port => 64000;
         /// <summary>
         /// The default UDP port to use when <see cref="ProtocolTypes.Double"/> is selected.
         /// <br/><br/>
         /// Common free ports: 49152 – 65535
         /// </summary>
         [ReadOnly]  //- only readonly to say 'dont change the ports!'
-        [BoxGroup("Connection Info")]
+        [ShowInInspector, BoxGroup("Connection Info")]
         //50113
-        public ushort UDP_Port = 64000;
-        [ReadOnly, BoxGroup("Connection Info")]
-        public ushort MaxPlayers = 16;
+        public ushort UDP_Port => 64001;
+        [ShowInInspector, ReadOnly, BoxGroup("Connection Info")]
+        public ushort MaxPlayers => 16;
         #endregion
 
         #region Network Values
