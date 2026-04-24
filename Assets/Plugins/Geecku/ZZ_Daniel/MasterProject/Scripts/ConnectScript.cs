@@ -57,6 +57,12 @@ namespace Daniel.Master
             ConnectInfo.gameObject.SetActive(true);
             UpdatePlayers();
         }
+        public void ConnectionFailed()
+        {
+            HostButton.interactable = true;
+            ConnectButton.interactable = true;
+            IPInput.interactable = true;
+        }
         private string GetIPAddress()
         {
             return IPInput.text;

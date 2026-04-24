@@ -16,6 +16,7 @@ namespace Daniel.Master
     public class GameManager : PersistantDSingleton<GameManager>
     {
         [SerializeField] List<string> SceneList;
+        [SerializeField] ConnectScript ConnectScript;
 
         //[Header("References")]
         [HideInInspector] public PlayerScript Player;
@@ -42,6 +43,8 @@ namespace Daniel.Master
         {
             base.Start();
             GlobalUIManager.Instance.ToggleUI(UI_Group.LANGUAGE_SELECTION);
+
+            SubscribeEvents();
         }
 
         protected override void Update()
@@ -153,9 +156,6 @@ namespace Daniel.Master
             }
             PlayerIdx = PlayerCountWaiting - 1;
 
-            NetworkManager.Client.OnClientConnected += Client_OnClientConnected;
-            NetworkManager.Client.OnClientDisconnected += Client_OnClientDisconnected;
-
             WaitingForPlayer();
         }
 
@@ -218,10 +218,17 @@ namespace Daniel.Master
 
         #region Events
 
+        private void SubscribeEvents()
+        {
+            NetworkManager.Client.OnClientConnected += Client_OnClientConnected;
+            NetworkManager.Client.OnClientDisconnected += Client_OnClientDisconnected;
+            NetworkManager.Client.OnFailedConnection += Client_OnFailedConnection;
+        }
         private void UnsubscribeEvents()
         {
             NetworkManager.Client.OnClientConnected -= Client_OnClientConnected;
             NetworkManager.Client.OnClientDisconnected -= Client_OnClientDisconnected;
+            NetworkManager.Client.OnFailedConnection -= Client_OnFailedConnection;
         }
 
         protected override void OnDestroy()
@@ -243,14 +250,20 @@ namespace Daniel.Master
             else
                 HostDisconnected();
         }
+        private void Client_OnFailedConnection(object sender, ConnectionFailedEventArgs e)
+        {
+            //-ToDo different cases handlen
+            Debug.Log("in asdjf");
+            Quit();
+        }
         #endregion
 
         #region Quit
         //ToDo
         public void Quit()
         {
-            //- ToDo
-            //Engine.SwitchScene("Connect");
+            Content.transform.parent.gameObject.SetActive(false);
+            ConnectScript.ConnectionFailed();
         }
         public void QuitInGame()
         {
