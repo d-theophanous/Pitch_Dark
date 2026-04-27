@@ -45,6 +45,7 @@ namespace Daniel.Master
                 Vector3 new_pos = new Vector3(world_pos.x, world_pos.y, 
                     MagGlasses.gameObject.transform.position.z);
                 MagGlasses.gameObject.transform.localPosition = new_pos;
+                MagGlasses.gameObject.transform.SetAsLastSibling();
             }  
         }
         private void UpdatePositions()
