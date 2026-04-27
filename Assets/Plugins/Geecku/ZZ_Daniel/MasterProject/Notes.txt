@@ -1,0 +1,4 @@
+
+Namenskonvetion für Dialoge:
+
+"sprache_dialogNummer_line" Bsp: "en_1_10" (Zehnte line in Dialog 1 auf English)

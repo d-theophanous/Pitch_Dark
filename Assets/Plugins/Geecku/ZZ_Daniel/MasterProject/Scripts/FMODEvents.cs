@@ -11,5 +11,7 @@ namespace Daniel.Master
 
         [field: Header("Improvisation Track")]
         [field: SerializeField] public EventReference ImprovisationTrack { get; private set; }
+        [field: Header("Dialogue")]
+        [field: SerializeField] public EventReference Dialogue { get; private set; }
     }
 }
