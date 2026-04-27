@@ -1,14 +1,13 @@
 using Geecku.DefaultNetworking;
 using Geecku.DefaultNetworking.Common.MessageHandlers;
 using Geecku.GlobalMangers;
-using NUnit.Framework;
 using Riptide;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
 namespace Daniel.Master
@@ -44,6 +43,8 @@ namespace Daniel.Master
             base.Start();
             GlobalUIManager.Instance.ToggleUI(UI_Group.LANGUAGE_SELECTION);
 
+            SetGameLanguage((int)Language.ENGLISH);
+
             SubscribeEvents();
         }
 
@@ -74,6 +75,20 @@ namespace Daniel.Master
         public void SetGameLanguage(int language) 
         { 
             Language = (Language)language;
+            switch (Language)
+            {
+                case Language.ENGLISH:
+                    LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
+                    break;
+                case Language.DUTCH:
+                    LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
+                    break;
+                case Language.GERMAN:
+                    LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[2];
+                    break;
+                default:
+                    break;
+            }
         }
         public void SetInitialLanguage(int language)
         {

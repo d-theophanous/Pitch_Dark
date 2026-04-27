@@ -29,7 +29,7 @@ namespace Daniel.Master
         //- repeat current dialogue line instead of going back
         public override void Return()
         {
-            //- ToDo logic dass wieder von vorne angefangen wird. 
+            //- ToDo(MP) logic dass wieder von vorne angefangen wird. 
         }
         public void UpdateReadableDialogue()
         {
@@ -38,7 +38,6 @@ namespace Daniel.Master
                 if (Text.text == Lines[index])
                 {
                     //- optional ToDo: nicer System
-                    //- Dialogue Index fixen
                     AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index);
                     NextLine();
                 }

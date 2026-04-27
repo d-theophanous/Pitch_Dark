@@ -19,11 +19,11 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 642347589353472
-    m_Localized: "Organiseer\t"
+    m_Localized: Organiseer
     m_Metadata:
       m_Items: []
   - m_Id: 677412906123264
-    m_Localized: "Verbinden\t"
+    m_Localized: Verbinden
     m_Metadata:
       m_Items: []
   - m_Id: 677417935093760
