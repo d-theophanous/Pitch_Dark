@@ -120,15 +120,6 @@ namespace Daniel.Master
             State = GameState.PLAYING;
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
         }
-        public void StartPuzzle()
-        {
-            if (PuzzleManager.Instance == null)
-            {
-                Debug.LogWarning("Puzzle Manager is null");
-                return;
-            }
-            PuzzleManager.Instance.StartPuzzle();
-        }
         public void QuitWaitingForPuzzle()
         {
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
