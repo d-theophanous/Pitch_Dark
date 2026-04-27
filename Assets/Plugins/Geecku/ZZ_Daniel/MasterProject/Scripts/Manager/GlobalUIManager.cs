@@ -18,7 +18,7 @@ namespace Daniel.Master
 
         [Header("Canvas References")]
         [SerializeField] private Canvas Canvas;
-        [SerializeField] private RawImage Background;
+        [SerializeField] private RawImage DialogueBackground;
 
         [Header("UI References")]
         [SerializeField] private GameObject Settings;
@@ -76,14 +76,14 @@ namespace Daniel.Master
                     if (!CurUIList.Contains(ui))
                     {
                         SecondPlayerCam.gameObject.SetActive(true);
-                        Background.texture = PlayerCam;
-                        Background.color = Color.white;
+                        DialogueBackground.texture = PlayerCam;
+                        DialogueBackground.color = Color.white;
                     }
                     else
                     {
                         SecondPlayerCam.gameObject.SetActive(false);
-                        Background.texture = null;
-                        Background.color = Color.black;
+                        DialogueBackground.texture = null;
+                        DialogueBackground.color = Color.black;
                     }
                     break;
                 default:

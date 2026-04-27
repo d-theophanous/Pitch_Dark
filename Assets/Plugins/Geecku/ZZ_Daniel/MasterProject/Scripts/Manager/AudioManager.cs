@@ -65,10 +65,7 @@ namespace Daniel.Master
         }
         public void PlayDialogue(string key)
         {
-            if (currentDialogueInstance.isValid())
-            {
-                currentDialogueInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            }
+            StopDialogue();
 
             currentDialogueInstance.setParameterByNameWithLabel("Tone", "Continue");
 
@@ -83,7 +80,15 @@ namespace Daniel.Master
         {
             string key = Helper.GetLanguageString() + "_" + dialogue 
                 + "_" + line;
+            Debug.Log(key);
             PlayDialogue(key);
+        }
+        public void StopDialogue()
+        {
+            if (currentDialogueInstance.isValid())
+            {
+                currentDialogueInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            }
         }
 
         #endregion

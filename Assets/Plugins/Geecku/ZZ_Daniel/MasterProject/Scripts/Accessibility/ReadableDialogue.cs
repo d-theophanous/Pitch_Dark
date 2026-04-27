@@ -37,12 +37,18 @@ namespace Daniel.Master
             {
                 if (Text.text == Lines[index])
                 {
+                    //- optional ToDo: nicer System
+                    //- Dialogue Index fixen
+                    AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index);
                     NextLine();
                 }
                 else
                 {
                     StopAllCoroutines();
-                    Text.text = Lines[index];
+                    //Text.text = Lines[index];
+
+                    AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index);
+                    NextLine();
                 }
                 ContinuePressed = false;
             }
@@ -54,6 +60,7 @@ namespace Daniel.Master
         public void StartDialogue()
         {
             index = 0;
+            AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index);
             StartCoroutine(TypeLine());
         }
         private IEnumerator TypeLine()

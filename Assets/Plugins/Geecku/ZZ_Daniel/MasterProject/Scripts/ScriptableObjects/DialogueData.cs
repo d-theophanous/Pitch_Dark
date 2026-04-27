@@ -21,14 +21,13 @@ namespace Daniel.Master
         order     = 0)]
     public class DialogueData : ScriptableObject
     {
+        public int DialogueNumber;
+
         [Tooltip("Language identifier for this asset, e.g. EN, NL, DE.")]
         public string Language = "EN";
 
         [Tooltip("All dialogue lines for this language.")]
         public List<string> Lines = new();
-
-        [Tooltip("All dialogue lines for this language.")]
-        public List<AudioClip> Audio = new();
 
     }
 }

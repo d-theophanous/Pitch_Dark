@@ -28,6 +28,12 @@ namespace Daniel.Master
         //- (LP) ToDo GameManager Update steuern lassen?
         void Update()
         {
+            UpdateMovement();
+        }
+
+        #region Movement
+        private void UpdateMovement()
+        {
             if (!IsFollowing || Player == null)
             {
                 Agent.ResetPath();
@@ -82,9 +88,12 @@ namespace Daniel.Master
         {
             SetFollowing(!IsFollowing);
         }
+        #endregion
+
         public override void ActivatePrompt()
         {
             Debug.Log("NPC interaction");
+            //- nur zum Testen?
             DialogueManager.Instance.StartDialogue(
                 DialogueList[0]);
             ToggleFollowing();
