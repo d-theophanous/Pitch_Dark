@@ -12,6 +12,7 @@ namespace Daniel.Master
         [SerializeField] private ReadableElementGroup MainMenuGroup;
         [SerializeField] private ReadableElementGroup SettingsGeneralGroup;
         [SerializeField] private ReadableElementGroup DialogueGroup;
+        [SerializeField] private ReadableElementGroup NetworkGate;
 
         public ReadableElementGroup CurrentGroup;
 
@@ -35,9 +36,12 @@ namespace Daniel.Master
                 case UI_Group.DIALOGUE:
                     new_group = DialogueGroup;
                     break;
+                case UI_Group.NETWORK_GATE:
+                    new_group = NetworkGate;
+                    break;
                 default:
                     new_group = null;
-                    Debug.LogError(group + "doesnt have a switch case yet.");
+                    Debug.LogError(group + " doesnt have a switch case yet.");
                     break;
             }
             if (CurrentGroup != null)

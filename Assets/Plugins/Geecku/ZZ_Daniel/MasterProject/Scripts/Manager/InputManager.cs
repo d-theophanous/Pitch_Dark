@@ -123,6 +123,11 @@ namespace Daniel.Master
         }
         #endregion
 
+        public void OnDebug()
+        {
+            GameManager.Instance.DebugCurInteractable();
+        }
+
         #endregion
     }
 }

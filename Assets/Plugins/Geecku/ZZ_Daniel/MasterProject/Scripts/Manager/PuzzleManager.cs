@@ -12,9 +12,20 @@ namespace Daniel.Master
         //- Tür öffnen logic einbauen
         //- collider nach durchgehen einbauen
 
-        public void StartPuzzle(Transform camera_position)
+        private int PuzzleCount;
+        private Camera CurCamera;
+        [SerializeField] private RenderTexture Texture;
+
+        public void StartPuzzle()
         {
             Debug.Log("puzzle started");
+            CurCamera.gameObject.SetActive(true);
+            
+            //- weitermachen
+            //- global ui manager puzzle geben 
+            //- readable groups aufsetzen
+            //- 
         }
+        public void SetCameraTransform(Camera camera) { CurCamera = camera; }
     }
 }

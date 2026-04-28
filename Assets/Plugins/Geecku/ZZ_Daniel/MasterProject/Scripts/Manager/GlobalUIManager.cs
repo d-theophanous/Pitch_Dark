@@ -38,7 +38,8 @@ namespace Daniel.Master
 
         //- for debugging public
         public Camera CurCamera;
- 
+
+        #region Add and Close UI
         public void ChangeMainCamera(Camera new_main)
         {
             if (new_main == null) return;
@@ -165,6 +166,8 @@ namespace Daniel.Master
             }
             return tmp;
         }
+
+        #endregion
 
         #region Settings
         private GameObject CurSettings;

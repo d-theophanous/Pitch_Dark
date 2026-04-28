@@ -31,6 +31,9 @@ namespace Daniel.Master
         public Genre Genre;
         public int InstrumentCount;
 
+        //- Debug
+        public Interactable DebugInteractable;
+
         protected override void Awake()
         {
             base.Awake();
@@ -311,6 +314,16 @@ namespace Daniel.Master
 
         #endregion
 
+        #region Debug
+        public void DebugCurInteractable()
+        {
+            DebugInteractable.ActivatePrompt();
+        }
+        public void DebugSkipGate()
+        {
+            PuzzleManager.Instance.StartPuzzle();
+        }
+        #endregion
     }
     public enum GameState
     {
