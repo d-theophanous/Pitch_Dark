@@ -13,6 +13,7 @@ namespace Daniel.Master
         [SerializeField] private ReadableElementGroup SettingsGeneralGroup;
         [SerializeField] private ReadableElementGroup DialogueGroup;
         [SerializeField] private ReadableElementGroup NetworkGate;
+        [SerializeField] private ReadableElementGroup Puzzle;
 
         public ReadableElementGroup CurrentGroup;
 
@@ -39,6 +40,10 @@ namespace Daniel.Master
                 case UI_Group.NETWORK_GATE:
                     new_group = NetworkGate;
                     break;
+                case UI_Group.PUZZLE:
+                    Debug.Log("puzzle:" + Puzzle);
+                    new_group = Puzzle;
+                    break;
                 default:
                     new_group = null;
                     Debug.LogError(group + " doesnt have a switch case yet.");
@@ -62,6 +67,7 @@ namespace Daniel.Master
             CurrentGroup.ActivateGroup();
             Debug.Log(CurrentGroup);
         }
+        public void SetPuzzleGroup(ReadableElementGroup group) { Puzzle = group; }
 
         #region Element Interaction
         public void ActivateCurElement()

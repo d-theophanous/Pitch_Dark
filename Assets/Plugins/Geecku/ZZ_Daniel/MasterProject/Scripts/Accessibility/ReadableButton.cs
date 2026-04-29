@@ -8,12 +8,12 @@ namespace Daniel.Master
     [RequireComponent (typeof (Button))]
     public class ReadableButton : ReadableElement
     {
-        private Button Button;
+        [SerializeField] private Button Button;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         private void Awake()
         {
             Element = UI_Element.BUTTON;
-            Button = GetComponent<Button>();
+            //Button = GetComponent<Button>();
         }
         public override void Activate()
         {

@@ -860,7 +860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &201302637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1276,6 +1276,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Solve
       objectReference: {fileID: 0}
+    - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
+      propertyPath: Ordernumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5710808220582153002, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_Name
       value: ReadableButton
@@ -1322,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6329030984631959873, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1231.7998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6329030984631959873, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1370,6 +1374,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6329030984631959873, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
   m_PrefabInstance: {fileID: 370374670}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &370374672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
+  m_PrefabInstance: {fileID: 370374670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098eaa10b6a7aa34cbc7a6236603c0b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.ReadableButton
 --- !u!1 &394986898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,6 +1557,7 @@ Transform:
   - {fileID: 119161217}
   - {fileID: 1238102577}
   - {fileID: 1771505165}
+  - {fileID: 1216955464}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &431464744
@@ -2553,6 +2569,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10db27538397beb469aca32f7283630a, type: 3}
+--- !u!1 &708084826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708084827}
+  - component: {fileID: 708084828}
+  m_Layer: 0
+  m_Name: Puzzle 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &708084827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708084826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1216955464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &708084828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708084826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d5c3994e905e84a8f51eef93a66b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.ReadableElementGroup
+  ElementList:
+  - {fileID: 1160397357}
+  - {fileID: 370374672}
+  <Group>k__BackingField: 6
+  Parent: {fileID: 0}
 --- !u!1001 &751864382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4037,7 +4102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4831913195350388322, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1231.7998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4831913195350388322, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4085,6 +4150,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4831913195350388322, guid: 10db27538397beb469aca32f7283630a, type: 3}
   m_PrefabInstance: {fileID: 1160397355}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1160397357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
+  m_PrefabInstance: {fileID: 1160397355}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efa4ab0aec176f49ab64a7820f74589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.ReadableLabel
 --- !u!1 &1187217994
 GameObject:
   m_ObjectHideFlags: 0
@@ -4129,6 +4205,7 @@ MonoBehaviour:
   SettingsGeneralGroup: {fileID: 119161218}
   DialogueGroup: {fileID: 1238102578}
   NetworkGate: {fileID: 1771505166}
+  Puzzle: {fileID: 0}
   CurrentGroup: {fileID: 0}
 --- !u!4 &1187217996
 Transform:
@@ -4182,6 +4259,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1216955463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1216955464}
+  m_Layer: 0
+  m_Name: Puzzles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216955464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216955463}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 708084827}
+  m_Father: {fileID: 420158770}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219304218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4481,6 +4590,7 @@ MonoBehaviour:
   Gate_Net: {fileID: 2121888492}
   Dialogue: {fileID: 2035178283}
   Language_Selection: {fileID: 1205725507}
+  Puzzle: {fileID: 148427522}
   Accessibility_Settings: {fileID: 508447543}
   Audio_Settings: {fileID: 1568206703}
   Genre_Settings: {fileID: 245704727}

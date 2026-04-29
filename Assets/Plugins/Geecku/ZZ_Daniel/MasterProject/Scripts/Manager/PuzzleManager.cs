@@ -1,4 +1,5 @@
 using Geecku.GlobalMangers;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Daniel.Master
@@ -12,19 +13,28 @@ namespace Daniel.Master
         //- Tür öffnen logic einbauen
         //- collider nach durchgehen einbauen
 
-        private int PuzzleCount;
+        [SerializeField] private List<PuzzleData> PuzzleList;
+
+        private PuzzleData CurPuzzle => PuzzleList[PuzzleCount];
+        private int PuzzleCount = 0;
         private Camera CurCamera;
-        [SerializeField] private RenderTexture Texture;
 
         public void StartPuzzle()
         {
-            Debug.Log("puzzle started");
+            Debug.Log("IN Start Puzzle: " + CurPuzzle);
+            Debug.Log("IN Start Puzzle1: " + CurPuzzle.Group);
+            Debug.Log("IN Start Puzzle2: " + CurPuzzle.UI);
             CurCamera.gameObject.SetActive(true);
-            
-            //- weitermachen
-            //- global ui manager puzzle geben 
-            //- readable groups aufsetzen
-            //- 
+
+            SetUpPuzzle();
+        }
+        private void SetUpPuzzle()
+        {
+            //- assign right group for TTSManager to open
+            TTSManager.Instance.SetPuzzleGroup(CurPuzzle.Group);
+
+            GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE, false);
+            CurPuzzle.UI.SetActive(true);            
         }
         public void SetCameraTransform(Camera camera) { CurCamera = camera; }
     }

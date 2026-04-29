@@ -16510,7 +16510,8 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  Texture: {fileID: 0}
+  PuzzleList:
+  - {fileID: 11400000, guid: 938d0d554b601604eb78e52024493cc4, type: 2}
 --- !u!4 &1905940976
 Transform:
   m_ObjectHideFlags: 0

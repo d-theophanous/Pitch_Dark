@@ -20,12 +20,14 @@ namespace Daniel.Master
         [SerializeField] private Canvas Canvas;
         [SerializeField] private RawImage DialogueBackground;
 
+        //-  mit jedem hinzufügen switch ändern: GetGameObjectFromEnum
         [Header("UI References")]
         [SerializeField] private GameObject Settings;
         [SerializeField] private GameObject Networking;
         [SerializeField] private GameObject Gate_Net;
         [SerializeField] private GameObject Dialogue;
         [SerializeField] private GameObject Language_Selection;
+        [SerializeField] private GameObject Puzzle;
 
         [Header("Settings References")]
         [SerializeField] private GameObject Accessibility_Settings;
@@ -55,40 +57,22 @@ namespace Daniel.Master
         }
         public void ToggleUI(UI_Group ui, bool is_additive = true)
         {
-            GameObject tmp = null;
-            switch (ui)
+            GameObject tmp = GetGameObjectFromEnum(ui);
+
+            if (ui == UI_Group.DIALOGUE)
             {
-                case UI_Group.MAIN_MENU:
-                    break;
-                case UI_Group.SETTINGS_GENERAL:
-                    tmp = Settings;
-                    break;
-                case UI_Group.LANGUAGE_SELECTION:
-                    tmp = Language_Selection;
-                    break;
-                case UI_Group.NETWORK_CONNECT:
-                    tmp = Networking;
-                    break;
-                case UI_Group.NETWORK_GATE:
-                    tmp = Gate_Net;
-                    break;
-                case UI_Group.DIALOGUE:
-                    tmp = Dialogue;
-                    if (!CurUIList.Contains(ui))
-                    {
-                        SecondPlayerCam.gameObject.SetActive(true);
-                        DialogueBackground.texture = PlayerCam;
-                        DialogueBackground.color = Color.white;
-                    }
-                    else
-                    {
-                        SecondPlayerCam.gameObject.SetActive(false);
-                        DialogueBackground.texture = null;
-                        DialogueBackground.color = Color.black;
-                    }
-                    break;
-                default:
-                    break;
+                if (!CurUIList.Contains(ui))
+                {
+                    SecondPlayerCam.gameObject.SetActive(true);
+                    DialogueBackground.texture = PlayerCam;
+                    DialogueBackground.color = Color.white;
+                }
+                else
+                {
+                    SecondPlayerCam.gameObject.SetActive(false);
+                    DialogueBackground.texture = null;
+                    DialogueBackground.color = Color.black;
+                }
             }
             bool is_active = tmp.gameObject.activeSelf;
             if (is_active)
@@ -160,6 +144,9 @@ namespace Daniel.Master
                     break;
                 case UI_Group.NONE:
                     tmp = null;
+                    break;
+                case UI_Group.PUZZLE:
+                    tmp = Puzzle;
                     break;
                 default:
                     break;
@@ -235,7 +222,7 @@ namespace Daniel.Master
     public enum UI_Group
     {
         LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL, NETWORK_GATE,
-        DIALOGUE, NONE
+        DIALOGUE, PUZZLE, NONE
     }
     public enum Settings
     {
