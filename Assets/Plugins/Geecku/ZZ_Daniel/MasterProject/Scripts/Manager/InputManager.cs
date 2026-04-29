@@ -43,18 +43,26 @@ namespace Daniel.Master
         public void OnPlayRoot()
         {
             AudioManager.Instance.PlayNote(Note.LOW_C);
+            if (PuzzleManager.Instance.IsSolving)
+                PuzzleManager.Instance.CheckPuzzle(Interval.PRIME);
         }
         public void OnPlayThird()
         {
             AudioManager.Instance.PlayNote(Note.LOW_E);
+            if (PuzzleManager.Instance.IsSolving)
+                PuzzleManager.Instance.CheckPuzzle(Interval.THIRD);
         }
         public void OnPlayFifth()
         {
             AudioManager.Instance.PlayNote(Note.LOW_G);
+            if (PuzzleManager.Instance.IsSolving)
+                PuzzleManager.Instance.CheckPuzzle(Interval.FIFTH);
         }
         public void OnPlayOctave()
         {
             AudioManager.Instance.PlayNote(Note.HIGH_C);
+            if (PuzzleManager.Instance.IsSolving)
+                PuzzleManager.Instance.CheckPuzzle(Interval.OCTAVE);
         }
         #endregion
 

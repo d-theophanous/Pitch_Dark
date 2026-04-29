@@ -28,6 +28,7 @@ namespace Daniel.Master
         [SerializeField] private GameObject Dialogue;
         [SerializeField] private GameObject Language_Selection;
         [SerializeField] private GameObject Puzzle;
+        [SerializeField] private List<GameObject> PuzzeList;
 
         [Header("Settings References")]
         [SerializeField] private GameObject Accessibility_Settings;
@@ -36,7 +37,8 @@ namespace Daniel.Master
         [SerializeField] private GameObject Language_Settings;
         [SerializeField] private GameObject Controls_Settings;
 
-        private List<UI_Group> CurUIList = new();
+        //- for debugging public
+        public List<UI_Group> CurUIList = new();
 
         //- for debugging public
         public Camera CurCamera;
@@ -59,6 +61,7 @@ namespace Daniel.Master
         {
             GameObject tmp = GetGameObjectFromEnum(ui);
 
+            //- ugly code
             if (ui == UI_Group.DIALOGUE)
             {
                 if (!CurUIList.Contains(ui))
@@ -74,6 +77,11 @@ namespace Daniel.Master
                     DialogueBackground.color = Color.black;
                 }
             }
+            else if (ui == UI_Group.PUZZLE)
+            {
+                PuzzeList[PuzzleManager.Instance.PuzzleCount].SetActive(!CurUIList.Contains(ui));                
+            }
+
             bool is_active = tmp.gameObject.activeSelf;
             if (is_active)
                 CloseUI(ui);

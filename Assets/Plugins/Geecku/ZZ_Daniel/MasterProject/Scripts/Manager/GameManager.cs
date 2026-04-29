@@ -65,6 +65,9 @@ namespace Daniel.Master
                 case GameState.DIALOGUE:
                     DialogueManager.Instance.UpdateDialogue();
                     break;
+                case GameState.SOLVING_PUZZLE:
+                    PuzzleManager.Instance.UpdatePuzzle();
+                    break;
                 default:
                     break;
             }
@@ -140,6 +143,11 @@ namespace Daniel.Master
             PlayerIsGateReady = true;
             //- ToDo UI
             Debug.Log("player gate ready");
+        }
+        public void SolveCurrentPuzzle()
+        {
+            PuzzleManager.Instance.SolvePuzzle();
+            SetGameState(GameState.SOLVING_PUZZLE);
         }
         #endregion
 
@@ -327,7 +335,7 @@ namespace Daniel.Master
     }
     public enum GameState
     {
-        PLAYING, CONNECT, WAITING, DIALOGUE
+        PLAYING, CONNECT, WAITING, DIALOGUE, SOLVING_PUZZLE
     }
     public enum Language
     {

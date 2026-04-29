@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a954314dcd07560448b142c0b4bf2b1d, type: 3}
   m_Name: 1_Puzzle
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.PuzzleData
-  Group: {fileID: 0}
-  UI: {fileID: 0}
+  SolutionInterval: 3

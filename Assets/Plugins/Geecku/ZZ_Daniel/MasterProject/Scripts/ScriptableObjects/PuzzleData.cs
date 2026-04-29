@@ -9,7 +9,6 @@ namespace Daniel.Master
         order = 0)]
     public class PuzzleData : ScriptableObject
     {
-        public ReadableElementGroup Group;
-        public GameObject UI;
+        public Interval SolutionInterval;
     }
 }

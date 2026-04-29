@@ -860,7 +860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &201302637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4591,7 +4591,8 @@ MonoBehaviour:
   Gate_Net: {fileID: 2121888492}
   Dialogue: {fileID: 2035178283}
   Language_Selection: {fileID: 1205725507}
-  Puzzle: {fileID: 148427522}
+  PuzzeList:
+  - {fileID: 201302636}
   Accessibility_Settings: {fileID: 508447543}
   Audio_Settings: {fileID: 1568206703}
   Genre_Settings: {fileID: 245704727}
