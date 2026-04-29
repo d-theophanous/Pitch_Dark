@@ -13,7 +13,7 @@ namespace Daniel.Master
         [SerializeField] private ReadableElementGroup SettingsGeneralGroup;
         [SerializeField] private ReadableElementGroup DialogueGroup;
         [SerializeField] private ReadableElementGroup NetworkGate;
-        [SerializeField] private ReadableElementGroup Puzzle;
+        [SerializeField] private List<ReadableElementGroup> PuzzleList;
 
         public ReadableElementGroup CurrentGroup;
 
@@ -41,8 +41,7 @@ namespace Daniel.Master
                     new_group = NetworkGate;
                     break;
                 case UI_Group.PUZZLE:
-                    Debug.Log("puzzle:" + Puzzle);
-                    new_group = Puzzle;
+                    new_group = PuzzleList[PuzzleManager.Instance.PuzzleCount];
                     break;
                 default:
                     new_group = null;
@@ -67,7 +66,6 @@ namespace Daniel.Master
             CurrentGroup.ActivateGroup();
             Debug.Log(CurrentGroup);
         }
-        public void SetPuzzleGroup(ReadableElementGroup group) { Puzzle = group; }
 
         #region Element Interaction
         public void ActivateCurElement()

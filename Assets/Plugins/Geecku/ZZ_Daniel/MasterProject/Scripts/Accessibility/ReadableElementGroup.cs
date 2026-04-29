@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Daniel.Master
-{
+{    
     public class ReadableElementGroup : MonoBehaviour
     {
         [SerializeField] private List<ReadableElement> ElementList;

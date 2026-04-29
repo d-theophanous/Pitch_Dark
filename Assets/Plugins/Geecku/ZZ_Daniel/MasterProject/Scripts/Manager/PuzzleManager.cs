@@ -16,14 +16,11 @@ namespace Daniel.Master
         [SerializeField] private List<PuzzleData> PuzzleList;
 
         private PuzzleData CurPuzzle => PuzzleList[PuzzleCount];
-        private int PuzzleCount = 0;
+        public int PuzzleCount = 0;
         private Camera CurCamera;
 
         public void StartPuzzle()
         {
-            Debug.Log("IN Start Puzzle: " + CurPuzzle);
-            Debug.Log("IN Start Puzzle1: " + CurPuzzle.Group);
-            Debug.Log("IN Start Puzzle2: " + CurPuzzle.UI);
             CurCamera.gameObject.SetActive(true);
 
             SetUpPuzzle();
@@ -31,7 +28,7 @@ namespace Daniel.Master
         private void SetUpPuzzle()
         {
             //- assign right group for TTSManager to open
-            TTSManager.Instance.SetPuzzleGroup(CurPuzzle.Group);
+            //TTSManager.Instance.SetPuzzleGroup(CurPuzzle.Group);
 
             GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE, false);
             CurPuzzle.UI.SetActive(true);            
