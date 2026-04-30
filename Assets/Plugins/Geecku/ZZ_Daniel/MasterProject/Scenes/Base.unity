@@ -1280,6 +1280,18 @@ PrefabInstance:
       propertyPath: Ordernumber
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 453830235}
+    - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SolveCurrentPuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Daniel.Master.GameManager, Assembly-CSharp-firstpass
+      objectReference: {fileID: 0}
     - target: {fileID: 5710808220582153002, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_Name
       value: ReadableButton
@@ -4591,6 +4603,7 @@ MonoBehaviour:
   Gate_Net: {fileID: 2121888492}
   Dialogue: {fileID: 2035178283}
   Language_Selection: {fileID: 1205725507}
+  Puzzle: {fileID: 148427522}
   PuzzeList:
   - {fileID: 201302636}
   Accessibility_Settings: {fileID: 508447543}
@@ -4598,6 +4611,7 @@ MonoBehaviour:
   Genre_Settings: {fileID: 245704727}
   Language_Settings: {fileID: 1988244407}
   Controls_Settings: {fileID: 1879370443}
+  CurUIList: 
   CurCamera: {fileID: 0}
 --- !u!4 &1244242017
 Transform:

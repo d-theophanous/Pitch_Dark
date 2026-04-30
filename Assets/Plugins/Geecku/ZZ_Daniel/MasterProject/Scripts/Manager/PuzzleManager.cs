@@ -9,16 +9,13 @@ namespace Daniel.Master
 {
     public class PuzzleManager : PersistantDSingleton<PuzzleManager>
     {
-        //- Camera aufsetzen die in Render texture outputet, die in Puzzle UI ist
-        //- Simple puzzle UI aufsetzen
-        //- ReadableGroup aufsetzen
-        //- lösungsloop aufsetzen
         //- Tür öffnen logic einbauen
         //- collider nach durchgehen einbauen
 
         [SerializeField] private List<PuzzleData> PuzzleList;
 
         private PuzzleData CurPuzzle => PuzzleList[PuzzleCount];
+        private DoorScript CurDoor;
         public int PuzzleCount = 0;
 
         public bool PuzzleActive;
@@ -31,7 +28,7 @@ namespace Daniel.Master
         {
             if (PuzzleSolved)
             {
-                Debug.Log("puzzle solved");
+                EndPuzzle();
             }
         }
         public void CheckPuzzle(Interval interval)
@@ -54,7 +51,7 @@ namespace Daniel.Master
             }
         }
 
-
+        #region Puzzle Logic
         public void StartPuzzle()
         {
             CurCamera.gameObject.SetActive(true);
@@ -64,6 +61,12 @@ namespace Daniel.Master
         public void SolvePuzzle()
         {
             IsSolving = true;
+            InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
+        }
+        public void EndPuzzle()
+        {
+            GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
+            GameManager.Instance.SetGameState(GameState.PLAYING);
         }
         private void SetUpPuzzle()
         {
@@ -71,8 +74,14 @@ namespace Daniel.Master
             //TTSManager.Instance.SetPuzzleGroup(CurPuzzle.Group);
 
             GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE, false);
+
         }
-        public void SetCameraTransform(Camera camera) { CurCamera = camera; }
+        #endregion
+        public void SetCurrentDoor(DoorScript door)
+        {
+            CurDoor = door;
+            CurCamera = door.GetCamera();
+        }
     }
     public enum Interval
     {

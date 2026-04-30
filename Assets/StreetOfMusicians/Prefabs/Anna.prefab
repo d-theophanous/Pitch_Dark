@@ -944,8 +944,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4994131331870096}
   - component: {fileID: 195994042306656126}
+  - component: {fileID: 6904380189975244124}
   - component: {fileID: 114135355443050238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Anna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,6 +993,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!208 &6904380189975244124
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327653220142280}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.12, y: 1, z: 0.12}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!114 &114135355443050238
 MonoBehaviour:
   m_ObjectHideFlags: 0

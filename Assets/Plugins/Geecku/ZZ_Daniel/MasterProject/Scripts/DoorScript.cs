@@ -10,7 +10,7 @@ namespace Daniel.Master
             Debug.Log("Activated");
             //- Send message to other player
             //- Display waiting UI
-            PuzzleManager.Instance.SetCameraTransform(DoorCamera);
+            PuzzleManager.Instance.SetCurrentDoor(this);
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
         }
         public override void EnterInteractionRange()
@@ -20,5 +20,6 @@ namespace Daniel.Master
             //- ToDo (HP)
             //Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 3f);
         }
+        public Camera GetCamera() => DoorCamera;
     }
 }
