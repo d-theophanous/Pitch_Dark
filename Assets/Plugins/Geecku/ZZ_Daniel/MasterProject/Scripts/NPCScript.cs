@@ -25,6 +25,10 @@ namespace Daniel.Master
         {
             Player = GameManager.Instance.Player.transform;
         }
+        private void Start()
+        {
+            Agent.speed = GameManager.Instance.Player.PlayerSpeed - 1.5f;
+        }   
         //- (LP) ToDo GameManager Update steuern lassen?
         void Update()
         {
@@ -97,6 +101,13 @@ namespace Daniel.Master
             DialogueManager.Instance.StartDialogue(
                 DialogueList[0]);
             ToggleFollowing();
+        }
+        public void ActivateSecondDialogue()
+        {
+            DialogueManager.Instance.StartDialogue(
+                DialogueList[1], true);
+            //- after second dialogue NPC will not be interactable anymore
+            this.tag = "Untagged";
         }
         public void StartPlay()
         {

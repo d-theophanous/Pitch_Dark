@@ -26,10 +26,11 @@ namespace Daniel.Master
 
         public void UpdatePuzzle()
         {
-            if (PuzzleSolved)
-            {
-                EndPuzzle();
-            }
+            //- maybe I dont need?
+            //if (PuzzleSolved)
+            //{
+            //    EndPuzzle();
+            //}
         }
         public void CheckPuzzle(Interval interval)
         {
@@ -41,7 +42,10 @@ namespace Daniel.Master
             yield return new WaitForSeconds(1f);
             if (interval == CurPuzzle.SolutionInterval)
             {
-                PuzzleSolved = true;
+                GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
+                CurDoor.ToggleDoor(true);
+                yield return new WaitForSeconds(1f);
+                CurDoor.DoorNPC.ActivateSecondDialogue();
             }
             else
             {
@@ -65,22 +69,21 @@ namespace Daniel.Master
         }
         public void EndPuzzle()
         {
-            GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
-            GameManager.Instance.SetGameState(GameState.PLAYING);
         }
         private void SetUpPuzzle()
         {
-            //- assign right group for TTSManager to open
-            //TTSManager.Instance.SetPuzzleGroup(CurPuzzle.Group);
-
             GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE, false);
-
         }
         #endregion
         public void SetCurrentDoor(DoorScript door)
         {
             CurDoor = door;
             CurCamera = door.GetCamera();
+        }
+        public void CloseDoor()
+        {
+            if (CurDoor != null)
+                CurDoor.ToggleDoor(false);
         }
     }
     public enum Interval

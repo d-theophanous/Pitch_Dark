@@ -82,9 +82,7 @@ namespace Daniel.Master
             }
             else
             {
-                GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
-                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
-                GameManager.Instance.SetGameState(GameState.PLAYING);
+                DialogueManager.Instance.EndDialogue();
             }
         }
     }

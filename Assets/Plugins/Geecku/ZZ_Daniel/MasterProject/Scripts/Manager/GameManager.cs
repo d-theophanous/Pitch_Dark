@@ -68,6 +68,8 @@ namespace Daniel.Master
                 case GameState.SOLVING_PUZZLE:
                     PuzzleManager.Instance.UpdatePuzzle();
                     break;
+                case GameState.IMPROVISING:
+                    break;
                 default:
                     break;
             }
@@ -335,7 +337,7 @@ namespace Daniel.Master
     }
     public enum GameState
     {
-        PLAYING, CONNECT, WAITING, DIALOGUE, SOLVING_PUZZLE
+        PLAYING, CONNECT, WAITING, DIALOGUE, SOLVING_PUZZLE, IMPROVISING
     }
     public enum Language
     {

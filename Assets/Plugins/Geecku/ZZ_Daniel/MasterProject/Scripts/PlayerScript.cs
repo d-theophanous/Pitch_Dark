@@ -1,10 +1,7 @@
-using JetBrains.Annotations;
 using System.Collections.Generic;
 using Unity.Cinemachine;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
 
 namespace Daniel.Master
 {
@@ -13,15 +10,17 @@ namespace Daniel.Master
         [SerializeField] private Transform Player1Spawn;
         [SerializeField] private Transform Player2Spawn;
         [SerializeField] private NavMeshAgent NavMeshAgent;
+        [SerializeField] private CinemachineCamera NPCCamera;
 
         public CinemachineCamera CinCam;
         public Interactable CurrentInteractable;
 
-        private float PlayerSpeed = 5.0f;
+        public float PlayerSpeed {  get; private set; }
 
         private void Awake()
         {
             GameManager.Instance.Player = this;
+            PlayerSpeed = 5f;
         }
         private void Start()
         {
@@ -62,6 +61,10 @@ namespace Daniel.Master
                 return;
             }
             CurrentInteractable.ActivatePrompt();
+        }
+        public void LookAt(Transform target)
+        {
+
         }
 
         #region Movement
