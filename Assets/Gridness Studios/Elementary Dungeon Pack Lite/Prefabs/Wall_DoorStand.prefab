@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 988509503722820421}
   - component: {fileID: 8474302936420658758}
   - component: {fileID: 487262076878505184}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1535
+    m_Bits: 1279
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 6f30a21c9cbc7a048ac85b6ba707db0f, type: 2}
   m_TargetDisplay: 0
@@ -609,7 +609,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6388175, y: 3.2974682, z: 0.39488146}
+  m_Size: {x: 2.2, y: 3.2974682, z: 2.08}
   m_Center: {x: -0.6579491, y: 1.647625, z: 0.00000003725293}
 --- !u!114 &6379473852384688255
 MonoBehaviour:
@@ -630,6 +630,7 @@ MonoBehaviour:
   DoorAnimator: {fileID: 2625385179280938174}
   DoorTrigger: {fileID: 25334746049843273}
   NavMeshObstacle: {fileID: 975487671856213502}
+  DoorNPC: {fileID: 0}
 --- !u!4 &2901804479087725220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7936834669806457470, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}

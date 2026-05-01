@@ -53,6 +53,38 @@ MonoBehaviour:
     m_Key: quit
     m_Metadata:
       m_Items: []
+  - m_Id: 5854222178500608
+    m_Key: waiting_gate_network
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5855682383495168
+    m_Key: solve_puzzle1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5856140980305920
+    m_Key: prompt_puzzle1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5856920319737856
+    m_Key: prompt_puzzle2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857130869604352
+    m_Key: prime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857152348635136
+    m_Key: third
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857174888824832
+    m_Key: fifth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857193863856128
+    m_Key: octave
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -54,6 +54,38 @@ MonoBehaviour:
     m_Localized: Quit
     m_Metadata:
       m_Items: []
+  - m_Id: 5854222178500608
+    m_Localized: 'Waiting for player '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5855682383495168
+    m_Localized: Solve the puzzle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5856140980305920
+    m_Localized: Door of the octave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5856920319737856
+    m_Localized: Door of the
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857130869604352
+    m_Localized: Prime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857152348635136
+    m_Localized: Third
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857174888824832
+    m_Localized: Fifth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857193863856128
+    m_Localized: Octave
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -15,6 +15,8 @@ namespace Daniel.Master
         {
             PuzzleManager.Instance.SetCurrentDoor(this);
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
+            tag = "Untagged";
+            GameManager.Instance.Player.CurrentInteractable = null;
         }
         public override void EnterInteractionRange()
         {

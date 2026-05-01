@@ -15,6 +15,7 @@ namespace Daniel.Master
         public float TextSpeed;
         private ReadableDialogue Dialogue;
         private Camera CurNPCCamera;
+        private NPCScript CurNPC;
         //- ugly
         private bool ImproviseAfter;
 
@@ -49,6 +50,7 @@ namespace Daniel.Master
         }
         public void CleanUpDialogue()
         {
+            CurNPC.ToggleFollowing();
             CurNPCCamera.gameObject.SetActive(false);
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
             GameManager.Instance.SetGameState(GameState.PLAYING);
@@ -57,6 +59,10 @@ namespace Daniel.Master
         {
             Dialogue.UpdateReadableDialogue();
         }
-        public void SetCurrentNPCCamera(Camera camera) { CurNPCCamera = camera; }
+        public void SetCurrentNPC(NPCScript npc) 
+        {
+            CurNPCCamera = npc.GetCamera();
+            CurNPC = npc;
+        }
     }
 }

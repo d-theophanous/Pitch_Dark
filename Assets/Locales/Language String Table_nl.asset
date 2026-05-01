@@ -54,6 +54,38 @@ MonoBehaviour:
     m_Localized: Kwijten
     m_Metadata:
       m_Items: []
+  - m_Id: 5854222178500608
+    m_Localized: Wachten op speler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5855682383495168
+    m_Localized: Los de puzzle op
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5856140980305920
+    m_Localized: Deur van het octaaf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5856920319737856
+    m_Localized: 'Deur van het '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857130869604352
+    m_Localized: Prime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857152348635136
+    m_Localized: Terts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857174888824832
+    m_Localized: Kwint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857193863856128
+    m_Localized: Octaaf
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

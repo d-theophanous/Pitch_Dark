@@ -10,7 +10,7 @@ namespace Daniel.Master
         [SerializeField] private Animator Animator;
 
         [Header("Follow Settings")]
-        public float StopDistance = 2.5f;
+        public float StopDistance = 4f;
         public float UpdateRate = 0.1f; // seconds between destination updates
 
         [Header("State")]
@@ -96,19 +96,23 @@ namespace Daniel.Master
         }
         #endregion
 
+        public override void EnterInteractionRange()
+        {
+            ActivatePrompt();
+        }
         public override void ActivatePrompt()
         {
-            DialogueManager.Instance.SetCurrentNPCCamera(NPCCamera);
+            DialogueManager.Instance.SetCurrentNPC(this);
             LookAtPlayer();
             Debug.Log("NPC interaction");
             //- nur zum Testen?
             DialogueManager.Instance.StartDialogue(
                 DialogueList[0]);
-            ToggleFollowing();
+            tag = "Untagged";
         }
         public void ActivateSecondDialogue()
         {
-            DialogueManager.Instance.SetCurrentNPCCamera(NPCCamera);
+            DialogueManager.Instance.SetCurrentNPC(this);
             LookAtPlayer();
             DialogueManager.Instance.StartDialogue(
                 DialogueList[1], true);
@@ -127,6 +131,10 @@ namespace Daniel.Master
         private void LookAtPlayer()
         {
             Parent.forward = GameManager.Instance.Player.transform.position - Parent.position;            
+        }
+        public Camera GetCamera()
+        {
+            return NPCCamera;
         }
     }
 }

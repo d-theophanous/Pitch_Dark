@@ -15,7 +15,7 @@ namespace Daniel.Master
 
         public bool PuzzleActive;
         public bool IsSolving;
-        public bool PuzzleSolved;
+        public bool IsPuzzleSolved;
         public Note[] SolutionInterval = new Note[2];
         private Camera CurCamera;
 
@@ -42,11 +42,7 @@ namespace Daniel.Master
             yield return new WaitForSeconds(1f);
             if (interval == CurPuzzle.SolutionInterval)
             {
-                //- close UI, open door and activate the dialogue
-                GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
-                CurDoor.ToggleDoor(true);
-                yield return new WaitForSeconds(1f);
-                CurDoor.DoorNPC.ActivateSecondDialogue();
+                StartCoroutine(PuzzleSolved());
             }
             else
             {
@@ -60,13 +56,34 @@ namespace Daniel.Master
         public void StartPuzzle()
         {
             CurCamera.gameObject.SetActive(true);
-
             SetUpPuzzle();
         }
+        //- for first puzzle ToDo
         public void SolvePuzzle()
         {
             IsSolving = true;
             InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
+        }
+        //- for second puzzle ToDo
+        public void SolveSecondPuzzle(int interval)
+        {
+            if ((Interval)interval == PuzzleList[PuzzleCount].SolutionInterval)
+            {
+                StartCoroutine(PuzzleSolved());
+            }
+            else
+            {
+                Debug.Log("Wrong");
+            }
+        }
+        private IEnumerator PuzzleSolved()
+        {
+            //- close UI, open door and activate the dialogue
+            GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
+            CurDoor.ToggleDoor(true);
+            yield return new WaitForSeconds(1f);
+            CurDoor.DoorNPC.ActivateSecondDialogue();
+            PuzzleCount++;
         }
         public void EndPuzzle()
         {

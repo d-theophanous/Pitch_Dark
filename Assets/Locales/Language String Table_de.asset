@@ -54,6 +54,38 @@ MonoBehaviour:
     m_Localized: Verlassen
     m_Metadata:
       m_Items: []
+  - m_Id: 5854222178500608
+    m_Localized: Warten auf andere Person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5855682383495168
+    m_Localized: "R\xE4tsel l\xF6sen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5856140980305920
+    m_Localized: Tor der Oktave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5856920319737856
+    m_Localized: Tor der
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857130869604352
+    m_Localized: Prime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857152348635136
+    m_Localized: Terz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857174888824832
+    m_Localized: Quinte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5857193863856128
+    m_Localized: Oktave
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
