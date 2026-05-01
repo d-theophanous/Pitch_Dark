@@ -14,7 +14,6 @@ namespace Daniel.Master
         [SerializeField] private Camera UICamera;
         [SerializeField] private Camera MagCamera;
         [SerializeField] private RenderTexture PlayerCam;
-        public GameObject SecondPlayerCam;
 
         [Header("Canvas References")]
         [SerializeField] private Canvas Canvas;
@@ -28,6 +27,7 @@ namespace Daniel.Master
         [SerializeField] private GameObject Dialogue;
         [SerializeField] private GameObject Language_Selection;
         [SerializeField] private GameObject Puzzle;
+        [SerializeField] private GameObject Improvisation;
         [SerializeField] private List<GameObject> PuzzeList;
 
         [Header("Settings References")]
@@ -66,13 +66,11 @@ namespace Daniel.Master
             {
                 if (!CurUIList.Contains(ui))
                 {
-                    SecondPlayerCam.gameObject.SetActive(true);
                     DialogueBackground.texture = PlayerCam;
                     DialogueBackground.color = Color.white;
                 }
                 else
                 {
-                    SecondPlayerCam.gameObject.SetActive(false);
                     DialogueBackground.texture = null;
                     DialogueBackground.color = Color.black;
                 }
@@ -156,6 +154,9 @@ namespace Daniel.Master
                 case UI_Group.PUZZLE:
                     tmp = Puzzle;
                     break;
+                case UI_Group.IMPROVISATION:
+                    tmp = Improvisation;
+                    break;
                 default:
                     break;
             }
@@ -230,7 +231,7 @@ namespace Daniel.Master
     public enum UI_Group
     {
         LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL, NETWORK_GATE,
-        DIALOGUE, PUZZLE, NONE
+        DIALOGUE, PUZZLE, NONE, IMPROVISATION
     }
     public enum Settings
     {

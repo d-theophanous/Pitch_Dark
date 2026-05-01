@@ -45,16 +45,19 @@ namespace Daniel.Master
                     break;
                 default:
                     new_group = null;
-                    Debug.LogError(group + " doesnt have a switch case yet.");
                     break;
             }
             if (CurrentGroup != null)
             {
                 CurrentGroup.DeactivateGroup();
             }
+            if (new_group == null)
+            {
+                Debug.Log("new readable element group ist null");
+                return;
+            }
             CurrentGroup = new_group;
             CurrentGroup.ActivateGroup();
-            Debug.Log(CurrentGroup);
         }
         public void SwitchReadableElementGroup(ReadableElementGroup group)
         {

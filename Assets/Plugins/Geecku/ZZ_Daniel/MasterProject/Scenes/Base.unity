@@ -3863,6 +3863,78 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
+--- !u!1 &1067895958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067895959}
+  - component: {fileID: 1067895961}
+  - component: {fileID: 1067895960}
+  m_Layer: 5
+  m_Name: Improvisation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1067895959
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067895958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2090360790}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1067895960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067895958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: 65252310590b0004b847f0239a9c1a6b, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1067895961
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067895958}
+  m_CullTransparentMesh: 1
 --- !u!114 &1079945646 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
@@ -4595,7 +4667,6 @@ MonoBehaviour:
   UICamera: {fileID: 431464747}
   MagCamera: {fileID: 876770772}
   PlayerCam: {fileID: 8400000, guid: 65252310590b0004b847f0239a9c1a6b, type: 2}
-  SecondPlayerCam: {fileID: 0}
   Canvas: {fileID: 2090360789}
   DialogueBackground: {fileID: 1349937437}
   Settings: {fileID: 530481474}
@@ -4604,6 +4675,7 @@ MonoBehaviour:
   Dialogue: {fileID: 2035178283}
   Language_Selection: {fileID: 1205725507}
   Puzzle: {fileID: 148427522}
+  Improvisation: {fileID: 1067895958}
   PuzzeList:
   - {fileID: 201302636}
   Accessibility_Settings: {fileID: 508447543}
@@ -7536,6 +7608,7 @@ RectTransform:
   - {fileID: 2121888493}
   - {fileID: 2035178284}
   - {fileID: 148427523}
+  - {fileID: 1067895959}
   - {fileID: 323175365}
   m_Father: {fileID: 173866052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

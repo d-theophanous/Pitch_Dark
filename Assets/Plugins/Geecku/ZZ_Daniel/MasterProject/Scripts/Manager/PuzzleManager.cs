@@ -2,16 +2,11 @@ using Geecku.GlobalMangers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 namespace Daniel.Master
 {
     public class PuzzleManager : PersistantDSingleton<PuzzleManager>
     {
-        //- Tür öffnen logic einbauen
-        //- collider nach durchgehen einbauen
-
         [SerializeField] private List<PuzzleData> PuzzleList;
 
         private PuzzleData CurPuzzle => PuzzleList[PuzzleCount];
@@ -32,6 +27,11 @@ namespace Daniel.Master
             //    EndPuzzle();
             //}
         }
+        /// <summary>
+        /// Gets called when you press the solve button. Waits for input and 
+        /// checks if your answer is right or wrong
+        /// </summary>
+        /// <param name="interval"></param>
         public void CheckPuzzle(Interval interval)
         {
             StartCoroutine(CheckPuzzleCoroutine(interval));
@@ -42,6 +42,7 @@ namespace Daniel.Master
             yield return new WaitForSeconds(1f);
             if (interval == CurPuzzle.SolutionInterval)
             {
+                //- close UI, open door and activate the dialogue
                 GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
                 CurDoor.ToggleDoor(true);
                 yield return new WaitForSeconds(1f);

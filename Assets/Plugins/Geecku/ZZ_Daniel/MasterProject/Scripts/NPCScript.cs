@@ -18,6 +18,8 @@ namespace Daniel.Master
 
         [SerializeField] private NavMeshAgent Agent;
         [SerializeField] private List<DialogueContainer> DialogueList;
+        [SerializeField] private Transform Parent;
+        [SerializeField] private Camera NPCCamera;
         private float UpdateTimer;
         private Transform Player;
 
@@ -96,6 +98,8 @@ namespace Daniel.Master
 
         public override void ActivatePrompt()
         {
+            DialogueManager.Instance.SetCurrentNPCCamera(NPCCamera);
+            LookAtPlayer();
             Debug.Log("NPC interaction");
             //- nur zum Testen?
             DialogueManager.Instance.StartDialogue(
@@ -104,11 +108,14 @@ namespace Daniel.Master
         }
         public void ActivateSecondDialogue()
         {
+            DialogueManager.Instance.SetCurrentNPCCamera(NPCCamera);
+            LookAtPlayer();
             DialogueManager.Instance.StartDialogue(
                 DialogueList[1], true);
             //- after second dialogue NPC will not be interactable anymore
             this.tag = "Untagged";
         }
+        //- gerade egal, weil die eh die ganze Zeit spielen haha
         public void StartPlay()
         {
 
@@ -116,6 +123,10 @@ namespace Daniel.Master
         public void StopPlay()
         {
 
+        }
+        private void LookAtPlayer()
+        {
+            Parent.forward = GameManager.Instance.Player.transform.position - Parent.position;            
         }
     }
 }

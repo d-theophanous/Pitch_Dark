@@ -2,6 +2,7 @@ using FMOD.Studio;
 using FMODUnity;
 using Geecku.GlobalMangers;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -185,6 +186,20 @@ namespace Daniel.Master
         public void StartImprovisation()
         {
             ImprovTrackEventInstance.start();
+            Debug.Log("startimprov");
+            StartCoroutine(StartImprovisationCoroutine());
+        }
+        private IEnumerator StartImprovisationCoroutine()
+        {
+            PLAYBACK_STATE tmp;
+            ImprovTrackEventInstance.getPlaybackState(out tmp);
+            while (tmp != PLAYBACK_STATE.STOPPED)
+            {
+                yield return null;
+                ImprovTrackEventInstance.getPlaybackState(out tmp);
+            }
+            DialogueManager.Instance.CleanUpDialogue();
+            GlobalUIManager.Instance.ToggleUI(UI_Group.IMPROVISATION);
         }
         public void StopImprovisation()
         {

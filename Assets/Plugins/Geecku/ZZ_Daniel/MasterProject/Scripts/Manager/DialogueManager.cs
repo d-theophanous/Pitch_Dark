@@ -12,10 +12,9 @@ namespace Daniel.Master
     public class DialogueManager : Geecku.GlobalMangers.Singleton<DialogueManager>
     {
         [SerializeField] private GameObject SecondPlayerCam;
-        [SerializeField] private CinemachineCamera MainCamera;
-        [SerializeField] private CinemachineCamera DialogueCamera;
         public float TextSpeed;
         private ReadableDialogue Dialogue;
+        private Camera CurNPCCamera;
         //- ugly
         private bool ImproviseAfter;
 
@@ -23,16 +22,14 @@ namespace Daniel.Master
         {
             base.Awake();
             Dialogue = GlobalUIManager.Instance.GetReadableDialogue();
-            GlobalUIManager.Instance.SecondPlayerCam = SecondPlayerCam;
         }
         public void StartDialogue(DialogueContainer data, bool improvise = false)
         {
+            CurNPCCamera.gameObject.SetActive(true);
             ImproviseAfter = improvise;
             Dialogue.SetUp(data, TextSpeed);
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
             GameManager.Instance.SetGameState(GameState.DIALOGUE);
-            DialogueCamera.Priority = 1;
-            MainCamera.Priority = 0;
         }
         public void EndDialogue()
         {
@@ -41,18 +38,25 @@ namespace Daniel.Master
                 InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Improvisation");
                 AudioManager.Instance.StartImprovisation();
                 GameManager.Instance.SetGameState(GameState.IMPROVISING);
+                GlobalUIManager.Instance.ToggleUI(UI_Group.IMPROVISATION, false);
+                PuzzleManager.Instance.IsSolving = false;
             }
-
-            DialogueCamera.Priority = 0;
-            MainCamera.Priority = 1;
-            GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
+            else
+            {
+                GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
+                CleanUpDialogue();
+            }
+        }
+        public void CleanUpDialogue()
+        {
+            CurNPCCamera.gameObject.SetActive(false);
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
             GameManager.Instance.SetGameState(GameState.PLAYING);
         }
-
         public void UpdateDialogue()
         {
             Dialogue.UpdateReadableDialogue();
         }
+        public void SetCurrentNPCCamera(Camera camera) { CurNPCCamera = camera; }
     }
 }

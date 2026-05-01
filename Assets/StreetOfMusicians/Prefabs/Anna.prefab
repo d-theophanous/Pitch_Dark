@@ -1068,6 +1068,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4190201353115136}
   - component: {fileID: 137570460133010968}
+  - component: {fileID: 766992885882807819}
+  - component: {fileID: 5498147314383060688}
   - component: {fileID: 136054650536311746}
   m_Layer: 0
   m_Name: body
@@ -1159,6 +1161,56 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.31185657, y: 0.0000005811453, z: 0.009354182}
     m_Extent: {x: 0.3201198, y: 0.16627279, z: 0.1738089}
   m_DirtyAABB: 0
+--- !u!114 &766992885882807819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346516546967338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9259f0c03367d3045a8fe12b97c3e605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.NPCScript
+  IsOneTimeUse: 0
+  ObjectsToBeOutlined:
+  - {fileID: 1966115925928858}
+  - {fileID: 1144760540206194}
+  - {fileID: 1878651360034930}
+  - {fileID: 1707033624596716}
+  - {fileID: 1618000004080764}
+  - {fileID: 1938473935121442}
+  Animator: {fileID: 95367897037393900}
+  StopDistance: 2.5
+  UpdateRate: 0.1
+  IsFollowing: 0
+  Agent: {fileID: 195994042306656126}
+  DialogueList:
+  - {fileID: 11400000, guid: 3090a614cc148cb46be4cc5bcabaf27f, type: 2}
+  - {fileID: 11400000, guid: 3090a614cc148cb46be4cc5bcabaf27f, type: 2}
+  Parent: {fileID: 4994131331870096}
+--- !u!135 &5498147314383060688
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346516546967338}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.02
+  m_Center: {x: 0.00000053780695, y: -0.009354187, z: 0.48834348}
 --- !u!136 &136054650536311746
 CapsuleCollider:
   m_ObjectHideFlags: 0
