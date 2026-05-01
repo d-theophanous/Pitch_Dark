@@ -29,7 +29,7 @@ namespace Daniel.Master
 
         //- Testing
         public Genre Genre;
-        public int InstrumentCount;
+        public Instrument Instrument;
 
         //- Debug
         public Interactable DebugInteractable;
@@ -77,7 +77,7 @@ namespace Daniel.Master
 
             //- Testing
             AudioManager.Instance.SetGenre(Genre);
-            AudioManager.Instance.SetInstrumentCount(InstrumentCount);
+            AudioManager.Instance.SetInstrument(Instrument);
         }
         public void SetGameState(GameState state) { State = state; }
         public void SetGameLanguage(int language) 

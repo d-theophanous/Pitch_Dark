@@ -1747,7 +1747,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   PlayerIdx: 0
   Genre: 0
-  InstrumentCount: 0
+  Instrument: 0
   DebugInteractable: {fileID: 0}
   MaxPlayerCount: 2
   Content: {fileID: 1028608921}
@@ -5605,18 +5605,18 @@ MonoBehaviour:
     SerializationNodes: []
   <Note>k__BackingField:
     Guid:
-      Data1: 1013508526
-      Data2: 1147980897
-      Data3: 771435705
-      Data4: 1830620619
-    Path: event:/Notes/Instruments
+      Data1: 1193591544
+      Data2: 1229493976
+      Data3: 475335304
+      Data4: -1915211806
+    Path: event:/Notes/Note
   <ImprovisationTrack>k__BackingField:
     Guid:
-      Data1: -103637208
-      Data2: 1300846371
-      Data3: 1787877511
-      Data4: -1144077047
-    Path: event:/ImprovTracks/ImprovisationTrack
+      Data1: -31278897
+      Data2: 1127420112
+      Data3: 905176750
+      Data4: -233710118
+    Path: event:/ImprovTracks/ImprovTrack
   <Dialogue>k__BackingField:
     Guid:
       Data1: 207156956

@@ -186,7 +186,6 @@ namespace Daniel.Master
         public void StartImprovisation()
         {
             ImprovTrackEventInstance.start();
-            Debug.Log("startimprov");
             StartCoroutine(StartImprovisationCoroutine());
         }
         private IEnumerator StartImprovisationCoroutine()
@@ -207,21 +206,16 @@ namespace Daniel.Master
         }
         public void PlayNote(Note note)
         {
-            NoteEventInstance.setParameterByName("Note", (float)note);
+            NoteEventInstance.setParameterByName("Note",(float)note);
             NoteEventInstance.start();
         }
         public void SetInstrument(Instrument instrument)
         {
-            //- can cause layer problems right now
-            NoteEventInstance.setParameterByName("Instrument", (float)instrument);
+            NoteEventInstance.setParameterByNameWithLabel("Instrument", instrument.ToString());
         }
         public void SetGenre(Genre genre)
         {
-            ImprovTrackEventInstance.setParameterByName("Genre", (float)genre);
-        }
-        public void SetInstrumentCount(int count)
-        {
-            ImprovTrackEventInstance.setParameterByName("LayerController", (float)count);
+            ImprovTrackEventInstance.setParameterByNameWithLabel("Genre", genre.ToString());
         }
         #endregion
 
@@ -244,11 +238,11 @@ namespace Daniel.Master
     //- ToDo change according to what we end up with
     public enum Instrument
     {
-        PIANO, SAXOPHONE, VIOLIN, GUITAR, DRUMS
+        Piano, Violin, Guitar, Vocal
     }
     public enum Genre
     {
-        UPRIGHT, BOSSANOVA
+        EDM, HipHop, Pop, Jazz, Mystic
     }
     public enum Note
     {
