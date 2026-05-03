@@ -23,7 +23,7 @@ namespace Daniel.Master
         private void Awake()
         {
             GameManager.Instance.Player = this;
-            PlayerSpeed = 5f;
+            PlayerSpeed = 3.5f;
         }
         private void Start()
         {
