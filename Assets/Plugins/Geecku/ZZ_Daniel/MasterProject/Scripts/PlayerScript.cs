@@ -11,11 +11,14 @@ namespace Daniel.Master
         [SerializeField] private Transform Player2Spawn;
         [SerializeField] private NavMeshAgent NavMeshAgent;
         [SerializeField] private CinemachineCamera NPCCamera;
+        public bool IsMoving => Movement.magnitude > 0;
+
 
         public CinemachineCamera CinCam;
         public Interactable CurrentInteractable;
 
         public float PlayerSpeed {  get; private set; }
+
 
         private void Awake()
         {
@@ -61,10 +64,6 @@ namespace Daniel.Master
                 return;
             }
             CurrentInteractable.ActivatePrompt();
-        }
-        public void LookAt(Transform target)
-        {
-
         }
 
         #region Movement
@@ -122,6 +121,11 @@ namespace Daniel.Master
                 transform.rotation = CinCam.transform.rotation;
             }
             LookWasActive = look_is_active;
+        }
+        public  void ResetMovement()
+        {
+            Movement = new Vector2 (0, 0);
+            NavMeshAgent.isStopped = true;
         }
         #endregion
     }

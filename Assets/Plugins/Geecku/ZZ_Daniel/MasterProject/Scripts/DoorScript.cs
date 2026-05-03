@@ -31,13 +31,14 @@ namespace Daniel.Master
         {
             if (open)
             {
-                //- ToDo play sounds
+                //- sounds gets played in puzzle manager
                 NavMeshObstacle.SetActive(false);
                 DoorAnimator.SetBool("open_door", true);
                 DoorAnimator.SetBool("close_door", false);
             }
             else
             {
+                AudioManager.Instance.PlaySFX(SFX.CLOSE_DOOR);
                 NavMeshObstacle.SetActive(true);
                 DoorAnimator.SetBool("open_door", false);
                 DoorAnimator.SetBool("close_door", true);

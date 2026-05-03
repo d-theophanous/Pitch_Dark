@@ -20,6 +20,8 @@ namespace Daniel.Master
         [SerializeField] private RawImage DialogueBackground;
 
         //-  mit jedem hinzufügen switch ändern: GetGameObjectFromEnum
+        //- ToDo (opt) eigentlich sollte ich pro ui eine classe haben die hat dann:
+        //- ui (gameobject), readableelement group und sound zum öffnen und schließen
         [Header("UI References")]
         [SerializeField] private GameObject Settings;
         [SerializeField] private GameObject Networking;
@@ -30,6 +32,7 @@ namespace Daniel.Master
         [SerializeField] private GameObject Improvisation;
         [SerializeField] private GameObject PlayerSelection;
         [SerializeField] private GameObject AccessibilitySelection;
+        [SerializeField] private GameObject GenreSelection;
         [SerializeField] private List<GameObject> PuzzeList;
 
         [Header("Settings References")]
@@ -81,6 +84,8 @@ namespace Daniel.Master
             {
                 PuzzeList[PuzzleManager.Instance.PuzzleCount].SetActive(!CurUIList.Contains(ui));                
             }
+            else if (ui == UI_Group.SETTINGS_GENERAL)
+                AudioManager.Instance.PlaySFX(SFX.OPEN_UI);
 
             bool is_active = tmp.gameObject.activeSelf;
             if (is_active)
@@ -165,6 +170,9 @@ namespace Daniel.Master
                 case UI_Group.ACCESSIBILITY_SELECTION:
                     tmp = AccessibilitySelection;
                     break;
+                case UI_Group.GENRE_SELECTION:
+                    tmp = GenreSelection;
+                    break;
                 default:
                     break;
             }
@@ -239,7 +247,8 @@ namespace Daniel.Master
     public enum UI_Group
     {
         LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL, NETWORK_GATE,
-        DIALOGUE, PUZZLE, NONE, IMPROVISATION, PLAYER_SELECTION, ACCESSIBILITY_SELECTION
+        DIALOGUE, PUZZLE, NONE, IMPROVISATION, PLAYER_SELECTION, ACCESSIBILITY_SELECTION,
+        GENRE_SELECTION
     }
     public enum Settings
     {

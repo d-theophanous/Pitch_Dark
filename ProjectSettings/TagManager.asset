@@ -9,6 +9,7 @@ TagManager:
   - Outline
   - Door
   - SmallPlayer
+  - Wall
   layers:
   - Default
   - TransparentFX

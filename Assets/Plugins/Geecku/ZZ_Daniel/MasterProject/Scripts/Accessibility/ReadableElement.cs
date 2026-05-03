@@ -36,7 +36,10 @@ namespace Daniel.Master
                 IsHighlighted = true;
             }
         }
-        protected virtual void OnSelect() { }
+        protected virtual void OnSelect() 
+        {
+            
+        }
         protected virtual void OnDeselect() { }
         public virtual void Activate() { }
         public virtual void Return()
@@ -44,10 +47,11 @@ namespace Daniel.Master
             if (Parent != null)
             {
                 TTSManager.Instance.SwitchReadableElementGroup(Parent.Parent);
+                AudioManager.Instance.PlaySFX(SFX.GO_BACK);
             }
             else
             {
-                //- ToDo play Sound
+                AudioManager.Instance.PlaySFX(SFX.NO_MORE_ELEMENTS);
                 Debug.Log("readable element doesnt have a parent");
             }
         }

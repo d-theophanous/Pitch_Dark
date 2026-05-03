@@ -39,7 +39,7 @@ namespace Daniel.Master
             AccMode = (AccessibilityMode)mode;
             SubscribeEvents(AccMode);
             ToggleSettings(AccMode);
-            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT, false);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.GENRE_SELECTION, false);
         }
         private void ToggleSettings(AccessibilityMode mode)
         {

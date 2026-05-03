@@ -51,6 +51,7 @@ namespace Daniel.Master
             SubscribeEvents();
         }
 
+        public event EventHandler UpdateEvent;
         protected override void Update()
         {
             switch (State)
@@ -73,11 +74,10 @@ namespace Daniel.Master
                 default:
                     break;
             }
+            UpdateEvent?.Invoke(this, null);
             AudioManager.Instance.UpdateAudio();
 
             //- Testing
-            AudioManager.Instance.SetGenre(Genre);
-            AudioManager.Instance.SetInstrument(Instrument);
         }
         public void SetGameState(GameState state) { State = state; }
         public void SetGameLanguage(int language) 

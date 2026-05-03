@@ -1,4 +1,5 @@
 using Geecku.GlobalMangers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,17 +37,18 @@ namespace Daniel.Master
         {
             StartCoroutine(CheckPuzzleCoroutine(interval));
         }
+        //- ToDo (opt) Beide Puzzle check funktion generalisieren etc.
         private IEnumerator CheckPuzzleCoroutine(Interval interval)
         {
             InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Disable();
             yield return new WaitForSeconds(1f);
             if (interval == CurPuzzle.SolutionInterval)
             {
-                StartCoroutine(PuzzleSolved());
+                AudioManager.Instance.PlaySFX(SFX.CORRECT, () => { PuzzleSolved(); });
             }
             else
             {
-                Debug.Log("Wrong");
+                AudioManager.Instance.PlaySFX(SFX.WRONG);
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
 
             }
@@ -69,21 +71,24 @@ namespace Daniel.Master
         {
             if ((Interval)interval == PuzzleList[PuzzleCount].SolutionInterval)
             {
-                StartCoroutine(PuzzleSolved());
+                AudioManager.Instance.PlaySFX(SFX.CORRECT, () => { PuzzleSolved(); });
             }
             else
             {
-                Debug.Log("Wrong");
+                AudioManager.Instance.PlaySFX(SFX.WRONG);
             }
         }
-        private IEnumerator PuzzleSolved()
+        private void PuzzleSolved()
         {
-            //- close UI, open door and activate the dialogue
-            GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
             CurDoor.ToggleDoor(true);
-            yield return new WaitForSeconds(1f);
-            CurDoor.DoorNPC.ActivateSecondDialogue();
             PuzzleCount++;
+            Action action = () =>
+            {
+                //- close UI, open door and activate the dialogue
+                GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
+                CurDoor.DoorNPC.ActivateSecondDialogue();
+            };
+            AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR, action);
         }
         public void EndPuzzle()
         {

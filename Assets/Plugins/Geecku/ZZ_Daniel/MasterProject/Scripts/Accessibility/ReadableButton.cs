@@ -18,6 +18,7 @@ namespace Daniel.Master
         public override void Activate()
         {
             StartCoroutine(ActivateCoroutine());
+            AudioManager.Instance.PlaySFX(SFX.SELECT_OPTION);
         }
         private IEnumerator ActivateCoroutine()
         {

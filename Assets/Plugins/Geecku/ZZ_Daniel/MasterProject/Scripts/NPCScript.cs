@@ -102,6 +102,7 @@ namespace Daniel.Master
         }
         public override void ActivatePrompt()
         {
+            GameManager.Instance.Player.ResetMovement();
             DialogueManager.Instance.SetCurrentNPC(this);
             LookAtPlayer();
             Debug.Log("NPC interaction");
@@ -112,6 +113,7 @@ namespace Daniel.Master
         }
         public void ActivateSecondDialogue()
         {
+            GameManager.Instance.Player.ResetMovement();
             DialogueManager.Instance.SetCurrentNPC(this);
             LookAtPlayer();
             DialogueManager.Instance.StartDialogue(

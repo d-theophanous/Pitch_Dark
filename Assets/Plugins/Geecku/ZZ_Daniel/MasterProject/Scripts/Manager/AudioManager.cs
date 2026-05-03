@@ -1,3 +1,4 @@
+using FMOD;
 using FMOD.Studio;
 using FMODUnity;
 using Geecku.GlobalMangers;
@@ -45,8 +46,8 @@ namespace Daniel.Master
 
             //- Dialogue Callback
             dialogueCallback = new EVENT_CALLBACK(DialogueEventCallback);
-            currentDialogueInstance = CreateEventInstance(FMODEvents.Instance.Dialogue);
 
+            //- Set up events
             SetUpEvents();
         }
         public void UpdateAudio()
@@ -59,6 +60,19 @@ namespace Daniel.Master
             DialogueBus.setVolume(DialogueVolume);
             TTSBus.setVolume(TTSVolume);
         }
+        private IEnumerator WaitForEnd(EventInstance instance, Action onComplete)
+        {
+            PLAYBACK_STATE state;
+            do
+            {
+                yield return null; // wait one frame
+                instance.getPlaybackState(out state);
+            }
+            while (state != PLAYBACK_STATE.STOPPED);
+
+            onComplete?.Invoke();
+        }
+
         #region Play Audio
         public void PlayOneShot(EventReference reference, Vector3 world_pos)
         {
@@ -81,7 +95,6 @@ namespace Daniel.Master
         {
             string key = Helper.GetLanguageString() + "_" + dialogue 
                 + "_" + line;
-            Debug.Log(key);
             PlayDialogue(key);
         }
         public void StopDialogue()
@@ -100,6 +113,130 @@ namespace Daniel.Master
             EventInstanceList.Add(instance);
             return instance;
         }
+
+        #region SFX and UI
+        public void PlaySFX(SFX sfx, Action on_complete = null)
+        {
+            string key = GetStringFromEnum(sfx);
+            EventInstance instance = RuntimeManager.CreateInstance(FMODEvents.Instance.OneShotEvent);
+            instance.setUserData(GCHandle.ToIntPtr(GCHandle.Alloc(key)));
+            instance.start();
+            instance.release();
+
+            instance.setCallback(ProgrammerSoundCallback,
+                EVENT_CALLBACK_TYPE.CREATE_PROGRAMMER_SOUND |
+                EVENT_CALLBACK_TYPE.DESTROY_PROGRAMMER_SOUND);
+
+            if (on_complete != null)
+                StartCoroutine(WaitForEnd(instance, on_complete));
+        }
+        private string GetStringFromEnum(SFX sfx)
+        {
+            string tmp = "";
+            switch (sfx)
+            {
+                case SFX.CORRECT:
+                    tmp = "correct";
+                    break;
+                case SFX.GO_BACK:
+                    tmp = "go_back_option";
+                    break;
+                case SFX.MAGNIFY:
+                    tmp = "magnifier";
+                    break;
+                case SFX.SWITCH_ELEMENT:
+                    tmp = "menu_switch_element";
+                    break;
+                case SFX.NO_MORE_ELEMENTS:
+                    tmp = "no_more_elements";
+                    break;
+                case SFX.REPEAT_SOUND:
+                    tmp = "repeat_sound";
+                    break;
+                case SFX.SELECT_OPTION:
+                    tmp = "select_option";
+                    break;
+                case SFX.CLOSE_UI:
+                    tmp = "ui_close";
+                    break;
+                case SFX.OPEN_UI:
+                    tmp = "ui_open";
+                    break;
+                case SFX.WRONG:
+                    tmp = "wrong";
+                    break;
+                case SFX.CLOSE_DOOR:
+                    tmp = "close_door";
+                    break;
+                case SFX.OPEN_DOOR:
+                    tmp = "open_door";
+                    break;
+                default:
+                    break;
+            }
+            return tmp;
+        }
+
+        [AOT.MonoPInvokeCallback(typeof(EVENT_CALLBACK))]
+        static FMOD.RESULT ProgrammerSoundCallback(EVENT_CALLBACK_TYPE type,
+            IntPtr instPtr, IntPtr paramPtr)
+        {
+            EventInstance instance = new EventInstance(instPtr);
+            instance.getUserData(out IntPtr userData);
+            GCHandle handle = GCHandle.FromIntPtr(userData);
+            string key = handle.Target as string;
+
+            if (type == EVENT_CALLBACK_TYPE.CREATE_PROGRAMMER_SOUND)
+            {
+                var param = (PROGRAMMER_SOUND_PROPERTIES)
+                    Marshal.PtrToStructure(paramPtr, typeof(PROGRAMMER_SOUND_PROPERTIES));
+                RuntimeManager.StudioSystem.getSoundInfo(key, out SOUND_INFO info);
+                RuntimeManager.CoreSystem.createSound(info.name_or_data,
+                    info.mode, ref info.exinfo, out Sound sound);
+                param.sound = sound.handle;
+                param.subsoundIndex = info.subsoundindex;
+                Marshal.StructureToPtr(param, paramPtr, false);
+            }
+            else if (type == EVENT_CALLBACK_TYPE.DESTROY_PROGRAMMER_SOUND)
+            {
+                var param = (PROGRAMMER_SOUND_PROPERTIES)
+                    Marshal.PtrToStructure(paramPtr, typeof(PROGRAMMER_SOUND_PROPERTIES));
+                new Sound(param.sound).release();
+                handle.Free();
+            }
+            return FMOD.RESULT.OK;
+        }
+        #endregion
+
+        #region Wall Stuff
+        //-ToDo opt start and stop methods
+        private EventInstance WallScratchEvent;
+        private EventInstance WallFaceEvent;
+        public void StartWallScratch()
+        {
+            PLAYBACK_STATE tmp;
+            WallScratchEvent.getPlaybackState(out tmp);
+            if (tmp != PLAYBACK_STATE.STOPPED)
+                return;
+            WallScratchEvent.start();
+        }
+        public void StopWallScratch()
+        {
+            WallScratchEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+        public void StartFaceWall()
+        {
+            PLAYBACK_STATE tmp;
+            WallFaceEvent.getPlaybackState(out tmp);
+            if (tmp != PLAYBACK_STATE.STOPPED)
+                return;
+            WallFaceEvent.start();
+        }
+        public void StopFaceWall()
+        {
+            WallFaceEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+        #endregion
 
         #region Dialogue
         private FMOD.Studio.EventInstance currentDialogueInstance;
@@ -182,6 +319,9 @@ namespace Daniel.Master
         {
             ImprovTrackEventInstance = CreateEventInstance(FMODEvents.Instance.ImprovisationTrack);
             NoteEventInstance = CreateEventInstance(FMODEvents.Instance.Note);
+            currentDialogueInstance = CreateEventInstance(FMODEvents.Instance.Dialogue);
+            WallScratchEvent = CreateEventInstance(FMODEvents.Instance.WallScratchEvent);
+            WallFaceEvent = CreateEventInstance(FMODEvents.Instance.WallFaceEvent);
         }
         public void StartImprovisation()
         {
@@ -206,16 +346,22 @@ namespace Daniel.Master
         }
         public void PlayNote(Note note)
         {
+            NoteEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             NoteEventInstance.setParameterByName("Note",(float)note);
             NoteEventInstance.start();
         }
-        public void SetInstrument(Instrument instrument)
+        public void SetInstrument(int instrument)
         {
-            NoteEventInstance.setParameterByNameWithLabel("Instrument", instrument.ToString());
+            NoteEventInstance.setParameterByNameWithLabel("Instrument", ((Instrument)instrument).ToString());
         }
-        public void SetGenre(Genre genre)
+        public void SetGenre(int genre)
         {
-            ImprovTrackEventInstance.setParameterByNameWithLabel("Genre", genre.ToString());
+            ImprovTrackEventInstance.setParameterByNameWithLabel("Genre", ((Genre)genre).ToString());
+        }
+        public void SetInitialGenre(int genre)
+        {
+            SetGenre(genre);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT, false);
         }
         #endregion
 
@@ -234,6 +380,7 @@ namespace Daniel.Master
             CleanUp();
         }
         #endregion
+
     }
     //- ToDo change according to what we end up with
     public enum Instrument
@@ -251,5 +398,10 @@ namespace Daniel.Master
     public enum Message_Tone
     {
         CONTINUE
+    }
+    public enum SFX
+    {
+        CORRECT, GO_BACK, MAGNIFY, SWITCH_ELEMENT, NO_MORE_ELEMENTS, REPEAT_SOUND,
+        SELECT_OPTION, CLOSE_UI, OPEN_UI, WRONG, CLOSE_DOOR, OPEN_DOOR
     }
 }

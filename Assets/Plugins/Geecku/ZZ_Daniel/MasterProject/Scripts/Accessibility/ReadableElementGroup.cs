@@ -45,9 +45,10 @@ namespace Daniel.Master
             if (CurElementIdx - 1 < 0)
             {
                 Debug.Log("no more previous elements");
-                //- Maybe play sound (ToDo)
+                AudioManager.Instance.PlaySFX(SFX.NO_MORE_ELEMENTS);
                 return;
             }
+            AudioManager.Instance.PlaySFX(SFX.SWITCH_ELEMENT);
             ElementList[CurElementIdx].ToggleHighlight();
             CurElementIdx--;
             ElementList[CurElementIdx].ToggleHighlight();
@@ -56,10 +57,11 @@ namespace Daniel.Master
         {
             if (CurElementIdx + 1 >= ElementList.Count)
             {
-                //- Maybe play sound (ToDo)
+                AudioManager.Instance.PlaySFX(SFX.NO_MORE_ELEMENTS);
                 Debug.Log("no more next elements");
                 return;
             }
+            AudioManager.Instance.PlaySFX(SFX.SWITCH_ELEMENT);
             ElementList[CurElementIdx].ToggleHighlight();
             CurElementIdx++;
             ElementList[CurElementIdx].ToggleHighlight();

@@ -15,6 +15,7 @@ namespace Daniel.Master
         [SerializeField] private ReadableElementGroup NetworkGate;
         [SerializeField] private ReadableElementGroup PlayerGroup;
         [SerializeField] private ReadableElementGroup AccessibilityGroup;
+        [SerializeField] private ReadableElementGroup GenreGroup;
         [SerializeField] private List<ReadableElementGroup> PuzzleList;
 
         public ReadableElementGroup CurrentGroup;
@@ -47,6 +48,9 @@ namespace Daniel.Master
                     break;
                 case UI_Group.ACCESSIBILITY_SELECTION:
                     new_group = AccessibilityGroup;
+                    break;
+                case UI_Group.GENRE_SELECTION:
+                    new_group = GenreGroup;
                     break;
                 case UI_Group.PUZZLE:
                     new_group = PuzzleList[PuzzleManager.Instance.PuzzleCount];
