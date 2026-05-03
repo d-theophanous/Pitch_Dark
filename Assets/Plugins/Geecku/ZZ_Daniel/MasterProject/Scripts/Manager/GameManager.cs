@@ -44,7 +44,7 @@ namespace Daniel.Master
         protected override void Start()
         {
             base.Start();
-            GlobalUIManager.Instance.ToggleUI(UI_Group.LANGUAGE_SELECTION);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.PLAYER_SELECTION);
 
             SetGameLanguage((int)Language.ENGLISH);
 
@@ -100,7 +100,7 @@ namespace Daniel.Master
         }
         public void SetInitialLanguage(int language)
         {
-            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT, false);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.ACCESSIBILITY_SELECTION, false);
             SetGameLanguage(language);
         }
         private void SwitchSceneToFirstInList()
@@ -331,6 +331,11 @@ namespace Daniel.Master
         #endregion
 
         #region Debug
+        public void SetPlayer(int player)
+        {
+            PlayerIdx = player;
+            GlobalUIManager.Instance.ToggleUI(UI_Group.LANGUAGE_SELECTION, false);
+        }
         public void DebugCurInteractable()
         {
             DebugInteractable.ActivatePrompt();

@@ -1,4 +1,6 @@
+using Geecku.DefaultNetworking;
 using Geecku.GlobalMangers;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -15,8 +17,13 @@ namespace Daniel.Master
         [SerializeField] RenderTexture MagTexture;
         [SerializeField] Canvas Settings;
 
+        [Header("Screen Space Canvas")]
+        [SerializeField] GameObject ScreenCanvas;
+
         [SerializeField] int MagnifierSize;
         [SerializeField] int MagnifierZoom;
+
+        public AccessibilityMode AccMode;
 
         protected override void Update()
         {
@@ -26,6 +33,52 @@ namespace Daniel.Master
                 UpdatePositions();  
             }
         }
+        #region Accessibility Mode Handling
+        public void SetAccessibilityMode(int mode)
+        {
+            AccMode = (AccessibilityMode)mode;
+            SubscribeEvents(AccMode);
+            ToggleSettings(AccMode);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT, false);
+        }
+        private void ToggleSettings(AccessibilityMode mode)
+        {
+            switch (mode)
+            {
+                case AccessibilityMode.BLIND:
+                    ScreenCanvas.SetActive(true);
+                    break;
+                case AccessibilityMode.NONE:
+                    break;
+                default:
+                    break;
+            }
+        }
+        private void SubscribeEvents(AccessibilityMode mode)
+        {
+            if (mode == AccMode)
+            {
+                Debug.Log("Accessibility mode is already active");
+                return;
+            }
+            switch (mode)
+            {
+                case AccessibilityMode.BLIND:
+                    break;
+                case AccessibilityMode.NONE:
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        //- Events
+        //public event EventHandler SetupAccessibility;
+        #region Functions
+        //- event functions
+        #endregion
+        #endregion
 
         #region Magnifier
 
@@ -80,5 +133,9 @@ namespace Daniel.Master
 
         #endregion
 
+    }
+    public enum AccessibilityMode
+    {
+        BLIND, NONE
     }
 }

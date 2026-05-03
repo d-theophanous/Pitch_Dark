@@ -28,6 +28,8 @@ namespace Daniel.Master
         [SerializeField] private GameObject Language_Selection;
         [SerializeField] private GameObject Puzzle;
         [SerializeField] private GameObject Improvisation;
+        [SerializeField] private GameObject PlayerSelection;
+        [SerializeField] private GameObject AccessibilitySelection;
         [SerializeField] private List<GameObject> PuzzeList;
 
         [Header("Settings References")]
@@ -157,6 +159,12 @@ namespace Daniel.Master
                 case UI_Group.IMPROVISATION:
                     tmp = Improvisation;
                     break;
+                case UI_Group.PLAYER_SELECTION:
+                    tmp = PlayerSelection;
+                    break;
+                case UI_Group.ACCESSIBILITY_SELECTION:
+                    tmp = AccessibilitySelection;
+                    break;
                 default:
                     break;
             }
@@ -231,7 +239,7 @@ namespace Daniel.Master
     public enum UI_Group
     {
         LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL, NETWORK_GATE,
-        DIALOGUE, PUZZLE, NONE, IMPROVISATION
+        DIALOGUE, PUZZLE, NONE, IMPROVISATION, PLAYER_SELECTION, ACCESSIBILITY_SELECTION
     }
     public enum Settings
     {
