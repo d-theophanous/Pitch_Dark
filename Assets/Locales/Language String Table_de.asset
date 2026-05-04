@@ -86,6 +86,22 @@ MonoBehaviour:
     m_Localized: Oktave
     m_Metadata:
       m_Items: []
+  - m_Id: 6766540001296384
+    m_Localized: "W\xE4hle aus, was auf dich zutrifft"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6766869241577472
+    m_Localized: Ich bin blind
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6767075475505152
+    m_Localized: Ich bin sehend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6767258569457664
+    m_Localized: "W\xE4hle aus, welches Genre dir gef\xE4llt"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

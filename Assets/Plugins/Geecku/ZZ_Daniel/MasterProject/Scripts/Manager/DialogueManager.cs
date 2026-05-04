@@ -12,11 +12,15 @@ namespace Daniel.Master
     public class DialogueManager : Geecku.GlobalMangers.Singleton<DialogueManager>
     {
         [SerializeField] private GameObject SecondPlayerCam;
+        //- should probably not be here
+        [SerializeField] private List<NPCScript> FirstPuzzleNPCList;
+        [SerializeField] private List<NPCScript> SecondPuzzleNPCList;
+        private List<NPCScript> CurrentNPCs = new();
         public float TextSpeed;
         private ReadableDialogue Dialogue;
         private Camera CurNPCCamera;
         private NPCScript CurNPC;
-        //- ugly
+        //- ugly ToDo opt
         private bool ImproviseAfter;
 
         protected override void Awake()
@@ -31,6 +35,8 @@ namespace Daniel.Master
             Dialogue.SetUp(data, TextSpeed);
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
             GameManager.Instance.SetGameState(GameState.DIALOGUE);
+
+            Dialogue.StartDialogue();
         }
         public void EndDialogue()
         {
@@ -50,7 +56,10 @@ namespace Daniel.Master
         }
         public void CleanUpDialogue()
         {
-            CurNPC.ToggleFollowing();
+            foreach (NPCScript npc in GetNPCFollowers())
+            {
+                npc.ToggleFollowing();
+            }
             CurNPCCamera.gameObject.SetActive(false);
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
             GameManager.Instance.SetGameState(GameState.PLAYING);
@@ -63,6 +72,29 @@ namespace Daniel.Master
         {
             CurNPCCamera = npc.GetCamera();
             CurNPC = npc;
+        }
+        //- ToDo opt
+        public void AddNPCFollowers()
+        {
+            if (CurrentNPCs == null)
+                Debug.Log("Current NPCs null");
+            if (GetNPCFollowers() == null)
+                Debug.Log("Current followers null");
+
+            CurrentNPCs.AddRange(GetNPCFollowers());
+        }
+        private List<NPCScript> GetNPCFollowers()
+        {
+            Debug.Log("puzzle cound: " + PuzzleManager.Instance.PuzzleCount);
+            if (PuzzleManager.Instance.PuzzleCount == 0)
+            {
+                return FirstPuzzleNPCList;
+            }
+            else if (PuzzleManager.Instance.PuzzleCount == 1)
+            {
+                return SecondPuzzleNPCList;
+            }
+            return null;
         }
     }
 }

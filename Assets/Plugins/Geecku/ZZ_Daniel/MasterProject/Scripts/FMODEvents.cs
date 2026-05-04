@@ -17,5 +17,6 @@ namespace Daniel.Master
         [field: SerializeField] public EventReference OneShotEvent { get; private set; }
         [field: SerializeField] public EventReference WallScratchEvent { get; private set; }
         [field: SerializeField] public EventReference WallFaceEvent { get; private set; }
+        [field: SerializeField] public EventReference FootstepEvent { get; private set; }
     }
 }

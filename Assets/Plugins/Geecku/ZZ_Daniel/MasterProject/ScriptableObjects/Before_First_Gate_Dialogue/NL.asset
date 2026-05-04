@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
   m_Name: NL
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
-  Language: EN
-  Lines: []
-  Audio: []
+  DialogueNumber: 0
+  Language: NL
+  Lines:
+  - sadfff
+  - fffffff
+  - fasd
+  - as
+  - fasdf

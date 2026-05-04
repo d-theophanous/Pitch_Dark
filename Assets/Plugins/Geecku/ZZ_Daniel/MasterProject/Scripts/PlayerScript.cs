@@ -23,7 +23,7 @@ namespace Daniel.Master
         private void Awake()
         {
             GameManager.Instance.Player = this;
-            PlayerSpeed = 3.5f;
+            PlayerSpeed = 2.5f;
         }
         private void Start()
         {
@@ -34,6 +34,7 @@ namespace Daniel.Master
         {
             RotateCharacter();
             MoveCharacter();
+            CheckForChange();
         }
 
         private void SpawnPlayer()
@@ -124,8 +125,18 @@ namespace Daniel.Master
         }
         public  void ResetMovement()
         {
-            Movement = new Vector2 (0, 0);
+            Movement = PreviousMoveInput = new Vector2 (0, 0);
+            AudioManager.Instance.StopFootsteps();
             NavMeshAgent.isStopped = true;
+        }
+        private Vector2 PreviousMoveInput = Vector2.zero;
+        private void CheckForChange()
+        {
+            if (PreviousMoveInput.magnitude == 0 && Movement.magnitude != 0)
+                AudioManager.Instance.PlayFootsteps();
+            else if (PreviousMoveInput.magnitude != 0 && Movement.magnitude == 0)
+                AudioManager.Instance.StopFootsteps();
+            PreviousMoveInput = Movement;
         }
         #endregion
     }

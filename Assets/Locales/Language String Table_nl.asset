@@ -86,6 +86,22 @@ MonoBehaviour:
     m_Localized: Octaaf
     m_Metadata:
       m_Items: []
+  - m_Id: 6766540001296384
+    m_Localized: Kies wat op jou van toepassing is
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6766869241577472
+    m_Localized: Ik ben blind
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6767075475505152
+    m_Localized: Ik kan zien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6767258569457664
+    m_Localized: Kies welk genre je leuk vindt
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

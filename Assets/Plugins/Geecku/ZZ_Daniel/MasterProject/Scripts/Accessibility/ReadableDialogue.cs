@@ -16,6 +16,7 @@ namespace Daniel.Master
 
         public void SetUp(DialogueContainer data, float text_speed)
         {
+            Debug.Log("Setup");
             CurDialog = data;
             CurDialogData = CurDialog.DialogueList[(int)GameManager.Language];
             Text.text = String.Empty;
@@ -26,6 +27,7 @@ namespace Daniel.Master
         {
             ContinuePressed = true;
         }
+        protected override void OnSelect() { }
         //- repeat current dialogue line instead of going back
         public override void Return()
         {
@@ -52,10 +54,6 @@ namespace Daniel.Master
                 ContinuePressed = false;
             }
         }
-        protected override void OnSelect()
-        {
-            StartDialogue();
-        }
         public void StartDialogue()
         {
             index = 0;
@@ -65,7 +63,8 @@ namespace Daniel.Master
         private IEnumerator TypeLine()
         {
             yield return new WaitForEndOfFrame();
-            //CurDialogData.Audio[index]. ToDo
+            Debug.Log("index: " + index);
+            Debug.Log("lines: " + Lines.Length);
             foreach (char c in Lines[index].ToCharArray())
             {
                 Text.text += c;

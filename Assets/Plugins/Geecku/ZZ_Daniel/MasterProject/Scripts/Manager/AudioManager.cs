@@ -26,7 +26,11 @@ namespace Daniel.Master
         #endregion
 
         private List<EventInstance> EventInstanceList;
+        private EventInstance FootstepEvent;
 
+        //- ToDo opt, for now all of the readable element narrations are in the 
+        //- SFX bank which is not optimal
+        //- auch problem dass narration of readable elements die ui sounds überschreibt
         protected override void Awake()
         {
             base.Awake();
@@ -49,6 +53,9 @@ namespace Daniel.Master
 
             //- Set up events
             SetUpEvents();
+
+            //- Instrument at the start
+            SetInstrument((int)Instrument.Vocal);
         }
         public void UpdateAudio()
         {
@@ -113,6 +120,33 @@ namespace Daniel.Master
             EventInstanceList.Add(instance);
             return instance;
         }
+
+        #region Accessibility
+        public void PlayReadableElement(string key)
+        {
+            EventInstance instance = RuntimeManager.CreateInstance(FMODEvents.Instance.OneShotEvent);
+            instance.setUserData(GCHandle.ToIntPtr(GCHandle.Alloc(key)));
+            instance.start();
+            instance.release();
+
+            instance.setCallback(ProgrammerSoundCallback,
+                EVENT_CALLBACK_TYPE.CREATE_PROGRAMMER_SOUND |
+                EVENT_CALLBACK_TYPE.DESTROY_PROGRAMMER_SOUND);
+        }
+        #endregion
+
+        #region Footsteps
+        public void PlayFootsteps()
+        {
+            UnityEngine.Debug.Log("play footsteps");
+            FootstepEvent.start();
+        }
+        public void StopFootsteps()
+        {
+            UnityEngine.Debug.Log("stop footsteps");
+            FootstepEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+        #endregion
 
         #region SFX and UI
         public void PlaySFX(SFX sfx, Action on_complete = null)
@@ -322,6 +356,7 @@ namespace Daniel.Master
             currentDialogueInstance = CreateEventInstance(FMODEvents.Instance.Dialogue);
             WallScratchEvent = CreateEventInstance(FMODEvents.Instance.WallScratchEvent);
             WallFaceEvent = CreateEventInstance(FMODEvents.Instance.WallFaceEvent);
+            FootstepEvent = CreateEventInstance(FMODEvents.Instance.FootstepEvent);
         }
         public void StartImprovisation()
         {

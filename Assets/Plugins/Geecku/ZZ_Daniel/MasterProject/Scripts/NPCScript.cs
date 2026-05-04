@@ -104,6 +104,7 @@ namespace Daniel.Master
         {
             GameManager.Instance.Player.ResetMovement();
             DialogueManager.Instance.SetCurrentNPC(this);
+            DialogueManager.Instance.AddNPCFollowers();
             LookAtPlayer();
             Debug.Log("NPC interaction");
             //- nur zum Testen?

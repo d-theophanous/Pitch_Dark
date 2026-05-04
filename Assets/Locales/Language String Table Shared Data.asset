@@ -85,6 +85,22 @@ MonoBehaviour:
     m_Key: octave
     m_Metadata:
       m_Items: []
+  - m_Id: 6766540001296384
+    m_Key: choose_accessibility
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6766869241577472
+    m_Key: mode_blind_accessibility
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6767075475505152
+    m_Key: mode_seeing_accessibility
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6767258569457664
+    m_Key: choose_genre
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

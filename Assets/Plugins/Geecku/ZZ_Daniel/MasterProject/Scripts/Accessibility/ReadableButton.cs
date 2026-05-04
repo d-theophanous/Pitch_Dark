@@ -36,6 +36,7 @@ namespace Daniel.Master
             {
                 Debug.Log("Button ist null");
             }
+            base.OnSelect();
             Button.OnPointerEnter(new PointerEventData(EventSystem.current));
         }
         protected override void OnDeselect()
