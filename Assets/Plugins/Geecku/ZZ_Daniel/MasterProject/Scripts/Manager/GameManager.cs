@@ -27,10 +27,6 @@ namespace Daniel.Master
         public int PlayerNumber => PlayerIdx + 1;
         public int PlayerIdx = 0;
 
-        //- Testing
-        public Genre Genre;
-        public Instrument Instrument;
-
         //- Debug
         public Interactable DebugInteractable;
 

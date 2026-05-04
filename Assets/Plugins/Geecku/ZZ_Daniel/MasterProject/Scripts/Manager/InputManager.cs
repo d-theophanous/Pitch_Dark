@@ -64,13 +64,10 @@ namespace Daniel.Master
             if (PuzzleManager.Instance.IsSolving)
                 PuzzleManager.Instance.CheckPuzzle(Interval.OCTAVE);
         }
-        public void OnSwitchInstrumentLeft()
+        public void OnSwitchInstrument(InputValue value)
         {
-            AudioManager.Instance.SwitchInstrument(-1);
-        }
-        public void OnSwitchInstrumentRight()
-        {
-            AudioManager.Instance.SwitchInstrument(+1);
+            Debug.Log("input:" + (int)value.Get<Vector2>().x);
+            AudioManager.Instance.SwitchInstrument((int)value.Get<Vector2>().x);
         }
         #endregion
 
@@ -118,6 +115,7 @@ namespace Daniel.Master
         public Vector2 MoveMagnifyDelta { get; private set; }
         public void OnMoveMagnify(InputValue value)
         {
+            Debug.Log(value.Get<Vector2>());
             MoveMagnifyDelta = value.Get<Vector2>();
         }
 

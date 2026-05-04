@@ -55,6 +55,7 @@ namespace Daniel.Master
             SetUpEvents();
 
             //- Instrument at the start
+            CurInstrument = Instrument.None;
             UnlockInstrument(Instrument.Vocals);
             SetInstrument((int)Instrument.Vocals);
         }
@@ -120,6 +121,15 @@ namespace Daniel.Master
             EventInstance instance = RuntimeManager.CreateInstance(reference);
             EventInstanceList.Add(instance);
             return instance;
+        }
+        private void SetUpEvents()
+        {
+            ImprovTrackEventInstance = CreateEventInstance(FMODEvents.Instance.ImprovisationTrack);
+            NoteEventInstance = CreateEventInstance(FMODEvents.Instance.Note);
+            currentDialogueInstance = CreateEventInstance(FMODEvents.Instance.Dialogue);
+            WallScratchEvent = CreateEventInstance(FMODEvents.Instance.WallScratchEvent);
+            WallFaceEvent = CreateEventInstance(FMODEvents.Instance.WallFaceEvent);
+            FootstepEvent = CreateEventInstance(FMODEvents.Instance.FootstepEvent);
         }
 
         #region Accessibility
@@ -351,16 +361,7 @@ namespace Daniel.Master
         EventInstance ImprovTrackEventInstance;
         EventInstance NoteEventInstance;
         private List<Instrument> UnlockedInstrumentList = new();
-        private Instrument CurInstrument = Instrument.None;
-        private void SetUpEvents()
-        {
-            ImprovTrackEventInstance = CreateEventInstance(FMODEvents.Instance.ImprovisationTrack);
-            NoteEventInstance = CreateEventInstance(FMODEvents.Instance.Note);
-            currentDialogueInstance = CreateEventInstance(FMODEvents.Instance.Dialogue);
-            WallScratchEvent = CreateEventInstance(FMODEvents.Instance.WallScratchEvent);
-            WallFaceEvent = CreateEventInstance(FMODEvents.Instance.WallFaceEvent);
-            FootstepEvent = CreateEventInstance(FMODEvents.Instance.FootstepEvent);
-        }
+        private Instrument CurInstrument;
         public void StartImprovisation()
         {
             ImprovTrackEventInstance.start();
@@ -425,8 +426,9 @@ namespace Daniel.Master
                     break;
                 cur_instr_idx++;
             }
+           
             SetInstrument((int)UnlockedInstrumentList[
-                Helper.GetLoopingIndex(UnlockedInstrumentList, cur_instr_idx + change)]);
+                Helper.GetLoopingIndex(UnlockedInstrumentList, (cur_instr_idx + change))]);
         }
         #endregion
 
@@ -463,7 +465,7 @@ namespace Daniel.Master
     public enum Message_Tone
     {
         CONTINUE, NONE, NOTES_EXAMPLE, HARMONIC_INTERVAL, TENSION_INTERVAL, PRIME, OCTAVE,
-        BUTTON
+        BUTTON, CLOSE_INTERVAL, FAR_INTERVAL, FIFTH, THIRD
     }
     public enum SFX
     {

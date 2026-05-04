@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
   m_Name: NL
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
-  DialogueNumber: 0
+  DialogueNumber: 2
   Language: NL
   Lines:
   - 'Ik dacht al dat ik verdwaald was in het doolhof, leuk om jullie allemaal te

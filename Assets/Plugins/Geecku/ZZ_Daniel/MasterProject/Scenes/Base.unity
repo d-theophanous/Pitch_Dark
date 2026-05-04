@@ -1331,7 +1331,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 500}
+  m_SizeDelta: {x: 800, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323175366
 MonoBehaviour:
@@ -2133,8 +2133,6 @@ MonoBehaviour:
   ConnectScript: {fileID: 1729751770}
   Player: {fileID: 0}
   PlayerIdx: 0
-  Genre: 1
-  Instrument: 0
   DebugInteractable: {fileID: 0}
   MaxPlayerCount: 2
   Content: {fileID: 1028608921}
@@ -2429,6 +2427,9 @@ MonoBehaviour:
   ScreenCanvas: {fileID: 1641795572}
   MagnifierSize: 0
   MagnifierZoom: 0
+  MagnifierMoveSpeed: 100
+  DefaultMagCamPos: {x: -15.6, y: -16.3, z: 141.3}
+  DefaultMagGlassPos: {x: 0, y: 0, z: -266}
   AccMode: 0
 --- !u!1001 &515293021
 PrefabInstance:
@@ -6042,15 +6043,15 @@ PrefabInstance:
     - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: 'AudioList.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 452825150c9574244a0e2e3159260816, type: 3}
+      objectReference: {fileID: 8300000, guid: 4340070a9cb0c3b48bc8e148bf7af8cf, type: 3}
     - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: 'AudioList.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: a08e45d332cdc1c42a0bf5ece2be9040, type: 3}
+      objectReference: {fileID: 8300000, guid: 267d8f6ab8a8c424bbf0013707bef048, type: 3}
     - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: 'AudioList.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: 206ad17e1b31d2a43a9b123bd216016f, type: 3}
+      objectReference: {fileID: 8300000, guid: 4ff8ba1d392620e4ea06c18469da8e21, type: 3}
     - target: {fileID: 1470920375813013905, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
       value: 1061658204225536
@@ -7145,15 +7146,15 @@ PrefabInstance:
     - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: 'AudioList.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 929b6e84414a48b4fa9a8f6f1b300246, type: 3}
+      objectReference: {fileID: 8300000, guid: 63e076c179b589648b17ab8f235f7340, type: 3}
     - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: 'AudioList.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: 7b4a9421e92287041b43b7cd3cc1d7bf, type: 3}
+      objectReference: {fileID: 8300000, guid: a34cb47d126253647bca5e92f4dffff6, type: 3}
     - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: 'AudioList.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: d3ee4fd30df194f44885fc39aaf3c6cc, type: 3}
+      objectReference: {fileID: 8300000, guid: 2e33b49a06cfdb94ba05f1b7e61ae612, type: 3}
     - target: {fileID: 1470920375813013905, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
       value: 1060507719221248
@@ -7971,7 +7972,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: Controller
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -11474,15 +11475,15 @@ PrefabInstance:
     - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: 'AudioList.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: a224fd5cc143b6042ba0e9576b40f3c4, type: 3}
+      objectReference: {fileID: 8300000, guid: 4e6f4faa28b8e884db42afe96633645b, type: 3}
     - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: 'AudioList.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: 74f042bd4a07b064b9228f80031a442a, type: 3}
+      objectReference: {fileID: 8300000, guid: 83960714c9b2f44439397f683b1880ee, type: 3}
     - target: {fileID: 961352260127853893, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: 'AudioList.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: 058b4573b542d0a4991c1f64f4d415f6, type: 3}
+      objectReference: {fileID: 8300000, guid: e3b596ea8d20ca345852506dee26e15c, type: 3}
     - target: {fileID: 1470920375813013905, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
       value: 1060507719221248

@@ -59,7 +59,7 @@ namespace Daniel.Master
                     StopAllCoroutines();
                     //Text.text = Lines[index];
 
-                    NextLine();
+                    if (NextLine())
                     AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
                         CurDialog.Tones[index]);
                 }
@@ -82,17 +82,19 @@ namespace Daniel.Master
                 yield return new WaitForSeconds(TextSpeed);
             }
         }
-        private void NextLine()
+        private bool NextLine()
         {
             if (index < Lines.Length - 1)
             {
                 index++;
                 Text.text = string.Empty;
                 StartCoroutine(TypeLine());
+                return true;
             }
             else
             {
                 DialogueManager.Instance.EndDialogue();
+                return false;
             }
         }
     }

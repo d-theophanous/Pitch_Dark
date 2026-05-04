@@ -21,10 +21,18 @@ namespace Daniel.Master
         [SerializeField] GameObject ScreenCanvas;
 
         [SerializeField] int MagnifierSize;
-        [SerializeField] int MagnifierZoom;
+        [SerializeField] int MagnifierZoom; 
+        [SerializeField] private float MagnifierMoveSpeed;
+        [SerializeField] private Vector3 DefaultMagCamPos;
+        [SerializeField] private Vector3 DefaultMagGlassPos;
 
         public AccessibilityMode AccMode;
 
+        protected override void Start()
+        {
+            base.Start();
+            SetCorners();
+        }
         protected override void Update()
         {
             //- Update camera movement when Magnifier is enabled
@@ -93,42 +101,48 @@ namespace Daniel.Master
             //- snap to mouse once enabled
             if (IsMagnify)
             {
-                //Vector3 world_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector3 world_pos = GlobalUIManager.Instance.CurCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-                Vector3 new_pos = new Vector3(world_pos.x, world_pos.y, 
-                    MagGlasses.gameObject.transform.position.z);
-                MagGlasses.gameObject.transform.localPosition = new_pos;
+                MagCamera.gameObject.transform.localPosition = DefaultMagCamPos;
+                MagGlasses.gameObject.transform.localPosition = DefaultMagGlassPos;
                 MagGlasses.gameObject.transform.SetAsLastSibling();
             }  
         }
+        private Vector2 MoveMagnifyDelta;
+
+        public void OnMoveMagnify(InputValue value)
+        {
+            MoveMagnifyDelta = value.Get<Vector2>();
+        }
+
         private void UpdatePositions()
         {
-            //- ToDo scaling problem persists Problem ist dass Magnifier glasses -266 z value
-            //- for now only mouse position?
-            Vector3 currentWorldPoint;
-            //- ToDo switch to new INput system
-            RectTransformUtility.ScreenPointToWorldPointInRectangle(
-                Settings.GetComponent<RectTransform>(), Mouse.current.position.ReadValue(), UICamera, out currentWorldPoint
-            );
+            Vector3 MoveMagnifyDelta = InputManager.Instance.MoveMagnifyDelta;
+            Vector3 offset = new Vector3(MoveMagnifyDelta.x, MoveMagnifyDelta.y, 0f) * MagnifierMoveSpeed * Time.deltaTime;
 
-            MagCamera.transform.position = new Vector3(currentWorldPoint.x,
-                currentWorldPoint.y,
-                MagCamera.transform.position.z);
-            MagGlasses.transform.position = new Vector3(currentWorldPoint.x,
-                currentWorldPoint.y,
-                MagGlasses.transform.position.z);
+            // Calculate new position
+            Vector3 newPos = MagGlasses.transform.position + offset;
+
+            float halfW = (MagCorners[2].x - MagCorners[0].x) / 2f;
+            float halfH = (MagCorners[2].y - MagCorners[0].y) / 2f;
+            // Clamp within canvas minus magnifier half-size
+            newPos.x = Mathf.Clamp(newPos.x, CanvasCorners[0].x + halfW, CanvasCorners[2].x - halfW);
+            newPos.y = Mathf.Clamp(newPos.y, CanvasCorners[0].y + halfH, CanvasCorners[2].y - halfH);
+            newPos.z = MagGlasses.transform.position.z; // preserve z
+
+            MagGlasses.transform.position = newPos;
+            MagCamera.transform.position = new Vector3(newPos.x, newPos.y, MagCamera.transform.position.z);
         }
-        private float GetWorldUnitsPerPixel()
+        Vector3[] MagCorners = new Vector3[4];
+        Vector3[] CanvasCorners = new Vector3[4];
+        private void SetCorners()
         {
-            // Depth of object along camera's look direction
-            float depth = Vector3.Dot(
-                transform.position - UICamera.transform.position,
-                UICamera.transform.forward
-            );
+            // Get the canvas bounds in world space
+            RectTransform canvasRect = Settings.GetComponent<RectTransform>();
+            canvasRect.GetWorldCorners(CanvasCorners);
+            // corners: 0=bottom-left, 1=top-left, 2=top-right, 3=bottom-right
 
-            // World units per pixel at that depth
-            float frustumHeight = 2f * depth * Mathf.Tan(UICamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
-            return frustumHeight / Screen.height;
+            // Get half the size of the magnifier so it stops at the edge, not the center
+            RectTransform magRect = MagGlasses.GetComponent<RectTransform>();
+            magRect.GetWorldCorners(MagCorners);
         }
 
         #endregion

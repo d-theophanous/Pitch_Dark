@@ -24,12 +24,12 @@ namespace Daniel.Master
         }
         public static int GetLoopingIndex<T>(List<T> list, int index)
         {
-            if (index >= 0 || index < list.Count) 
+            if (index >= 0 && index < list.Count) 
                 return index;
             int new_idx = list.Count;
             if (index < 0)
             {
-                new_idx -= index;
+                new_idx += index;
             }
             else if (index >= list.Count)
             {

@@ -74,11 +74,12 @@ namespace Daniel.Master
         private void PuzzleSolved()
         {
             CurDoor.ToggleDoor(true);
-            PuzzleCount++;
             Action action = () =>
             {
                 //- close UI, open door and activate the dialogue
                 GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
+                PuzzleCount++;
+                CurCamera.gameObject.SetActive(false);
                 CurDoor.DoorNPC.ActivateSecondDialogue();
             };
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR, action);

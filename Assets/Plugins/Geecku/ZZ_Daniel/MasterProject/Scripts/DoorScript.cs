@@ -23,7 +23,12 @@ namespace Daniel.Master
             base.EnterInteractionRange();
             //- mode dependent here I think
             //- ToDo (HP)
-            //Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 3f);
+            Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 3f);
+        }
+        public override void ExitInteractionRange()
+        {
+            base.ExitInteractionRange();
+            Rumbler.Instance.StopRumble();
         }
         public Camera GetCamera() => DoorCamera;
 

@@ -310,7 +310,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""name"": ""MoveMagnify"",
                     ""type"": ""PassThrough"",
                     ""id"": ""291be747-9efb-46fd-93dc-ce6907a23ca6"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -380,22 +380,11 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""dec333a0-e8e3-4e96-9569-64c595b32391"",
-                    ""path"": ""<DualShockGamepad>/touchpadButton"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Controller"",
                     ""action"": ""Magnify"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e232ed8b-0b62-4272-957c-6ac39c44a45e"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard"",
-                    ""action"": ""MoveMagnify"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -407,17 +396,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Controller"",
                     ""action"": ""MoveMagnify"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d3adad49-a865-4f7f-a891-1778fdd47203"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Controller"",
-                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -581,6 +559,15 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchInstrument"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""fbde763f-424b-407d-9c1b-84ea7c26ff8e"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -591,6 +578,17 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard"",
+                    ""action"": ""PlayRoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""08469bd7-0806-4dee-a273-6b22da582f80"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
                     ""action"": ""PlayRoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -608,22 +606,22 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b587d2a3-7592-4805-b49d-26e85fbc02be"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Controller"",
-                    ""action"": ""ImprovTest"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""56a8a41b-e0c9-4275-9236-a698287ad7d9"",
                     ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard"",
+                    ""action"": ""PlayThird"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3fcb969d-07cd-4748-8fa4-db0186904d1a"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
                     ""action"": ""PlayThird"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -641,6 +639,17 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""32aab06b-9341-4a2a-901c-4a773990204a"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""PlayFifth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""3aaaa957-1a4b-4e67-9121-f49d10ebb869"",
                     ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
@@ -652,12 +661,23 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b36daf53-9b3d-4a4b-970c-d52556103673"",
-                    ""path"": """",
+                    ""id"": ""b4119065-7f47-48da-8b0e-ab9fbf62d8e4"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Controller"",
                     ""action"": ""PlayOctave"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""844a017e-ba9b-4ffb-a274-603654f68922"",
+                    ""path"": ""<Gamepad>/dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""SwitchInstrument"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -789,6 +809,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_Improvisation_PlayThird = m_Improvisation.FindAction("PlayThird", throwIfNotFound: true);
         m_Improvisation_PlayFifth = m_Improvisation.FindAction("PlayFifth", throwIfNotFound: true);
         m_Improvisation_PlayOctave = m_Improvisation.FindAction("PlayOctave", throwIfNotFound: true);
+        m_Improvisation_SwitchInstrument = m_Improvisation.FindAction("SwitchInstrument", throwIfNotFound: true);
         // General
         m_General = asset.FindActionMap("General", throwIfNotFound: true);
         m_General_Settings = m_General.FindAction("Settings", throwIfNotFound: true);
@@ -1175,6 +1196,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_Improvisation_PlayThird;
     private readonly InputAction m_Improvisation_PlayFifth;
     private readonly InputAction m_Improvisation_PlayOctave;
+    private readonly InputAction m_Improvisation_SwitchInstrument;
     /// <summary>
     /// Provides access to input actions defined in input action map "Improvisation".
     /// </summary>
@@ -1206,6 +1228,10 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Improvisation/PlayOctave".
         /// </summary>
         public InputAction @PlayOctave => m_Wrapper.m_Improvisation_PlayOctave;
+        /// <summary>
+        /// Provides access to the underlying input action "Improvisation/SwitchInstrument".
+        /// </summary>
+        public InputAction @SwitchInstrument => m_Wrapper.m_Improvisation_SwitchInstrument;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1247,6 +1273,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @PlayOctave.started += instance.OnPlayOctave;
             @PlayOctave.performed += instance.OnPlayOctave;
             @PlayOctave.canceled += instance.OnPlayOctave;
+            @SwitchInstrument.started += instance.OnSwitchInstrument;
+            @SwitchInstrument.performed += instance.OnSwitchInstrument;
+            @SwitchInstrument.canceled += instance.OnSwitchInstrument;
         }
 
         /// <summary>
@@ -1273,6 +1302,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @PlayOctave.started -= instance.OnPlayOctave;
             @PlayOctave.performed -= instance.OnPlayOctave;
             @PlayOctave.canceled -= instance.OnPlayOctave;
+            @SwitchInstrument.started -= instance.OnSwitchInstrument;
+            @SwitchInstrument.performed -= instance.OnSwitchInstrument;
+            @SwitchInstrument.canceled -= instance.OnSwitchInstrument;
         }
 
         /// <summary>
@@ -1659,6 +1691,13 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPlayOctave(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchInstrument" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchInstrument(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "General" which allows adding and removing callbacks.

@@ -36,6 +36,8 @@ public enum RumblePattern
         }
         public void RumbleConstant(float low, float high, float duration)
         {
+            if (Gamepad == null)
+                return;
             StartRumble(duration);
             Gamepad.SetMotorSpeeds(low, high);
 
