@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.382
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -7656,15 +7656,15 @@ PrefabInstance:
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: 'AudioList.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 904ce1f9201d1b649a7e661bb38a5c68, type: 3}
+      objectReference: {fileID: 8300000, guid: a8e0d8c92fe041c4e879d5f7593e63d4, type: 3}
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: 'AudioList.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: 8c0329bf57bd75a4586c91301ba3180a, type: 3}
+      objectReference: {fileID: 8300000, guid: fc1245ed4624751468ca058390759773, type: 3}
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: 'AudioList.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: b85d60821719d84498a0c1cb82610702, type: 3}
+      objectReference: {fileID: 8300000, guid: 22ee0c7ef99cc564aa452ff4d8838b81, type: 3}
     - target: {fileID: 3832338113460869256, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: m_Name
       value: ReadableLabel
