@@ -20,14 +20,6 @@ namespace Daniel.Master
         public Note[] SolutionInterval = new Note[2];
         private Camera CurCamera;
 
-        public void UpdatePuzzle()
-        {
-            //- maybe I dont need?
-            //if (PuzzleSolved)
-            //{
-            //    EndPuzzle();
-            //}
-        }
         /// <summary>
         /// Gets called when you press the solve button. Waits for input and 
         /// checks if your answer is right or wrong
@@ -72,6 +64,7 @@ namespace Daniel.Master
             if ((Interval)interval == PuzzleList[PuzzleCount].SolutionInterval)
             {
                 AudioManager.Instance.PlaySFX(SFX.CORRECT, () => { PuzzleSolved(); });
+                AudioManager.Instance.UnlockInstrument(Instrument.Piano);
             }
             else
             {

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: NarrationScriptData_eng
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::NarrationScriptData
   lines:
-  - English
+  - Pop
+  - Hip Hop
+  - EDM

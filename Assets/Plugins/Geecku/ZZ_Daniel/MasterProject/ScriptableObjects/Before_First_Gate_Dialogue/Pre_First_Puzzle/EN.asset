@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
+  m_Name: EN
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
+  DialogueNumber: 0
+  Language: EN
+  Lines:
+  - 'Hey you, I know you, you were with the labyrinth expedition group earlier '
+  - 'Good to see that you are not hurt '
+  - 'After the earthquake that happened earlier I lost everyone from the group '
+  - 'Me and my band just wanted to go on a fun adventure but now they are lost somewhere
+    in this labyrinth '
+  - 'I hope they are alright '
+  - 'Lets look for them together maybe then you can also find your friend '
+  - 'The door ahead is closed and it seems to be some sort of musical puzzle '
+  - 'I can teach you the basics but you will have to figure out how to solve it '
+  - 'Are you ready? '
+  - 'Where we come from, we have 12 notes that we use to make music '
+  - 'Here is a small example '
+  - 'Now some sound better together than others '
+  - 'Here are two that when you play them create a lot of tension '
+  - 'While these are soft '
+  - 'When I play two notes, the difference between them are called intervals '
+  - 'Here is a small interval where the notes are close to each other '
+  - 'Here is a big interval where the notes are far apart '
+  - 'I will teach you two intervals that you will need for the puzzle. Remember them
+    well '
+  - 'The prime is the interval that I get when I play the same note twice. '
+  - 'The prime is the smallest interval '
+  - 'The octave is the interval that I get when I play two notes that sound similar
+    but are far apart '
+  - 'You can try it our yourself by pressing the buttons on your right hand '

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
+  m_Name: NL
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
+  DialogueNumber: 0
+  Language: NL
+  Lines:
+  - "H\xE9 jij, ik ken je, je zat eerder bij de groep die het labyrint ging verkennen "
+  - 'Fijn om te zien dat je niets mankeert '
+  - 'Na de aardbeving van daarnet ben ik iedereen uit de groep kwijtgeraakt '
+  - 'Mijn band en ik wilden gewoon een leuk avontuur beleven, maar nu zijn ze ergens
+    in dit labyrint verdwaald '
+  - 'Ik hoop dat ze in orde zijn '
+  - 'Laten we samen naar ze zoeken, misschien kun je dan ook je vriend vinden '
+  - 'De deur verderop is gesloten en het lijkt een soort muzikale puzzel te zijn '
+  - 'Ik kan je de basis leren, maar je zult zelf moeten uitzoeken hoe je het moet
+    oplossen '
+  - 'Ben je er klaar voor? '
+  - 'Waar wij vandaan komen, hebben we 12 noten die we gebruiken om muziek te maken '
+  - 'Hier is een klein voorbeeld '
+  - 'Sommige klinken beter samen dan andere '
+  - "Hier zijn er twee die, als je ze speelt, veel spanning cre\xEBren "
+  - 'Terwijl deze zacht zijn '
+  - 'Als ik twee noten speel, wordt het verschil tussen beide intervallen genoemd '
+  - 'Hier is een klein interval waarbij de noten dicht bij elkaar liggen '
+  - 'Hier is een groot interval waarbij de noten ver uit elkaar liggen '
+  - 'Ik zal je twee intervallen leren die je nodig hebt voor de puzzel. Onthoud ze
+    goed '
+  - 'De prime is het interval dat ik krijg als ik dezelfde noot twee keer speel '
+  - 'De prime is het kleinste interval '
+  - 'Het octaaf is het interval dat ik krijg als ik twee noten speel die hetzelfde
+    klinken maar ver uit elkaar liggen '
+  - 'Je kunt het zelf proberen door op de knoppen aan je rechterkant te drukken '

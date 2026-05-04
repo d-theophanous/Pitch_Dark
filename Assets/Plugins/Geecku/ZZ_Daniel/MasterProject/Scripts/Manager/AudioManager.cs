@@ -55,7 +55,8 @@ namespace Daniel.Master
             SetUpEvents();
 
             //- Instrument at the start
-            SetInstrument((int)Instrument.Vocal);
+            UnlockInstrument(Instrument.Vocals);
+            SetInstrument((int)Instrument.Vocals);
         }
         public void UpdateAudio()
         {
@@ -85,11 +86,11 @@ namespace Daniel.Master
         {
             RuntimeManager.PlayOneShot(reference, world_pos);
         }
-        public void PlayDialogue(string key)
+        public void PlayDialogue(string key, Message_Tone tone = Message_Tone.CONTINUE)
         {
             StopDialogue();
 
-            currentDialogueInstance.setParameterByNameWithLabel("Tone", "Continue");
+            currentDialogueInstance.setParameterByNameWithLabel("Tone", tone.ToString());
 
             // Pin the key string in memory and pass a pointer through the user data
             GCHandle stringHandle = GCHandle.Alloc(key);
@@ -98,11 +99,11 @@ namespace Daniel.Master
             currentDialogueInstance.setCallback(dialogueCallback);
             currentDialogueInstance.start();
         }
-        public void PlayDialogue(int dialogue, int line)
+        public void PlayDialogue(int dialogue, int line, Message_Tone tone = Message_Tone.CONTINUE)
         {
             string key = Helper.GetLanguageString() + "_" + dialogue 
                 + "_" + line;
-            PlayDialogue(key);
+            PlayDialogue(key, tone);
         }
         public void StopDialogue()
         {
@@ -349,6 +350,8 @@ namespace Daniel.Master
         #region Improvisation
         EventInstance ImprovTrackEventInstance;
         EventInstance NoteEventInstance;
+        private List<Instrument> UnlockedInstrumentList = new();
+        private Instrument CurInstrument = Instrument.None;
         private void SetUpEvents()
         {
             ImprovTrackEventInstance = CreateEventInstance(FMODEvents.Instance.ImprovisationTrack);
@@ -387,7 +390,16 @@ namespace Daniel.Master
         }
         public void SetInstrument(int instrument)
         {
-            NoteEventInstance.setParameterByNameWithLabel("Instrument", ((Instrument)instrument).ToString());
+            Instrument tmp = (Instrument)instrument;
+            if (!UnlockedInstrumentList.Contains(tmp))
+                return;
+            if (CurInstrument != Instrument.None)
+            {
+                ImprovTrackEventInstance.setParameterByName(CurInstrument.ToString(), 1f);
+            }
+            CurInstrument = tmp;
+            NoteEventInstance.setParameterByNameWithLabel("Instrument", CurInstrument.ToString());
+            ImprovTrackEventInstance.setParameterByName(CurInstrument.ToString(), 0f);
         }
         public void SetGenre(int genre)
         {
@@ -397,6 +409,24 @@ namespace Daniel.Master
         {
             SetGenre(genre);
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT, false);
+        }
+        public void UnlockInstrument(Instrument instrument)
+        {
+            //- unlock and add to track
+            UnlockedInstrumentList.Add(instrument);
+            ImprovTrackEventInstance.setParameterByName(instrument.ToString(), 1f);
+        }
+        public void SwitchInstrument(int change)
+        {
+            int cur_instr_idx = 0;
+            foreach (Instrument instrument in UnlockedInstrumentList)
+            {
+                if (instrument == CurInstrument)
+                    break;
+                cur_instr_idx++;
+            }
+            SetInstrument((int)UnlockedInstrumentList[
+                Helper.GetLoopingIndex(UnlockedInstrumentList, cur_instr_idx + change)]);
         }
         #endregion
 
@@ -420,7 +450,7 @@ namespace Daniel.Master
     //- ToDo change according to what we end up with
     public enum Instrument
     {
-        Piano, Violin, Guitar, Vocal
+        Piano, Violin, Guitar, Vocals, None
     }
     public enum Genre
     {
@@ -432,7 +462,8 @@ namespace Daniel.Master
     }
     public enum Message_Tone
     {
-        CONTINUE
+        CONTINUE, NONE, NOTES_EXAMPLE, HARMONIC_INTERVAL, TENSION_INTERVAL, PRIME, OCTAVE,
+        BUTTON
     }
     public enum SFX
     {

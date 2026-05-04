@@ -12,9 +12,7 @@ namespace Daniel.Master
         [SerializeField] protected TMP_Text Text;
         //- ToDo opt
         [SerializeField] protected List<AudioClip> AudioList;
-        //- for debugging, change again!!!
-        protected AudioClip Audio => null;
-            //AudioList[(int)GameManager.Language];
+        protected AudioClip Audio => AudioList[(int)GameManager.Language];
         //- anstelle von Label vlt Dictonary mit englishem Text als Key
         //- sprach triple oder so als value
         protected UI_Element Element;

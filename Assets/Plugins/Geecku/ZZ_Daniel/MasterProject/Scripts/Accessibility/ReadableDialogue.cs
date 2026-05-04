@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using TMPro;
+using Unity.GraphToolkit.Editor;
 using UnityEngine;
 
 namespace Daniel.Master
@@ -16,12 +17,21 @@ namespace Daniel.Master
 
         public void SetUp(DialogueContainer data, float text_speed)
         {
-            Debug.Log("Setup");
             CurDialog = data;
-            CurDialogData = CurDialog.DialogueList[(int)GameManager.Language];
+            CurDialogData = CurDialog.DialogueList[GetChangedLanguageInt((int)GameManager.Language)];
             Text.text = String.Empty;
             Lines = CurDialogData.Lines.ToArray();
             TextSpeed = text_speed;
+        }
+        //- hilarious (ToDo) opt
+        private int GetChangedLanguageInt(int language)
+        {
+            if (language == 0)
+                return 1;
+            else if (language == 1)
+                return 0;
+            else
+                return 2;
         }
         public override void Activate()
         {
@@ -39,17 +49,19 @@ namespace Daniel.Master
             {
                 if (Text.text == Lines[index])
                 {
-                    //- optional ToDo: nicer System
-                    AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index);
                     NextLine();
+                    //- optional ToDo: nicer System
+                    AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
+                        CurDialog.Tones[index]);
                 }
                 else
                 {
                     StopAllCoroutines();
                     //Text.text = Lines[index];
 
-                    AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index);
                     NextLine();
+                    AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
+                        CurDialog.Tones[index]);
                 }
                 ContinuePressed = false;
             }
@@ -57,14 +69,13 @@ namespace Daniel.Master
         public void StartDialogue()
         {
             index = 0;
-            AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index);
+            AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
+                        CurDialog.Tones[index]);
             StartCoroutine(TypeLine());
         }
         private IEnumerator TypeLine()
         {
             yield return new WaitForEndOfFrame();
-            Debug.Log("index: " + index);
-            Debug.Log("lines: " + Lines.Length);
             foreach (char c in Lines[index].ToCharArray())
             {
                 Text.text += c;

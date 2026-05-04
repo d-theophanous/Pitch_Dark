@@ -67,7 +67,6 @@ namespace Daniel.Master
                     DialogueManager.Instance.UpdateDialogue();
                     break;
                 case GameState.SOLVING_PUZZLE:
-                    PuzzleManager.Instance.UpdatePuzzle();
                     break;
                 case GameState.IMPROVISING:
                     break;

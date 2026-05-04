@@ -42,10 +42,10 @@ namespace Daniel.Master
         {
             if (ImproviseAfter)
             {
-                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Improvisation");
-                AudioManager.Instance.StartImprovisation();
                 GameManager.Instance.SetGameState(GameState.IMPROVISING);
                 GlobalUIManager.Instance.ToggleUI(UI_Group.IMPROVISATION, false);
+                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Improvisation");
+                AudioManager.Instance.StartImprovisation();
                 PuzzleManager.Instance.IsSolving = false;
             }
             else
@@ -56,10 +56,6 @@ namespace Daniel.Master
         }
         public void CleanUpDialogue()
         {
-            foreach (NPCScript npc in GetNPCFollowers())
-            {
-                npc.ToggleFollowing();
-            }
             CurNPCCamera.gameObject.SetActive(false);
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
             GameManager.Instance.SetGameState(GameState.PLAYING);
@@ -82,6 +78,10 @@ namespace Daniel.Master
                 Debug.Log("Current followers null");
 
             CurrentNPCs.AddRange(GetNPCFollowers());
+            foreach (NPCScript npc in GetNPCFollowers())
+            {
+                npc.ToggleFollowing();
+            }
         }
         private List<NPCScript> GetNPCFollowers()
         {

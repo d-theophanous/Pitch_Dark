@@ -64,6 +64,14 @@ namespace Daniel.Master
             if (PuzzleManager.Instance.IsSolving)
                 PuzzleManager.Instance.CheckPuzzle(Interval.OCTAVE);
         }
+        public void OnSwitchInstrumentLeft()
+        {
+            AudioManager.Instance.SwitchInstrument(-1);
+        }
+        public void OnSwitchInstrumentRight()
+        {
+            AudioManager.Instance.SwitchInstrument(+1);
+        }
         #endregion
 
         #region Settings and UI
