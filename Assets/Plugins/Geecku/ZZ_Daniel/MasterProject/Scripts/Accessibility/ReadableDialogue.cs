@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using TMPro;
-using Unity.GraphToolkit.Editor;
 using UnityEngine;
 
 namespace Daniel.Master
@@ -50,9 +49,13 @@ namespace Daniel.Master
                 if (Text.text == Lines[index])
                 {
                     NextLine();
-                    //- optional ToDo: nicer System
-                    AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
-                        CurDialog.Tones[index]);
+                    if (GameManager.Instance.PlayerIdx == 1 && (index == 18 || index == 19 || index == 20))
+                        AudioManager.Instance.ChangeLines = true;
+                    else
+                        AudioManager.Instance.ChangeLines = false;
+                        //- optional ToDo: nicer System
+                        AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
+                            CurDialog.Tones[index]);
                 }
                 else
                 {

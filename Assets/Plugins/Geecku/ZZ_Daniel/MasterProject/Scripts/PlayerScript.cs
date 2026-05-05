@@ -49,7 +49,7 @@ namespace Daniel.Master
             else
             {
                 tmp = Player2Spawn;
-                CurRotationIdx = 3;
+                CurRotationIdx = 1;
             }
 
             transform.position = tmp.position;

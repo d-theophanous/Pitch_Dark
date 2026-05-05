@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: NarrationScriptData_de
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::NarrationScriptData
   lines:
-  - Pop
-  - Hip Hop
-  - EDM
+  - Die Terz klingt so
+  - "Die T\xF6ne liegen ziemlich nah beieinander"
+  - "Die Quinte ist ein noch gr\xF6\xDFeres, harmonisch klingendes Intervall, das
+    so klingt"

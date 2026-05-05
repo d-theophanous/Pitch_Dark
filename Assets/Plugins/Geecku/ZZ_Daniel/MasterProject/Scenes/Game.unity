@@ -635,8 +635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36b70e827ee77f44a624c729ce5a12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1Spawn: {fileID: 1269578798}
-  Player2Spawn: {fileID: 1991484681}
+  Player1Spawn: {fileID: 430324109}
+  Player2Spawn: {fileID: 430324109}
   NavMeshAgent: {fileID: 68033102}
   NPCCamera: {fileID: 0}
   CinCam: {fileID: 866957315}
@@ -15778,11 +15778,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4029966270365353113, guid: 0b4e224ea20b38e4aa5bda640d4b5a3b, type: 3}
+      propertyPath: DialogueList2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029966270365353113, guid: 0b4e224ea20b38e4aa5bda640d4b5a3b, type: 3}
       propertyPath: 'DialogueList.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: a1567bccfdd50a4458a40620f8d478af, type: 2}
     - target: {fileID: 4029966270365353113, guid: 0b4e224ea20b38e4aa5bda640d4b5a3b, type: 3}
       propertyPath: 'DialogueList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
+    - target: {fileID: 4029966270365353113, guid: 0b4e224ea20b38e4aa5bda640d4b5a3b, type: 3}
+      propertyPath: 'DialogueList2.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 401e226b7d23f35488ee87a126bb4e96, type: 2}
+    - target: {fileID: 4029966270365353113, guid: 0b4e224ea20b38e4aa5bda640d4b5a3b, type: 3}
+      propertyPath: 'DialogueList2.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
     m_RemovedComponents: []
@@ -19437,11 +19449,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 766992885882807819, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
+      propertyPath: DialogueList2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 766992885882807819, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
       propertyPath: 'DialogueList.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 8ad596c0b6567b34fb91c2efe2e4a772, type: 2}
     - target: {fileID: 766992885882807819, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
       propertyPath: 'DialogueList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
+    - target: {fileID: 766992885882807819, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
+      propertyPath: 'DialogueList2.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ad596c0b6567b34fb91c2efe2e4a772, type: 2}
+    - target: {fileID: 766992885882807819, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
+      propertyPath: 'DialogueList2.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
     m_RemovedComponents: []

@@ -270,17 +270,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""action"": ""ImprovTest"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5d32d4e9-ae26-478a-aa0b-0e0f6481f5fd"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Controller"",
-                    ""action"": ""ImprovTest"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },

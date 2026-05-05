@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -23,6 +24,17 @@ namespace Daniel.Master
         private float UpdateTimer;
         private Transform Player;
 
+        //- very ugly, very temporary, ToDo
+        [SerializeField] private List<DialogueContainer> DialogueList2;
+        private List<DialogueContainer> DialogueListFinal
+        {
+            get
+            {
+                if (GameManager.Instance.PlayerIdx == 0)
+                    return DialogueList;
+                return DialogueList2;
+            }
+        }
         void Awake()
         {
             Player = GameManager.Instance.Player.transform;
@@ -109,7 +121,7 @@ namespace Daniel.Master
             Debug.Log("NPC interaction");
             //- nur zum Testen?
             DialogueManager.Instance.StartDialogue(
-                DialogueList[0]);
+                DialogueListFinal[0]);
             tag = "Untagged";
         }
         public void ActivateSecondDialogue()
@@ -118,7 +130,7 @@ namespace Daniel.Master
             DialogueManager.Instance.SetCurrentNPC(this);
             LookAtPlayer();
             DialogueManager.Instance.StartDialogue(
-                DialogueList[1], true);
+                DialogueListFinal[1], true);
             //- after second dialogue NPC will not be interactable anymore
             this.tag = "Untagged";
         }

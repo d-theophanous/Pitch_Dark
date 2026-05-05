@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7141654a37e5e741874cec7e1c8ecd7, type: 3}
+  m_Name: Container 1
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueContainer
+  DialogueList:
+  - {fileID: 11400000, guid: 6111b24fe15fba2418d7b8812d402865, type: 2}
+  - {fileID: 11400000, guid: 9d11852e9f2e96d4ea18ec8be2afed2b, type: 2}
+  - {fileID: 11400000, guid: b6cd73db272c00c46a4b0defc997a9d7, type: 2}
+  Tones: 0000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000400000003000000000000000800000009000000000000000b000000000000000a00000000000000

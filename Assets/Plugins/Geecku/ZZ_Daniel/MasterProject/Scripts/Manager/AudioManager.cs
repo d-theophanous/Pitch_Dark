@@ -100,10 +100,14 @@ namespace Daniel.Master
             currentDialogueInstance.setCallback(dialogueCallback);
             currentDialogueInstance.start();
         }
+        public bool ChangeLines;
         public void PlayDialogue(int dialogue, int line, Message_Tone tone = Message_Tone.CONTINUE)
         {
             string key = Helper.GetLanguageString() + "_" + dialogue 
                 + "_" + line;
+            //- lord have mercy ToDo
+            if (ChangeLines)
+                key += "_2";
             PlayDialogue(key, tone);
         }
         public void StopDialogue()

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: nl_NarrationScriptData
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::NarrationScriptData
   lines:
-  - Pop
-  - Hip Hop
-  - EDM
+  - De derde is het interval dat zo klinkt
+  - De noten liggen vrij dicht bij elkaar
+  - De kwint is een nog groter, harmonisch klinkend interval dat zo klinkt
