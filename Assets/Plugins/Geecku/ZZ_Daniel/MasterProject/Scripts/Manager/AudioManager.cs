@@ -153,12 +153,10 @@ namespace Daniel.Master
         #region Footsteps
         public void PlayFootsteps()
         {
-            UnityEngine.Debug.Log("play footsteps");
             FootstepEvent.start();
         }
         public void StopFootsteps()
         {
-            UnityEngine.Debug.Log("stop footsteps");
             FootstepEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
         #endregion

@@ -105,26 +105,24 @@ namespace Geecku.DefaultNetworking
         /// <summary>
         /// The default IP-address to connect when <see cref="AutoConnectClient"/> is enabled.
         /// </summary>
-        [ShowInInspector, BoxGroup("Connection Info")]
+        //[ShowInInspector, BoxGroup("Connection Info")]
         public string IP_Address = "127.0.0.1";
         /// <summary>
         /// The default TCP port to use.
         /// <br/><br/>
         /// Common free ports: 49152 – 65535
         /// </summary>
-        [ReadOnly]  //- only readonly to say 'dont change the ports!'
-        [ShowInInspector, BoxGroup("Connection Info")]
         //50112
-        public ushort TCP_Port => 64000;
+        private ushort _TCP_Port = 64000;
+        public ushort TCP_Port => _TCP_Port;
         /// <summary>
         /// The default UDP port to use when <see cref="ProtocolTypes.Double"/> is selected.
         /// <br/><br/>
         /// Common free ports: 49152 – 65535
         /// </summary>
-        [ReadOnly]  //- only readonly to say 'dont change the ports!'
-        [ShowInInspector, BoxGroup("Connection Info")]
         //50113
-        public ushort UDP_Port => 64001;
+        private ushort _UDP_Port = 64001;
+        public ushort UDP_Port => _UDP_Port;
         [ShowInInspector, ReadOnly, BoxGroup("Connection Info")]
         public ushort MaxPlayers => 16;
         #endregion
@@ -239,6 +237,11 @@ namespace Geecku.DefaultNetworking
         public static K Instantiate<K>(Transform transform) where K : MonoBehaviour
         {
             return Instance.GetEmptyTransform(transform).gameObject.AddComponent<K>();
+        }
+        public static void SetPort(ushort tcp, ushort udp)
+        {
+            Instance._TCP_Port = tcp;
+            Instance._UDP_Port = udp;
         }
         #endregion
 

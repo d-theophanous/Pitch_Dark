@@ -66,7 +66,9 @@ public class InteractionColliderScript : MonoBehaviour
     {
         if (PlayWallSound)
         {
-            if (IsFacingTheWall(CurrentWallCollider.gameObject))
+            if ((CurrentWallCollider != null && NextWallCollider != null
+                && IsFacingTheWall(NextWallCollider.gameObject)) ||
+                IsFacingTheWall(CurrentWallCollider.gameObject))
             {
                 AudioManager.Instance.StartFaceWall();
             }
@@ -89,7 +91,6 @@ public class InteractionColliderScript : MonoBehaviour
     {
         GameObject player = GameManager.Instance.Player.gameObject;
         float dot = Vector3.Dot(wall.transform.forward, player.transform.forward);
-        Debug.Log("dot: " + Mathf.Abs(dot));
         return Mathf.Abs(dot) > 0.5f;
     }
     #endregion

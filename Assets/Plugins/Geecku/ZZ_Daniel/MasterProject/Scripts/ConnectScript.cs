@@ -2,6 +2,7 @@ using Geecku;
 using Geecku.DefaultNetworking;
 using Geecku.GlobalMangers;
 using System.Collections;
+using System.Net;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,6 +16,8 @@ namespace Daniel.Master
         public const string LOCALHOST = "127.0.0.1";
         #region UI
         [SerializeField] private TMP_InputField IPInput;
+        [SerializeField] private TMP_InputField TCPPortInput;
+        [SerializeField] private TMP_InputField UDPPortInput;
         [SerializeField] private Button HostButton;
         [SerializeField] private Button ConnectButton;
         [SerializeField] private TMP_Text ConnectInfo;
@@ -26,6 +29,7 @@ namespace Daniel.Master
         {
             Debug.Log("Host");
             NetworkManager.Instance.IP_Address = LOCALHOST;
+            SetPorts();
             NetworkManager.StartServer();
             NetworkManager.StartClient();
 
@@ -39,10 +43,22 @@ namespace Daniel.Master
             var ip_address = GetIPAddress();
             if (ip_address == null)
                 return;
-            NetworkManager.Instance.IP_Address = ip_address;
+            SetPorts();
             NetworkManager.StartClient();
+            Debug.Log(NetworkManager.Instance.TCP_Port);
 
             Setup();
+        }
+        private void SetPorts()
+        {
+            string udp_port = UDPPortInput.text;
+            string tcp_port = TCPPortInput.text;
+            if (udp_port == null || tcp_port == null)
+                return;
+
+            ushort.TryParse(udp_port, out ushort udp);
+            ushort.TryParse(tcp_port, out ushort tcp);
+            NetworkManager.SetPort(tcp, udp);
         }
         private int PlayerCount => LocalClientCount;
         public void UpdatePlayers()
