@@ -1,0 +1,40 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Accessibility mode is already active
+	
+MLog>> Host
+	
+MLog>> Server: Started on port 64000.
+	
+MLog>> Client: Connecting to 127.0.0.1:64000...
+	
+MLog>> Client: Connected successfully.
+	
+MLog>> Server: Client 1 (127.0.0.1:61661) connected successfully.
+	
+MLog>> Client: Client ready with msg-index '0'.
+	
+MLog>> Client: Disconnected from Server. Manual exit.
+	
+MLog>> Server: Client 1 (127.0.0.1:61661) disconnected.
+	
+MLog>> Server: Client 2 (127.0.0.1:64150) connected successfully.
+	
+MLog>> Server: Client 2 (127.0.0.1:64150) disconnected: Timed out.
+	
+MLog>> Server: Client 3 (192.168.178.69:54789) connected successfully.
+	
+MLog>> Server: Client 3 (192.168.178.69:54789) disconnected: Timed out.
+	
+MLog>> Quit
+	

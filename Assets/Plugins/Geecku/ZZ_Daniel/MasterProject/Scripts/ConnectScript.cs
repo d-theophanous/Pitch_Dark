@@ -43,7 +43,8 @@ namespace Daniel.Master
             var ip_address = GetIPAddress();
             if (ip_address == null)
                 return;
-            SetPorts();
+            SetPorts(); 
+            NetworkManager.Instance.IP_Address = ip_address;
             NetworkManager.StartClient();
             Debug.Log(NetworkManager.Instance.TCP_Port);
 
