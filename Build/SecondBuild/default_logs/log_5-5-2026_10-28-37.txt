@@ -1,0 +1,175 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> Accessibility mode is already active
+	
+MLog>> Game started :))
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> puzzle cound: 0
+	
+MLog>> puzzle cound: 0
+	
+MLog>> puzzle cound: 0
+	
+MLog>> NPC interaction
+	
+MLog>> (-0.09, 1.00)
+	
+MLog>> (-0.11, 0.99)
+	
+MLog>> (-0.12, 0.99)
+	
+MLog>> (-0.12, 0.99)
+	
+MLog>> (-0.14, 0.99)
+	
+MLog>> (-0.13, 0.99)
+	
+MLog>> (-0.14, 0.99)
+	
+MLog>> (-0.14, 0.99)
+	
+MLog>> (-0.14, 0.99)
+	
+MLog>> (-0.08, 1.00)
+	
+MLog>> (-0.09, 0.96)
+	
+MLog>> (0.00, 0.71)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> play footsteps
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> stop footsteps
+	
+MLog>> (0.00, -0.37)
+	
+MLog>> (0.00, -1.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchReadableElementGroup (Daniel.Master.ReadableElementGroup group) (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	Daniel.Master.ReadableElement.Return () (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	Daniel.Master.ReadableElementGroup.ReturnCurElement () (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	Daniel.Master.TTSManager.ReturnCurElement () (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	Daniel.Master.InputManager.OnBack () (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> stop footsteps
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> Player
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> bin null
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> Quit
+	

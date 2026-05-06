@@ -1,0 +1,3851 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> Accessibility mode is already active
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> Game started :))
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> puzzle cound: 0
+	
+MLog>> puzzle cound: 0
+	
+MLog>> puzzle cound: 0
+	
+MLog>> NPC interaction
+	
+MLog>> (0.63, 0.78)
+	
+MLog>> (0.67, 0.74)
+	
+MLog>> (0.74, 0.67)
+	
+MLog>> (0.80, 0.59)
+	
+MLog>> (0.85, 0.53)
+	
+MLog>> (0.88, 0.48)
+	
+MLog>> (0.89, 0.45)
+	
+MLog>> (0.90, 0.44)
+	
+MLog>> (0.92, 0.40)
+	
+MLog>> (0.94, 0.34)
+	
+MLog>> (0.98, 0.22)
+	
+MLog>> (0.99, 0.13)
+	
+MLog>> (1.00, 0.03)
+	
+MLog>> (0.99, -0.12)
+	
+MLog>> (0.98, -0.17)
+	
+MLog>> (0.97, -0.23)
+	
+MLog>> (0.97, -0.25)
+	
+MLog>> (0.96, -0.27)
+	
+MLog>> (0.96, -0.28)
+	
+MLog>> (0.97, -0.26)
+	
+MLog>> (0.97, -0.23)
+	
+MLog>> (0.82, -0.10)
+	
+MLog>> (0.63, -0.04)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.04, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> play footsteps
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> stop footsteps
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchReadableElementGroup (Daniel.Master.ReadableElementGroup group) (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	Daniel.Master.ReadableElement.Return () (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	Daniel.Master.ReadableElementGroup.ReturnCurElement () (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	Daniel.Master.TTSManager.ReturnCurElement () (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	Daniel.Master.InputManager.OnBack () (at <1e23b93cf01044c3a3e420961992e5a0>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.02)
+	
+MLog>> (0.00, 0.06)
+	
+MLog>> (0.00, 0.13)
+	
+MLog>> (0.00, 0.20)
+	
+MLog>> (0.00, 0.22)
+	
+MLog>> (0.00, 0.28)
+	
+MLog>> (0.00, 0.33)
+	
+MLog>> (0.00, 0.38)
+	
+MLog>> (0.00, 0.39)
+	
+MLog>> (0.00, 0.43)
+	
+MLog>> (0.00, 0.47)
+	
+MLog>> (0.00, 0.48)
+	
+MLog>> (0.00, 0.53)
+	
+MLog>> (0.00, 0.54)
+	
+MLog>> (0.00, 0.56)
+	
+MLog>> (0.00, 0.57)
+	
+MLog>> (0.00, 0.58)
+	
+MLog>> (0.00, 0.61)
+	
+MLog>> (0.00, 0.62)
+	
+MLog>> (0.00, 0.65)
+	
+MLog>> (0.00, 0.67)
+	
+MLog>> (0.00, 0.69)
+	
+MLog>> (0.00, 0.69)
+	
+MLog>> (0.00, 0.70)
+	
+MLog>> (0.00, 0.71)
+	
+MLog>> (0.00, 0.72)
+	
+MLog>> (0.00, 0.75)
+	
+MLog>> (0.00, 0.77)
+	
+MLog>> (0.00, 0.79)
+	
+MLog>> (0.00, 0.85)
+	
+MLog>> (0.00, 0.94)
+	
+MLog>> (-0.01, 0.98)
+	
+MLog>> (-0.04, 1.00)
+	
+MLog>> (-0.07, 1.00)
+	
+MLog>> (-0.07, 1.00)
+	
+MLog>> (-0.07, 1.00)
+	
+MLog>> (-0.06, 1.00)
+	
+MLog>> (-0.05, 1.00)
+	
+MLog>> (-0.03, 0.79)
+	
+MLog>> (0.01, 0.43)
+	
+MLog>> (0.01, 0.24)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> stop footsteps
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> play footsteps
+	
+MLog>> Player
+	
+MLog>> stop footsteps
+	
+MLog>> puzzle cound: 1
+	
+MLog>> puzzle cound: 1
+	
+MLog>> puzzle cound: 1
+	
+MLog>> NPC interaction
+	
+MLog>> (0.07, 0.76)
+	
+MLog>> (0.00, 0.77)
+	
+MLog>> (-0.06, 0.77)
+	
+MLog>> (-0.11, 0.76)
+	
+MLog>> (-0.13, 0.72)
+	
+MLog>> (-0.14, 0.62)
+	
+MLog>> (-0.10, 0.38)
+	
+MLog>> (-0.06, 0.24)
+	
+MLog>> (0.00, 0.01)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> bin null
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> Player
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> Player
+	
+MLog>> (1.00, -0.07)
+	
+MLog>> (0.99, -0.12)
+	
+MLog>> (0.99, -0.13)
+	
+MLog>> (0.99, -0.17)
+	
+MLog>> (0.98, -0.17)
+	
+MLog>> (0.98, -0.20)
+	
+MLog>> (0.98, -0.19)
+	
+MLog>> (0.98, -0.20)
+	
+MLog>> (0.98, -0.19)
+	
+MLog>> (0.99, -0.17)
+	
+MLog>> (1.00, -0.06)
+	
+MLog>> (0.99, 0.14)
+	
+MLog>> (0.83, 0.36)
+	
+MLog>> (0.69, 0.54)
+	
+MLog>> (0.60, 0.70)
+	
+MLog>> (0.55, 0.73)
+	
+MLog>> (0.49, 0.79)
+	
+MLog>> (0.46, 0.79)
+	
+MLog>> (0.42, 0.79)
+	
+MLog>> (0.37, 0.79)
+	
+MLog>> (0.32, 0.78)
+	
+MLog>> (0.26, 0.71)
+	
+MLog>> (0.23, 0.63)
+	
+MLog>> (0.20, 0.54)
+	
+MLog>> (0.15, 0.36)
+	
+MLog>> (0.07, 0.17)
+	
+MLog>> (0.04, 0.09)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> stop footsteps
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> input:-1
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:-1
+	
+MLog>> input:0
+	
+MLog>> input:-1
+	
+MLog>> input:0
+	
+MLog>> bin null
+	
+MLog>> play footsteps
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 1.192093E-07
+	
+MLog>> dot: 0.9848079
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> Player
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> play footsteps
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> dot: 1
+	
+MLog>> Player
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> stop footsteps
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> play footsteps
+	
+MLog>> stop footsteps
+	
+MLog>> Quit
+	

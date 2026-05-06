@@ -1,0 +1,310 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Language (Daniel.Master.ReadableElementGroup)
+	
+MLog>> Network Connect (Daniel.Master.ReadableElementGroup)
+	
+MLog>> Client: Connecting to 1212121:64000...
+	
+MLog>> Client: Connection Failed: NoConnection
+	
+MLog>> in asdjf
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnNavigate(InputValue)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnNavigate(InputValue)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.UI.Button.Press () (at <c358818e547f4a6ba856ce0cbf2617d7>:0)
+	UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at <c358818e547f4a6ba856ce0cbf2617d7>:0)
+	UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at <c358818e547f4a6ba856ce0cbf2617d7>:0)
+	UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at <c358818e547f4a6ba856ce0cbf2617d7>:0)
+	UnityEngine.EventSystems.EventSystem:Update()
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.UI.Button.Press () (at <c358818e547f4a6ba856ce0cbf2617d7>:0)
+	UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at <c358818e547f4a6ba856ce0cbf2617d7>:0)
+	UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at <c358818e547f4a6ba856ce0cbf2617d7>:0)
+	UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at <c358818e547f4a6ba856ce0cbf2617d7>:0)
+	UnityEngine.EventSystems.EventSystem:Update()
+	
+MLog>> Client: Connecting to 1212121:64000...
+	
+MLog>> Client: Connection Failed: NoConnection
+	
+MLog>> in asdjf
+	
+MLog>> no more previous elements
+	
+MLog>> no more previous elements
+	
+MLog>> no more previous elements
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnNavigate(InputValue)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnNavigate(InputValue)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnNavigate(InputValue)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnClick()
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnClick()
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnClick()
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnNavigate(InputValue)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	Daniel.Master.ConnectScript.Host () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <bcf03540643a4cada5c48d6b4a4ec08a>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnNavigate(InputValue)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Client: Connecting to 1212121:64000...
+	
+MLog>> Client: Connection Failed: NoConnection
+	
+MLog>> in asdjf
+	
+MLog>> Quit
+	
