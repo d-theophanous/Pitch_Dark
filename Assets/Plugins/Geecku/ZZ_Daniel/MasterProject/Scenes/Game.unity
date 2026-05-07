@@ -7857,6 +7857,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1717311965}
     m_Modifications:
+    - target: {fileID: 25334746049843273, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: m_Size.x
+      value: 2.4876761
+      objectReference: {fileID: 0}
+    - target: {fileID: 25334746049843273, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: m_Center.x
+      value: -1.2361783
+      objectReference: {fileID: 0}
+    - target: {fileID: 25334746049843273, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0000009442895
+      objectReference: {fileID: 0}
     - target: {fileID: 650682149939800212, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -7886,12 +7898,68 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: DeactivateAfterTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: TriggerExitAction.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: TriggerEnterAction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: TriggerEnterAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: TriggerExitAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1905940975}
+    - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: TriggerEnterAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1905940975}
     - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: TriggerExitAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: TriggerEnterAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: TriggerEnterAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: TriggerEnterAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Daniel.Master.PuzzleManager, Assembly-CSharp-firstpass
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: TriggerEnterAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595640275928593753, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595640275928593753, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595640275928593753, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595640275928593753, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595640275928593753, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6379473852384688255, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: DoorNPC
