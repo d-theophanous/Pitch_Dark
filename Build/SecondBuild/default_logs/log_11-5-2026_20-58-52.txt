@@ -1,0 +1,26 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Accessibility mode is already active
+	
+MLog>> Host
+	
+MLog>> Server: Started on port 0.
+	
+MLog>> Client: Connecting to 127.0.0.1:0...
+	
+MLog>> Client: Connection Failed: NoConnection
+	
+MLog>> in asdjf
+	
+MLog>> Quit
+	
