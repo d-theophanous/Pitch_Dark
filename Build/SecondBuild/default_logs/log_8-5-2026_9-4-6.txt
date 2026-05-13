@@ -1,0 +1,1398 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, -0.08)
+	
+MLog>> (0.00, -0.17)
+	
+MLog>> (0.00, -0.29)
+	
+MLog>> (0.00, -0.51)
+	
+MLog>> (0.00, -0.70)
+	
+MLog>> (0.00, -0.80)
+	
+MLog>> (0.00, -0.95)
+	
+MLog>> (0.00, -1.00)
+	
+MLog>> (0.00, -1.00)
+	
+MLog>> (0.00, -1.00)
+	
+MLog>> (0.00, -1.00)
+	
+MLog>> (0.00, -0.97)
+	
+MLog>> (0.00, -0.92)
+	
+MLog>> (0.00, -0.90)
+	
+MLog>> (0.00, -0.67)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> Accessibility mode is already active
+	
+MLog>> Game started :))
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> puzzle cound: 0
+	
+MLog>> puzzle cound: 0
+	
+MLog>> puzzle cound: 0
+	
+MLog>> NPC interaction
+	
+MLog>> (0.00, 0.75)
+	
+MLog>> (0.00, 0.76)
+	
+MLog>> (0.00, 0.77)
+	
+MLog>> (0.00, 0.78)
+	
+MLog>> (0.00, 0.79)
+	
+MLog>> (0.00, 0.80)
+	
+MLog>> (0.00, 0.81)
+	
+MLog>> (0.00, 0.82)
+	
+MLog>> (0.00, 0.83)
+	
+MLog>> (0.00, 0.85)
+	
+MLog>> (0.00, 0.86)
+	
+MLog>> (0.00, 0.87)
+	
+MLog>> (0.00, 0.88)
+	
+MLog>> (0.00, 0.90)
+	
+MLog>> (0.00, 0.91)
+	
+MLog>> (0.00, 0.92)
+	
+MLog>> (0.00, 0.93)
+	
+MLog>> (0.00, 0.92)
+	
+MLog>> (0.00, 0.90)
+	
+MLog>> (0.00, 0.89)
+	
+MLog>> (0.00, 0.88)
+	
+MLog>> (0.00, 0.87)
+	
+MLog>> (0.00, 0.86)
+	
+MLog>> (0.00, 0.85)
+	
+MLog>> (0.00, 0.80)
+	
+MLog>> (0.00, 0.76)
+	
+MLog>> (0.00, 0.66)
+	
+MLog>> (0.00, 0.54)
+	
+MLog>> (0.00, 0.40)
+	
+MLog>> (0.00, 0.25)
+	
+MLog>> (0.00, 0.13)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.02)
+	
+MLog>> (0.00, 0.05)
+	
+MLog>> (0.00, 0.10)
+	
+MLog>> (0.00, 0.14)
+	
+MLog>> (0.00, 0.20)
+	
+MLog>> (0.00, 0.23)
+	
+MLog>> (0.00, 0.28)
+	
+MLog>> (0.00, 0.35)
+	
+MLog>> (0.00, 0.42)
+	
+MLog>> (0.00, 0.49)
+	
+MLog>> (0.00, 0.54)
+	
+MLog>> (0.00, 0.59)
+	
+MLog>> (0.00, 0.62)
+	
+MLog>> (0.00, 0.67)
+	
+MLog>> (0.00, 0.72)
+	
+MLog>> (0.00, 0.76)
+	
+MLog>> (0.00, 0.79)
+	
+MLog>> (0.00, 0.80)
+	
+MLog>> (0.00, 0.81)
+	
+MLog>> (0.00, 0.82)
+	
+MLog>> (0.00, 0.81)
+	
+MLog>> (0.00, 0.82)
+	
+MLog>> (0.00, 0.81)
+	
+MLog>> (0.00, 0.80)
+	
+MLog>> (0.00, 0.79)
+	
+MLog>> (0.00, 0.77)
+	
+MLog>> (0.00, 0.75)
+	
+MLog>> (0.00, 0.66)
+	
+MLog>> (0.00, 0.52)
+	
+MLog>> (0.00, 0.31)
+	
+MLog>> (0.00, 0.12)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (-0.01, -0.01)
+	
+MLog>> (-0.05, -0.03)
+	
+MLog>> (-0.09, -0.04)
+	
+MLog>> (-0.13, -0.05)
+	
+MLog>> (-0.16, -0.06)
+	
+MLog>> (-0.19, -0.06)
+	
+MLog>> (-0.22, -0.06)
+	
+MLog>> (-0.23, -0.06)
+	
+MLog>> (-0.24, -0.05)
+	
+MLog>> (-0.24, -0.04)
+	
+MLog>> (-0.25, -0.03)
+	
+MLog>> (-0.25, -0.02)
+	
+MLog>> (-0.25, -0.02)
+	
+MLog>> (-0.25, 0.00)
+	
+MLog>> (-0.24, 0.00)
+	
+MLog>> (-0.25, 0.00)
+	
+MLog>> (-0.24, 0.00)
+	
+MLog>> (-0.25, 0.00)
+	
+MLog>> (-0.27, 0.00)
+	
+MLog>> (-0.28, 0.00)
+	
+MLog>> (-0.30, 0.00)
+	
+MLog>> (-0.32, 0.00)
+	
+MLog>> (-0.35, -0.02)
+	
+MLog>> (-0.37, -0.03)
+	
+MLog>> (-0.42, -0.04)
+	
+MLog>> (-0.44, -0.06)
+	
+MLog>> (-0.46, -0.09)
+	
+MLog>> (-0.48, -0.11)
+	
+MLog>> (-0.50, -0.13)
+	
+MLog>> (-0.54, -0.16)
+	
+MLog>> (-0.57, -0.17)
+	
+MLog>> (-0.59, -0.19)
+	
+MLog>> (-0.61, -0.21)
+	
+MLog>> (-0.61, -0.23)
+	
+MLog>> (-0.61, -0.23)
+	
+MLog>> (-0.62, -0.25)
+	
+MLog>> (-0.62, -0.27)
+	
+MLog>> (-0.62, -0.29)
+	
+MLog>> (-0.62, -0.32)
+	
+MLog>> (-0.62, -0.32)
+	
+MLog>> (-0.62, -0.34)
+	
+MLog>> (-0.61, -0.36)
+	
+MLog>> (-0.60, -0.36)
+	
+MLog>> (-0.57, -0.36)
+	
+MLog>> (-0.51, -0.36)
+	
+MLog>> (-0.48, -0.36)
+	
+MLog>> (-0.41, -0.35)
+	
+MLog>> (-0.34, -0.34)
+	
+MLog>> (-0.28, -0.34)
+	
+MLog>> (-0.26, -0.36)
+	
+MLog>> (-0.24, -0.37)
+	
+MLog>> (-0.22, -0.42)
+	
+MLog>> (-0.20, -0.44)
+	
+MLog>> (-0.16, -0.46)
+	
+MLog>> (-0.10, -0.48)
+	
+MLog>> (-0.04, -0.51)
+	
+MLog>> (0.00, -0.53)
+	
+MLog>> (0.00, -0.55)
+	
+MLog>> (0.00, -0.56)
+	
+MLog>> (0.00, -0.59)
+	
+MLog>> (0.00, -0.60)
+	
+MLog>> (0.00, -0.62)
+	
+MLog>> (0.00, -0.63)
+	
+MLog>> (0.00, -0.64)
+	
+MLog>> (0.00, -0.65)
+	
+MLog>> (0.00, -0.66)
+	
+MLog>> (0.00, -0.68)
+	
+MLog>> (0.00, -0.70)
+	
+MLog>> (0.00, -0.73)
+	
+MLog>> (0.00, -0.72)
+	
+MLog>> (0.00, -0.71)
+	
+MLog>> (0.00, -0.70)
+	
+MLog>> (0.00, -0.69)
+	
+MLog>> (0.00, -0.66)
+	
+MLog>> (0.00, -0.65)
+	
+MLog>> (0.00, -0.64)
+	
+MLog>> (0.03, -0.63)
+	
+MLog>> (0.05, -0.62)
+	
+MLog>> (0.07, -0.62)
+	
+MLog>> (0.11, -0.62)
+	
+MLog>> (0.18, -0.60)
+	
+MLog>> (0.22, -0.60)
+	
+MLog>> (0.27, -0.60)
+	
+MLog>> (0.30, -0.58)
+	
+MLog>> (0.35, -0.59)
+	
+MLog>> (0.37, -0.57)
+	
+MLog>> (0.40, -0.54)
+	
+MLog>> (0.44, -0.51)
+	
+MLog>> (0.47, -0.49)
+	
+MLog>> (0.49, -0.47)
+	
+MLog>> (0.51, -0.45)
+	
+MLog>> (0.53, -0.44)
+	
+MLog>> (0.55, -0.41)
+	
+MLog>> (0.55, -0.40)
+	
+MLog>> (0.57, -0.39)
+	
+MLog>> (0.60, -0.36)
+	
+MLog>> (0.67, -0.35)
+	
+MLog>> (0.71, -0.31)
+	
+MLog>> (0.76, -0.28)
+	
+MLog>> (0.82, -0.24)
+	
+MLog>> (0.89, -0.19)
+	
+MLog>> (0.97, -0.14)
+	
+MLog>> (1.00, -0.07)
+	
+MLog>> (1.00, 0.00)
+	
+MLog>> (1.00, 0.00)
+	
+MLog>> (1.00, 0.00)
+	
+MLog>> (1.00, 0.00)
+	
+MLog>> (1.00, 0.00)
+	
+MLog>> (0.96, 0.00)
+	
+MLog>> (0.82, 0.00)
+	
+MLog>> (0.70, 0.00)
+	
+MLog>> (0.55, 0.00)
+	
+MLog>> (0.45, 0.00)
+	
+MLog>> (0.36, 0.00)
+	
+MLog>> (0.20, 0.00)
+	
+MLog>> (0.03, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.04)
+	
+MLog>> (0.00, 0.08)
+	
+MLog>> (0.00, 0.11)
+	
+MLog>> (0.00, 0.12)
+	
+MLog>> (0.00, 0.15)
+	
+MLog>> (0.00, 0.16)
+	
+MLog>> (0.00, 0.18)
+	
+MLog>> (0.00, 0.20)
+	
+MLog>> (0.00, 0.22)
+	
+MLog>> (0.00, 0.23)
+	
+MLog>> (0.00, 0.27)
+	
+MLog>> (0.00, 0.29)
+	
+MLog>> (0.00, 0.31)
+	
+MLog>> (0.00, 0.32)
+	
+MLog>> (0.00, 0.31)
+	
+MLog>> (0.00, 0.29)
+	
+MLog>> (0.00, 0.27)
+	
+MLog>> (0.00, 0.23)
+	
+MLog>> (0.00, 0.18)
+	
+MLog>> (0.00, 0.05)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (-0.05, 0.00)
+	
+MLog>> (-0.12, 0.00)
+	
+MLog>> (-0.17, 0.00)
+	
+MLog>> (-0.20, 0.00)
+	
+MLog>> (-0.22, 0.00)
+	
+MLog>> (-0.24, 0.00)
+	
+MLog>> (-0.27, 0.00)
+	
+MLog>> (-0.30, 0.00)
+	
+MLog>> (-0.37, 0.00)
+	
+MLog>> (-0.52, 0.00)
+	
+MLog>> (-0.76, 0.00)
+	
+MLog>> (-1.00, 0.00)
+	
+MLog>> (-1.00, 0.00)
+	
+MLog>> (-1.00, 0.00)
+	
+MLog>> (-0.89, 0.00)
+	
+MLog>> (-0.52, 0.00)
+	
+MLog>> (-0.05, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (-0.01, -0.04)
+	
+MLog>> (-0.05, -0.09)
+	
+MLog>> (-0.10, -0.11)
+	
+MLog>> (-0.11, -0.12)
+	
+MLog>> (-0.12, -0.12)
+	
+MLog>> (-0.13, -0.12)
+	
+MLog>> (-0.12, -0.11)
+	
+MLog>> (-0.10, -0.10)
+	
+MLog>> (-0.05, -0.07)
+	
+MLog>> (-0.03, -0.04)
+	
+MLog>> (-0.01, -0.02)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, -0.06)
+	
+MLog>> (0.00, -0.17)
+	
+MLog>> (0.00, -0.26)
+	
+MLog>> (0.00, -0.35)
+	
+MLog>> (0.00, -0.46)
+	
+MLog>> (0.00, -0.55)
+	
+MLog>> (0.00, -0.63)
+	
+MLog>> (0.00, -0.66)
+	
+MLog>> (0.00, -0.70)
+	
+MLog>> (0.00, -0.73)
+	
+MLog>> (0.00, -0.75)
+	
+MLog>> (0.00, -0.76)
+	
+MLog>> (0.05, -0.76)
+	
+MLog>> (0.15, -0.76)
+	
+MLog>> (0.23, -0.77)
+	
+MLog>> (0.32, -0.77)
+	
+MLog>> (0.38, -0.78)
+	
+MLog>> (0.43, -0.76)
+	
+MLog>> (0.49, -0.77)
+	
+MLog>> (0.52, -0.75)
+	
+MLog>> (0.57, -0.73)
+	
+MLog>> (0.61, -0.70)
+	
+MLog>> (0.68, -0.68)
+	
+MLog>> (0.71, -0.65)
+	
+MLog>> (0.75, -0.59)
+	
+MLog>> (0.78, -0.56)
+	
+MLog>> (0.80, -0.53)
+	
+MLog>> (0.83, -0.51)
+	
+MLog>> (0.84, -0.50)
+	
+MLog>> (0.87, -0.48)
+	
+MLog>> (0.88, -0.45)
+	
+MLog>> (0.88, -0.44)
+	
+MLog>> (0.89, -0.41)
+	
+MLog>> (0.91, -0.36)
+	
+MLog>> (0.95, -0.31)
+	
+MLog>> (0.98, -0.21)
+	
+MLog>> (1.00, 0.00)
+	
+MLog>> (1.00, 0.00)
+	
+MLog>> (1.00, 0.02)
+	
+MLog>> (1.00, 0.08)
+	
+MLog>> (0.98, 0.19)
+	
+MLog>> (0.96, 0.29)
+	
+MLog>> (0.92, 0.39)
+	
+MLog>> (0.87, 0.49)
+	
+MLog>> (0.83, 0.56)
+	
+MLog>> (0.80, 0.60)
+	
+MLog>> (0.76, 0.65)
+	
+MLog>> (0.72, 0.69)
+	
+MLog>> (0.67, 0.74)
+	
+MLog>> (0.61, 0.80)
+	
+MLog>> (0.56, 0.83)
+	
+MLog>> (0.52, 0.85)
+	
+MLog>> (0.45, 0.90)
+	
+MLog>> (0.40, 0.92)
+	
+MLog>> (0.37, 0.93)
+	
+MLog>> (0.29, 0.96)
+	
+MLog>> (0.18, 0.98)
+	
+MLog>> (0.11, 0.99)
+	
+MLog>> (0.03, 1.00)
+	
+MLog>> (0.00, 1.00)
+	
+MLog>> (0.00, 1.00)
+	
+MLog>> (0.00, 0.95)
+	
+MLog>> (0.00, 0.84)
+	
+MLog>> (0.00, 0.70)
+	
+MLog>> (-0.02, 0.57)
+	
+MLog>> (-0.05, 0.47)
+	
+MLog>> (-0.07, 0.36)
+	
+MLog>> (-0.09, 0.29)
+	
+MLog>> (-0.11, 0.24)
+	
+MLog>> (-0.13, 0.21)
+	
+MLog>> (-0.13, 0.13)
+	
+MLog>> (-0.13, 0.08)
+	
+MLog>> (-0.12, 0.03)
+	
+MLog>> (-0.12, 0.01)
+	
+MLog>> (-0.12, 0.00)
+	
+MLog>> (-0.15, 0.00)
+	
+MLog>> (-0.17, 0.00)
+	
+MLog>> (-0.18, 0.00)
+	
+MLog>> (-0.19, 0.00)
+	
+MLog>> (-0.21, 0.00)
+	
+MLog>> (-0.23, 0.00)
+	
+MLog>> (-0.25, 0.00)
+	
+MLog>> (-0.27, 0.00)
+	
+MLog>> (-0.28, 0.00)
+	
+MLog>> (-0.29, 0.00)
+	
+MLog>> (-0.30, 0.00)
+	
+MLog>> (-0.35, 0.00)
+	
+MLog>> (-0.46, 0.00)
+	
+MLog>> (-0.57, 0.00)
+	
+MLog>> (-0.70, 0.00)
+	
+MLog>> (-0.82, 0.00)
+	
+MLog>> (-0.94, 0.00)
+	
+MLog>> (-1.00, 0.00)
+	
+MLog>> (-1.00, 0.00)
+	
+MLog>> (-1.00, 0.00)
+	
+MLog>> (-1.00, 0.00)
+	
+MLog>> (-0.97, 0.00)
+	
+MLog>> (-0.90, 0.00)
+	
+MLog>> (-0.82, 0.00)
+	
+MLog>> (-0.67, 0.00)
+	
+MLog>> (-0.55, 0.00)
+	
+MLog>> (-0.43, 0.00)
+	
+MLog>> (-0.27, 0.00)
+	
+MLog>> (-0.15, 0.00)
+	
+MLog>> (-0.01, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.01, 0.00)
+	
+MLog>> (0.02, 0.00)
+	
+MLog>> (0.09, 0.00)
+	
+MLog>> (0.17, 0.00)
+	
+MLog>> (0.26, 0.00)
+	
+MLog>> (0.30, 0.00)
+	
+MLog>> (0.36, 0.00)
+	
+MLog>> (0.38, 0.00)
+	
+MLog>> (0.39, 0.00)
+	
+MLog>> (0.42, 0.00)
+	
+MLog>> (0.45, 0.00)
+	
+MLog>> (0.47, 0.00)
+	
+MLog>> (0.49, 0.00)
+	
+MLog>> (0.50, 0.00)
+	
+MLog>> (0.51, 0.00)
+	
+MLog>> (0.52, 0.00)
+	
+MLog>> (0.55, 0.00)
+	
+MLog>> (0.63, 0.00)
+	
+MLog>> (0.69, 0.00)
+	
+MLog>> (0.72, 0.00)
+	
+MLog>> (0.75, 0.00)
+	
+MLog>> (0.78, 0.00)
+	
+MLog>> (0.81, 0.00)
+	
+MLog>> (0.82, 0.00)
+	
+MLog>> (0.81, 0.00)
+	
+MLog>> (0.82, 0.00)
+	
+MLog>> (0.83, 0.00)
+	
+MLog>> (0.85, 0.00)
+	
+MLog>> (0.88, 0.00)
+	
+MLog>> (0.90, 0.03)
+	
+MLog>> (0.90, 0.07)
+	
+MLog>> (0.90, 0.16)
+	
+MLog>> (0.90, 0.23)
+	
+MLog>> (0.91, 0.31)
+	
+MLog>> (0.91, 0.35)
+	
+MLog>> (0.91, 0.41)
+	
+MLog>> (0.89, 0.45)
+	
+MLog>> (0.87, 0.50)
+	
+MLog>> (0.84, 0.54)
+	
+MLog>> (0.81, 0.58)
+	
+MLog>> (0.78, 0.62)
+	
+MLog>> (0.74, 0.67)
+	
+MLog>> (0.71, 0.71)
+	
+MLog>> (0.66, 0.75)
+	
+MLog>> (0.60, 0.80)
+	
+MLog>> (0.54, 0.84)
+	
+MLog>> (0.47, 0.88)
+	
+MLog>> (0.43, 0.90)
+	
+MLog>> (0.39, 0.92)
+	
+MLog>> (0.37, 0.93)
+	
+MLog>> (0.33, 0.94)
+	
+MLog>> (0.25, 0.97)
+	
+MLog>> (0.17, 0.99)
+	
+MLog>> (0.11, 0.99)
+	
+MLog>> (0.04, 1.00)
+	
+MLog>> (0.00, 1.00)
+	
+MLog>> (0.00, 1.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchReadableElementGroup (Daniel.Master.ReadableElementGroup group) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.ReadableElement.Return () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.ReadableElementGroup.ReturnCurElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.TTSManager.ReturnCurElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnBack () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> puzzle cound: 1
+	
+MLog>> puzzle cound: 1
+	
+MLog>> puzzle cound: 1
+	
+MLog>> NPC interaction
+	
+MLog>> (1.00, 0.00)
+	
+MLog>> (0.80, 0.00)
+	
+MLog>> (0.60, 0.00)
+	
+MLog>> (0.45, 0.00)
+	
+MLog>> (0.36, 0.00)
+	
+MLog>> (0.19, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (-0.17, 0.00)
+	
+MLog>> (-0.30, 0.00)
+	
+MLog>> (-0.41, 0.00)
+	
+MLog>> (-0.49, 0.00)
+	
+MLog>> (-0.56, 0.00)
+	
+MLog>> (-0.64, 0.00)
+	
+MLog>> (-0.69, 0.00)
+	
+MLog>> (-0.73, 0.00)
+	
+MLog>> (-0.77, 0.00)
+	
+MLog>> (-0.79, 0.00)
+	
+MLog>> (-0.80, 0.00)
+	
+MLog>> (-0.79, 0.00)
+	
+MLog>> (-0.77, 0.00)
+	
+MLog>> (-0.75, 0.00)
+	
+MLog>> (-0.72, 0.00)
+	
+MLog>> (-0.68, 0.00)
+	
+MLog>> (-0.62, 0.00)
+	
+MLog>> (-0.52, 0.00)
+	
+MLog>> (-0.46, 0.00)
+	
+MLog>> (-0.33, 0.00)
+	
+MLog>> (-0.24, 0.00)
+	
+MLog>> (-0.14, 0.00)
+	
+MLog>> (-0.03, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> bin null
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, -0.02)
+	
+MLog>> (0.00, -0.07)
+	
+MLog>> (0.00, -0.10)
+	
+MLog>> (0.00, -0.12)
+	
+MLog>> (0.00, -0.13)
+	
+MLog>> (0.00, -0.14)
+	
+MLog>> (0.00, -0.13)
+	
+MLog>> (0.00, -0.12)
+	
+MLog>> (0.00, -0.09)
+	
+MLog>> (0.00, -0.03)
+	
+MLog>> (0.00, -0.03)
+	
+MLog>> (0.00, -0.02)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> (0.00, -0.04)
+	
+MLog>> (0.00, -0.14)
+	
+MLog>> (0.00, -0.20)
+	
+MLog>> (0.00, -0.28)
+	
+MLog>> (0.00, -0.41)
+	
+MLog>> (0.00, -0.57)
+	
+MLog>> (0.00, -0.68)
+	
+MLog>> (0.00, -0.79)
+	
+MLog>> (0.00, -1.00)
+	
+MLog>> (0.00, -1.00)
+	
+MLog>> (0.00, -0.93)
+	
+MLog>> (0.00, -0.61)
+	
+MLog>> (0.00, -0.17)
+	
+MLog>> (0.00, 0.00)
+	
+MLog>> no more previous elements
+	
+MLog>> no more previous elements
+	
+MLog>> no more previous elements
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchReadableElementGroup (Daniel.Master.ReadableElementGroup group) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.ReadableElement.Return () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.ReadableElementGroup.ReturnCurElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.TTSManager.ReturnCurElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnBack () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToPreviousElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToPreviousElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToPreviousElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.ActivateCurElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToPreviousElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToPreviousElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.ActivateCurElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToPreviousElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToPreviousElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToPreviousElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.TTSManager.SwitchToNextElement () (at <27ead76acb3a436f883c036b12f359b5>:0)
+	Daniel.Master.InputManager.OnNavigate (UnityEngine.InputSystem.InputValue value) (at <27ead76acb3a436f883c036b12f359b5>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> no more previous elements
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> input:1
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:-1
+	
+MLog>> input:0
+	
+MLog>> input:1
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:1
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:-1
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:1
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:-1
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:1
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:-1
+	
+MLog>> input:0
+	
+MLog>> input:1
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:0
+	
+MLog>> input:1
+	
+MLog>> input:0
+	
+MLog>> Quit
+	

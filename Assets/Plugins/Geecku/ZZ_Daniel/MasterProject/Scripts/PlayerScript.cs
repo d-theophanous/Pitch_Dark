@@ -68,7 +68,7 @@ namespace Daniel.Master
         }
 
         #region Movement
-        private Vector2 Movement = new();
+        public Vector2 Movement = new();
         public void Move(Vector2 value)
         {
             Movement = value;
