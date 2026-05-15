@@ -9110,10 +9110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19671e85e2e8d6545a3f3876957544c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::DirectionChecker
-  playerTransform: {fileID: 68033095}
-  doorTransform: {fileID: 1121424215}
-  alignmentThreshold: 0.5
-  pathUpdateInterval: 0.3
+  PlayerNavMesh: {fileID: 0}
+  Destination: {fileID: 0}
 --- !u!4 &877785672
 Transform:
   m_ObjectHideFlags: 0
@@ -23315,6 +23313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f4d694c3cbde94ca7855241cce57a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::InteractionColliderScript
+  CurrentWallCollider: {fileID: 0}
+  NextWallCollider: {fileID: 0}
 --- !u!54 &1948744175
 Rigidbody:
   m_ObjectHideFlags: 0
