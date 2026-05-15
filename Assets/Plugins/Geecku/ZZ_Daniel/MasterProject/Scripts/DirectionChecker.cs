@@ -29,7 +29,7 @@ namespace Daniel.Master
         }
         private void FillWayPoints()
         {
-
+            //- idea clip the points to closest floor!!!!!!
         }
     }
 }
