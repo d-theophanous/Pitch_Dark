@@ -33,9 +33,10 @@ namespace Daniel.Master
         protected override void Awake()
         {
             base.Awake();
+            MovementEvents = new();
 
             //- Setup languages and everything for debug to be able to skip things
-            State = GameState.WAITING;
+            SetGameState(GameState.WAITING);
         }
         protected override void Start()
         {
@@ -74,7 +75,49 @@ namespace Daniel.Master
 
             //- Testing
         }
-        public void SetGameState(GameState state) { State = state; }
+
+        //- for future games: implement states as classes!!!!
+        public void SetGameState(GameState state) 
+        {
+            switch (State)
+            {
+                case GameState.PLAYING:
+                    UnsubscribeMovementEvents();
+                    break;
+                case GameState.CONNECT:
+                    break;
+                case GameState.WAITING:
+                    break;
+                case GameState.DIALOGUE:
+                    break;
+                case GameState.SOLVING_PUZZLE:
+                    break;
+                case GameState.IMPROVISING:
+                    break;
+                default:
+                    break;
+            }
+            State = state;
+            switch (State)
+            {
+                case GameState.PLAYING:
+                    Debug.Log("gamestate switch to playing");
+                    SubscribeMovementEvents();
+                    break;
+                case GameState.CONNECT:
+                    break;
+                case GameState.WAITING:
+                    break;
+                case GameState.DIALOGUE:
+                    break;
+                case GameState.SOLVING_PUZZLE:
+                    break;
+                case GameState.IMPROVISING:
+                    break;
+                default:
+                    break;
+            }
+        }
         public void SetGameLanguage(int language) 
         { 
             Language = (Language)language;
@@ -110,6 +153,31 @@ namespace Daniel.Master
             GlobalUIManager.Instance.ChangeMainCamera();
         }
 
+        #region Update Event Handling
+        public List<EventHandler> MovementEvents;
+
+        private void SubscribeMovementEvents()
+        {
+            foreach (EventHandler handler in MovementEvents)
+            {
+                UpdateEvent += handler;
+            }
+        }
+        private void UnsubscribeMovementEvents()
+        {
+            foreach (EventHandler handler in MovementEvents)
+            {
+                UpdateEvent -= handler;
+            }
+        }
+        public void AddEventAndSubscribe(List<EventHandler> events, EventHandler handler)
+        {
+            events.Add(handler);
+            UpdateEvent += handler;
+        }
+
+        #endregion
+
         #region Game Logic
         public void StartGame()
         {
@@ -120,7 +188,7 @@ namespace Daniel.Master
         private IEnumerator AsyncStartGame()
         {
             yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
-            State = GameState.PLAYING;
+            SetGameState(GameState.PLAYING);
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
         }
         public void QuitWaitingForPuzzle()
@@ -343,7 +411,7 @@ namespace Daniel.Master
     }
     public enum GameState
     {
-        PLAYING, CONNECT, WAITING, DIALOGUE, SOLVING_PUZZLE, IMPROVISING
+        NONE, PLAYING, CONNECT, WAITING, DIALOGUE, SOLVING_PUZZLE, IMPROVISING
     }
     public enum Language
     {

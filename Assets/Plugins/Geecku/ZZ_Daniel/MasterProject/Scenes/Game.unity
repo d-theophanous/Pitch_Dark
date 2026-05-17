@@ -9110,8 +9110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19671e85e2e8d6545a3f3876957544c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::DirectionChecker
-  PlayerNavMesh: {fileID: 0}
-  Destination: {fileID: 0}
+  PlayerNavMesh: {fileID: 68033102}
+  Destination: {fileID: 877785672}
+  FloorParent: {fileID: 1205765336}
+  Waypoints: []
+  FinalWaypoints: []
 --- !u!4 &877785672
 Transform:
   m_ObjectHideFlags: 0
@@ -9121,7 +9124,7 @@ Transform:
   m_GameObject: {fileID: 877785670}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.42065, y: 4.06118, z: 3.91555}
+  m_LocalPosition: {x: -14.56, y: 0.2, z: 7.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
