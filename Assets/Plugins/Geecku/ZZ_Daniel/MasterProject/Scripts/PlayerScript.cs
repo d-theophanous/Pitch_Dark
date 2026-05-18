@@ -12,7 +12,7 @@ namespace Daniel.Master
         [SerializeField] private NavMeshAgent NavMeshAgent;
         [SerializeField] private CinemachineCamera NPCCamera;
         public bool IsMoving => Movement.magnitude > 0;
-        public Vector3 WalkDirection => new Vector3(Movement.y, 0, Movement.x);
+        public Vector3 WalkDirection => new Vector3(Movement.y, 0, -Movement.x);
 
 
         public CinemachineCamera CinCam;

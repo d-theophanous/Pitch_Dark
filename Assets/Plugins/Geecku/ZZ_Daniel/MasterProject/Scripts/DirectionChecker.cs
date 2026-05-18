@@ -19,6 +19,8 @@ namespace Daniel.Master
         public Vector3[] Waypoints;
         public List<Vector3> FinalWaypoints = new();
         private Transform[] FloorTransformList;
+        private Vector3 CurWaypoint;
+        private const float WayPointRadius = 1.5f;
 
         private void Start()
         {
@@ -33,12 +35,56 @@ namespace Daniel.Master
                 CalculatePath();
                 AccumulatedTime = 0f;
             }
-            else
+            else if (GameManager.Instance.Player.IsMoving)
             {
                 AccumulatedTime += Time.deltaTime;
             }
-        } 
 
+            if (IsOnRightPath())
+            {
+                Rumbler.Instance.RumbleConstant(0.1f, 0.1f, 20f);
+                Debug.Log("bin on right path");
+            }
+        } 
+        private bool IsOnRightPath()
+        {
+            if (!GameManager.Instance.Player.IsMoving)
+                return false;
+            if (FinalWaypoints.Count > 0 &&
+                Vector3.Distance(PlayerPos, CurWaypoint) < WayPointRadius)
+            {
+                FinalWaypoints.RemoveAt(0);
+                if (FinalWaypoints.Count > 0)
+                    CurWaypoint = FinalWaypoints[0];
+                else
+                    return false;
+            }
+            //- get angle between walk direction and vector to target
+            var cur_waypoint = new Vector3(CurWaypoint.x, PlayerPos.y, CurWaypoint.z);
+            var vec_to_target = cur_waypoint - PlayerPos;
+            var angle = Vector3.Angle(vec_to_target, GameManager.Instance.Player.WalkDirection);
+
+            //- check if angle is in threshold
+            if (angle <= GetAllowedAngle(vec_to_target) / 2)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        Vector3 TestA;
+        Vector3 TestB;
+        private float GetAllowedAngle(Vector3 vec_to_target)
+        {
+            var perpendicular_vec = Vector3.Cross(vec_to_target, Vector3.up).normalized;
+            var pos_a = CurWaypoint + perpendicular_vec * WayPointRadius;
+            var pos_b = CurWaypoint - perpendicular_vec * WayPointRadius;
+            TestA = pos_a;
+            TestB = pos_b;
+            var vec_a = pos_a - PlayerPos;
+            var vec_b = pos_b - PlayerPos;
+            return Vector3.Angle(vec_b, vec_a);
+        }
         private void CalculatePath()
         {
             FloorTransformList = FloorParent.GetComponentsInChildren<Transform>();
@@ -50,6 +96,7 @@ namespace Daniel.Master
             {
                 Waypoints = CurPath.corners;
                 FillWayPoints();
+                CurWaypoint = FinalWaypoints[0];
             }
         }
         private void FillWayPoints()
@@ -85,6 +132,17 @@ namespace Daniel.Master
             {
                 Gizmos.DrawSphere(item, 1.5f);
             }
+
+            var cur_waypoint = new Vector3(CurWaypoint.x, PlayerPos.y, CurWaypoint.z);
+            var vec_to_target = cur_waypoint - PlayerPos;
+            var angle = Vector3.Angle(vec_to_target, GameManager.Instance.Player.WalkDirection);
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(PlayerPos, PlayerPos + vec_to_target);
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawLine(PlayerPos, PlayerPos + GameManager.Instance.Player.WalkDirection.normalized * 4); 
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(PlayerPos, TestA);
+            Gizmos.DrawLine(PlayerPos, TestB);
         }
     }    
 }

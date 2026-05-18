@@ -24,7 +24,7 @@ public enum RumblePattern
         //private float highA;
         //private float highStep;
         //private float rumbleStep;
-        private bool isMotorActive = false;
+        private bool IsRumbling;
         private Gamepad Gamepad;
         private PlayerInput PlayerInput;
 
@@ -36,7 +36,7 @@ public enum RumblePattern
         }
         public void RumbleConstant(float low, float high, float duration)
         {
-            if (Gamepad == null)
+            if (Gamepad == null || IsRumbling)
                 return;
             StartRumble(duration);
             Gamepad.SetMotorSpeeds(low, high);
@@ -49,6 +49,7 @@ public enum RumblePattern
         }
         private void StartRumble(float duration)
         {
+            IsRumbling = true;
             StopAllCoroutines();
             StartCoroutine(StartRumbleCo(duration));
         }
@@ -81,53 +82,9 @@ public enum RumblePattern
             if (Gamepad != null)
             {
                 Gamepad.SetMotorSpeeds(0, 0);
+                IsRumbling = false;
             }
         }
-
-        //        private void Update()
-        //{
-        //    if (Time.time > rumbleDurration)
-        //    {
-        //        StopRumble();
-        //        return;
-        //    }
-
-        //    var gamepad = GetGamepad();
-        //    if (gamepad == null)
-        //        return;
-
-        //    switch (activeRumbePattern)
-        //    {
-        //        case RumblePattern.Constant:
-        //            gamepad.SetMotorSpeeds(lowA, highA);
-        //            break;
-
-        //        case RumblePattern.Pulse:
-
-        //            if (Time.time > pulseDurration)
-        //            {
-        //                isMotorActive = !isMotorActive;
-        //                pulseDurration = Time.time + rumbleStep;
-        //                if (!isMotorActive)
-        //                {
-        //                    gamepad.SetMotorSpeeds(0, 0);
-        //                }
-        //                else
-        //                {
-        //                    gamepad.SetMotorSpeeds(lowA, highA);
-        //                }
-        //            }
-
-        //            break;
-        //        case RumblePattern.Linear:
-        //            gamepad.SetMotorSpeeds(lowA, highA);
-        //            lowA += (lowStep * Time.deltaTime);
-        //            highA += (highStep * Time.deltaTime);
-        //            break;
-        //        default:
-        //            break;
-        //    }
-        //}
 
         protected override void OnDestroy()
         {
