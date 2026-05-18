@@ -1,4 +1,6 @@
+using Geecku.GlobalMangers;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -6,9 +8,9 @@ using UnityEngine.AI;
 
 namespace Daniel.Master
 {
-    public class DirectionChecker : MonoBehaviour
+    public class DirectionChecker : Singleton<DirectionChecker>
     {
-        private const float PathUpdateRate = 10f;
+        private const float PathUpdateRate = 1f;
         private float AccumulatedTime = PathUpdateRate;
 
         [SerializeField] private NavMeshAgent PlayerNavMesh;
@@ -16,17 +18,19 @@ namespace Daniel.Master
         [SerializeField] private GameObject FloorParent;
         private Vector3 PlayerPos => GameManager.Instance.Player.transform.position;
         private NavMeshPath CurPath;
-        public Vector3[] Waypoints;
-        public List<Vector3> FinalWaypoints = new();
+        private Vector3[] Waypoints;
+        private List<Vector3> FinalWaypoints = new();
         private Transform[] FloorTransformList;
         private Vector3 CurWaypoint;
-        private const float WayPointRadius = 1.5f;
+        private const float WayPointRadius = 2.2f;
 
-        private void Start()
+        #region MonoBehaviour Commons
+        protected override void Start()
         {
+            base.Start();
             CurPath = new NavMeshPath();
-            GameManager.Instance.AddEventAndSubscribe(
-                GameManager.Instance.MovementEvents, UpdateDirectionChecker );
+            //- Debug Test
+            StartDirectionChecking(Destination);
         }
         public void UpdateDirectionChecker(object sender, System.EventArgs e)
         {
@@ -35,17 +39,39 @@ namespace Daniel.Master
                 CalculatePath();
                 AccumulatedTime = 0f;
             }
-            else if (GameManager.Instance.Player.IsMoving)
+            else 
             {
                 AccumulatedTime += Time.deltaTime;
             }
 
             if (IsOnRightPath())
             {
-                Rumbler.Instance.RumbleConstant(0.1f, 0.1f, 20f);
+                //- hier anstelle die network funktion aufrufen
+                //GameManager.Instance.ClientSend_DirectionCheck(1);
                 Debug.Log("bin on right path");
             }
-        } 
+            else
+                Debug.Log("");
+                //GameManager.Instance.ClientSend_DirectionCheck(0);
+        }
+        #endregion
+
+        #region Public Functions
+        public void SetDestination(Transform new_destination)
+        {
+            Destination = new_destination;
+        }
+        public void StartDirectionChecking(Transform new_destination)
+        {
+            GameManager.Instance.UpdateEvent += UpdateDirectionChecker;
+            SetDestination(new_destination);
+        }
+        public void StopDirectionChecking()
+        {
+            GameManager.Instance.UpdateEvent -= UpdateDirectionChecker;
+        }
+        #endregion
+
         private bool IsOnRightPath()
         {
             if (!GameManager.Instance.Player.IsMoving)
@@ -96,6 +122,13 @@ namespace Daniel.Master
             {
                 Waypoints = CurPath.corners;
                 FillWayPoints();
+                //- if the player already is very close to the new current waypoint
+                //- skip this waypoint
+                int index = 0;
+                while (Vector3.Distance(FinalWaypoints[index], PlayerPos) <= (WayPointRadius + 0.5f)
+                    && index < FinalWaypoints.Count - 1)
+                    index++;
+                FinalWaypoints.RemoveRange(0, index);
                 CurWaypoint = FinalWaypoints[0];
             }
         }
@@ -130,7 +163,12 @@ namespace Daniel.Master
         {
             foreach (var item in FinalWaypoints)
             {
-                Gizmos.DrawSphere(item, 1.5f);
+                Gizmos.DrawSphere(item, 1f);
+            }
+            Gizmos.color = Color.black;
+            foreach (var item in Waypoints)
+            {
+                Gizmos.DrawSphere(item, 1f);
             }
 
             var cur_waypoint = new Vector3(CurWaypoint.x, PlayerPos.y, CurWaypoint.z);
@@ -143,6 +181,8 @@ namespace Daniel.Master
             Gizmos.color = Color.blue;
             Gizmos.DrawLine(PlayerPos, TestA);
             Gizmos.DrawLine(PlayerPos, TestB);
+            Gizmos.color = Color.purple;
+            Gizmos.DrawSphere(CurWaypoint, 1f);
         }
     }    
 }

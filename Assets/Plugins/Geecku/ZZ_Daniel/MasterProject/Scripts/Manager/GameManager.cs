@@ -228,6 +228,49 @@ namespace Daniel.Master
         [SerializeField] private TMP_Text Content;
         private int PlayerCountWaiting;
 
+        //- Message numbers
+        private const ushort PlayerGateIDServer = 1000;
+        private const ushort PlayerGateIDClient = 1001;
+        private const ushort DirectionCheckIDServer = 1002;
+        private const ushort DirectionCheckIDClient = 1003;
+
+        #region Template functions for sending other player a message
+        public void ClientSend_()
+        {
+            Message msg = Message.Create(MessageSendMode.Reliable, 0);
+            NetworkManager.Client.Send(msg);
+        }
+        [MessageHandler(0)]
+        private static void ServerReceive_(ushort client_id, Message msg)
+        {
+            Message new_msg = Message.Create(MessageSendMode.Reliable, 1);
+            NetworkManager.Server.MsgHandler.MessageIndex++;
+            new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
+            NetworkManager.Server.SendToAll(new_msg);
+        }
+        [MessageHandler(1)]
+        private static void ClientReceive_(ushort client_id, Message msg)
+        {
+
+            Action action;
+            if (client_id == NetworkManager.Client.LocalClient.ID)
+            {
+                action = () =>
+                {
+                    //- logic for what player who sent the message should do with it
+                };
+            }
+            else
+            {
+                action = () =>
+                {
+                    //- logic for other player
+                };
+            }
+            ClientMessageHandler.Handle(msg, action);
+        }
+        #endregion
+
         #region Gate Logic
         [SerializeField] private TMP_Text WaitingPlayerText;
         #endregion
@@ -267,21 +310,70 @@ namespace Daniel.Master
         #endregion
 
         #region Messages
+        //- Player helps other person navigate
+        public void ClientSend_DirectionCheck(ushort content)
+        {
+            Message msg = Message.Create(MessageSendMode.Reliable, DirectionCheckIDServer);
+            msg.AddUShort(content);
+            NetworkManager.Client.Send(msg);
+        }
+        [MessageHandler(DirectionCheckIDServer)]
+        private static void ServerReceive_DirectionCheck(ushort client_id, Message msg)
+        {
+            var content = msg.GetUShort();
+            Message new_msg = Message.Create(MessageSendMode.Reliable, DirectionCheckIDClient);
+            NetworkManager.Server.MsgHandler.MessageIndex++;
+            new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
+            new_msg.AddUShort(content);
+            NetworkManager.Server.SendToAll(new_msg);
+        }
+        [MessageHandler(DirectionCheckIDClient)]
+        private static void ClientReceive_DirectionCheck(ushort client_id, Message msg)
+        {
+            var index = msg.GetInt();
+            var content = msg.GetUShort();
+            Action action;
+            if (client_id == NetworkManager.Client.LocalClient.ID)
+            {
+                action = () =>
+                {
+                    //- logic for what player who sent the message should do with it
+                };
+            }
+            else
+            {
+                action = () =>
+                {
+                    if (content == 0)
+                    {
+                        Debug.Log("not rumbling");
+                        Rumbler.Instance.StopRumble();
+                    }
+                    else if (content == 1)
+                    {
+                        Rumbler.Instance.RumbleConstant(0.1f, 0.1f, 20f);
+                        Debug.Log("rumbling");
+                    }
+                };
+            }
+            ClientMessageHandler.Handle(msg, action);
+        }
+
         //- Player ready at door
         public void ClientSend_PlayerAtGate()
         {
-            Message msg = Message.Create(MessageSendMode.Reliable, 1000);
+            Message msg = Message.Create(MessageSendMode.Reliable, PlayerGateIDServer);
             NetworkManager.Client.Send(msg);
         }
-        [MessageHandler(1000)]
+        [MessageHandler(PlayerGateIDServer)]
         private static void ServerReceive_PlayerAtGate(ushort client_id, Message msg)
         {
-            Message new_msg = Message.Create(MessageSendMode.Reliable, 1001);
+            Message new_msg = Message.Create(MessageSendMode.Reliable, PlayerGateIDClient);
             NetworkManager.Server.MsgHandler.MessageIndex++;
             new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
             NetworkManager.Server.SendToAll(new_msg);
         }
-        [MessageHandler(1001)]
+        [MessageHandler(PlayerGateIDClient)]
         private static void ClientReceive_PlayerAtGate(ushort client_id, Message msg)
         {
 
@@ -305,7 +397,6 @@ namespace Daniel.Master
         #endregion
 
         #region Events
-
         private void SubscribeEvents()
         {
             NetworkManager.Client.OnClientConnected += Client_OnClientConnected;
