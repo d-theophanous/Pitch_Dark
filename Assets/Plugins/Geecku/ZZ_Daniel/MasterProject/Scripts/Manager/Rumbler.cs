@@ -27,6 +27,7 @@ public enum RumblePattern
         private bool IsRumbling;
         private Gamepad Gamepad;
         private PlayerInput PlayerInput;
+        public (float, float) DefaultRumbleFrequency = (0.1f, 0.1f);
 
         protected override void Awake()
         {
@@ -42,48 +43,47 @@ public enum RumblePattern
             Gamepad.SetMotorSpeeds(low, high);
 
         }
-        private IEnumerator StartRumbleCo(float duration)
+        private IEnumerator RumbleDuration(float duration)
         {
+            Gamepad.SetMotorSpeeds(DefaultRumbleFrequency.Item1, DefaultRumbleFrequency.Item2);
             yield return new WaitForSeconds(duration);
-            StopRumble();
+            ResetRumble();
         }
-        private void StartRumble(float duration)
+        private IEnumerator RumbleEndless()
         {
+            Gamepad.SetMotorSpeeds(DefaultRumbleFrequency.Item1, DefaultRumbleFrequency.Item2);
+            while (IsRumbling)
+                yield return null;
+            ResetRumble();
+        }
+        public void StartRumble(float duration)
+        {
+            if (IsRumbling)
+                return;
             IsRumbling = true;
             StopAllCoroutines();
-            StartCoroutine(StartRumbleCo(duration));
+            StartCoroutine(RumbleDuration(duration));
         }
-
-        //public void RumblePulse(float low, float high, float burstTime, float durration)
-        //{
-        //    activeRumbePattern = RumblePattern.Pulse;
-        //    lowA = low;
-        //    highA = high;
-        //    rumbleStep = burstTime;
-        //    pulseDurration = Time.time + burstTime;
-        //    rumbleDurration = Time.time + durration;
-        //    isMotorActive = true;
-        //    var g = GetGamepad();
-        //    g?.SetMotorSpeeds(lowA, highA);
-        //}
-
-        //public void RumbleLinear(float lowStart, float lowEnd, float highStart, float highEnd, float durration)
-        //{
-        //    activeRumbePattern = RumblePattern.Linear;
-        //    lowA = lowStart;
-        //    highA = highStart;
-        //    lowStep = (lowEnd - lowStart) / durration;
-        //    highStep = (highEnd - highStart) / durration;
-        //    rumbleDurration = Time.time + durration;
-        //}
-
-        public void StopRumble()
+        public void StartRumble()
+        {
+            if (IsRumbling)
+                return;
+            IsRumbling = true;
+            StopAllCoroutines();
+            StartCoroutine(RumbleEndless());
+        }
+        private void ResetRumble()
         {
             if (Gamepad != null)
             {
                 Gamepad.SetMotorSpeeds(0, 0);
                 IsRumbling = false;
             }
+        }
+
+        public void StopRumble()
+        {
+            IsRumbling = false;
         }
 
         protected override void OnDestroy()

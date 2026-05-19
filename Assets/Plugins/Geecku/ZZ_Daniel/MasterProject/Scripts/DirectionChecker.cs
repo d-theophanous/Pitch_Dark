@@ -30,7 +30,8 @@ namespace Daniel.Master
             base.Start();
             CurPath = new NavMeshPath();
             //- Debug Test
-            StartDirectionChecking(Destination);
+            if (GameManager.Instance.PlayerIdx == 1)
+                StartDirectionChecking(Destination);
         }
         public void UpdateDirectionChecker(object sender, System.EventArgs e)
         {
@@ -47,12 +48,11 @@ namespace Daniel.Master
             if (IsOnRightPath())
             {
                 //- hier anstelle die network funktion aufrufen
-                //GameManager.Instance.ClientSend_DirectionCheck(1);
+                GameManager.Instance.ClientSend_DirectionCheck(1);
                 Debug.Log("bin on right path");
             }
             else
-                Debug.Log("");
-                //GameManager.Instance.ClientSend_DirectionCheck(0);
+                GameManager.Instance.ClientSend_DirectionCheck(0);
         }
         #endregion
 

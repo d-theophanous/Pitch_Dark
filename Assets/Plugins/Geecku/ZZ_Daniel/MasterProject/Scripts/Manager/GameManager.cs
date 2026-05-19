@@ -323,21 +323,24 @@ namespace Daniel.Master
             var content = msg.GetUShort();
             Message new_msg = Message.Create(MessageSendMode.Reliable, DirectionCheckIDClient);
             NetworkManager.Server.MsgHandler.MessageIndex++;
-            new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
+
+            new_msg.AddUShort(client_id);
             new_msg.AddUShort(content);
+            new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
             NetworkManager.Server.SendToAll(new_msg);
         }
         [MessageHandler(DirectionCheckIDClient)]
-        private static void ClientReceive_DirectionCheck(ushort client_id, Message msg)
+        private static void ClientReceive_DirectionCheck(Message msg)
         {
-            var index = msg.GetInt();
+            var client_id = msg.GetUShort();
             var content = msg.GetUShort();
+            Debug.Log("content in client receive: " + content);
             Action action;
             if (client_id == NetworkManager.Client.LocalClient.ID)
             {
                 action = () =>
                 {
-                    //- logic for what player who sent the message should do with it
+                    Debug.Log("sent: " + content);
                 };
             }
             else
@@ -351,7 +354,7 @@ namespace Daniel.Master
                     }
                     else if (content == 1)
                     {
-                        Rumbler.Instance.RumbleConstant(0.1f, 0.1f, 20f);
+                        Rumbler.Instance.StartRumble();
                         Debug.Log("rumbling");
                     }
                 };
@@ -371,12 +374,13 @@ namespace Daniel.Master
             Message new_msg = Message.Create(MessageSendMode.Reliable, PlayerGateIDClient);
             NetworkManager.Server.MsgHandler.MessageIndex++;
             new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
+            new_msg.AddUShort(client_id);
             NetworkManager.Server.SendToAll(new_msg);
         }
         [MessageHandler(PlayerGateIDClient)]
-        private static void ClientReceive_PlayerAtGate(ushort client_id, Message msg)
+        private static void ClientReceive_PlayerAtGate(Message msg)
         {
-
+            var client_id = msg.GetUShort();
             Action action;
             if (client_id == NetworkManager.Client.LocalClient.ID)
             {

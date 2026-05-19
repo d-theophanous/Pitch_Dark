@@ -14,6 +14,8 @@ namespace Daniel.Master
     public class ConnectScript : MonoBehaviour
     {
         public const string LOCALHOST = "127.0.0.1";
+        public const string DEFAULT_PORT_TCP = "64000";
+        public const string DEFAULT_PORT_UDP = "64001";
         #region UI
         [SerializeField] private TMP_InputField IPInput;
         [SerializeField] private TMP_InputField TCPPortInput;
@@ -91,6 +93,8 @@ namespace Daniel.Master
         {
             ConnectInfo.gameObject.SetActive(false);
             IPInput.text = LOCALHOST;
+            TCPPortInput.text = DEFAULT_PORT_TCP;
+            UDPPortInput.text = DEFAULT_PORT_UDP;
         }
         private void Start()
         {
