@@ -324,28 +324,24 @@ namespace Daniel.Master
             Message new_msg = Message.Create(MessageSendMode.Reliable, DirectionCheckIDClient);
             NetworkManager.Server.MsgHandler.MessageIndex++;
 
+            new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
             new_msg.AddUShort(client_id);
             new_msg.AddUShort(content);
-            new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
             NetworkManager.Server.SendToAll(new_msg);
         }
         [MessageHandler(DirectionCheckIDClient)]
         private static void ClientReceive_DirectionCheck(Message msg)
         {
-            var client_id = msg.GetUShort();
-            var content = msg.GetUShort();
-            Debug.Log("content in client receive: " + content);
-            Action action;
-            if (client_id == NetworkManager.Client.LocalClient.ID)
+            Action action = () =>
             {
-                action = () =>
+                var client_id = msg.GetUShort();
+                var content = msg.GetUShort();
+                Debug.Log("content in client receive: " + content);
+                if (client_id == NetworkManager.Client.LocalClient.ID)
                 {
                     Debug.Log("sent: " + content);
-                };
-            }
-            else
-            {
-                action = () =>
+                }
+                else
                 {
                     if (content == 0)
                     {
@@ -357,8 +353,8 @@ namespace Daniel.Master
                         Rumbler.Instance.StartRumble();
                         Debug.Log("rumbling");
                     }
-                };
-            }
+                }
+            };            
             ClientMessageHandler.Handle(msg, action);
         }
 

@@ -114,9 +114,8 @@ namespace Geecku.DefaultNetworking.Common.MessageHandlers
             }
         }
         private List<MsgStruct> PendingMessageStructList = new();
-        private void HandleAction(MsgHeader msg_header, Action action)
+        private void HandleAction(int msg_index, Action action)
         {
-            var msg_index = msg_header.MsgIdx;
             bool safe_and_execute_later = !IsReadyForMessages;
 
             if (!safe_and_execute_later && msg_index == this.MessageIndex + 1) //- if true, then its a message in order
@@ -159,8 +158,17 @@ namespace Geecku.DefaultNetworking.Common.MessageHandlers
             //{
             //    Debug.Log("Print " + i);
             //};
-            manager.MsgHandler.HandleAction(msg_header, action);
+            manager.MsgHandler.HandleAction(msg_header.MsgIdx, action);
         }
+        //public static void HandleIndex(Message msg, out ClientManager manager)
+        //{
+        //    var msg_header = new MsgHeader(msg, out ClientManager m);
+        //    manager = m;
+        //}
+        //public static void HandleAction(int msg_index, Action action, ClientManager manager)
+        //{
+        //    manager.MsgHandler.HandleAction(msg_index, action);
+        //}
 
         #region Test in order Mesages
         [MessageHandler(567)]
@@ -173,7 +181,7 @@ namespace Geecku.DefaultNetworking.Common.MessageHandlers
             {
                 Debug.Log("Print " + i);
             };
-            manager.MsgHandler.HandleAction(msg_header, action);
+            manager.MsgHandler.HandleAction(msg_header.MsgIdx, action);
         }
         #endregion
 
@@ -199,7 +207,7 @@ namespace Geecku.DefaultNetworking.Common.MessageHandlers
                         NetworkManager.HandleAddSyncObjectTransferAction(msg);
                     }
                 };
-                manager.MsgHandler.HandleAction(msg_header, action);
+                manager.MsgHandler.HandleAction(msg_header.MsgIdx, action);
             });
         }
         #endregion
@@ -228,7 +236,7 @@ namespace Geecku.DefaultNetworking.Common.MessageHandlers
                         NetworkManager.HandleRemoveSyncObjectTransferAction(msg);
                     }
                 };
-                manager.MsgHandler.HandleAction(msg_header, action);
+                manager.MsgHandler.HandleAction(msg_header.MsgIdx, action);
             });
         }
         #endregion
@@ -257,7 +265,7 @@ namespace Geecku.DefaultNetworking.Common.MessageHandlers
                         NetworkManager.HandleUpdateSyncObjectTransferAction(msg);
                     }
                 };
-                manager.MsgHandler.HandleAction(msg_header, action);
+                manager.MsgHandler.HandleAction(msg_header.MsgIdx, action);
             });
         }
         #endregion
