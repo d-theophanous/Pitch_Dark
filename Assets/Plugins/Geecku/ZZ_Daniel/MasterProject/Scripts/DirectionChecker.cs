@@ -30,8 +30,8 @@ namespace Daniel.Master
             base.Start();
             CurPath = new NavMeshPath();
             //- Debug Test
-            if (GameManager.Instance.PlayerIdx == 1)
-                StartDirectionChecking(Destination);
+            //if (GameManager.Instance.PlayerIdx == 1)
+            //    StartDirectionChecking(Destination);
         }
         public void UpdateDirectionChecker(object sender, System.EventArgs e)
         {

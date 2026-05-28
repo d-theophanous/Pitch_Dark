@@ -1,4 +1,16 @@
 
+ToDo's
+- Tutorial
+	- dialogue (nicht skippable)
+	- bissl rumlaufen im Labyrinth 
+	- Dialogue Manager?
+- Readable Button bugs mit Controller fixen
+- Fackel einbauen + dass sie ausgeht
+- sound für wenn du dich drehst
+
+
+
+
 Namenskonvetion für Dialoge:
 
 "sprache_dialogNummer_line" Bsp: "en_1_10" (Zehnte line in Dialog 1 auf English)
