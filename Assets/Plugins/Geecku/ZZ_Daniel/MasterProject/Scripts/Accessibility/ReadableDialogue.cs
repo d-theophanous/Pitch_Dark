@@ -44,11 +44,13 @@ namespace Daniel.Master
         }
         public void UpdateReadableDialogue()
         {
-            if (ContinuePressed)
+            if (ContinuePressed || DialogueManager.Instance.ContinueWithDialogue)
             {
+                DialogueManager.Instance.ContinueWithDialogue = false;
                 if (Text.text == Lines[index])
                 {
                     NextLine();
+                    //- this is so ugly, change
                     if (GameManager.Instance.PlayerIdx == 1 && (index == 18 || index == 19 || index == 20))
                         AudioManager.Instance.ChangeLines = true;
                     else

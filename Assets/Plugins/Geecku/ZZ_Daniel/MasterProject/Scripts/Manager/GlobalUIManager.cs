@@ -115,7 +115,7 @@ namespace Daniel.Master
             //- opt ToDo set Magnifier as last sibling (i do it in toggle magnifier
             //- however if you switch settings while having the magnifier on its not last anymore
         }
-        private void CloseUI(UI_Group ui)
+        public void CloseUI(UI_Group ui)
         {
             if (CurUIList.Count == 0)
                 return;

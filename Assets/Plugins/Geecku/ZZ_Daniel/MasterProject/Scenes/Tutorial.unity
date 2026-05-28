@@ -9378,6 +9378,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 381a4ca51396de0448120759a89e69a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::Geecku.TutorialManager
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: CurrentSegment
+      Entry: 6
+      Data: 
+  CurrentDialogue: {fileID: 0}
+  DialogueList:
+  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
+  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
+  IsDialogue: 0
 --- !u!4 &915032561
 Transform:
   m_ObjectHideFlags: 0
@@ -19449,6 +19466,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 668735768885291391, guid: 91ad7bf144749b04ab484a680630a040, type: 3}
   m_PrefabInstance: {fileID: 1657046142}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1669647139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1669647141}
+  - component: {fileID: 1669647140}
+  m_Layer: 0
+  m_Name: Dialogue Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1669647140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669647139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4482bad2bb88c449b032abe11abc9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueManager
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  SecondPlayerCam: {fileID: 0}
+  FirstPuzzleNPCList: []
+  SecondPuzzleNPCList: []
+  TextSpeed: 0.05
+  ContinueWithDialogue: 0
+  TutorialAfter: 0
+--- !u!4 &1669647141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669647139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.06597, y: 1.45984, z: 5.50938}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1670872370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25609,3 +25685,4 @@ SceneRoots:
   - {fileID: 198045677}
   - {fileID: 1160397356}
   - {fileID: 915032561}
+  - {fileID: 1669647141}

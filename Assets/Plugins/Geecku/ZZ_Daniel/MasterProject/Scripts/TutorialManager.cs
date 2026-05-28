@@ -26,8 +26,8 @@ namespace Daniel.Master
          * navigieren. Auf deiner linken Seite des Controllers hast du vier 
          * Knöpfe. Benutze den oberen und den unteren 
          * Knopf, um zu navigieren. Probiere es einmal aus!
-         * Super! Immer wenn es Text auf dem Bildschirm gibt wird automatisch der erste
-         * Text vorgelesen und dieser Ton erklingt: 
+         * Super! Sobald es Text auf dem Bildschirm erklingt dieser Ton und es wird automatisch der erste
+         * Text vorgelesen 
          * Befindest du dich wieder im normalen Spielemodus erklingt dieser Sound:
          * 
          * Weiter mit der Steuerung deines Charakters: 
@@ -61,34 +61,51 @@ namespace Daniel.Master
          * speech, was  für ne speech
          */
 
-        private TutorialSegment CurrentSegment;
+        public TutorialSegment CurrentSegment;
+        public DialogueContainer CurrentDialogue;
         private List<TutorialSegment> TutorialSegmentList = new();
+        public List<DialogueContainer> DialogueList = new();
         private int SegmentIndex = 0;
+        private int DialogueIndex = 0;
+        public bool IsDialogue;
 
         #region MonoBehaviour commons
         protected override void Start()
         {
             base.Start();
             SetUpSegments();
+
+            //- Testing
+            StartTutorial();
         }
         public void UpdateTutorialManager(object sender, EventArgs e)
         {
-            if (CurrentSegment == null)
-                return;
-            CurrentSegment.UpdateTutorialSegment();
+            if (IsDialogue)
+            {
 
-            if (CurrentSegment.SegmentComplete)
-                Debug.Log("Next segment");
+            }
+            else
+            {
+                if (CurrentSegment == null)
+                    return;
+                CurrentSegment.UpdateTutorialSegment();
+
+                if (CurrentSegment.SegmentComplete)
+                    ToggleStatus(true);
+            }
         }
 
         #endregion
         public void SetUpSegments()
         {
-            TutorialSegment seg_1 = new TutorialSegment();
+            TutorialSegment seg_1 = new();
             seg_1.RequiredButtonDic.Add(TutorialButton.X,
+                new TutorialButtonInfo(""));
+            seg_1.RequiredButtonDic.Add(TutorialButton.Square,
                 new TutorialButtonInfo(""));
 
             TutorialSegmentList.Add(seg_1);
+
         }
         public void ProcessButtonPress(TutorialButton button, bool one_time)
         {
@@ -103,13 +120,29 @@ namespace Daniel.Master
 
         public void StartTutorial()
         {
-            if (TutorialSegmentList.Count == 0)
+            if (TutorialSegmentList.Count == 0 || DialogueList.Count == 0)
                 return;
-            CurrentSegment = TutorialSegmentList[SegmentIndex];
-            SegmentIndex++;
-            GameManager.Instance.UpdateEvent += UpdateTutorialManager;
-        }
 
+            GameManager.Instance.UpdateEvent += UpdateTutorialManager;
+            ToggleStatus(true);
+        }
+        public void ToggleStatus(bool switch_to_dialogue)
+        {
+            if (switch_to_dialogue)
+            {
+                CurrentDialogue = DialogueList[DialogueIndex];
+                DialogueIndex++;
+                DialogueManager.Instance.StartTutorialDialogue(CurrentDialogue);
+            }
+            else
+            {
+                GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
+                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Tutorial");
+                CurrentSegment = TutorialSegmentList[SegmentIndex];
+                SegmentIndex++;
+            }
+            IsDialogue = switch_to_dialogue;
+        }
 
         public void SkipTutorial()
         {
@@ -127,7 +160,7 @@ namespace Daniel.Master
 
     public class TutorialSegment
     {
-        public Dictionary<TutorialButton, TutorialButtonInfo> RequiredButtonDic;
+        public Dictionary<TutorialButton, TutorialButtonInfo> RequiredButtonDic = new();
         public bool SegmentComplete = false;
 
         public void UpdateTutorialSegment()

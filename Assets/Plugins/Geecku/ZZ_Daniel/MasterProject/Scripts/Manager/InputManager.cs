@@ -21,7 +21,7 @@ namespace Daniel.Master
             {
                 action_map.Disable();
             }
-            PlayerInput.actions.FindActionMap("UI").Enable();            
+            PlayerInput.actions.FindActionMap("UI").Enable();                  
         }
 
         #region Input Triggers
@@ -135,6 +135,20 @@ namespace Daniel.Master
         {
             GameManager.Instance.Player.Look(value.Get<Vector2>());
         }
+        #endregion
+
+        #region Tutorial
+        public void OnX(InputValue value)
+        {
+            Debug.Log("x pressed");
+            TutorialManager.Instance.ProcessButtonPress(TutorialButton.X, true);
+        }
+        public void OnC(InputValue value)
+        {
+            Debug.Log("x pressed");
+            TutorialManager.Instance.ProcessButtonPress(TutorialButton.Square, true);
+        }
+
         #endregion
 
         public void OnDebug()

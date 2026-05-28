@@ -181,7 +181,8 @@ namespace Daniel.Master
         #region Game Logic
         public void StartGame()
         {
-            StartCoroutine(AsyncStartGame());
+            //StartCoroutine(AsyncStartGame());
+            StartCoroutine(AsyncStartTutorial());
             Content.transform.parent.gameObject.SetActive(false);
             Debug.Log("Game started :))");
         }
@@ -189,6 +190,12 @@ namespace Daniel.Master
         {
             yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
             SetGameState(GameState.PLAYING);
+            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
+        }
+        private IEnumerator AsyncStartTutorial()
+        {
+            yield return SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive);
+            
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
         }
         public void QuitWaitingForPuzzle()
@@ -485,6 +492,10 @@ namespace Daniel.Master
         #endregion
 
         #region Debug
+        public void CurrentDebug()
+        {
+            StartCoroutine(AsyncStartTutorial());
+        }
         public void SetPlayer(int player)
         {
             PlayerIdx = player;

@@ -120,7 +120,7 @@ namespace Daniel.Master
             LookAtPlayer();
             Debug.Log("NPC interaction");
             //- nur zum Testen?
-            DialogueManager.Instance.StartDialogue(
+            DialogueManager.Instance.StartNPCDialogue(
                 DialogueListFinal[0]);
             tag = "Untagged";
         }
@@ -129,7 +129,7 @@ namespace Daniel.Master
             GameManager.Instance.Player.ResetMovement();
             DialogueManager.Instance.SetCurrentNPC(this);
             LookAtPlayer();
-            DialogueManager.Instance.StartDialogue(
+            DialogueManager.Instance.StartNPCDialogue(
                 DialogueListFinal[1], true);
             //- after second dialogue NPC will not be interactable anymore
             this.tag = "Untagged";

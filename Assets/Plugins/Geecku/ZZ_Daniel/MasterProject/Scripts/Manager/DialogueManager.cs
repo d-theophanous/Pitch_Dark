@@ -23,15 +23,27 @@ namespace Daniel.Master
         //- ugly ToDo opt
         private bool ImproviseAfter;
 
+        public bool ContinueWithDialogue;
+        public bool TutorialAfter;
+
         protected override void Awake()
         {
             base.Awake();
             Dialogue = GlobalUIManager.Instance.GetReadableDialogue();
         }
-        public void StartDialogue(DialogueContainer data, bool improvise = false)
+        public void StartNPCDialogue(DialogueContainer data, bool improvise = false)
         {
             CurNPCCamera.gameObject.SetActive(true);
             ImproviseAfter = improvise;
+            SetUpDialogue(data);
+        }
+        public void StartTutorialDialogue(DialogueContainer data)
+        {
+            TutorialAfter = true;
+            SetUpDialogue(data);
+        }
+        private void SetUpDialogue(DialogueContainer data)
+        {
             Dialogue.SetUp(data, TextSpeed);
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
             GameManager.Instance.SetGameState(GameState.DIALOGUE);
@@ -47,6 +59,10 @@ namespace Daniel.Master
                 InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Improvisation");
                 AudioManager.Instance.StartImprovisation();
                 PuzzleManager.Instance.IsSolving = false;
+            }
+            else if (TutorialAfter)
+            {
+                TutorialManager.Instance.ToggleStatus(false);
             }
             else
             {
