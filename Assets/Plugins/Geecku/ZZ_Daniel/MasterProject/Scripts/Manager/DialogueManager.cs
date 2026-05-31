@@ -39,6 +39,7 @@ namespace Daniel.Master
         }
         public void StartTutorialDialogue(DialogueContainer data)
         {
+            GlobalUIManager.Instance.PlayerViewCamera.gameObject.SetActive(true);
             TutorialAfter = true;
             SetUpDialogue(data);
         }
@@ -63,6 +64,7 @@ namespace Daniel.Master
             else if (TutorialAfter)
             {
                 TutorialManager.Instance.ToggleStatus(false);
+                GlobalUIManager.Instance.PlayerViewCamera.gameObject.SetActive(false);
             }
             else
             {

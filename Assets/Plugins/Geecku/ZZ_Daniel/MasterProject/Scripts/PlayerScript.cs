@@ -11,6 +11,7 @@ namespace Daniel.Master
         [SerializeField] private Transform Player2Spawn;
         [SerializeField] private NavMeshAgent NavMeshAgent;
         [SerializeField] private CinemachineCamera NPCCamera;
+        [SerializeField] private Camera PlayerCamera;
         public bool IsMoving => Movement.magnitude > 0;
         public Vector3 WalkDirection => new Vector3(Movement.y, 0, -Movement.x);
 
@@ -25,6 +26,7 @@ namespace Daniel.Master
         {
             GameManager.Instance.Player = this;
             PlayerSpeed = 2.5f;
+            GlobalUIManager.Instance.PlayerViewCamera = PlayerCamera;
         }
         private void Start()
         {

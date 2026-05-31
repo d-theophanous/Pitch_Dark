@@ -7767,7 +7767,8 @@ MonoBehaviour:
     SerializationNodes: []
   UICamera: {fileID: 431464747}
   MagCamera: {fileID: 876770772}
-  PlayerCam: {fileID: 8400000, guid: 65252310590b0004b847f0239a9c1a6b, type: 2}
+  PlayerViewRenderTexture: {fileID: 8400000, guid: 65252310590b0004b847f0239a9c1a6b, type: 2}
+  PlayerViewCamera: {fileID: 0}
   Canvas: {fileID: 2090360789}
   DialogueBackground: {fileID: 1349937437}
   Settings: {fileID: 530481474}

@@ -13,7 +13,9 @@ namespace Daniel.Master
         [Header ("Camera Stuff")]
         [SerializeField] private Camera UICamera;
         [SerializeField] private Camera MagCamera;
-        [SerializeField] private RenderTexture PlayerCam;
+        [SerializeField] private RenderTexture PlayerViewRenderTexture;
+
+        public Camera PlayerViewCamera;
 
         [Header("Canvas References")]
         [SerializeField] private Canvas Canvas;
@@ -71,7 +73,7 @@ namespace Daniel.Master
             {
                 if (!CurUIList.Contains(ui))
                 {
-                    DialogueBackground.texture = PlayerCam;
+                    DialogueBackground.texture = PlayerViewRenderTexture;
                     DialogueBackground.color = Color.white;
                 }
                 else

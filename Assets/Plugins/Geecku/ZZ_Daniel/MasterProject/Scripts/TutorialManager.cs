@@ -16,7 +16,7 @@ namespace Daniel.Master
          * Wenn du diesen Ton hörst <Ton> heißt dass das du am Ende des aktuellen 
          * Satzes bist. Du kannst den nächsten Satz abspielen indem du X drückst. 
          * Der X knopf ist der untere der vier Knöpfe auf der rechten Seite deines 
-         * Controllers. 
+         * Controllers. Probier es mal aus!
          * Sehr gut! 
          * Möchtest du den letzten Satz wiederholen, drücke Quadrat, der linke knopf der
          * vier Knöpfe.
@@ -96,25 +96,29 @@ namespace Daniel.Master
         }
 
         #endregion
+
         public void SetUpSegments()
         {
-            TutorialSegment seg_1 = new();
+            ButtonTutorialSegment seg_1 = new();
             seg_1.RequiredButtonDic.Add(TutorialButton.X,
                 new TutorialButtonInfo(""));
             seg_1.RequiredButtonDic.Add(TutorialButton.Square,
                 new TutorialButtonInfo(""));
 
             TutorialSegmentList.Add(seg_1);
-
         }
         public void ProcessButtonPress(TutorialButton button, bool one_time)
         {
-            if (CurrentSegment.RequiredButtonDic.ContainsKey(button))
+            ButtonTutorialSegment tmp = (ButtonTutorialSegment)CurrentSegment;
+            if (tmp != null)
             {
-                if (one_time)
-                    CurrentSegment.RequiredButtonDic[button].PressedOnce();
-                else
-                    CurrentSegment.RequiredButtonDic[button].Pressed();
+                if (tmp.RequiredButtonDic.ContainsKey(button))
+                {
+                    if (one_time)
+                        tmp.RequiredButtonDic[button].PressedOnce();
+                    else
+                        tmp.RequiredButtonDic[button].Pressed();
+                }
             }
         }
 
@@ -126,16 +130,31 @@ namespace Daniel.Master
             GameManager.Instance.UpdateEvent += UpdateTutorialManager;
             ToggleStatus(true);
         }
+
+        //- based on the assumption that we end the tutorial with a dialogue
+        private void EndTutorial()
+        {
+            GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
+            GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
+            GameManager.Instance.SetGameState(GameState.PLAYING);
+            InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
+            //- switch to actual game haha + wait for other person to be ready...
+        }
         public void ToggleStatus(bool switch_to_dialogue)
         {
             if (switch_to_dialogue)
-            {
+            {             
                 CurrentDialogue = DialogueList[DialogueIndex];
                 DialogueIndex++;
                 DialogueManager.Instance.StartTutorialDialogue(CurrentDialogue);
             }
             else
             {
+                if (SegmentIndex == TutorialSegmentList.Count)
+                {
+                    EndTutorial();
+                    return;
+                }
                 GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
                 InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Tutorial");
                 CurrentSegment = TutorialSegmentList[SegmentIndex];
@@ -156,15 +175,26 @@ namespace Daniel.Master
         {
 
         }
+
+        #region Public Trigger Functions
+        public void TriggerSegmentComplete()
+        {
+            CurrentSegment.SegmentComplete = true;
+        }
+        #endregion
     }
 
     public class TutorialSegment
     {
-        public Dictionary<TutorialButton, TutorialButtonInfo> RequiredButtonDic = new();
         public bool SegmentComplete = false;
-
-        public void UpdateTutorialSegment()
+        public virtual void UpdateTutorialSegment() { }
+    }
+    public class ButtonTutorialSegment : TutorialSegment
+    {
+        public Dictionary<TutorialButton, TutorialButtonInfo> RequiredButtonDic = new();
+        public override void UpdateTutorialSegment()
         {
+
             bool is_complete = true;
             foreach (var button in RequiredButtonDic)
             {
@@ -177,6 +207,10 @@ namespace Daniel.Master
                 SegmentComplete = true;
             }
         }
+    }
+    public class TriggerTutorialSegment : TutorialSegment
+    {
+
     }
     public class TutorialButtonInfo
     {
