@@ -1,9 +1,11 @@
 using Geecku.GlobalMangers;
 using NUnit.Framework;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.Composites;
+using UnityEngine.SceneManagement;
 
 namespace Daniel.Master
 {
@@ -68,6 +70,8 @@ namespace Daniel.Master
         private int SegmentIndex = 0;
         private int DialogueIndex = 0;
         public bool IsDialogue;
+        public Transform SegmentSpawnExit;
+        public Transform SegmentSpawnDoor;
 
         #region MonoBehaviour commons
         protected override void Start()
@@ -99,13 +103,45 @@ namespace Daniel.Master
 
         public void SetUpSegments()
         {
+            //- Segment 1: X Button Press
             ButtonTutorialSegment seg_1 = new();
             seg_1.RequiredButtonDic.Add(TutorialButton.X,
                 new TutorialButtonInfo(""));
-            seg_1.RequiredButtonDic.Add(TutorialButton.Square,
+
+            //- Segment 2: Oberen und unteren Pfeil
+            ButtonTutorialSegment seg_2 = new();
+            seg_2.RequiredButtonDic.Add(TutorialButton.Down_Arrow,
+                new TutorialButtonInfo(""));
+            seg_2.RequiredButtonDic.Add(TutorialButton.Up_Arrow,
                 new TutorialButtonInfo(""));
 
+            //- Segment 3: 
+            ButtonTutorialSegment seg_3 = new();
+            seg_3.RequiredButtonDic.Add(TutorialButton.Left_Joystick,
+                new TutorialButtonInfo("", 2f));
+            seg_3.RequiredButtonDic.Add(TutorialButton.Right_Joystick,
+                new TutorialButtonInfo(""));
+
+            //- Segment 4: 
+            TriggerTutorialSegment seg_4 = new();
+            seg_4.StartAction = () => 
+            {
+                GameManager.Instance.Player.TeleportCharacter(SegmentSpawnExit.position);
+            };
+
+
+            //- Segment 5:
+            TriggerTutorialSegment seg_5 = new();
+            seg_5.StartAction = () =>
+            {
+                GameManager.Instance.Player.TeleportCharacter(SegmentSpawnDoor.position);
+            };
+
             TutorialSegmentList.Add(seg_1);
+            TutorialSegmentList.Add(seg_2);
+            TutorialSegmentList.Add(seg_3);
+            TutorialSegmentList.Add(seg_4);
+            TutorialSegmentList.Add(seg_5);
         }
         public void ProcessButtonPress(TutorialButton button, bool one_time)
         {
@@ -132,13 +168,16 @@ namespace Daniel.Master
         }
 
         //- based on the assumption that we end the tutorial with a dialogue
-        private void EndTutorial()
+        private IEnumerator EndTutorialCoroutine()
         {
             GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
             GameManager.Instance.SetGameState(GameState.PLAYING);
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
             //- switch to actual game haha + wait for other person to be ready...
+            yield return SceneManager.UnloadSceneAsync("Tutorial");
+            yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
+
         }
         public void ToggleStatus(bool switch_to_dialogue)
         {
@@ -152,12 +191,13 @@ namespace Daniel.Master
             {
                 if (SegmentIndex == TutorialSegmentList.Count)
                 {
-                    EndTutorial();
+                    StartCoroutine(EndTutorialCoroutine());
                     return;
                 }
                 GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
                 InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Tutorial");
                 CurrentSegment = TutorialSegmentList[SegmentIndex];
+                CurrentSegment.OnStartSegment();
                 SegmentIndex++;
             }
             IsDialogue = switch_to_dialogue;
@@ -187,7 +227,13 @@ namespace Daniel.Master
     public class TutorialSegment
     {
         public bool SegmentComplete = false;
+        public Action StartAction;
+
         public virtual void UpdateTutorialSegment() { }
+        public virtual void OnStartSegment() 
+        {
+            StartAction?.Invoke();
+        }
     }
     public class ButtonTutorialSegment : TutorialSegment
     {

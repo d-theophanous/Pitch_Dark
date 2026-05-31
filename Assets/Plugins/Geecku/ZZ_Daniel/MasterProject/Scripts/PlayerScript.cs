@@ -55,7 +55,7 @@ namespace Daniel.Master
                 CurRotationIdx = 1;
             }
 
-            transform.position = tmp.position;
+            TeleportCharacter(tmp.position);
             transform.forward = tmp.forward;
             CinCam.transform.rotation = LookDirList[CurRotationIdx];
         }
@@ -140,6 +140,10 @@ namespace Daniel.Master
             else if (PreviousMoveInput.magnitude != 0 && Movement.magnitude == 0)
                 AudioManager.Instance.StopFootsteps();
             PreviousMoveInput = Movement;
+        }
+        public void TeleportCharacter(Vector3 new_pos)
+        {
+            NavMeshAgent.Warp(new_pos);
         }
         #endregion
     }

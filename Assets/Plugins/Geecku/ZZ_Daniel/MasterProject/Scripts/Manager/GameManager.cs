@@ -20,6 +20,8 @@ namespace Daniel.Master
         //[Header("References")]
         [HideInInspector] public PlayerScript Player;
 
+        public bool SkipTutorial;
+
         private GameState State;
         public static Language Language;
 
@@ -181,8 +183,10 @@ namespace Daniel.Master
         #region Game Logic
         public void StartGame()
         {
-            //StartCoroutine(AsyncStartGame());
-            StartCoroutine(AsyncStartTutorial());
+            if (SkipTutorial)
+                StartCoroutine(AsyncStartGame());
+            else
+                StartCoroutine(AsyncStartTutorial());
             Content.transform.parent.gameObject.SetActive(false);
             Debug.Log("Game started :))");
         }

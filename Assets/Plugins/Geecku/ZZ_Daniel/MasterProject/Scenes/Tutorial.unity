@@ -2029,7 +2029,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b4cfca0f200665248a8aa515401981a0, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 0b522a89b932ebc47b47e379b852bc3c, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &221598456
 PrefabInstance:
@@ -3330,8 +3330,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1096634297}
   - {fileID: 1290212214}
+  - {fileID: 1096634297}
   m_Father: {fileID: 52796524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &363192863
@@ -3952,7 +3952,7 @@ Transform:
   m_GameObject: {fileID: 430324108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -5.73, y: -1, z: -3.31}
+  m_LocalPosition: {x: -5.02, y: -1, z: -2.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6470,6 +6470,10 @@ PrefabInstance:
       propertyPath: DoorNPC
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6379473852384688255, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: DoorTrigger
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7613687411510550139, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5
@@ -6518,19 +6522,49 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 6379473852384688255, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 8417466778113480612, guid: 4963b55652180e946b10fda98efef25e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7613687411510550139, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1121424215}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 650682149939800212, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 748668369}
   m_SourcePrefab: {fileID: 100100000, guid: 4963b55652180e946b10fda98efef25e, type: 3}
 --- !u!4 &748668366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7613687411510550139, guid: 4963b55652180e946b10fda98efef25e, type: 3}
   m_PrefabInstance: {fileID: 748668365}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &748668367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 650682149939800212, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+  m_PrefabInstance: {fileID: 748668365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &748668368 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2625385179280938174, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+  m_PrefabInstance: {fileID: 748668365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &748668369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748668367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b75fe083dfe33742bdc76c70928dcba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Geecku.TutorialDoorScript
+  IsOneTimeUse: 0
+  ObjectsToBeOutlined: []
+  DoorAnimator: {fileID: 748668368}
 --- !u!1001 &765501236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7762,7 +7796,13 @@ MonoBehaviour:
   DialogueList:
   - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
   - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
+  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
+  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
+  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
+  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
   IsDialogue: 0
+  SegmentSpawnExit: {fileID: 1290212214}
+  SegmentSpawnDoor: {fileID: 1096634297}
 --- !u!4 &915032561
 Transform:
   m_ObjectHideFlags: 0
@@ -13449,7 +13489,7 @@ Transform:
   m_GameObject: {fileID: 1290212213}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -25.62, y: 0, z: 7.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

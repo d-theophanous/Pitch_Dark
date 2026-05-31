@@ -14,6 +14,7 @@ namespace Daniel.Master
         public override void ActivatePrompt()
         {
             PuzzleManager.Instance.SetCurrentDoor(this);
+            Rumbler.Instance.StopRumble();
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
             tag = "Untagged";
             GameManager.Instance.Player.CurrentInteractable = null;
@@ -23,7 +24,7 @@ namespace Daniel.Master
             base.EnterInteractionRange();
             //- mode dependent here I think
             //- ToDo (HP)
-            Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 3f);
+            Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 100f);
         }
         public override void ExitInteractionRange()
         {

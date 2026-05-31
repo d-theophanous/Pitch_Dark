@@ -755,7 +755,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             ""id"": ""aebcf0c2-17e3-48dc-9f71-7953655d9932"",
             ""actions"": [
                 {
-                    ""name"": ""X"",
+                    ""name"": ""South"",
                     ""type"": ""Button"",
                     ""id"": ""fcf0365e-c7eb-4d22-ae8e-ce2d94aabde2"",
                     ""expectedControlType"": """",
@@ -764,9 +764,54 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""C"",
+                    ""name"": ""RightStick"",
+                    ""type"": ""Value"",
+                    ""id"": ""7306b366-4da0-4cf7-8cbc-4a8d8d3aa3a1"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""LeftStick"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""cccad793-d704-4a55-b392-34ed908c00d1"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""West"",
                     ""type"": ""Button"",
                     ""id"": ""bcf3646f-4231-4c32-b2b6-6e58ec74992e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Up"",
+                    ""type"": ""Button"",
+                    ""id"": ""4ddc59f3-179b-45ee-b19d-6a387889475a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Down"",
+                    ""type"": ""Button"",
+                    ""id"": ""13c9ae62-f9d0-4195-a09f-41d75ab11ae2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""R2"",
+                    ""type"": ""Button"",
+                    ""id"": ""83787236-c089-4a54-9ca0-b25a71c07669"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -777,22 +822,132 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4ca5b463-64d4-4893-aa28-d985d650a1d9"",
-                    ""path"": ""<Keyboard>/x"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard;Controller"",
-                    ""action"": ""X"",
+                    ""groups"": "";Controller"",
+                    ""action"": ""South"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2e8848a6-3de3-41a0-b2e9-190cd65e3faa"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""id"": ""ad434ad5-4202-49f7-b04f-8310d95adfee"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard;Controller"",
-                    ""action"": ""C"",
+                    ""groups"": "";Controller"",
+                    ""action"": ""RightStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""325baadb-d73a-4824-b63b-967826c8b436"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""LeftStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""2815aa29-36e7-4f87-ad43-2464279a3fa1"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftStick"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""a27466f5-4d5c-4cd0-abba-8d997d3f5854"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""LeftStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""630a9f3e-7b9a-4409-b006-50f1629e8088"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""LeftStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""34e62e57-60fe-452d-950e-9f60a6387b0b"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""LeftStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""957c90cf-cba8-444c-ad86-b59d4d5f8040"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""LeftStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e8848a6-3de3-41a0-b2e9-190cd65e3faa"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""West"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ca7f7ef4-f29b-4d51-9f21-e96025a00c29"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""796765d3-234f-4e09-9563-2ee764f214a3"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ff88f9f1-8e41-494a-aa98-afbf30c0860a"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""R2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -855,8 +1010,13 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_Dialogue_Continue = m_Dialogue.FindAction("Continue", throwIfNotFound: true);
         // Tutorial
         m_Tutorial = asset.FindActionMap("Tutorial", throwIfNotFound: true);
-        m_Tutorial_X = m_Tutorial.FindAction("X", throwIfNotFound: true);
-        m_Tutorial_C = m_Tutorial.FindAction("C", throwIfNotFound: true);
+        m_Tutorial_South = m_Tutorial.FindAction("South", throwIfNotFound: true);
+        m_Tutorial_RightStick = m_Tutorial.FindAction("RightStick", throwIfNotFound: true);
+        m_Tutorial_LeftStick = m_Tutorial.FindAction("LeftStick", throwIfNotFound: true);
+        m_Tutorial_West = m_Tutorial.FindAction("West", throwIfNotFound: true);
+        m_Tutorial_Up = m_Tutorial.FindAction("Up", throwIfNotFound: true);
+        m_Tutorial_Down = m_Tutorial.FindAction("Down", throwIfNotFound: true);
+        m_Tutorial_R2 = m_Tutorial.FindAction("R2", throwIfNotFound: true);
     }
 
     ~@BaseAction()
@@ -1576,8 +1736,13 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     // Tutorial
     private readonly InputActionMap m_Tutorial;
     private List<ITutorialActions> m_TutorialActionsCallbackInterfaces = new List<ITutorialActions>();
-    private readonly InputAction m_Tutorial_X;
-    private readonly InputAction m_Tutorial_C;
+    private readonly InputAction m_Tutorial_South;
+    private readonly InputAction m_Tutorial_RightStick;
+    private readonly InputAction m_Tutorial_LeftStick;
+    private readonly InputAction m_Tutorial_West;
+    private readonly InputAction m_Tutorial_Up;
+    private readonly InputAction m_Tutorial_Down;
+    private readonly InputAction m_Tutorial_R2;
     /// <summary>
     /// Provides access to input actions defined in input action map "Tutorial".
     /// </summary>
@@ -1590,13 +1755,33 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// </summary>
         public TutorialActions(@BaseAction wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Tutorial/X".
+        /// Provides access to the underlying input action "Tutorial/South".
         /// </summary>
-        public InputAction @X => m_Wrapper.m_Tutorial_X;
+        public InputAction @South => m_Wrapper.m_Tutorial_South;
         /// <summary>
-        /// Provides access to the underlying input action "Tutorial/C".
+        /// Provides access to the underlying input action "Tutorial/RightStick".
         /// </summary>
-        public InputAction @C => m_Wrapper.m_Tutorial_C;
+        public InputAction @RightStick => m_Wrapper.m_Tutorial_RightStick;
+        /// <summary>
+        /// Provides access to the underlying input action "Tutorial/LeftStick".
+        /// </summary>
+        public InputAction @LeftStick => m_Wrapper.m_Tutorial_LeftStick;
+        /// <summary>
+        /// Provides access to the underlying input action "Tutorial/West".
+        /// </summary>
+        public InputAction @West => m_Wrapper.m_Tutorial_West;
+        /// <summary>
+        /// Provides access to the underlying input action "Tutorial/Up".
+        /// </summary>
+        public InputAction @Up => m_Wrapper.m_Tutorial_Up;
+        /// <summary>
+        /// Provides access to the underlying input action "Tutorial/Down".
+        /// </summary>
+        public InputAction @Down => m_Wrapper.m_Tutorial_Down;
+        /// <summary>
+        /// Provides access to the underlying input action "Tutorial/R2".
+        /// </summary>
+        public InputAction @R2 => m_Wrapper.m_Tutorial_R2;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1623,12 +1808,27 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_TutorialActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_TutorialActionsCallbackInterfaces.Add(instance);
-            @X.started += instance.OnX;
-            @X.performed += instance.OnX;
-            @X.canceled += instance.OnX;
-            @C.started += instance.OnC;
-            @C.performed += instance.OnC;
-            @C.canceled += instance.OnC;
+            @South.started += instance.OnSouth;
+            @South.performed += instance.OnSouth;
+            @South.canceled += instance.OnSouth;
+            @RightStick.started += instance.OnRightStick;
+            @RightStick.performed += instance.OnRightStick;
+            @RightStick.canceled += instance.OnRightStick;
+            @LeftStick.started += instance.OnLeftStick;
+            @LeftStick.performed += instance.OnLeftStick;
+            @LeftStick.canceled += instance.OnLeftStick;
+            @West.started += instance.OnWest;
+            @West.performed += instance.OnWest;
+            @West.canceled += instance.OnWest;
+            @Up.started += instance.OnUp;
+            @Up.performed += instance.OnUp;
+            @Up.canceled += instance.OnUp;
+            @Down.started += instance.OnDown;
+            @Down.performed += instance.OnDown;
+            @Down.canceled += instance.OnDown;
+            @R2.started += instance.OnR2;
+            @R2.performed += instance.OnR2;
+            @R2.canceled += instance.OnR2;
         }
 
         /// <summary>
@@ -1640,12 +1840,27 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="TutorialActions" />
         private void UnregisterCallbacks(ITutorialActions instance)
         {
-            @X.started -= instance.OnX;
-            @X.performed -= instance.OnX;
-            @X.canceled -= instance.OnX;
-            @C.started -= instance.OnC;
-            @C.performed -= instance.OnC;
-            @C.canceled -= instance.OnC;
+            @South.started -= instance.OnSouth;
+            @South.performed -= instance.OnSouth;
+            @South.canceled -= instance.OnSouth;
+            @RightStick.started -= instance.OnRightStick;
+            @RightStick.performed -= instance.OnRightStick;
+            @RightStick.canceled -= instance.OnRightStick;
+            @LeftStick.started -= instance.OnLeftStick;
+            @LeftStick.performed -= instance.OnLeftStick;
+            @LeftStick.canceled -= instance.OnLeftStick;
+            @West.started -= instance.OnWest;
+            @West.performed -= instance.OnWest;
+            @West.canceled -= instance.OnWest;
+            @Up.started -= instance.OnUp;
+            @Up.performed -= instance.OnUp;
+            @Up.canceled -= instance.OnUp;
+            @Down.started -= instance.OnDown;
+            @Down.performed -= instance.OnDown;
+            @Down.canceled -= instance.OnDown;
+            @R2.started -= instance.OnR2;
+            @R2.performed -= instance.OnR2;
+            @R2.canceled -= instance.OnR2;
         }
 
         /// <summary>
@@ -1886,18 +2101,53 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     public interface ITutorialActions
     {
         /// <summary>
-        /// Method invoked when associated input action "X" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "South" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnX(InputAction.CallbackContext context);
+        void OnSouth(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "C" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "RightStick" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnC(InputAction.CallbackContext context);
+        void OnRightStick(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "LeftStick" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLeftStick(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "West" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnWest(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Up" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnUp(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Down" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDown(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "R2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnR2(InputAction.CallbackContext context);
     }
 }

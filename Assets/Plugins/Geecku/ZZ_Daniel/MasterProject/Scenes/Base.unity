@@ -2511,6 +2511,7 @@ MonoBehaviour:
   - Connect_M
   ConnectScript: {fileID: 1729751770}
   Player: {fileID: 0}
+  SkipTutorial: 1
   PlayerIdx: 0
   DebugInteractable: {fileID: 0}
   MaxPlayerCount: 2

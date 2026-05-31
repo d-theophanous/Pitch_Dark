@@ -138,15 +138,32 @@ namespace Daniel.Master
         #endregion
 
         #region Tutorial
-        public void OnX(InputValue value)
+        public void OnSouth(InputValue value)
         {
-            Debug.Log("x pressed");
             TutorialManager.Instance.ProcessButtonPress(TutorialButton.X, true);
         }
-        public void OnC(InputValue value)
+        public void OnWest(InputValue value)
         {
-            Debug.Log("x pressed");
             TutorialManager.Instance.ProcessButtonPress(TutorialButton.Square, true);
+        }
+        public void OnRightStick(InputValue value)
+        {
+            TutorialManager.Instance.ProcessButtonPress(TutorialButton.Right_Joystick, true);
+        }
+        public void OnLeftStick(InputValue value)
+        {
+            if (value.Get<Vector2>().magnitude > 0)
+            {
+                TutorialManager.Instance.ProcessButtonPress(TutorialButton.Left_Joystick, false);
+            }
+        }
+        public void OnUp(InputValue value)
+        {
+            TutorialManager.Instance.ProcessButtonPress(TutorialButton.Up_Arrow, true);
+        }
+        public void OnDown(InputValue value)
+        {
+            TutorialManager.Instance.ProcessButtonPress(TutorialButton.Down_Arrow, true);
         }
 
         #endregion
