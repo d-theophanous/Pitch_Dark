@@ -18,7 +18,7 @@ namespace Daniel.Master
         [SerializeField] private List<NPCScript> SecondPuzzleNPCList;
         private List<NPCScript> CurrentNPCs = new();
         public float TextSpeed;
-        private ReadableDialogue Dialogue;
+        public ReadableDialogue Dialogue;
         private Camera CurNPCCamera;
         private NPCScript CurNPC;
         //- ugly ToDo opt

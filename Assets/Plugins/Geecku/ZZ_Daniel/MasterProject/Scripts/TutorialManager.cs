@@ -167,6 +167,7 @@ namespace Daniel.Master
             ButtonTutorialSegment tmp = (ButtonTutorialSegment)CurrentSegment;
             if (tmp != null)
             {
+                Debug.Log("key pressed: " + button.ToString());
                 if (tmp.RequiredButtonDic.ContainsKey(button))
                 {
                     if (one_time)

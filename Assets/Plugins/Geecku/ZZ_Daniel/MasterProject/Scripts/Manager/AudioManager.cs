@@ -87,7 +87,7 @@ namespace Daniel.Master
         {
             RuntimeManager.PlayOneShot(reference, world_pos);
         }
-        public void PlayDialogue(string key, Message_Tone tone = Message_Tone.CONTINUE)
+        public void PlayDialogue(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE)
         {
             StopDialogue();
 
@@ -99,16 +99,18 @@ namespace Daniel.Master
 
             currentDialogueInstance.setCallback(dialogueCallback);
             currentDialogueInstance.start();
+            if (on_complete != null)
+                StartCoroutine(WaitForEnd(currentDialogueInstance, on_complete));
         }
         public bool ChangeLines;
-        public void PlayDialogue(int dialogue, int line, Message_Tone tone = Message_Tone.CONTINUE)
+        public void PlayDialogue(int dialogue, int line, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE)
         {
             string key = Helper.GetLanguageString() + "_" + dialogue 
                 + "_" + line;
             //- lord have mercy ToDo
             if (ChangeLines)
                 key += "_2";
-            PlayDialogue(key, tone);
+            PlayDialogue(key, on_complete, tone);
         }
         public void StopDialogue()
         {

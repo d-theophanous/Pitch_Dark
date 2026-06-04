@@ -16,6 +16,8 @@ namespace Daniel.Master
         private DialogueContainer CurDialog;
         private DialogueData CurDialogData;
         private Dictionary<int, Action> ActionDic;
+        private Action DefaultAction = () => { DialogueManager.Instance.ContinueWithDialogue = true; };
+        private Action CurrentAction;
 
         public void SetUp(DialogueContainer data, float text_speed, Dictionary<int, Action> action_dic)
         {
@@ -42,7 +44,8 @@ namespace Daniel.Master
         }
         public override void Activate()
         {
-            ContinuePressed = true;
+            if (DialogueManager.Instance.ContinueWithDialogue)
+                ContinuePressed = true;
         }
         protected override void OnSelect() { }
         //- repeat current dialogue line instead of going back
@@ -52,38 +55,16 @@ namespace Daniel.Master
         }
         public void UpdateReadableDialogue()
         {
-            if (ContinuePressed || DialogueManager.Instance.ContinueWithDialogue)
+            if (ContinuePressed && DialogueManager.Instance.ContinueWithDialogue)
             {
                 DialogueManager.Instance.ContinueWithDialogue = false;
-                if (Text.text == Lines[index])
-                {
-                    NextLine();
-                    //- this is so ugly, change
-                    if (GameManager.Instance.PlayerIdx == 1 && (index == 18 || index == 19 || index == 20))
-                        AudioManager.Instance.ChangeLines = true;
-                    else
-                        AudioManager.Instance.ChangeLines = false;
-                        //- optional ToDo: nicer System
-                        AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
-                            CurDialog.Tones[index]);
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    //Text.text = Lines[index];
-
-                    if (NextLine())
-                    AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
-                        CurDialog.Tones[index]);
-                }
                 ContinuePressed = false;
+                NextLine();
             }
         }
         public void StartDialogue()
         {
-            index = -1;
-            AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index + 1,
-                        CurDialog.Tones[index + 1]);
+            index = 0;
             NextLine();
         }
         private IEnumerator TypeLine()
@@ -94,15 +75,20 @@ namespace Daniel.Master
                 Text.text += c;
                 yield return new WaitForSeconds(TextSpeed);
             }
+            index++;
         }
         private bool NextLine()
         {
             if (index < Lines.Length - 1)
             {
-                index++;
                 if (ActionDic.ContainsKey(index))
-                    ActionDic[index]?.Invoke();
-                Text.text = string.Empty;
+                    CurrentAction = ActionDic[index];
+                else
+                    CurrentAction = DefaultAction;
+                    Text.text = string.Empty;
+                AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
+                    CurrentAction, CurDialog.Tones[index]);
+
                 StartCoroutine(TypeLine());
                 return true;
             }

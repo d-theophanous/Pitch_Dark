@@ -14,7 +14,10 @@ namespace Daniel.Master
                 new TutorialButtonInfo(""));
             seg_1.EndAction = () =>
             {
+                Debug.Log("EndAction");
                 TutorialManager.Instance.EndSegment();
+                DialogueManager.Instance.ContinueWithDialogue = true;
+                DialogueManager.Instance.Dialogue.Activate();
             };
             Dictionary<int, Action> action_dic = new();
             action_dic.Add(0, () =>
