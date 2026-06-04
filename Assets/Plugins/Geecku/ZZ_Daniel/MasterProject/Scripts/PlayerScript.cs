@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -31,9 +32,10 @@ namespace Daniel.Master
         private void Start()
         {
             SpawnPlayer();
+            GameManager.Instance.MovementEvents.Add(UpdatePlayer);
         }
 
-        public void UpdatePlayer()
+        public void UpdatePlayer(object sender, EventArgs e)
         {
             RotateCharacter();
             MoveCharacter();

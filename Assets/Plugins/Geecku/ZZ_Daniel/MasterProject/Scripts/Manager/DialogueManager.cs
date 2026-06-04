@@ -1,4 +1,5 @@
 using Geecku.GlobalMangers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -31,21 +32,21 @@ namespace Daniel.Master
             base.Awake();
             Dialogue = GlobalUIManager.Instance.GetReadableDialogue();
         }
-        public void StartNPCDialogue(DialogueContainer data, bool improvise = false)
+        public void StartNPCDialogue(DialogueContainer data, Dictionary<int, Action> action_dic, bool improvise = false)
         {
             CurNPCCamera.gameObject.SetActive(true);
             ImproviseAfter = improvise;
-            SetUpDialogue(data);
+            SetUpDialogue(data, action_dic);
         }
         public void StartTutorialDialogue(DialogueContainer data)
         {
             GlobalUIManager.Instance.PlayerViewCamera.gameObject.SetActive(true);
             TutorialAfter = true;
-            SetUpDialogue(data);
+            SetUpDialogue(data, null);
         }
-        private void SetUpDialogue(DialogueContainer data)
+        private void SetUpDialogue(DialogueContainer data, Dictionary<int, Action> action_dic)
         {
-            Dialogue.SetUp(data, TextSpeed);
+            Dialogue.SetUp(data, TextSpeed, action_dic);
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
             GameManager.Instance.SetGameState(GameState.DIALOGUE);
 
@@ -86,33 +87,6 @@ namespace Daniel.Master
         {
             CurNPCCamera = npc.GetCamera();
             CurNPC = npc;
-        }
-        //- ToDo opt
-        public void AddNPCFollowers()
-        {
-            if (CurrentNPCs == null)
-                Debug.Log("Current NPCs null");
-            if (GetNPCFollowers() == null)
-                Debug.Log("Current followers null");
-
-            CurrentNPCs.AddRange(GetNPCFollowers());
-            foreach (NPCScript npc in GetNPCFollowers())
-            {
-                npc.ToggleFollowing();
-            }
-        }
-        private List<NPCScript> GetNPCFollowers()
-        {
-            Debug.Log("puzzle cound: " + PuzzleManager.Instance.PuzzleCount);
-            if (PuzzleManager.Instance.PuzzleCount == 0)
-            {
-                return FirstPuzzleNPCList;
-            }
-            else if (PuzzleManager.Instance.PuzzleCount == 1)
-            {
-                return SecondPuzzleNPCList;
-            }
-            return null;
         }
     }
 }

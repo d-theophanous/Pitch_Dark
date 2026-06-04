@@ -1,10 +1,8 @@
 using Geecku.GlobalMangers;
-using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.Composites;
 using UnityEngine.SceneManagement;
 
 namespace Daniel.Master
@@ -73,14 +71,19 @@ namespace Daniel.Master
         public Transform SegmentSpawnExit;
         public Transform SegmentSpawnDoor;
 
+        [SerializeField] private NPCScript StartNPC;
+
         #region MonoBehaviour commons
         protected override void Start()
         {
             base.Start();
             SetUpSegments();
 
+            //- send NPC to you
+            StartNPC.SetFollowing(true);
+
             //- Testing
-            StartTutorial();
+            //StartTutorial();
         }
         public void UpdateTutorialManager(object sender, EventArgs e)
         {
@@ -95,7 +98,7 @@ namespace Daniel.Master
                 CurrentSegment.UpdateTutorialSegment();
 
                 if (CurrentSegment.SegmentComplete)
-                    ToggleStatus(true);
+                    CurrentSegment.EndAction?.Invoke();
             }
         }
 
@@ -104,16 +107,24 @@ namespace Daniel.Master
         public void SetUpSegments()
         {
             //- Segment 1: X Button Press
-            ButtonTutorialSegment seg_1 = new();
-            seg_1.RequiredButtonDic.Add(TutorialButton.X,
-                new TutorialButtonInfo(""));
+            //ButtonTutorialSegment seg_1 = new();
+            //seg_1.RequiredButtonDic.Add(TutorialButton.X,
+            //    new TutorialButtonInfo(""));
+            //seg_1.EndAction = () =>
+            //{
+            //    ToggleStatus(true);
+            //};
 
-            //- Segment 2: Oberen und unteren Pfeil
-            ButtonTutorialSegment seg_2 = new();
+                //- Segment 2: Oberen und unteren Pfeil
+                ButtonTutorialSegment seg_2 = new();
             seg_2.RequiredButtonDic.Add(TutorialButton.Down_Arrow,
                 new TutorialButtonInfo(""));
             seg_2.RequiredButtonDic.Add(TutorialButton.Up_Arrow,
                 new TutorialButtonInfo(""));
+            seg_2.EndAction = () =>
+            {
+                ToggleStatus(true);
+            };
 
             //- Segment 3: 
             ButtonTutorialSegment seg_3 = new();
@@ -121,23 +132,31 @@ namespace Daniel.Master
                 new TutorialButtonInfo("", 2f));
             seg_3.RequiredButtonDic.Add(TutorialButton.Right_Joystick,
                 new TutorialButtonInfo(""));
+            seg_3.EndAction = () =>
+            {
+                ToggleStatus(true);
+            };
 
             //- Segment 4: 
             TriggerTutorialSegment seg_4 = new();
-            seg_4.StartAction = () => 
+            seg_4.EndAction = () =>
             {
-                GameManager.Instance.Player.TeleportCharacter(SegmentSpawnExit.position);
+                ToggleStatus(true);
             };
+            //seg_4.StartAction = () => 
+            //{
+            //    GameManager.Instance.Player.TeleportCharacter(SegmentSpawnExit.position);
+            //};
 
 
             //- Segment 5:
             TriggerTutorialSegment seg_5 = new();
-            seg_5.StartAction = () =>
+            seg_5.EndAction = () =>
             {
-                GameManager.Instance.Player.TeleportCharacter(SegmentSpawnDoor.position);
+                ToggleStatus(true);
             };
 
-            TutorialSegmentList.Add(seg_1);
+            //TutorialSegmentList.Add(seg_1);
             TutorialSegmentList.Add(seg_2);
             TutorialSegmentList.Add(seg_3);
             TutorialSegmentList.Add(seg_4);
@@ -165,6 +184,20 @@ namespace Daniel.Master
 
             GameManager.Instance.UpdateEvent += UpdateTutorialManager;
             ToggleStatus(true);
+        }
+        public void StartSegment(TutorialSegment segment)
+        {
+            if (segment == null) return;
+            GameManager.Instance.UpdateEvent += UpdateTutorialManager;
+            InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Tutorial");
+            CurrentSegment = segment;
+            CurrentSegment.OnStartSegment();
+        }
+        public void EndSegment()
+        {
+            GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
+            InputManager.Instance.PlayerInput.SwitchCurrentActionMap("UI");
+            CurrentSegment = null;
         }
 
         //- based on the assumption that we end the tutorial with a dialogue
@@ -228,6 +261,7 @@ namespace Daniel.Master
     {
         public bool SegmentComplete = false;
         public Action StartAction;
+        public Action EndAction;
 
         public virtual void UpdateTutorialSegment() { }
         public virtual void OnStartSegment() 
@@ -240,7 +274,6 @@ namespace Daniel.Master
         public Dictionary<TutorialButton, TutorialButtonInfo> RequiredButtonDic = new();
         public override void UpdateTutorialSegment()
         {
-
             bool is_complete = true;
             foreach (var button in RequiredButtonDic)
             {

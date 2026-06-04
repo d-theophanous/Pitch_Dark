@@ -21,6 +21,7 @@ namespace Daniel.Master
         [HideInInspector] public PlayerScript Player;
 
         public bool SkipTutorial;
+        [HideInInspector] public bool StartTutorial;
 
         private GameState State;
         public static Language Language;
@@ -56,7 +57,7 @@ namespace Daniel.Master
             switch (State)
             {
                 case GameState.PLAYING:
-                    Player.UpdatePlayer();
+                    //Player.UpdatePlayer();
                     break;
                 case GameState.CONNECT:
                     break;
@@ -183,24 +184,21 @@ namespace Daniel.Master
         #region Game Logic
         public void StartGame()
         {
-            if (SkipTutorial)
-                StartCoroutine(AsyncStartGame());
-            else
-                StartCoroutine(AsyncStartTutorial());
+            StartCoroutine(AsyncStartGame());
             Content.transform.parent.gameObject.SetActive(false);
             Debug.Log("Game started :))");
         }
         private IEnumerator AsyncStartGame()
         {
             yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
-            SetGameState(GameState.PLAYING);
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
-        }
-        private IEnumerator AsyncStartTutorial()
-        {
-            yield return SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive);
-            
-            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
+
+            if (SkipTutorial)
+                SetGameState(GameState.PLAYING);
+            else
+            {
+
+            }
         }
         public void QuitWaitingForPuzzle()
         {
@@ -496,10 +494,6 @@ namespace Daniel.Master
         #endregion
 
         #region Debug
-        public void CurrentDebug()
-        {
-            StartCoroutine(AsyncStartTutorial());
-        }
         public void SetPlayer(int player)
         {
             PlayerIdx = player;

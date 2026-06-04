@@ -1,5 +1,7 @@
+using NUnit.Framework;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -13,14 +15,20 @@ namespace Daniel.Master
         private bool ContinuePressed;
         private DialogueContainer CurDialog;
         private DialogueData CurDialogData;
+        private Dictionary<int, Action> ActionDic;
 
-        public void SetUp(DialogueContainer data, float text_speed)
+        public void SetUp(DialogueContainer data, float text_speed, Dictionary<int, Action> action_dic)
         {
             CurDialog = data;
             CurDialogData = CurDialog.DialogueList[GetChangedLanguageInt((int)GameManager.Language)];
             Text.text = String.Empty;
             Lines = CurDialogData.Lines.ToArray();
             TextSpeed = text_speed;
+
+            if (action_dic == null)
+                ActionDic = new();
+            else
+                ActionDic = action_dic;
         }
         //- hilarious (ToDo) opt
         private int GetChangedLanguageInt(int language)
@@ -73,10 +81,10 @@ namespace Daniel.Master
         }
         public void StartDialogue()
         {
-            index = 0;
-            AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
-                        CurDialog.Tones[index]);
-            StartCoroutine(TypeLine());
+            index = -1;
+            AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index + 1,
+                        CurDialog.Tones[index + 1]);
+            NextLine();
         }
         private IEnumerator TypeLine()
         {
@@ -92,6 +100,8 @@ namespace Daniel.Master
             if (index < Lines.Length - 1)
             {
                 index++;
+                if (ActionDic.ContainsKey(index))
+                    ActionDic[index]?.Invoke();
                 Text.text = string.Empty;
                 StartCoroutine(TypeLine());
                 return true;

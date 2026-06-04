@@ -1,6 +1,5 @@
-using NUnit.Framework;
+using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,15 +17,16 @@ namespace Daniel.Master
         public bool IsFollowing = false;
 
         [SerializeField] private NavMeshAgent Agent;
-        [SerializeField] private List<DialogueContainer> DialogueList;
+        [SerializeField] protected List<DialogueContainer> DialogueList;
         [SerializeField] private Transform Parent;
         [SerializeField] private Camera NPCCamera;
         private float UpdateTimer;
         private Transform Player;
+        protected List<Dictionary<int, Action>> ActionDicList = new(); //-  I am going insane
 
         //- very ugly, very temporary, ToDo
-        [SerializeField] private List<DialogueContainer> DialogueList2;
-        private List<DialogueContainer> DialogueListFinal
+        [SerializeField] protected List<DialogueContainer> DialogueList2;
+        protected List<DialogueContainer> DialogueListFinal
         {
             get
             {
@@ -39,7 +39,7 @@ namespace Daniel.Master
         {
             Player = GameManager.Instance.Player.transform;
         }
-        private void Start()
+        protected virtual void Start()
         {
             Agent.speed = GameManager.Instance.Player.PlayerSpeed - 1.5f;
         }   
@@ -116,12 +116,12 @@ namespace Daniel.Master
         {
             GameManager.Instance.Player.ResetMovement();
             DialogueManager.Instance.SetCurrentNPC(this);
-            DialogueManager.Instance.AddNPCFollowers();
+            ToggleFollowing();
             LookAtPlayer();
             Debug.Log("NPC interaction");
             //- nur zum Testen?
             DialogueManager.Instance.StartNPCDialogue(
-                DialogueListFinal[0]);
+                DialogueListFinal[0], ActionDicList[0]);
             tag = "Untagged";
         }
         public void ActivateSecondDialogue()
@@ -130,7 +130,7 @@ namespace Daniel.Master
             DialogueManager.Instance.SetCurrentNPC(this);
             LookAtPlayer();
             DialogueManager.Instance.StartNPCDialogue(
-                DialogueListFinal[1], true);
+                DialogueListFinal[1], ActionDicList[2], true);
             //- after second dialogue NPC will not be interactable anymore
             this.tag = "Untagged";
         }
@@ -143,7 +143,7 @@ namespace Daniel.Master
         {
 
         }
-        private void LookAtPlayer()
+        protected void LookAtPlayer()
         {
             Parent.forward = GameManager.Instance.Player.transform.position - Parent.position;            
         }

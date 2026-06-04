@@ -832,6 +832,17 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""5027cd7e-921d-470e-8508-6c1ff1b6ad1b"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard;Controller"",
+                    ""action"": ""South"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""ad434ad5-4202-49f7-b04f-8310d95adfee"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
