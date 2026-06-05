@@ -79,7 +79,7 @@ namespace Daniel.Master
         }
         private bool NextLine()
         {
-            if (index < Lines.Length - 1)
+            if (index <= Lines.Length - 1)
             {
                 if (ActionDic.ContainsKey(index))
                     CurrentAction = ActionDic[index];

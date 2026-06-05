@@ -18087,12 +18087,12 @@ MonoBehaviour:
   IsFollowing: 0
   Agent: {fileID: 1354979634}
   DialogueList:
-  - {fileID: 11400000, guid: a1567bccfdd50a4458a40620f8d478af, type: 2}
+  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
   - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
   Parent: {fileID: 1354979632}
   NPCCamera: {fileID: 1354979635}
   DialogueList2:
-  - {fileID: 11400000, guid: 401e226b7d23f35488ee87a126bb4e96, type: 2}
+  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
   - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
 --- !u!1001 &1355685740
 PrefabInstance:
@@ -22134,6 +22134,7 @@ MonoBehaviour:
   SecondPuzzleNPCList:
   - {fileID: 1668810937}
   TextSpeed: 0.05
+  Dialogue: {fileID: 0}
   ContinueWithDialogue: 0
   TutorialAfter: 0
 --- !u!1001 &1651490320

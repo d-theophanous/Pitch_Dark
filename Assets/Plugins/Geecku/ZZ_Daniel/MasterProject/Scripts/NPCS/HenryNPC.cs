@@ -9,22 +9,7 @@ namespace Daniel.Master
         protected override void Start()
         {
             base.Start();
-            ButtonTutorialSegment seg_1 = new();
-            seg_1.RequiredButtonDic.Add(TutorialButton.X,
-                new TutorialButtonInfo(""));
-            seg_1.EndAction = () =>
-            {
-                Debug.Log("EndAction");
-                TutorialManager.Instance.EndSegment();
-                DialogueManager.Instance.ContinueWithDialogue = true;
-                DialogueManager.Instance.Dialogue.Activate();
-            };
-            Dictionary<int, Action> action_dic = new();
-            action_dic.Add(0, () =>
-            {
-                TutorialManager.Instance.StartSegment(seg_1);
-            });
-            ActionDicList.Add(action_dic);
+            SetUpTutorialSegments();
         }
         public override void ActivatePrompt()
         {
@@ -36,6 +21,77 @@ namespace Daniel.Master
             DialogueManager.Instance.StartNPCDialogue(
                 DialogueListFinal[0], ActionDicList[0]);
             tag = "Untagged";
+        }
+        private void SetUpTutorialSegments()
+        {
+            //- Repeat last line
+            ButtonTutorialSegment seg_3 = new();
+            seg_3.RequiredButtonDic.Add(TutorialButton.Square,
+                new TutorialButtonInfo(""));
+            seg_3.StartAction = () => {
+                AudioManager.Instance.PlayDialogue("de_0_0", null); //- ToDo
+            };
+            seg_3.EndAction = () => //- ToDO jump to next segment
+            {
+                //- vlt noch so was wie "now back to the dialgoue" spielen
+                TutorialManager.Instance.EndSegment();
+                DialogueManager.Instance.ContinueWithDialogue = true;
+            };
+
+            //- Navigate through text
+            ButtonTutorialSegment seg_2 = new();
+            seg_2.RequiredButtonDic.Add(TutorialButton.Up_Arrow,
+                new TutorialButtonInfo(""));
+            seg_2.RequiredButtonDic.Add(TutorialButton.Down_Arrow,
+                new TutorialButtonInfo(""));
+            seg_2.StartAction = () => {
+                AudioManager.Instance.PlayDialogue("de_0_0", null); //- ToDo
+            };
+            seg_2.EndAction = () =>
+            {
+                TutorialManager.Instance.SwitchSegment(seg_3);
+            };
+
+            //- Advance Dialogue
+            ButtonTutorialSegment seg_1 = new();
+            seg_1.RequiredButtonDic.Add(TutorialButton.X,
+                new TutorialButtonInfo(""));
+            seg_1.StartAction = () => {
+                AudioManager.Instance.PlayDialogue("de_0_0", null); //- ToDo
+            };
+            seg_1.EndAction = () =>
+            {
+                TutorialManager.Instance.SwitchSegment(seg_2);
+            };
+            Dictionary<int, Action> dialogue_1_dic = new();
+            dialogue_1_dic.Add(0, () =>
+            {
+                TutorialManager.Instance.StartSegment(seg_1);
+            });
+
+            //- Movement stuff
+            ButtonTutorialSegment seg_4 = new();
+            seg_4.RequiredButtonDic.Add(TutorialButton.Left_Joystick,
+                new TutorialButtonInfo("", 2f));
+            seg_4.RequiredButtonDic.Add(TutorialButton.Right_Joystick,
+                new TutorialButtonInfo(""));
+            seg_4.StartAction = () => {
+                AudioManager.Instance.PlayDialogue("de_0_0", null); //- ToDo
+            };
+            seg_4.EndAction = () =>
+            {
+                Debug.Log("fertig");
+                DialogueManager.Instance.EndDialogue();
+                TutorialManager.Instance.ToggleStatus(true);
+            };
+            dialogue_1_dic.Add(DialogueListFinal[0].DialogueList[0].Lines.Count - 1, () =>
+            {
+                TutorialManager.Instance.StartSegment(seg_4);
+            });
+
+            Debug.Log("info: " + (DialogueListFinal[0].DialogueList[0].Lines.Count - 1));
+
+            ActionDicList.Add(dialogue_1_dic);
         }
     }
 }

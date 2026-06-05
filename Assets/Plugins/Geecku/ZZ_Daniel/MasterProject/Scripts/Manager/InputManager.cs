@@ -115,7 +115,6 @@ namespace Daniel.Master
         public Vector2 MoveMagnifyDelta { get; private set; }
         public void OnMoveMagnify(InputValue value)
         {
-            Debug.Log(value.Get<Vector2>());
             MoveMagnifyDelta = value.Get<Vector2>();
         }
 

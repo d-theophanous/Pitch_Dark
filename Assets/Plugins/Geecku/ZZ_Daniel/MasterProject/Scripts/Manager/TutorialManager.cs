@@ -177,7 +177,6 @@ namespace Daniel.Master
                 }
             }
         }
-
         public void StartTutorial()
         {
             if (TutorialSegmentList.Count == 0 || DialogueList.Count == 0)
@@ -191,14 +190,18 @@ namespace Daniel.Master
             if (segment == null) return;
             GameManager.Instance.UpdateEvent += UpdateTutorialManager;
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Tutorial");
-            CurrentSegment = segment;
-            CurrentSegment.OnStartSegment();
+            SwitchSegment(segment);
         }
         public void EndSegment()
         {
             GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("UI");
             CurrentSegment = null;
+        }
+        public void SwitchSegment(TutorialSegment segment)
+        {
+            CurrentSegment = segment;
+            CurrentSegment.OnStartSegment();
         }
 
         //- based on the assumption that we end the tutorial with a dialogue
@@ -309,6 +312,8 @@ namespace Daniel.Master
         }
         public void CheckButtonStatus()
         {
+            Debug.Log("current press time: " + CurrentPressTime);
+            TimePassedWithNoPress += Time.deltaTime;
             if (TimePassedWithNoPress >= HelpTime)
             {
                 Debug.Log("Play help info");

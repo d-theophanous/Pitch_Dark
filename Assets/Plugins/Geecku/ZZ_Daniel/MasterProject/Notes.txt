@@ -8,9 +8,54 @@ ToDo's
 - Fackel einbauen + dass sie ausgeht
 - sound für wenn du dich drehst
 
-
-
-
 Namenskonvetion für Dialoge:
 
 "sprache_dialogNummer_line" Bsp: "en_1_10" (Zehnte line in Dialog 1 auf English)
+
+Tutorial Setup
+- Du stehst still NPC läuft auf dich zu und ruft dir zu
+- Sobald NPC dich erreicht
+"Hey, ist alles in ok bei dir?"
+- Tutorial Segment 1 startet
+"Du befindest dich jetzt im Dialogmodus. Wenn du diesen Sound hörst: heißt das, dass das Spiel 
+auf deinen Input wartet. Drücke X, der untere der vier Knöpfe auf der rechten Seite deines 
+Controllers um fortzufahren"
+" Solange sich Text auf dem Bildschirm befindet kannst du diesen mit der oberen und 
+unteren Pfeiltast auf der linken Seite deines Controllers navigieren und mit X oder der
+rechten Pfeiltaste aktivieren. Wenn du das oberer oder untere Textende erreicht hast, erklingt dieser sound:
+Probier es mal aus!"
+- Tutorial Ende
+" Super, eins noch. Möchtest du den letzten Satz wiederholen drücke viereck, der linke 
+der vier knöpfe auf der rechten seite des Controllers"
+- Tutorial Ende
+"Komm hoch mit dir."
+
+"Ohh, deine Brille hat das Erdbeeben glaube ich nicht überlebt. Na ja, wenigstens scheinst du unverletzt""
+" Außer uns ist hier niemand. Lass uns gemeinsam die anderen suchen. "
+" Dein Freund ist sicher irgendwo da draußen, genauso wie der Rest meiner Bandmitglieder"
+" Ich folge dir!"
+
+- Tutorial für steuerung startet
+* Mit dem  linken Joystick bewegst du deinen Charakter. Bewegest du den Joystick
+* nach links bewegt sich dein Charakter nach links.
+* Mit dem rechten Joystick kannst du ändern, in welche Richtung der Charakter guckt
+* Bewegst du ihn nach rechts dreht sich dein Charakter 90° nach rechts. 
+* Probiere es einmal aus!
+* 
+* Super! Damit du auch in geschlossenen Räumen weißt, wo du bist gibt es 
+* drei Arten von Sounds. 
+* Wenn du gegen eine Wand läufst hörst du diesen Sound:
+* Wenn du an einer Wand entlangläufst hörst du diesen SOund:
+         * Wenn links oder rechts von dir einen Gang gibt, hörst du ein Windrauschen 
+         * in deinem linken oder rechten Ohr: 
+         * Du befindest dich jetzt in einem Raum mit einem AUsgang. Versuche den Ausgang 
+         * zu finden.
+         * 
+         * Super, eine letzte Sache noch: wenn du in der Nähe von einem Objekt bist,
+         * mit dem du interagieren kannst ertönt dieser Sound: 
+         * Drücke den hinteren Rechten Knopf auf der rechten Seite um mit dem Objekt
+         * zu interargieren.
+         * 
+         * Du befindest dich in einem Raum. Finde die Tür mit der du interargieren kannst,
+         * und drück dann den hintern rechten Knopf. 
+         *
