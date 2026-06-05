@@ -150,11 +150,14 @@ namespace Daniel.Master
             TutorialManager.Instance.ProcessButtonPress(TutorialButton.Right_Joystick, true);
         }
         public void OnLeftStick(InputValue value)
-        {
-            if (value.Get<Vector2>().magnitude > 0)
+        {         
+            if (value.Get<Vector2>().magnitude > 0f)
             {
-                TutorialManager.Instance.ProcessButtonPress(TutorialButton.Left_Joystick, false);
+                TutorialManager.Instance.ProcessButtonPress(TutorialButton.Left_Joystick, false, true);                
             }
+            else
+                TutorialManager.Instance.ProcessButtonPress(TutorialButton.Left_Joystick, false, false);
+
         }
         public void OnUp(InputValue value)
         {

@@ -162,21 +162,19 @@ namespace Daniel.Master
             TutorialSegmentList.Add(seg_4);
             TutorialSegmentList.Add(seg_5);
         }
-        public void ProcessButtonPress(TutorialButton button, bool one_time)
+        public void ProcessButtonPress(TutorialButton button, bool is_one_time, bool start_press = true)
         {
             ButtonTutorialSegment tmp = (ButtonTutorialSegment)CurrentSegment;
-            if (tmp != null)
+            if (tmp != null && tmp.RequiredButtonDic.ContainsKey(button))
             {
-                Debug.Log("key pressed: " + button.ToString());
-                if (tmp.RequiredButtonDic.ContainsKey(button))
-                {
-                    if (one_time)
-                        tmp.RequiredButtonDic[button].PressedOnce();
-                    else
-                        tmp.RequiredButtonDic[button].Pressed();
-                }
+                if (is_one_time)
+                    tmp.RequiredButtonDic[button].StartPressed(is_one_time);
+                else if (start_press)
+                    tmp.RequiredButtonDic[button].StartPressed(false);
+                else
+                    tmp.RequiredButtonDic[button].StopPressed();
             }
-        }
+            }
         public void StartTutorial()
         {
             if (TutorialSegmentList.Count == 0 || DialogueList.Count == 0)
@@ -303,6 +301,7 @@ namespace Daniel.Master
         public float TimePassedWithNoPress;
         public bool Completed = false;
         public float CurrentPressTime = 0f;
+        public bool IsBeingPressed;
 
         public TutorialButtonInfo(string help_audio_name, float required_press_time = 1f)
         {
@@ -312,27 +311,33 @@ namespace Daniel.Master
         }
         public void CheckButtonStatus()
         {
-            Debug.Log("current press time: " + CurrentPressTime);
-            TimePassedWithNoPress += Time.deltaTime;
-            if (TimePassedWithNoPress >= HelpTime)
-            {
-                Debug.Log("Play help info");
-                TimePassedWithNoPress = 0;
-            }
+            if (IsBeingPressed)
+                CurrentPressTime += Time.deltaTime;
+            else
+                TimePassedWithNoPress += Time.deltaTime;
+
             if (CurrentPressTime >= RequiredPressTime)
             {
                 Completed = true;
             }
+            else if (TimePassedWithNoPress >= HelpTime)
+            {
+                Debug.Log("Play help info");
+                TimePassedWithNoPress = 0;
+            }
         }
-        public void PressedOnce()
+        public void StartPressed(bool is_one_time)
         {
-            CurrentPressTime = RequiredPressTime;
+            if (is_one_time)
+                CurrentPressTime = RequiredPressTime;
+            else
+                IsBeingPressed = true;
+
             TimePassedWithNoPress = 0f;
         }
-        public void Pressed()
+        public void StopPressed()
         {
-            CurrentPressTime += Time.deltaTime;
-            TimePassedWithNoPress = 0f;
+            IsBeingPressed = false;
         }
     }
     public enum TutorialButton
