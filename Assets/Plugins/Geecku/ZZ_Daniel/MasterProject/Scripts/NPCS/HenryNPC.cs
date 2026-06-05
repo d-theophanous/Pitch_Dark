@@ -77,15 +77,18 @@ namespace Daniel.Master
                 new TutorialButtonInfo(""));
             seg_4.StartAction = () => {
                 AudioManager.Instance.PlayDialogue("de_0_0", null); //- ToDo
+                InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
             };
             seg_4.EndAction = () =>
             {
                 Debug.Log("fertig");
-                DialogueManager.Instance.EndDialogue();
                 TutorialManager.Instance.ToggleStatus(true);
+                InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
+                GameManager.Instance.Player.ResetMovement();
             };
             dialogue_1_dic.Add(DialogueListFinal[0].DialogueList[0].Lines.Count - 1, () =>
             {
+                DialogueManager.Instance.EndDialogue();
                 TutorialManager.Instance.StartSegment(seg_4);
             });
 

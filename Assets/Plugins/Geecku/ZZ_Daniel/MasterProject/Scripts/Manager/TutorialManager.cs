@@ -106,66 +106,27 @@ namespace Daniel.Master
 
         public void SetUpSegments()
         {
-            //- Segment 1: X Button Press
-            //ButtonTutorialSegment seg_1 = new();
-            //seg_1.RequiredButtonDic.Add(TutorialButton.X,
-            //    new TutorialButtonInfo(""));
-            //seg_1.EndAction = () =>
-            //{
-            //    ToggleStatus(true);
-            //};
-
-                //- Segment 2: Oberen und unteren Pfeil
-                ButtonTutorialSegment seg_2 = new();
-            seg_2.RequiredButtonDic.Add(TutorialButton.Down_Arrow,
-                new TutorialButtonInfo(""));
-            seg_2.RequiredButtonDic.Add(TutorialButton.Up_Arrow,
-                new TutorialButtonInfo(""));
-            seg_2.EndAction = () =>
-            {
-                ToggleStatus(true);
-            };
-
-            //- Segment 3: 
-            ButtonTutorialSegment seg_3 = new();
-            seg_3.RequiredButtonDic.Add(TutorialButton.Left_Joystick,
-                new TutorialButtonInfo("", 2f));
-            seg_3.RequiredButtonDic.Add(TutorialButton.Right_Joystick,
-                new TutorialButtonInfo(""));
-            seg_3.EndAction = () =>
-            {
-                ToggleStatus(true);
-            };
-
-            //- Segment 4: 
-            TriggerTutorialSegment seg_4 = new();
-            seg_4.EndAction = () =>
-            {
-                ToggleStatus(true);
-            };
-            //seg_4.StartAction = () => 
-            //{
-            //    GameManager.Instance.Player.TeleportCharacter(SegmentSpawnExit.position);
-            //};
-
-
             //- Segment 5:
             TriggerTutorialSegment seg_5 = new();
+            seg_5.StartAction = () =>
+            {
+                Debug.Log("start last semgent");
+                GameManager.Instance.SetGameState(GameState.PLAYING);
+                InputManager.Instance.PlayerInput.actions.FindActionMap("Tutorial").Enable();
+                InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
+            };
             seg_5.EndAction = () =>
             {
+                InputManager.Instance.PlayerInput.actions.FindActionMap("Tutorial").Disable();
+                InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
+                //- opt ToDo "Filmsequenz" zuerst wie man durch Tür läuft und Tüt sich schließt
                 ToggleStatus(true);
             };
-
-            //TutorialSegmentList.Add(seg_1);
-            TutorialSegmentList.Add(seg_2);
-            TutorialSegmentList.Add(seg_3);
-            TutorialSegmentList.Add(seg_4);
             TutorialSegmentList.Add(seg_5);
         }
         public void ProcessButtonPress(TutorialButton button, bool is_one_time, bool start_press = true)
         {
-            ButtonTutorialSegment tmp = (ButtonTutorialSegment)CurrentSegment;
-            if (tmp != null && tmp.RequiredButtonDic.ContainsKey(button))
+            if (CurrentSegment is ButtonTutorialSegment tmp && tmp.RequiredButtonDic.ContainsKey(button))
             {
                 if (is_one_time)
                     tmp.RequiredButtonDic[button].StartPressed(is_one_time);
@@ -174,7 +135,7 @@ namespace Daniel.Master
                 else
                     tmp.RequiredButtonDic[button].StopPressed();
             }
-            }
+        }
         public void StartTutorial()
         {
             if (TutorialSegmentList.Count == 0 || DialogueList.Count == 0)
@@ -210,9 +171,7 @@ namespace Daniel.Master
             GameManager.Instance.SetGameState(GameState.PLAYING);
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
             //- switch to actual game haha + wait for other person to be ready...
-            yield return SceneManager.UnloadSceneAsync("Tutorial");
-            yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
-
+            yield return null;
         }
         public void ToggleStatus(bool switch_to_dialogue)
         {

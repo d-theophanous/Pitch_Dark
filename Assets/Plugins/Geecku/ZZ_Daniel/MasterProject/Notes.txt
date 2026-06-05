@@ -52,7 +52,7 @@ der vier knöpfe auf der rechten seite des Controllers"
          * zu finden.
          * 
          * Super, eine letzte Sache noch: wenn du in der Nähe von einem Objekt bist,
-         * mit dem du interagieren kannst ertönt dieser Sound: 
+         * mit dem du interagieren kannst ertönt solange du damit interagieren kannst dieser Sound: 
          * Drücke den hinteren Rechten Knopf auf der rechten Seite um mit dem Objekt
          * zu interargieren.
          * 
