@@ -11,6 +11,9 @@ ToDo's
 Namenskonvetion für Dialoge:
 
 "sprache_dialogNummer_line" Bsp: "en_1_10" (Zehnte line in Dialog 1 auf English)
+100 + 101 ist Tutorial Dialogue
+200 sind die Tutorial Lines ohne angezeigten Dialogue
+300 ist kram für modus ansage
 
 Tutorial Setup
 - Du stehst still NPC läuft auf dich zu und ruft dir zu

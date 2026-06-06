@@ -107,10 +107,12 @@ namespace Daniel.Master
         {
             string key = Helper.GetLanguageString() + "_" + dialogue 
                 + "_" + line;
-            //- lord have mercy ToDo
-            if (ChangeLines)
-                key += "_2";
             PlayDialogue(key, on_complete, tone);
+        }
+        public void PlayDialogue2(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE)
+        {
+            string tmp = Helper.GetLanguageString() + "_" + key;
+            PlayDialogue(tmp, on_complete, tone);
         }
         public void StopDialogue()
         {

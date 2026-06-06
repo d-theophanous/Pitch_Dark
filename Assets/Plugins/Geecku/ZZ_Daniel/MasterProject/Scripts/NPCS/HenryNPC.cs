@@ -26,9 +26,9 @@ namespace Daniel.Master
             //- Repeat last line
             ButtonTutorialSegment seg_3 = new();
             seg_3.RequiredButtonDic.Add(TutorialButton.Square,
-                new TutorialButtonInfo(""));
+                new TutorialButtonInfo("200_5"));
             seg_3.StartAction = () => {
-                AudioManager.Instance.PlayDialogue("de_0_0", null); //- ToDo
+                AudioManager.Instance.PlayDialogue(200, 4, null); //- ToDo
             };
             seg_3.EndAction = () => //- ToDO jump to next segment
             {
@@ -40,11 +40,11 @@ namespace Daniel.Master
             //- Navigate through text
             ButtonTutorialSegment seg_2 = new();
             seg_2.RequiredButtonDic.Add(TutorialButton.Up_Arrow,
-                new TutorialButtonInfo(""));
+                new TutorialButtonInfo("200_3"));
             seg_2.RequiredButtonDic.Add(TutorialButton.Down_Arrow,
                 new TutorialButtonInfo(""));
             seg_2.StartAction = () => {
-                AudioManager.Instance.PlayDialogue("de_0_0", null); //- ToDo
+                AudioManager.Instance.PlayDialogue(200, 2, null); 
             };
             seg_2.EndAction = () =>
             {
@@ -54,9 +54,9 @@ namespace Daniel.Master
             //- Advance Dialogue
             ButtonTutorialSegment seg_1 = new();
             seg_1.RequiredButtonDic.Add(TutorialButton.X,
-                new TutorialButtonInfo(""));
+                new TutorialButtonInfo("200_1"));
             seg_1.StartAction = () => {
-                AudioManager.Instance.PlayDialogue("de_0_0", null); //- ToDo
+                AudioManager.Instance.PlayDialogue(200, 0, null); 
             };
             seg_1.EndAction = () =>
             {
@@ -71,11 +71,11 @@ namespace Daniel.Master
             //- Movement stuff
             ButtonTutorialSegment seg_4 = new();
             seg_4.RequiredButtonDic.Add(TutorialButton.Left_Joystick,
-                new TutorialButtonInfo("", 2f));
+                new TutorialButtonInfo("200_7", 2f));
             seg_4.RequiredButtonDic.Add(TutorialButton.Right_Joystick,
                 new TutorialButtonInfo(""));
             seg_4.StartAction = () => {
-                AudioManager.Instance.PlayDialogue("de_0_0", null); //- ToDo
+                AudioManager.Instance.PlayDialogue(200, 6, null); 
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
             };
             seg_4.EndAction = () =>

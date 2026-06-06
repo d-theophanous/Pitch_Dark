@@ -256,7 +256,7 @@ namespace Daniel.Master
     }
     public class TutorialButtonInfo
     {
-        private const float HelpTime = 10f;
+        private const float HelpTime = 18f;
         public float RequiredPressTime;
         public string HelpAudioName;
         public float TimePassedWithNoPress;
@@ -283,7 +283,7 @@ namespace Daniel.Master
             }
             else if (TimePassedWithNoPress >= HelpTime)
             {
-                Debug.Log("Play help info");
+                AudioManager.Instance.PlayDialogue2(HelpAudioName, null, Message_Tone.NONE);
                 TimePassedWithNoPress = 0;
             }
         }

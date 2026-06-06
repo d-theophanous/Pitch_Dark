@@ -91,7 +91,7 @@ public enum RumblePattern
         {
             base.OnDestroy();
             StopAllCoroutines();
-            StopRumble();
+            ResetRumble();
         }
 
         // Private helpers
