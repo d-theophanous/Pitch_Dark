@@ -161,7 +161,6 @@ namespace Daniel.Master
 
         private void SubscribeMovementEvents()
         {
-            Debug.Log("subscribe");
             foreach (EventHandler handler in MovementEvents)
             {
                 UpdateEvent += handler;
@@ -169,7 +168,6 @@ namespace Daniel.Master
         }
         private void UnsubscribeMovementEvents()
         {
-            Debug.Log("unsubscribe");
             foreach (EventHandler handler in MovementEvents)
             {
                 UpdateEvent -= handler;

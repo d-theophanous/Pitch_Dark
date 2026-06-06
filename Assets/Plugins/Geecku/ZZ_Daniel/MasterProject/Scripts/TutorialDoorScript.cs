@@ -10,6 +10,8 @@ namespace Daniel.Master
         {
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR);
             TutorialManager.Instance.TriggerSegmentComplete();
+            Rumbler.Instance.StopRumble();
+            tag = "Untagged";
         }
         public override void EnterInteractionRange()
         {

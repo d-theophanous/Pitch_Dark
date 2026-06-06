@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd12a18dafdb74ab8b1dd16427d1e6, type: 3}
+  m_Name: lines_de
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::NarrationScriptData
+  lines:
+  - Ist da jemand? Hallo?
+  - Hey, ist alles ok bei dir?
+  - "Du befindest dich jetzt im Dialogmodus. Wechselst du den Modus, sagt dir das
+    Spiel in welchem Modus du dich befindest. Wenn das Spiel auf deinen Input wartet,
+    h\xF6rst du diesen Sound. Dr\xFCck X, der untere der vier Kn\xF6pfe auf der rechten
+    Seite deines Controllers, um fortzufahren."
+  - "Dr\xFCcke X, der untere der vier Kn\xF6pfe auf der rechten Seite deines Controllers."
+  - Solange sich Text auf dem Bildschirm befindet, kannst du diesen mit der oberen
+    und unteren Pfeiltaste auf der linken Seite deines Controllers navigieren und
+    mit X oder der rechten Pfeiltaste aktivieren. Wenn du das obere oder untere Textende
+    erreicht hast, erklingt dieser Sound. Probier es mal aus!
+  - "Dr\xFCcke die obere und untere Pfeiltaste, um den Text auf dem Bildschirm zu
+    navigieren."
+  - "Super, eins noch. M\xF6chtest du den letzten Satz wiederholen, dr\xFCcke Viereck,
+    der linke der vier Kn\xF6pfe auf der rechten Seite des Controllers."
+  - "Dr\xFCcke Viereck, der linke der vier Kn\xF6pfe auf der rechten Seite des Controllers."
+  - Dialog
+  - Puzzle
+  - Bewegen
+  - "Men\uFFFD"
+  - Warten auf andere Person
+  - Filmsequenz
+  - Komm, hoch mit dir.
+  - "Ohh, deine Brille hat das Erdbeben glaube ich nicht \xFCberlebt. Na ja, wenigstens
+    scheinst du unverletzt."
+  - "Au\xDFer uns ist hier niemand. Lass uns gemeinsam die Anderen suchen."
+  - "Dein Freund ist sicher irgendwo da drau\xDFen, genauso wie der Rest meiner Bandmitglieder."
+  - Ich folge dir!
+  - Mit dem linken Joystick bewegst du dich. Bewegst du den Joystick nach links,
+    bewegt sich dein Charakter nach links.
+  - "Mit dem rechten Joystick kannst du \xE4ndern, in welche Richtung du guckst.
+    Bewegst du ihn einmal nach rechts, drehst du dich 90\xB0 nach rechts. Probiere
+    es einmal aus!"
+  - "Bewege dich mit dem linken Joystick und \xE4ndere deine Blickrichtung mit dem
+    rechten Joystick."
+  - "Top. Damit du auch in geschlossenen R\xE4umen wei\xDFt, wo du bist, gibt es
+    drei Arten von Sounds."
+  - "Wenn du gegen eine Wand l\xE4ufst, h\xF6rst du diesen Sound."
+  - "Wenn du an einer Wand entlangl\xE4ufst, h\xF6rst du diesen Sound."
+  - "Wenn links oder rechts von dir ein Gang ist, h\xF6rst du ein Windrauschen in
+    deinem linken oder rechten Ohr."
+  - Eine letzte Sache noch.
+  - "Wenn du in der N\xE4he von einem Objekt bist, mit dem du interagieren kannst,
+    ert\xF6nt solange du damit interagieren kannst dieser Sound."
+  - "Dr\xFCcke den hinteren rechten Knopf auf der rechten Seite, um dann mit dem
+    Objekt zu interagieren."
+  - "Du befindest dich jetzt in einem Raum mit einem Ausgang. Finde die T\xFCr, mit
+    der du interagieren kannst, und dr\xFCck dann den hinteren rechten Knopf."
+  - "Super, du hast den Ausgang gefunden. N\xE4chstes Mal \xF6ffnet sich die T\xFCr
+    nicht so leicht. Viel Erfolg!"

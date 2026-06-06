@@ -84,6 +84,7 @@ public enum RumblePattern
         public void StopRumble()
         {
             IsRumbling = false;
+            Gamepad.SetMotorSpeeds(0, 0);
         }
 
         protected override void OnDestroy()

@@ -164,14 +164,16 @@ namespace Daniel.Master
         }
 
         //- based on the assumption that we end the tutorial with a dialogue
-        private IEnumerator EndTutorialCoroutine()
+        private void EndTutorial()
         {
             GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
             GameManager.Instance.SetGameState(GameState.PLAYING);
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
-            //- switch to actual game haha + wait for other person to be ready...
-            yield return null;
+
+            //- ToDo wait for other player but for now this is fine
+            //- eigentlich auch dass man hier durch Tür läuft
+            GameManager.Instance.Player.SpawnPlayerAtStart();
         }
         public void ToggleStatus(bool switch_to_dialogue)
         {
@@ -185,7 +187,7 @@ namespace Daniel.Master
             {
                 if (SegmentIndex == TutorialSegmentList.Count)
                 {
-                    StartCoroutine(EndTutorialCoroutine());
+                    EndTutorial();
                     return;
                 }
                 GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);

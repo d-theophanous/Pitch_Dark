@@ -8,8 +8,10 @@ namespace Daniel.Master
 {
     public class PlayerScript : MonoBehaviour
     {
+        //- ToDo change to List
         [SerializeField] private Transform Player1Spawn;
         [SerializeField] private Transform Player2Spawn;
+        [SerializeField] private List<Transform> PlayerStartSpawnList;
         [SerializeField] private NavMeshAgent NavMeshAgent;
         [SerializeField] private CinemachineCamera NPCCamera;
         [SerializeField] private Camera PlayerCamera;
@@ -22,7 +24,7 @@ namespace Daniel.Master
 
         public float PlayerSpeed {  get; private set; }
 
-
+        #region Unity Commons
         private void Awake()
         {
             GameManager.Instance.Player = this;
@@ -34,13 +36,13 @@ namespace Daniel.Master
             SpawnPlayer();
             GameManager.Instance.MovementEvents.Add(UpdatePlayer);
         }
-
         public void UpdatePlayer(object sender, EventArgs e)
         {
             RotateCharacter();
             MoveCharacter();
             CheckForChange();
         }
+        #endregion
 
         private void SpawnPlayer()
         {
@@ -60,6 +62,10 @@ namespace Daniel.Master
             TeleportCharacter(tmp.position);
             transform.forward = tmp.forward;
             CinCam.transform.rotation = LookDirList[CurRotationIdx];
+        }
+        public void SpawnPlayerAtStart()
+        {
+            TeleportCharacter(PlayerStartSpawnList[GameManager.Instance.PlayerIdx].transform.position);
         }
 
         public void Interact()

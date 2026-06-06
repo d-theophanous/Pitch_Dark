@@ -16,7 +16,6 @@ namespace Daniel.Master
             GameManager.Instance.Player.ResetMovement();
             DialogueManager.Instance.SetCurrentNPC(this);
             LookAtPlayer();
-            Debug.Log("NPC interaction");
             //- nur zum Testen?
             DialogueManager.Instance.StartNPCDialogue(
                 DialogueListFinal[0], ActionDicList[0]);
@@ -81,7 +80,6 @@ namespace Daniel.Master
             };
             seg_4.EndAction = () =>
             {
-                Debug.Log("fertig");
                 TutorialManager.Instance.ToggleStatus(true);
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
                 GameManager.Instance.Player.ResetMovement();
@@ -92,7 +90,6 @@ namespace Daniel.Master
                 TutorialManager.Instance.StartSegment(seg_4);
             });
 
-            Debug.Log("info: " + (DialogueListFinal[0].DialogueList[0].Lines.Count - 1));
 
             ActionDicList.Add(dialogue_1_dic);
         }

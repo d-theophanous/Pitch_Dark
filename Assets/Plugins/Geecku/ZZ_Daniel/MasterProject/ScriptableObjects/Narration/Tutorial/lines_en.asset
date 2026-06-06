@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd12a18dafdb74ab8b1dd16427d1e6, type: 3}
+  m_Name: lines_en
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::NarrationScriptData
+  lines:
+  - Is anyone there? Hello?
+  - Hey, are you okay?
+  - You are now in dialogue mode. When you switch modes, the game will tell you which
+    mode you're in. When the game is waiting for your input, you'll hear this sound.
+    Press X, the bottom of the four buttons on the right side of your controller,
+    to continue.
+  - Press X, the lowest of the four buttons on the right side of your controller.
+  - As long as there is text on the screen, you can navigate it using the up and
+    down arrow keys on the left side of your controller and select it with X or the
+    right arrow key. When you reach the top or bottom of the text, you'll hear this
+    sound. Give it a try!
+  - Press the up and down arrow buttons to navigate the text on the screen.
+  - Great, one more thing. If you want to repeat the last sentence, press Square,
+    the leftmost of the four buttons on the right side of the controller.
+  - Press Square, the leftmost of the four buttons on the right side of the controller.
+  - Dialog
+  - Puzzle
+  - Move
+  - Menu
+  - Wait for another person
+  - Cutscene
+  - Come on, get up.
+  - Oh, I don't think your glasses survived the earthquake. Well, at least you seem
+    to be unharmed.
+  - There's no one else here but us. Let's go look for the others together.
+  - Your friend is surely out there somewhere, just like the rest of my bandmates.
+  - I'll follow you!
+  - Use the left joystick to move. If you move the joystick to the left, your character
+    moves to the left.
+  - "Use the right joystick to change the direction you're facing. If you move it
+    to the right once, you turn 90\xB0 to the right. Give it a try!"
+  - Move with the left joystick and change your viewing direction with the right
+    joystick.
+  - Great. To help you know where you are even in enclosed spaces, there are three
+    types of sounds.
+  - When you run into a wall, you'll hear this sound.
+  - When you walk along a wall, you'll hear this sound.
+  - When there's a hallway to your left or right, you'll hear the sound of wind in
+    your left or right ear.
+  - One last thing.
+  - When you're near an object you can interact with, this sound will play as long
+    as you can interact with it.
+  - Press the rear right button on the right side to interact with the object.
+  - You are now in a room with an exit. Find the door you can interact with, then
+    press the rear right button.
+  - Great, you found the exit. Next time, the door won't open so easily. Good luck!

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd12a18dafdb74ab8b1dd16427d1e6, type: 3}
+  m_Name: lines_nl
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::NarrationScriptData
+  lines:
+  - Is er iemand? Hallo?
+  - He, gaat het goed met je?
+  - Je bevindt je nu in de dialoogmodus. Als je van modus wisselt, laat het spel
+    je weten in welke modus je je bevindt. Als het spel op je invoer wacht, hoor
+    je dit geluid. Druk op X, de onderste van de vier knoppen aan de rechterkant
+    van je controller, om door te gaan.
+  - Druk op X, de onderste van de vier knoppen aan de rechterkant van je controller.
+  - Zolang er tekst op het scherm staat, kun je hierdoor navigeren met de bovenste
+    en onderste pijltoets aan de linkerkant van je controller en deze activeren met
+    X of de rechterpijltoets. Als je het bovenste of onderste einde van de tekst
+    hebt bereikt, klinkt dit geluid. Probeer het eens!
+  - Druk op de bovenste en onderste pijltoets om door de tekst op het scherm te navigeren.
+  - Super, nog een ding. Als je de laatste zin wilt herhalen, druk dan op Vierkant,
+    de linkerknop van de vier knoppen aan de rechterkant van de controller.
+  - Druk op Vierkant, de linkerknop van de vier knoppen aan de rechterkant van de
+    controller.
+  - Dialoog
+  - Puzzel
+  - Bewegen
+  - Menu
+  - Wachten op iemand anders
+  - Filmfragment
+  - Kom, sta op.
+  - Oei, je bril heeft de aardbeving volgens mij niet overleefd. Ach, je lijkt in
+    ieder geval ongedeerd.
+  - Behalve wij is hier niemand. Laten we samen de anderen zoeken.
+  - Je vriend is vast ergens daarbuiten, net als de rest van mijn bandleden.
+  - Ik volg je!
+  - Met de linker joystick kun je je verplaatsen. Als je de joystick naar links beweegt,
+    gaat je personage naar links.
+  - "Met de rechter joystick kun je de kijkrichting aanpassen. Als je deze een keer
+    naar rechts beweegt, draai je 90\xB0 naar rechts. Probeer het maar eens!"
+  - Beweeg met de linker joystick en verander je kijkrichting met de rechter joystick.
+  - Top. Om ervoor te zorgen dat je ook in gesloten ruimtes weet waar je bent, zijn
+    er drie soorten geluiden.
+  - Als je tegen een muur aanloopt, hoor je dit geluid.
+  - Als je langs een muur loopt, hoor je dit geluid.
+  - Als er links of rechts van je een gang is, hoor je een ruisend geluid in je linker-
+    of rechteroor.
+  - Nog een ding.
+  - Als je in de buurt bent van een object waarmee je kunt interageren, klinkt dit
+    geluid zolang je ermee kunt interageren.
+  - Druk op de achterste rechterknop aan de rechterkant om vervolgens met het object
+    te interageren.
+  - Je bevindt je nu in een ruimte met een uitgang. Zoek de deur waarmee je kunt
+    interageren en druk vervolgens op de rechterknop aan de achterkant.
+  - Geweldig, je hebt de uitgang gevonden. De volgende keer gaat de deur niet zo
+    gemakkelijk open. Veel succes!
