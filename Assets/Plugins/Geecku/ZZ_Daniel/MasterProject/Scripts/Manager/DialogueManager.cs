@@ -1,12 +1,6 @@
-using Geecku.GlobalMangers;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using Unity.Cinemachine;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Daniel.Master
 {

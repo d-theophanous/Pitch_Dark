@@ -10706,12 +10706,8 @@ MonoBehaviour:
       Data: 
   CurrentDialogue: {fileID: 0}
   DialogueList:
-  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
-  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
-  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
-  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
-  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
-  - {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
+  - {fileID: 11400000, guid: 3f927a8ab783779408a2a9fef6585498, type: 2}
+  - {fileID: 11400000, guid: a25a788dd37940e4a869e0b2d8a6282a, type: 2}
   IsDialogue: 0
   SegmentSpawnExit: {fileID: 0}
   SegmentSpawnDoor: {fileID: 0}
@@ -18125,11 +18121,13 @@ MonoBehaviour:
   DialogueList:
   - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
   - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
+  - {fileID: 11400000, guid: ad5b93e3ecfacb74998461e19de960ae, type: 2}
   Parent: {fileID: 1354979632}
   NPCCamera: {fileID: 1354979635}
   DialogueList2:
   - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
   - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
+  - {fileID: 11400000, guid: ad5b93e3ecfacb74998461e19de960ae, type: 2}
 --- !u!1001 &1355685740
 PrefabInstance:
   m_ObjectHideFlags: 0

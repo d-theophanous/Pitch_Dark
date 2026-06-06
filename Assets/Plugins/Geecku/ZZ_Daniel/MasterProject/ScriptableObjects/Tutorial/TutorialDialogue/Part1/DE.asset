@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
+  m_Name: DE
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
+  DialogueNumber: 100
+  Language: DE
+  Lines:
+  - "Top. Damit du auch in geschlossenen R\xE4umen wei\xDFt, wo du bist, gibt es
+    drei Arten von Sounds."
+  - "Wenn du gegen eine Wand l\xE4ufst, h\xF6rst du diesen Sound."
+  - "Wenn du an einer Wand entlangl\xE4ufst, h\xF6rst du diesen Sound."
+  - "Wenn links oder rechts von dir ein Gang ist, h\xF6rst du ein Windrauschen in
+    deinem linken oder rechten Ohr."
+  - Eine letzte Sache noch.
+  - "Wenn du in der N\xE4he von einem Objekt bist, mit dem du interagieren kannst,
+    ert\xF6nt solange du damit interagieren kannst dieser Sound."
+  - "Dr\xFCcke den hinteren rechten Knopf auf der rechten Seite, um dann mit dem
+    Objekt zu interagieren."
+  - "Du befindest dich jetzt in einem Raum mit einem Ausgang. Finde die T\xFCr, mit
+    der du interagieren kannst, und dr\xFCck dann den hinteren rechten Knopf."

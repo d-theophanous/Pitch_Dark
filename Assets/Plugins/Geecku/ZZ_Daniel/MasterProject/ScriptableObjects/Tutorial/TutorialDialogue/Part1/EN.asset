@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
+  m_Name: EN
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
+  DialogueNumber: 100
+  Language: EN
+  Lines:
+  - Great. To help you know where you are even in enclosed spaces, there are three
+    types of sounds.
+  - When you run into a wall, you'll hear this sound.
+  - When you walk along a wall, you'll hear this sound.
+  - When there's a hallway to your left or right, you'll hear the sound of wind in
+    your left or right ear.
+  - One last thing.
+  - When you're near an object you can interact with, this sound will play as long
+    as you can interact with it.
+  - Press the rear right button on the right side to interact with the object.
+  - You are now in a room with an exit. Find the door you can interact with, then
+    press the rear right button.

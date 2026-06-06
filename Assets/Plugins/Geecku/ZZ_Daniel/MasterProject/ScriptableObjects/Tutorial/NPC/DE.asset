@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
+  m_Name: DE
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
+  DialogueNumber: 4
+  Language: DE
+  Lines:
+  - Ist da jemand? Hallo?
+  - Hey, ist alles ok bei dir?
+  - Komm, hoch mit dir.
+  - "Ohh, deine Brille hat das Erdbeben glaube ich nicht \xFCberlebt. Na ja, wenigstens
+    scheinst du unverletzt."
+  - "Au\xDFer uns ist hier niemand. Lass uns gemeinsam die Anderen suchen."
+  - "Dein Freund ist sicher irgendwo da drau\xDFen, genauso wie der Rest meiner Bandmitglieder."
+  - Ich folge dir!
