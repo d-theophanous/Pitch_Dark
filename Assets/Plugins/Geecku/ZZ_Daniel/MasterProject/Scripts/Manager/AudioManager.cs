@@ -111,6 +111,8 @@ namespace Daniel.Master
         }
         public void PlayDialogue2(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE)
         {
+            if (key == "")
+                return;
             string tmp = Helper.GetLanguageString() + "_" + key;
             PlayDialogue(tmp, on_complete, tone);
         }
@@ -471,7 +473,7 @@ namespace Daniel.Master
     public enum Message_Tone
     {
         CONTINUE, NONE, NOTES_EXAMPLE, HARMONIC_INTERVAL, TENSION_INTERVAL, PRIME, OCTAVE,
-        BUTTON, CLOSE_INTERVAL, FAR_INTERVAL, FIFTH, THIRD
+        BUTTON, CLOSE_INTERVAL, FAR_INTERVAL, FIFTH, THIRD, WAIT
     }
     public enum SFX
     {

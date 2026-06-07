@@ -25,26 +25,32 @@ namespace Daniel.Master
         {
             //- Repeat last line
             ButtonTutorialSegment seg_3 = new();
+            TutorialButtonInfo seg_3_button_info = new TutorialButtonInfo("200_5");
             seg_3.RequiredButtonDic.Add(TutorialButton.Square,
-                new TutorialButtonInfo("200_5"));
+                seg_3_button_info);
             seg_3.StartAction = () => {
-                AudioManager.Instance.PlayDialogue(200, 4, null); //- ToDo
+                AudioManager.Instance.PlayDialogue(200, 4, () => { seg_3_button_info.SpeechOver = true; }); 
             };
-            seg_3.EndAction = () => //- ToDO jump to next segment
+            seg_3.EndAction = () =>
             {
-                //- vlt noch so was wie "now back to the dialgoue" spielen
-                TutorialManager.Instance.EndSegment();
-                DialogueManager.Instance.ContinueWithDialogue = true;
+                AudioManager.Instance.PlayDialogue(200, 9, () =>
+                {
+                    TutorialManager.Instance.EndSegment();
+                    DialogueManager.Instance.ContinueWithDialogue = true;
+                    DialogueManager.Instance.Dialogue.Activate();
+                }, Message_Tone.WAIT);
             };
 
             //- Navigate through text
             ButtonTutorialSegment seg_2 = new();
+            TutorialButtonInfo seg_2_button_info_1 = new TutorialButtonInfo("200_3");
+            TutorialButtonInfo seg_2_button_info_2 = new TutorialButtonInfo("");
             seg_2.RequiredButtonDic.Add(TutorialButton.Up_Arrow,
-                new TutorialButtonInfo("200_3"));
+                seg_2_button_info_1);
             seg_2.RequiredButtonDic.Add(TutorialButton.Down_Arrow,
-                new TutorialButtonInfo(""));
+                seg_2_button_info_2);
             seg_2.StartAction = () => {
-                AudioManager.Instance.PlayDialogue(200, 2, null); 
+                AudioManager.Instance.PlayDialogue(200, 2, () => { seg_2_button_info_1.SpeechOver = true; }); 
             };
             seg_2.EndAction = () =>
             {
@@ -53,10 +59,11 @@ namespace Daniel.Master
 
             //- Advance Dialogue
             ButtonTutorialSegment seg_1 = new();
+            TutorialButtonInfo seg_1_button_info = new TutorialButtonInfo("200_1");
             seg_1.RequiredButtonDic.Add(TutorialButton.X,
-                new TutorialButtonInfo("200_1"));
+                seg_1_button_info);
             seg_1.StartAction = () => {
-                AudioManager.Instance.PlayDialogue(200, 0, null); 
+                AudioManager.Instance.PlayDialogue(200, 0, () => { seg_1_button_info.SpeechOver = true; }); 
             };
             seg_1.EndAction = () =>
             {
@@ -70,12 +77,17 @@ namespace Daniel.Master
 
             //- Movement stuff
             ButtonTutorialSegment seg_4 = new();
+            TutorialButtonInfo seg_4_button_info_1 = new TutorialButtonInfo("200_8", 2f);
+            TutorialButtonInfo seg_4_button_info_2 = new TutorialButtonInfo("");
             seg_4.RequiredButtonDic.Add(TutorialButton.Left_Joystick,
-                new TutorialButtonInfo("200_7", 2f));
+                seg_4_button_info_1);
             seg_4.RequiredButtonDic.Add(TutorialButton.Right_Joystick,
-                new TutorialButtonInfo(""));
+                seg_4_button_info_2);
             seg_4.StartAction = () => {
-                AudioManager.Instance.PlayDialogue(200, 6, null); 
+                AudioManager.Instance.PlayDialogue(200, 6, () =>
+                {
+                    AudioManager.Instance.PlayDialogue(200, 7, () => { seg_2_button_info_1.SpeechOver = true; });
+                }, Message_Tone.NONE); 
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
             };
             seg_4.EndAction = () =>

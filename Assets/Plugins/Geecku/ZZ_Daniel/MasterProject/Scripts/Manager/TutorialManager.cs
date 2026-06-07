@@ -98,7 +98,10 @@ namespace Daniel.Master
                 CurrentSegment.UpdateTutorialSegment();
 
                 if (CurrentSegment.SegmentComplete)
+                {
+                    GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
                     CurrentSegment.EndAction?.Invoke();
+                }
             }
         }
 
@@ -153,12 +156,12 @@ namespace Daniel.Master
         }
         public void EndSegment()
         {
-            GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
             InputManager.Instance.PlayerInput.SwitchCurrentActionMap("UI");
             CurrentSegment = null;
         }
         public void SwitchSegment(TutorialSegment segment)
         {
+            GameManager.Instance.UpdateEvent += UpdateTutorialManager;
             CurrentSegment = segment;
             CurrentSegment.OnStartSegment();
         }
@@ -256,13 +259,14 @@ namespace Daniel.Master
     }
     public class TutorialButtonInfo
     {
-        private const float HelpTime = 18f;
+        private const float HelpTime = 20f;
         public float RequiredPressTime;
         public string HelpAudioName;
         public float TimePassedWithNoPress;
         public bool Completed = false;
         public float CurrentPressTime = 0f;
         public bool IsBeingPressed;
+        public bool SpeechOver = false;
 
         public TutorialButtonInfo(string help_audio_name, float required_press_time = 1f)
         {
@@ -274,7 +278,7 @@ namespace Daniel.Master
         {
             if (IsBeingPressed)
                 CurrentPressTime += Time.deltaTime;
-            else
+            else if (SpeechOver)
                 TimePassedWithNoPress += Time.deltaTime;
 
             if (CurrentPressTime >= RequiredPressTime)
