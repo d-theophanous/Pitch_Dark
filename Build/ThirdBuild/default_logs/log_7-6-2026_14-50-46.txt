@@ -1,0 +1,98 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Game started :))
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> gamestate switch to playing
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> in on move
+	
+MLog>> Quit
+	

@@ -142,7 +142,8 @@ namespace Daniel.Master
         }
         public void SetInitialLanguage(int language)
         {
-            GlobalUIManager.Instance.ToggleUI(UI_Group.ACCESSIBILITY_SELECTION, false);
+            //- ToDo switch back to accessibility option selection
+            GlobalUIManager.Instance.ToggleUI(UI_Group.GENRE_SELECTION, false);
             SetGameLanguage(language);
         }
         private void SwitchSceneToFirstInList()

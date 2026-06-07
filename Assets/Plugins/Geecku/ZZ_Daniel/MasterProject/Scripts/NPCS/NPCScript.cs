@@ -85,12 +85,6 @@ namespace Daniel.Master
         /// </summary>
         public void SetFollowing(bool follow)
         {
-            var player = GameManager.Instance.Player;
-            if (IsFollowing && !player.NPCFollowerList.Contains(this))
-                player.NPCFollowerList.Add(this);
-            else
-                player.NPCFollowerList.Remove(this);
-
             IsFollowing = follow;
 
             if (!IsFollowing)
@@ -104,6 +98,12 @@ namespace Daniel.Master
             {
                 Agent.isStopped = false;
             }
+            var player = GameManager.Instance.Player;
+            if (IsFollowing && !player.NPCFollowerList.Contains(this))
+                player.NPCFollowerList.Add(this);
+            else
+                player.NPCFollowerList.Remove(this);
+
         }
         /// <summary>
         /// Convenience method to flip the current follow state.
@@ -124,8 +124,12 @@ namespace Daniel.Master
             DialogueManager.Instance.SetCurrentNPC(this);
             ToggleFollowing();
             LookAtPlayer();
-            Debug.Log("NPC interaction");
             //- nur zum Testen?
+            //- ToDo 
+            if (ActionDicList.Count == 0)
+            {
+                ActionDicList.Add(new());
+            }
             DialogueManager.Instance.StartNPCDialogue(
                 DialogueListFinal[0], ActionDicList[0]);
             tag = "Untagged";
@@ -135,8 +139,15 @@ namespace Daniel.Master
             GameManager.Instance.Player.ResetMovement();
             DialogueManager.Instance.SetCurrentNPC(this);
             LookAtPlayer();
+            //- ToDo
+            if (ActionDicList.Count < 2)
+            {
+                ActionDicList.Add(new());
+            }
+            Debug.Log("action dic count: " + ActionDicList.Count);
+            Debug.Log("dialogue list count: " + DialogueListFinal.Count);
             DialogueManager.Instance.StartNPCDialogue(
-                DialogueListFinal[1], ActionDicList[2], true);
+                DialogueListFinal[1], ActionDicList[1], true);
             //- after second dialogue NPC will not be interactable anymore
             this.tag = "Untagged";
         }

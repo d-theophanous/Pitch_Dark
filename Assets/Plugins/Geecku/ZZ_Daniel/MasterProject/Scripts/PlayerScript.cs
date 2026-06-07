@@ -53,11 +53,6 @@ namespace Daniel.Master
             MoveCharacter();
             CheckForChange();
 
-            if (IsMoving)
-            {
-                Debug.Log("Movement INput: " + Movement);
-                Debug.Log("Walk Direction: " + WalkDirection);
-            }
         }
         #endregion
 
