@@ -177,6 +177,7 @@ namespace Daniel.Master
             //- ToDo wait for other player but for now this is fine
             //- eigentlich auch dass man hier durch Tür läuft
             GameManager.Instance.Player.SpawnPlayerAtStart();
+            GameManager.Instance.Player.TeleportNPCsToPlayer();
         }
         public void ToggleStatus(bool switch_to_dialogue)
         {
@@ -259,7 +260,7 @@ namespace Daniel.Master
     }
     public class TutorialButtonInfo
     {
-        private const float HelpTime = 20f;
+        private const float HelpTime = 15f;
         public float RequiredPressTime;
         public string HelpAudioName;
         public float TimePassedWithNoPress;

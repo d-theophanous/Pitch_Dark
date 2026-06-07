@@ -57,7 +57,8 @@ namespace Daniel.Master
             switch (State)
             {
                 case GameState.PLAYING:
-                    //Player.UpdatePlayer();
+                    if (SkipTutorial)
+                        Player.UpdatePlayer(null, null); //-    später weg
                     break;
                 case GameState.CONNECT:
                     break;
@@ -194,7 +195,12 @@ namespace Daniel.Master
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
 
             if (SkipTutorial)
+            {
+                Debug.Log("ja in skip tutorial");
                 SetGameState(GameState.PLAYING);
+                InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
+                SubscribeMovementEvents();
+            }
             else
             {
 

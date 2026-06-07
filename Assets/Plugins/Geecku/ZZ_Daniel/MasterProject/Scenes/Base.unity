@@ -2512,6 +2512,7 @@ MonoBehaviour:
   ConnectScript: {fileID: 1729751770}
   Player: {fileID: 0}
   SkipTutorial: 1
+  StartTutorial: 0
   PlayerIdx: 0
   DebugInteractable: {fileID: 0}
   MaxPlayerCount: 2
@@ -9425,6 +9426,13 @@ MonoBehaviour:
       Data3: -1467571827
       Data4: -1171313075
     Path: event:/Footsteps
+  <InteractableEvent>k__BackingField:
+    Guid:
+      Data1: -1527525642
+      Data2: 1203045289
+      Data3: 1862771862
+      Data4: -1074534492
+    Path: event:/Interactable2
 --- !u!4 &1584220755
 Transform:
   m_ObjectHideFlags: 0

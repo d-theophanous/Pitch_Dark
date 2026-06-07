@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 namespace Daniel.Master
@@ -14,7 +15,11 @@ namespace Daniel.Master
         public override void ActivatePrompt()
         {
             PuzzleManager.Instance.SetCurrentDoor(this);
-            Rumbler.Instance.StopRumble();
+            //StudioEventEmitter emitter = gameObject.GetComponentInChildren<StudioEventEmitter>();
+            //emitter.Stop();
+            //emitter.gameObject.SetActive(false);
+
+            AudioManager.Instance.StopInteractable(); //-   ToDo
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
             tag = "Untagged";
             GameManager.Instance.Player.CurrentInteractable = null;
@@ -22,14 +27,12 @@ namespace Daniel.Master
         public override void EnterInteractionRange()
         {
             base.EnterInteractionRange();
-            //- mode dependent here I think
-            //- ToDo (HP)
-            Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 100f);
+            AudioManager.Instance.PlayInteractable();
         }
         public override void ExitInteractionRange()
         {
             base.ExitInteractionRange();
-            Rumbler.Instance.StopRumble();
+            AudioManager.Instance.StopInteractable();
         }
         public Camera GetCamera() => DoorCamera;
 

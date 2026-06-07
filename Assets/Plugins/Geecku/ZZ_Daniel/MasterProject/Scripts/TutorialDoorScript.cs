@@ -1,4 +1,6 @@
 using UnityEngine;
+using FMODUnity;
+using FMOD;
 
 namespace Daniel.Master
 {
@@ -10,20 +12,22 @@ namespace Daniel.Master
         {
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR);
             TutorialManager.Instance.TriggerSegmentComplete();
-            Rumbler.Instance.StopRumble();
             tag = "Untagged";
+            //StudioEventEmitter emitter = gameObject.GetComponentInChildren<StudioEventEmitter>();
+            //emitter.Stop();
+            //emitter.gameObject.SetActive(false);
+
+            AudioManager.Instance.StopInteractable();
         }
         public override void EnterInteractionRange()
         {
             base.EnterInteractionRange();
-            //- mode dependent here I think
-            //- ToDo (HP)
-            Rumbler.Instance.RumbleConstant(0.5f, 0.5f, 100f);
+            AudioManager.Instance.PlayInteractable();
         }
         public override void ExitInteractionRange()
         {
             base.ExitInteractionRange();
-            Rumbler.Instance.StopRumble();
+            AudioManager.Instance.StopInteractable();
         }
     }
 }

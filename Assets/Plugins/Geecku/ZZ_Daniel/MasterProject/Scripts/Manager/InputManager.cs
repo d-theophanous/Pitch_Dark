@@ -81,6 +81,10 @@ namespace Daniel.Master
         {
             TTSManager.Instance.ReturnCurElement();
         }
+        public void OnRepeat()
+        {
+            TTSManager.Instance.RepeatCurElement();
+        }
         public void OnNavigate(InputValue value)
         {
             Vector2 input = value.Get<Vector2>();
@@ -129,6 +133,7 @@ namespace Daniel.Master
         public void OnMove(InputValue value)
         {
             GameManager.Instance.Player.Move(value.Get<Vector2>());
+            Debug.Log("in on move");
         }
         public void OnLook(InputValue value)
         {

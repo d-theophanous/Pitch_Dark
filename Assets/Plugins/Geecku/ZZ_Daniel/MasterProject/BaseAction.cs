@@ -142,7 +142,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""aac1845c-cf37-4795-b209-0dd87c384743"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Controller"",
@@ -330,6 +330,15 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Repeat"",
+                    ""type"": ""Button"",
+                    ""id"": ""12f517ab-e160-4828-b120-dbd14a9d62a4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -495,6 +504,17 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Controller"",
                     ""action"": ""Back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e69cb490-58d0-441e-8af4-c67ebff1adac"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""Repeat"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1005,6 +1025,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
         m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
         m_UI_Back = m_UI.FindAction("Back", throwIfNotFound: true);
+        m_UI_Repeat = m_UI.FindAction("Repeat", throwIfNotFound: true);
         // Improvisation
         m_Improvisation = asset.FindActionMap("Improvisation", throwIfNotFound: true);
         m_Improvisation_PlayRoot = m_Improvisation.FindAction("PlayRoot", throwIfNotFound: true);
@@ -1259,6 +1280,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_Navigate;
     private readonly InputAction m_UI_Click;
     private readonly InputAction m_UI_Back;
+    private readonly InputAction m_UI_Repeat;
     /// <summary>
     /// Provides access to input actions defined in input action map "UI".
     /// </summary>
@@ -1294,6 +1316,10 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "UI/Back".
         /// </summary>
         public InputAction @Back => m_Wrapper.m_UI_Back;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/Repeat".
+        /// </summary>
+        public InputAction @Repeat => m_Wrapper.m_UI_Repeat;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1338,6 +1364,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Back.started += instance.OnBack;
             @Back.performed += instance.OnBack;
             @Back.canceled += instance.OnBack;
+            @Repeat.started += instance.OnRepeat;
+            @Repeat.performed += instance.OnRepeat;
+            @Repeat.canceled += instance.OnRepeat;
         }
 
         /// <summary>
@@ -1367,6 +1396,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Back.started -= instance.OnBack;
             @Back.performed -= instance.OnBack;
             @Back.canceled -= instance.OnBack;
+            @Repeat.started -= instance.OnRepeat;
+            @Repeat.performed -= instance.OnRepeat;
+            @Repeat.canceled -= instance.OnRepeat;
         }
 
         /// <summary>
@@ -2023,6 +2055,13 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnBack(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Repeat" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRepeat(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Improvisation" which allows adding and removing callbacks.

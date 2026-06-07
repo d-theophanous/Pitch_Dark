@@ -46,6 +46,7 @@ namespace Daniel.Master
         }
         protected virtual void OnDeselect() { }
         public virtual void Activate() { }
+        public virtual void Repeat() { }
         public virtual void Return()
         {
             if (Parent != null)

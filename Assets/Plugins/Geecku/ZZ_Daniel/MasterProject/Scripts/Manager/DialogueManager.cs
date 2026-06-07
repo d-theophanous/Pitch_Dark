@@ -10,7 +10,6 @@ namespace Daniel.Master
         //- should probably not be here
         [SerializeField] private List<NPCScript> FirstPuzzleNPCList;
         [SerializeField] private List<NPCScript> SecondPuzzleNPCList;
-        private List<NPCScript> CurrentNPCs = new();
         public float TextSpeed;
         public ReadableDialogue Dialogue;
         private Camera CurNPCCamera;

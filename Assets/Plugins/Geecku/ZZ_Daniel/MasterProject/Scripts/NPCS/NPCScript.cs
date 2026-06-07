@@ -16,7 +16,7 @@ namespace Daniel.Master
         [Header("State")]
         public bool IsFollowing = false;
 
-        [SerializeField] private NavMeshAgent Agent;
+        [SerializeField] public NavMeshAgent Agent;
         [SerializeField] protected List<DialogueContainer> DialogueList;
         [SerializeField] private Transform Parent;
         [SerializeField] private Camera NPCCamera;
@@ -85,6 +85,12 @@ namespace Daniel.Master
         /// </summary>
         public void SetFollowing(bool follow)
         {
+            var player = GameManager.Instance.Player;
+            if (IsFollowing && !player.NPCFollowerList.Contains(this))
+                player.NPCFollowerList.Add(this);
+            else
+                player.NPCFollowerList.Remove(this);
+
             IsFollowing = follow;
 
             if (!IsFollowing)

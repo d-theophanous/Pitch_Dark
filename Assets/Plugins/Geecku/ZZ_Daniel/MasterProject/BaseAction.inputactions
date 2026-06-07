@@ -56,7 +56,7 @@
                 {
                     "name": "",
                     "id": "aac1845c-cf37-4795-b209-0dd87c384743",
-                    "path": "<Gamepad>/buttonSouth",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Controller",
@@ -244,6 +244,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Repeat",
+                    "type": "Button",
+                    "id": "12f517ab-e160-4828-b120-dbd14a9d62a4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -409,6 +418,17 @@
                     "processors": "",
                     "groups": ";Controller",
                     "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e69cb490-58d0-441e-8af4-c67ebff1adac",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Repeat",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

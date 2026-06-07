@@ -27,6 +27,7 @@ namespace Daniel.Master
                 ElementList[CurElementIdx].ToggleHighlight();
             }
         }
+        //- kinda ugly and unneccessary opt ToDo
         public void DeactivateGroup()
         {
             ElementList[CurElementIdx].ToggleHighlight();
@@ -65,6 +66,10 @@ namespace Daniel.Master
             ElementList[CurElementIdx].ToggleHighlight();
             CurElementIdx++;
             ElementList[CurElementIdx].ToggleHighlight();
+        }
+        public void RepeatCurElement()
+        {
+            ElementList[CurElementIdx].Repeat();
         }
     }
 }

@@ -47,6 +47,10 @@ namespace Daniel.Master
             if (DialogueManager.Instance.ContinueWithDialogue)
                 ContinuePressed = true;
         }
+        public override void Repeat()
+        {
+            AudioManager.Instance.RepeatLastDialogue();
+        }
         protected override void OnSelect() { }
         //- repeat current dialogue line instead of going back
         public override void Return()

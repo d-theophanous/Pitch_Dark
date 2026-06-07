@@ -26,7 +26,6 @@ namespace Daniel.Master
         #endregion
 
         private List<EventInstance> EventInstanceList;
-        private EventInstance FootstepEvent;
 
         //- ToDo opt, for now all of the readable element narrations are in the 
         //- SFX bank which is not optimal
@@ -90,7 +89,7 @@ namespace Daniel.Master
         public void PlayDialogue(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE)
         {
             StopDialogue();
-
+            LastDialogueInfo = (key, tone);
             currentDialogueInstance.setParameterByNameWithLabel("Tone", tone.ToString());
 
             // Pin the key string in memory and pass a pointer through the user data
@@ -123,6 +122,12 @@ namespace Daniel.Master
                 currentDialogueInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             }
         }
+        private (string, Message_Tone) LastDialogueInfo;
+        public void RepeatLastDialogue()
+        {
+            if (LastDialogueInfo.Item1 != null)
+                PlayDialogue(LastDialogueInfo.Item1, null, LastDialogueInfo.Item2);
+        }
 
         #endregion
 
@@ -140,6 +145,7 @@ namespace Daniel.Master
             WallScratchEvent = CreateEventInstance(FMODEvents.Instance.WallScratchEvent);
             WallFaceEvent = CreateEventInstance(FMODEvents.Instance.WallFaceEvent);
             FootstepEvent = CreateEventInstance(FMODEvents.Instance.FootstepEvent);
+            InteractableEvent = CreateEventInstance(FMODEvents.Instance.InteractableEvent);
         }
 
         #region Accessibility
@@ -157,6 +163,7 @@ namespace Daniel.Master
         #endregion
 
         #region Footsteps
+        private EventInstance FootstepEvent;
         public void PlayFootsteps()
         {
             FootstepEvent.start();
@@ -164,6 +171,18 @@ namespace Daniel.Master
         public void StopFootsteps()
         {
             FootstepEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+        #endregion
+
+        #region Interactable
+        private EventInstance InteractableEvent;
+        public void PlayInteractable()
+        {
+            InteractableEvent.start();
+        }
+        public void StopInteractable()
+        {
+            InteractableEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
         #endregion
 

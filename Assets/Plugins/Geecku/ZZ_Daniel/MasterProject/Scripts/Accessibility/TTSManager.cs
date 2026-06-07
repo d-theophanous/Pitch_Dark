@@ -99,6 +99,10 @@ namespace Daniel.Master
         {
             CurrentGroup.SwitchToNextElement();
         }
+        public void RepeatCurElement()
+        {
+            CurrentGroup.RepeatCurElement();
+        }
         #endregion
     }
     //- for narration of what the person is hovering over

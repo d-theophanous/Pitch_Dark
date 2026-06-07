@@ -44,13 +44,17 @@ namespace Daniel.Master
             //- Navigate through text
             ButtonTutorialSegment seg_2 = new();
             TutorialButtonInfo seg_2_button_info_1 = new TutorialButtonInfo("200_3");
-            TutorialButtonInfo seg_2_button_info_2 = new TutorialButtonInfo("");
+            TutorialButtonInfo seg_2_button_info_2 = new TutorialButtonInfo("200_3");
             seg_2.RequiredButtonDic.Add(TutorialButton.Up_Arrow,
                 seg_2_button_info_1);
             seg_2.RequiredButtonDic.Add(TutorialButton.Down_Arrow,
                 seg_2_button_info_2);
             seg_2.StartAction = () => {
-                AudioManager.Instance.PlayDialogue(200, 2, () => { seg_2_button_info_1.SpeechOver = true; }); 
+                AudioManager.Instance.PlayDialogue(200, 2, () => 
+                { 
+                    seg_2_button_info_1.SpeechOver = true;
+                    seg_2_button_info_2.SpeechOver = true;
+                }); 
             };
             seg_2.EndAction = () =>
             {
@@ -78,7 +82,7 @@ namespace Daniel.Master
             //- Movement stuff
             ButtonTutorialSegment seg_4 = new();
             TutorialButtonInfo seg_4_button_info_1 = new TutorialButtonInfo("200_8", 2f);
-            TutorialButtonInfo seg_4_button_info_2 = new TutorialButtonInfo("");
+            TutorialButtonInfo seg_4_button_info_2 = new TutorialButtonInfo("200_8");
             seg_4.RequiredButtonDic.Add(TutorialButton.Left_Joystick,
                 seg_4_button_info_1);
             seg_4.RequiredButtonDic.Add(TutorialButton.Right_Joystick,
@@ -86,7 +90,11 @@ namespace Daniel.Master
             seg_4.StartAction = () => {
                 AudioManager.Instance.PlayDialogue(200, 6, () =>
                 {
-                    AudioManager.Instance.PlayDialogue(200, 7, () => { seg_2_button_info_1.SpeechOver = true; });
+                    AudioManager.Instance.PlayDialogue(200, 7, () => 
+                    { 
+                        seg_4_button_info_1.SpeechOver = true;
+                        seg_4_button_info_2.SpeechOver = true;
+                    });
                 }, Message_Tone.NONE); 
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
             };

@@ -15,9 +15,20 @@ namespace Daniel.Master
         [SerializeField] private NavMeshAgent NavMeshAgent;
         [SerializeField] private CinemachineCamera NPCCamera;
         [SerializeField] private Camera PlayerCamera;
+        public List<NPCScript> NPCFollowerList = new();
         public bool IsMoving => Movement.magnitude > 0;
-        public Vector3 WalkDirection => new Vector3(Movement.y, 0, -Movement.x);
-
+        //public Vector3 WalkDirection => new Vector3(Movement.y, 0, -Movement.x);
+        public Vector3 WalkDirection
+        {
+            get
+            {
+                Vector3 move = new Vector3(Movement.x, 0f, Movement.y);
+                move = Vector3.ClampMagnitude(move, 1f);
+                move = CinCam.transform.rotation * move;
+                move.y = 0f;
+                return move.normalized;
+            }
+        }
 
         public CinemachineCamera CinCam;
         public Interactable CurrentInteractable;
@@ -41,6 +52,12 @@ namespace Daniel.Master
             RotateCharacter();
             MoveCharacter();
             CheckForChange();
+
+            if (IsMoving)
+            {
+                Debug.Log("Movement INput: " + Movement);
+                Debug.Log("Walk Direction: " + WalkDirection);
+            }
         }
         #endregion
 
@@ -71,11 +88,15 @@ namespace Daniel.Master
         public void Interact()
         {
             if (CurrentInteractable == null)
-            {
-                Debug.Log("bin null");
                 return;
-            }
             CurrentInteractable.ActivatePrompt();
+        }
+        public void TeleportNPCsToPlayer()
+        {
+            foreach (var npc in NPCFollowerList)
+            {
+                npc.Agent.Warp(transform.position);
+            }
         }
 
         #region Movement
