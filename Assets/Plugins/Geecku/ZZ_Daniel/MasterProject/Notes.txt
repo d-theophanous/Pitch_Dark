@@ -1,3 +1,10 @@
+Debug Sachen:
+- skip tutorial 
+- npc malik wieder interactable machen (oder aktivieren)
+- fog an
+- ceiling wieder her
+- spawn richtig setzen
+
 
 ToDo's
 - Tutorial

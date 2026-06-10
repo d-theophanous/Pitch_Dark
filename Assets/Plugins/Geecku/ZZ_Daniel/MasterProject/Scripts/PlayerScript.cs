@@ -46,13 +46,13 @@ namespace Daniel.Master
         {
             SpawnPlayer();
             GameManager.Instance.MovementEvents.Add(UpdatePlayer);
+            GameManager.Instance.SubscribeMovementEvents();
         }
         public void UpdatePlayer(object sender, EventArgs e)
         {
             RotateCharacter();
             MoveCharacter();
             CheckForChange();
-
         }
         #endregion
 
@@ -113,6 +113,7 @@ namespace Daniel.Master
 
             move = CinCam.transform.rotation * move;
             move.y = 0f; // safety — keep movement flat
+
 
             // Move
             Vector3 finalMove = move * PlayerSpeed;

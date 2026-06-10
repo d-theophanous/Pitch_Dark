@@ -144,6 +144,7 @@ namespace Daniel.Master
         #region Tutorial
         public void OnSouth(InputValue value)
         {
+            Debug.Log("x");
             TutorialManager.Instance.ProcessButtonPress(TutorialButton.X, true);
         }
         public void OnWest(InputValue value)

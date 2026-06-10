@@ -144,8 +144,7 @@ namespace Daniel.Master
             {
                 ActionDicList.Add(new());
             }
-            Debug.Log("action dic count: " + ActionDicList.Count);
-            Debug.Log("dialogue list count: " + DialogueListFinal.Count);
+
             DialogueManager.Instance.StartNPCDialogue(
                 DialogueListFinal[1], ActionDicList[1], true);
             //- after second dialogue NPC will not be interactable anymore

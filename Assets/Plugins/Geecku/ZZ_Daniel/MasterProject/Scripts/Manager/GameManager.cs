@@ -57,8 +57,6 @@ namespace Daniel.Master
             switch (State)
             {
                 case GameState.PLAYING:
-                    if (SkipTutorial)
-                        Player.UpdatePlayer(null, null); //-    später weg
                     break;
                 case GameState.CONNECT:
                     break;
@@ -161,10 +159,11 @@ namespace Daniel.Master
         #region Update Event Handling
         public List<EventHandler> MovementEvents;
 
-        private void SubscribeMovementEvents()
+        public void SubscribeMovementEvents()
         {
             foreach (EventHandler handler in MovementEvents)
             {
+                UpdateEvent -= handler; //- make sure there are in there only once
                 UpdateEvent += handler;
             }
         }
@@ -199,8 +198,6 @@ namespace Daniel.Master
             {
                 Debug.Log("ja in skip tutorial");
                 SetGameState(GameState.PLAYING);
-                InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
-                SubscribeMovementEvents();
             }
             else
             {
