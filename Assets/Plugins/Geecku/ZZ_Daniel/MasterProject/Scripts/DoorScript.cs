@@ -5,13 +5,12 @@ namespace Daniel.Master
 {
     public class DoorScript : Interactable
     {
-        //- add door open animation
-        //- after animation zoom npc, dialogue etc...
         [SerializeField] private Camera DoorCamera;
         [SerializeField] private Animator DoorAnimator;
         [SerializeField] private BoxCollider DoorTrigger;
         [SerializeField] private GameObject NavMeshObstacle;
         public NPCScript DoorNPC;
+        public NPCScript TutorialNPC;
         public override void ActivatePrompt()
         {
             PuzzleManager.Instance.SetCurrentDoor(this);

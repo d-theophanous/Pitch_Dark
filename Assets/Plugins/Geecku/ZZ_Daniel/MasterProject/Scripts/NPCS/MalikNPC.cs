@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Daniel.Master
+{
+    public class MalikNPC : NPCScript
+    {
+        protected override void Start()
+        {
+            base.Start();
+            SetUpDialogueActions();
+            if (GameManager.Instance.SkipTutorial)
+                SetFollowing(true);
+        }
+        private void SetUpDialogueActions()
+        {
+            Dictionary<int, Action> dialogue_1_dic = new();
+            dialogue_1_dic.Add(DialogueList[0].DialogueList[0].Lines.Count - 1, () =>
+            {
+                DirectionChecker.Instance.StartDirectionChecking(
+                    DirectionChecker.Instance.FirstDestination);
+                DialogueManager.Instance.ContinueWithDialogue = true;
+                //DialogueManager.Instance.EndDialogue();
+            });
+
+            Dictionary<int, Action> dialogue_2_dic = new();
+            dialogue_2_dic.Add(DialogueList[1].DialogueList[0].Lines.Count - 1, () =>
+            {
+                PuzzleManager.Instance.SetUpPuzzle();
+                GameManager.Instance.SolveCurrentPuzzle();
+            });
+
+            ActionDicList.Add(dialogue_1_dic);
+            ActionDicList.Add(dialogue_2_dic);
+        }
+    }
+}

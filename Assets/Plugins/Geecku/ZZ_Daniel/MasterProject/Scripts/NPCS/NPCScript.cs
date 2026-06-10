@@ -24,17 +24,6 @@ namespace Daniel.Master
         private Transform Player;
         protected List<Dictionary<int, Action>> ActionDicList = new(); //-  I am going insane
 
-        //- very ugly, very temporary, ToDo
-        [SerializeField] protected List<DialogueContainer> DialogueList2;
-        protected List<DialogueContainer> DialogueListFinal
-        {
-            get
-            {
-                if (GameManager.Instance.PlayerIdx == 0)
-                    return DialogueList;
-                return DialogueList2;
-            }
-        }
         void Awake()
         {
             Player = GameManager.Instance.Player.transform;
@@ -131,7 +120,7 @@ namespace Daniel.Master
                 ActionDicList.Add(new());
             }
             DialogueManager.Instance.StartNPCDialogue(
-                DialogueListFinal[0], ActionDicList[0]);
+                DialogueList[0], ActionDicList[0]);
             tag = "Untagged";
         }
         public void ActivateSecondDialogue()
@@ -146,7 +135,7 @@ namespace Daniel.Master
             }
 
             DialogueManager.Instance.StartNPCDialogue(
-                DialogueListFinal[1], ActionDicList[1], true);
+                DialogueList[1], ActionDicList[1], true);
             //- after second dialogue NPC will not be interactable anymore
             this.tag = "Untagged";
         }

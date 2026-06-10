@@ -20,6 +20,8 @@ namespace Daniel.Master
         public Note[] SolutionInterval = new Note[2];
         private Camera CurCamera;
 
+        public List<NPCScript> TutorialNPCs = new();
+
         /// <summary>
         /// Gets called when you press the solve button. Waits for input and 
         /// checks if your answer is right or wrong
@@ -49,8 +51,10 @@ namespace Daniel.Master
         #region Puzzle Logic
         public void StartPuzzle()
         {
-            CurCamera.gameObject.SetActive(true);
-            SetUpPuzzle();
+            if (CurDoor.TutorialNPC == null)
+                SetUpPuzzle();
+            else
+                CurDoor.TutorialNPC.ActivateSecondDialogue();
         }
         //- for first puzzle ToDo
         public void SolvePuzzle()
@@ -87,8 +91,9 @@ namespace Daniel.Master
         public void EndPuzzle()
         {
         }
-        private void SetUpPuzzle()
+        public void SetUpPuzzle()
         {
+            CurCamera.gameObject.SetActive(true);
             GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE, false);
         }
         #endregion

@@ -18,7 +18,7 @@ namespace Daniel.Master
             LookAtPlayer();
             //- nur zum Testen?
             DialogueManager.Instance.StartNPCDialogue(
-                DialogueListFinal[0], ActionDicList[0]);
+                DialogueList[0], ActionDicList[0]);
             tag = "Untagged";
         }
         private void SetUpTutorialSegments()
@@ -104,7 +104,7 @@ namespace Daniel.Master
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
                 GameManager.Instance.Player.ResetMovement();
             };
-            dialogue_1_dic.Add(DialogueListFinal[0].DialogueList[0].Lines.Count - 1, () =>
+            dialogue_1_dic.Add(DialogueList[0].DialogueList[0].Lines.Count - 1, () =>
             {
                 DialogueManager.Instance.EndDialogue();
                 TutorialManager.Instance.StartSegment(seg_4);

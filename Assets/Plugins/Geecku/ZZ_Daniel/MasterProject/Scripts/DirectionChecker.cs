@@ -24,6 +24,10 @@ namespace Daniel.Master
         private Vector3 CurWaypoint;
         private const float WayPointRadius = 2.2f;
 
+        public Transform FirstDestination;
+        public Transform SecondDestination;
+        public Transform ThirdDestination;
+
         #region MonoBehaviour Commons
         protected override void Start()
         {
@@ -48,11 +52,13 @@ namespace Daniel.Master
             if (IsOnRightPath())
             {
                 //- hier anstelle die network funktion aufrufen
-                GameManager.Instance.ClientSend_DirectionCheck(1);
+                //GameManager.Instance.ClientSend_DirectionCheck(1);
                 Debug.Log("bin on right path");
+                Rumbler.Instance.StartRumble();
             }
             else
-                GameManager.Instance.ClientSend_DirectionCheck(0);
+                Rumbler.Instance.StopRumble();
+                //GameManager.Instance.ClientSend_DirectionCheck(0);
         }
         #endregion
 

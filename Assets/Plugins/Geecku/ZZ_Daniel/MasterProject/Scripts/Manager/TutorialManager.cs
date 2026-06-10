@@ -72,6 +72,7 @@ namespace Daniel.Master
         public Transform SegmentSpawnDoor;
 
         [SerializeField] private NPCScript StartNPC;
+        [SerializeField] private NPCScript AfterTutorialNPC;
 
         #region MonoBehaviour commons
         protected override void Start()
@@ -178,6 +179,9 @@ namespace Daniel.Master
             //- eigentlich auch dass man hier durch Tür läuft
             GameManager.Instance.Player.SpawnPlayerAtStart();
             GameManager.Instance.Player.TeleportNPCsToPlayer();
+
+            //- NPC walks to you
+            AfterTutorialNPC.SetFollowing(true);
         }
         public void ToggleStatus(bool switch_to_dialogue)
         {

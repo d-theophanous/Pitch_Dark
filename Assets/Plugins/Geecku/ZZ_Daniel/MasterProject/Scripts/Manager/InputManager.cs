@@ -133,7 +133,6 @@ namespace Daniel.Master
         public void OnMove(InputValue value)
         {
             GameManager.Instance.Player.Move(value.Get<Vector2>());
-            Debug.Log("in on move");
         }
         public void OnLook(InputValue value)
         {

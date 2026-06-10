@@ -7185,11 +7185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845965385828732, guid: 8f625856cbd911745b6dab1569936428, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4870230668834182, guid: 8f625856cbd911745b6dab1569936428, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.83
+      value: -22.7
       objectReference: {fileID: 0}
     - target: {fileID: 4870230668834182, guid: 8f625856cbd911745b6dab1569936428, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7197,7 +7197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4870230668834182, guid: 8f625856cbd911745b6dab1569936428, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.69
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4870230668834182, guid: 8f625856cbd911745b6dab1569936428, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7238,33 +7238,76 @@ PrefabInstance:
     - target: {fileID: 2602750065473651525, guid: 8f625856cbd911745b6dab1569936428, type: 3}
       propertyPath: 'DialogueList.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: a1567bccfdd50a4458a40620f8d478af, type: 2}
+      objectReference: {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
     - target: {fileID: 2602750065473651525, guid: 8f625856cbd911745b6dab1569936428, type: 3}
       propertyPath: 'DialogueList2.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: a1567bccfdd50a4458a40620f8d478af, type: 2}
+      objectReference: {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
     m_RemovedComponents:
     - {fileID: 8163187063491280318, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+    - {fileID: 2602750065473651525, guid: 8f625856cbd911745b6dab1569936428, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1045506782850000, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 529402870}
   m_SourcePrefab: {fileID: 100100000, guid: 8f625856cbd911745b6dab1569936428, type: 3}
---- !u!114 &529402864 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2602750065473651525, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+--- !u!1 &529402864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1778872688860352, guid: 8f625856cbd911745b6dab1569936428, type: 3}
   m_PrefabInstance: {fileID: 529402863}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9259f0c03367d3045a8fe12b97c3e605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.NPCScript
 --- !u!4 &529402865 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4870230668834182, guid: 8f625856cbd911745b6dab1569936428, type: 3}
   m_PrefabInstance: {fileID: 529402863}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &529402866 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95067426829382730, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+  m_PrefabInstance: {fileID: 529402863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &529402867 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 195740760260531914, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+  m_PrefabInstance: {fileID: 529402863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &529402868 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3962936104929854567, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+  m_PrefabInstance: {fileID: 529402863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &529402869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1045506782850000, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+  m_PrefabInstance: {fileID: 529402863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &529402870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529402869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ca49d3e366d83479668777250e3149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.MalikNPC
+  IsOneTimeUse: 0
+  ObjectsToBeOutlined:
+  - {fileID: 529402864}
+  Animator: {fileID: 529402866}
+  StopDistance: 2.5
+  UpdateRate: 0.1
+  IsFollowing: 0
+  Agent: {fileID: 529402867}
+  DialogueList:
+  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
+  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
+  Parent: {fileID: 529402865}
+  NPCCamera: {fileID: 529402868}
 --- !u!1001 &530211068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10601,6 +10644,10 @@ PrefabInstance:
       propertyPath: DoorNPC
       value: 
       objectReference: {fileID: 1354979637}
+    - target: {fileID: 6379473852384688255, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: TutorialNPC
+      value: 
+      objectReference: {fileID: 529402870}
     - target: {fileID: 7613687411510550139, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.5
@@ -12153,6 +12200,9 @@ MonoBehaviour:
   PlayerNavMesh: {fileID: 68033102}
   Destination: {fileID: 877785672}
   FloorParent: {fileID: 1205765336}
+  FirstDestination: {fileID: 1121424215}
+  SecondDestination: {fileID: 0}
+  ThirdDestination: {fileID: 0}
 --- !u!4 &877785672
 Transform:
   m_ObjectHideFlags: 0
@@ -12621,6 +12671,7 @@ MonoBehaviour:
   SegmentSpawnExit: {fileID: 0}
   SegmentSpawnDoor: {fileID: 0}
   StartNPC: {fileID: 1354979637}
+  AfterTutorialNPC: {fileID: 529402870}
 --- !u!4 &915032561
 Transform:
   m_ObjectHideFlags: 0
@@ -20460,9 +20511,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
   Parent: {fileID: 1354979632}
   NPCCamera: {fileID: 1354979635}
-  DialogueList2:
-  - {fileID: 11400000, guid: ad5b93e3ecfacb74998461e19de960ae, type: 2}
-  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
 --- !u!1001 &1355685740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24869,11 +24917,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   SecondPlayerCam: {fileID: 0}
-  FirstPuzzleNPCList:
-  - {fileID: 0}
-  - {fileID: 529402864}
-  SecondPuzzleNPCList:
-  - {fileID: 1668810937}
   TextSpeed: 0.05
   Dialogue: {fileID: 0}
   ContinueWithDialogue: 0
@@ -29579,6 +29622,7 @@ MonoBehaviour:
   IsSolving: 0
   IsPuzzleSolved: 0
   SolutionInterval: 0000000000000000
+  TutorialNPCs: []
 --- !u!4 &1905940976
 Transform:
   m_ObjectHideFlags: 0

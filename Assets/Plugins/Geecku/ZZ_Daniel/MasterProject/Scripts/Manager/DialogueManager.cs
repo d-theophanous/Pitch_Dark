@@ -7,9 +7,6 @@ namespace Daniel.Master
     public class DialogueManager : Geecku.GlobalMangers.Singleton<DialogueManager>
     {
         [SerializeField] private GameObject SecondPlayerCam;
-        //- should probably not be here
-        [SerializeField] private List<NPCScript> FirstPuzzleNPCList;
-        [SerializeField] private List<NPCScript> SecondPuzzleNPCList;
         public float TextSpeed;
         public ReadableDialogue Dialogue;
         private Camera CurNPCCamera;
@@ -47,6 +44,7 @@ namespace Daniel.Master
         }
         public void EndDialogue()
         {
+            Debug.Log("in end dialogue");
             if (ImproviseAfter)
             {
                 GameManager.Instance.SetGameState(GameState.IMPROVISING);
