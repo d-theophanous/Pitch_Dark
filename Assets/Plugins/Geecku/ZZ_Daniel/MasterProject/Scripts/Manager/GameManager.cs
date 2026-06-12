@@ -222,15 +222,10 @@ namespace Daniel.Master
             //- ToDo UI
             Debug.Log("player gate ready");
         }
-        //- for first puzzle (I know this is bad ToDo)
+
         public void SolveCurrentPuzzle()
         {
-            PuzzleManager.Instance.SolvePuzzle();
-            SetGameState(GameState.SOLVING_PUZZLE);
-        }
-        public void SolveSecondPuzzle(int interval)
-        {
-            PuzzleManager.Instance.SolveSecondPuzzle(interval);
+            PuzzleManager.Instance.StartSolvingPuzzle();
             SetGameState(GameState.SOLVING_PUZZLE);
         }
         #endregion

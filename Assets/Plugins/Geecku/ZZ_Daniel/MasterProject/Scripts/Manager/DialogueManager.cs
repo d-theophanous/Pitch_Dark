@@ -37,7 +37,8 @@ namespace Daniel.Master
         private void SetUpDialogue(DialogueContainer data, Dictionary<int, Action> action_dic)
         {
             Dialogue.SetUp(data, TextSpeed, action_dic);
-            GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
+            //- should be false no? ToDo
+            GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE, false);
             GameManager.Instance.SetGameState(GameState.DIALOGUE);
 
             Dialogue.StartDialogue();

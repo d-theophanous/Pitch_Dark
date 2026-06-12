@@ -8,45 +8,78 @@ namespace Daniel.Master
 {
     public class PuzzleManager : PersistantDSingleton<PuzzleManager>
     {
-        [SerializeField] private List<PuzzleData> PuzzleList;
+        [SerializeField] private PuzzleUI PuzzleSolveUI;
+        [SerializeField] private PuzzleUI PuzzleSolutionUI;
+        private List<Puzzle> PuzzleList;
 
-        private PuzzleData CurPuzzle => PuzzleList[PuzzleCount];
+        private List<Interval> SolutionSequence;
+        private int SolutionIdx;
+
         private DoorScript CurDoor;
         public int PuzzleCount = 0;
 
         public bool PuzzleActive;
         public bool IsSolving;
         public bool IsPuzzleSolved;
-        public Note[] SolutionInterval = new Note[2];
         private Camera CurCamera;
 
         public List<NPCScript> TutorialNPCs = new();
 
-        /// <summary>
-        /// Gets called when you press the solve button. Waits for input and 
-        /// checks if your answer is right or wrong
-        /// </summary>
-        /// <param name="interval"></param>
+        protected override void Start()
+        {
+            SetUpPuzzleList();
+        }
+        private void SetUpPuzzleList()
+        {
+            //- 1.Puzzle
+            Puzzle puzzle_1 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE }, 2);
+
+            //- 2.Puzzle
+            Puzzle puzzle_2 = new Puzzle(false, new() { Interval.PRIME, Interval.OCTAVE }, 3);
+
+            //- 3.Puzzle
+            Puzzle puzzle_3 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH }, 3);
+            
+            //- 4.Puzzle
+            Puzzle puzzle_4 = new Puzzle(false, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH }, 4);
+
+            //- 5.Puzzle
+            Puzzle puzzle_5 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH }, 4);
+
+            //- 6.Puzzle
+            Puzzle puzzle_6 = new Puzzle(false, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH }, 4);
+
+            PuzzleList.Add(puzzle_1);
+            PuzzleList.Add(puzzle_2);
+            PuzzleList.Add(puzzle_3);
+            PuzzleList.Add(puzzle_4);
+            PuzzleList.Add(puzzle_5);
+            PuzzleList.Add(puzzle_6);
+        }
+
         public void CheckPuzzle(Interval interval)
         {
-            StartCoroutine(CheckPuzzleCoroutine(interval));
+            //- ToDo
         }
+
         //- ToDo (opt) Beide Puzzle check funktion generalisieren etc.
         private IEnumerator CheckPuzzleCoroutine(Interval interval)
         {
-            InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Disable();
-            yield return new WaitForSeconds(1f);
-            if (interval == CurPuzzle.SolutionInterval)
-            {
-                AudioManager.Instance.PlaySFX(SFX.CORRECT, () => { PuzzleSolved(); });
-            }
-            else
-            {
-                AudioManager.Instance.PlaySFX(SFX.WRONG);
-                InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
+            //InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Disable();
+            //yield return new WaitForSeconds(1f);
+            //if (interval == CurPuzzle.SolutionInterval)
+            //{
+            //    AudioManager.Instance.PlaySFX(SFX.CORRECT, () => { PuzzleSolved(); });
+            //}
+            //else
+            //{
+            //    AudioManager.Instance.PlaySFX(SFX.WRONG);
+            //    InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
 
-            }
+            //}
+            yield return null;
         }
+
 
         #region Puzzle Logic
         public void StartPuzzle()
@@ -57,23 +90,9 @@ namespace Daniel.Master
                 CurDoor.TutorialNPC.ActivateSecondDialogue();
         }
         //- for first puzzle ToDo
-        public void SolvePuzzle()
+        public void StartSolvingPuzzle()
         {
-            IsSolving = true;
-            InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
-        }
-        //- for second puzzle ToDo
-        public void SolveSecondPuzzle(int interval)
-        {
-            if ((Interval)interval == PuzzleList[PuzzleCount].SolutionInterval)
-            {
-                AudioManager.Instance.PlaySFX(SFX.CORRECT, () => { PuzzleSolved(); });
-                AudioManager.Instance.UnlockInstrument(Instrument.Piano);
-            }
-            else
-            {
-                AudioManager.Instance.PlaySFX(SFX.WRONG);
-            }
+            IsSolving = true;            
         }
         private void PuzzleSolved()
         {
@@ -95,8 +114,20 @@ namespace Daniel.Master
         {
             CurCamera.gameObject.SetActive(true);
             GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE, false);
+
+
+        }
+        private void SetUpSolveUI()
+        {
+
+        }
+        private void SetUpSolutionUI()
+        {
+
         }
         #endregion
+
+        #region Door Stuff
         public void SetCurrentDoor(DoorScript door)
         {
             CurDoor = door;
@@ -107,9 +138,42 @@ namespace Daniel.Master
             if (CurDoor != null)
                 CurDoor.ToggleDoor(false);
         }
+        #endregion
     }
     public enum Interval
     {
         PRIME, THIRD, FIFTH, OCTAVE
     }
+    public class Puzzle
+    {
+        public bool Player1Solves;
+        public List<Interval> Intervals;
+        public int PasswordLength;
+        public Action OnEndAction;
+
+        public Puzzle(bool player1_solves, List<Interval> interval_list, int password_length, Action on_end_action = null)
+        {
+            Player1Solves = player1_solves;
+            Intervals = interval_list; 
+            PasswordLength = password_length;
+            OnEndAction = on_end_action;
+        }
+    }    
+    /*
+     * So was wie
+     * puzzle 
+     * wie viele lösungseingaben
+     * welche intervalle
+     * action für wenn fertig?
+     * lösungseingaben sollen random sein aber ähnlich häufig die intervalle vorkommen
+     * lassen
+     * 
+     * puzzle1: 2 lösungen, prime und oktave
+     * 
+     * PuzzleContainer
+     * drei buttons
+     * element group
+     * label
+     *  
+     */
 }

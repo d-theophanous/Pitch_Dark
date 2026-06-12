@@ -35,7 +35,7 @@ namespace Daniel.Master
         [SerializeField] private GameObject PlayerSelection;
         [SerializeField] private GameObject AccessibilitySelection;
         [SerializeField] private GameObject GenreSelection;
-        [SerializeField] private List<GameObject> PuzzeList;
+        [SerializeField] private List<GameObject> PuzzeList; //-    List with Solve and Solution UI
 
         [Header("Settings References")]
         [SerializeField] private GameObject Accessibility_Settings;
@@ -84,7 +84,7 @@ namespace Daniel.Master
             }
             else if (ui == UI_Group.PUZZLE)
             {
-                PuzzeList[PuzzleManager.Instance.PuzzleCount].SetActive(!CurUIList.Contains(ui));                
+                PuzzeList[GameManager.Instance.PlayerIdx].SetActive(!CurUIList.Contains(ui));                
             }
             else if (ui == UI_Group.SETTINGS_GENERAL)
                 AudioManager.Instance.PlaySFX(SFX.OPEN_UI);
@@ -97,10 +97,9 @@ namespace Daniel.Master
 
             StartCoroutine(ToggleReadableElementGroup(ui, !is_active));
 
-            if (!is_additive)
+            if (!is_additive && CurUIList.Count > 1)
                 CloseUI(CurUIList[CurUIList.Count - 2]);
         }
-
         private void AddUI(UI_Group ui)
         {
             if (CurUIList.Count == 0)
