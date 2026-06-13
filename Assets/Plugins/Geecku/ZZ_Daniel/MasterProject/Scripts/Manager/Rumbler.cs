@@ -47,14 +47,14 @@ public enum RumblePattern
         {
             Gamepad.SetMotorSpeeds(DefaultRumbleFrequency.Item1, DefaultRumbleFrequency.Item2);
             yield return new WaitForSeconds(duration);
-            ResetRumble();
+            StopRumble();
         }
         private IEnumerator RumbleEndless()
         {
             Gamepad.SetMotorSpeeds(DefaultRumbleFrequency.Item1, DefaultRumbleFrequency.Item2);
             while (IsRumbling)
                 yield return null;
-            ResetRumble();
+            StopRumble();
         }
         public void StartRumble(float duration)
         {
@@ -72,26 +72,20 @@ public enum RumblePattern
             StopAllCoroutines();
             StartCoroutine(RumbleEndless());
         }
-        private void ResetRumble()
-        {
-            if (Gamepad != null)
-            {
-                Gamepad.SetMotorSpeeds(0, 0);
-                IsRumbling = false;
-            }
-        }
-
         public void StopRumble()
         {
             IsRumbling = false;
-            Gamepad.SetMotorSpeeds(0, 0);
+            if (Gamepad != null)
+            {
+                Gamepad.SetMotorSpeeds(0, 0);
+            }
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
             StopAllCoroutines();
-            ResetRumble();
+            StopRumble();
         }
 
         // Private helpers

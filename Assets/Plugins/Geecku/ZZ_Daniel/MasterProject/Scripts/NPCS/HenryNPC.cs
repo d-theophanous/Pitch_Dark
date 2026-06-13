@@ -10,6 +10,7 @@ namespace Daniel.Master
         {
             base.Start();
             SetUpTutorialSegments();
+            ImproviseAfterSecondDialogue = true;
         }
         public override void ActivatePrompt()
         {

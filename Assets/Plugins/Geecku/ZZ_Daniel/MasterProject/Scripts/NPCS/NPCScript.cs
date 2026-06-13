@@ -8,6 +8,7 @@ namespace Daniel.Master
     public class NPCScript : Interactable
     {
         [SerializeField] private Animator Animator;
+        protected bool ImproviseAfterSecondDialogue;
 
         [Header("Follow Settings")]
         public float StopDistance = 4f;
@@ -135,7 +136,7 @@ namespace Daniel.Master
             }
 
             DialogueManager.Instance.StartNPCDialogue(
-                DialogueList[1], ActionDicList[1], true);
+                DialogueList[1], ActionDicList[1], ImproviseAfterSecondDialogue);
             //- after second dialogue NPC will not be interactable anymore
             this.tag = "Untagged";
         }

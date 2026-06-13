@@ -19,6 +19,17 @@ namespace Daniel.Master
                 element.SetParent(this);
             }
         }
+        public List<ReadableElement> GetElements() => ElementList;
+        public void RemoveElement(ReadableElement element)
+        {
+            if (ElementList.Contains(element))
+                ElementList.Remove(element);
+        }
+        public void AddElement(ReadableElement element)
+        {
+            if (!ElementList.Contains(element))
+                ElementList.Add(element);
+        }
         public void ActivateGroup()
         {
             ElementList.Sort();

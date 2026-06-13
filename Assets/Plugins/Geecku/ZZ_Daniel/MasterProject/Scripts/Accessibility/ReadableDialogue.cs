@@ -99,6 +99,10 @@ namespace Daniel.Master
             else
             {
                 DialogueManager.Instance.EndDialogue();
+                if (ActionDic.ContainsKey(index))
+                {
+                    ActionDic[index]?.Invoke();
+                }
                 return false;
             }
         }

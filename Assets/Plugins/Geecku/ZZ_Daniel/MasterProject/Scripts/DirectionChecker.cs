@@ -53,7 +53,6 @@ namespace Daniel.Master
             {
                 //- hier anstelle die network funktion aufrufen
                 //GameManager.Instance.ClientSend_DirectionCheck(1);
-                Debug.Log("bin on right path");
                 Rumbler.Instance.StartRumble();
             }
             else

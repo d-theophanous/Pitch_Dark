@@ -10595,11 +10595,11 @@ PrefabInstance:
     - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: TriggerExitAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1905940975}
+      objectReference: {fileID: 0}
     - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: TriggerEnterAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1905940975}
+      objectReference: {fileID: 0}
     - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: TriggerExitAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -29576,68 +29576,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8378305016021551963, guid: e7a79a14190d3d34f93236ba7164d734, type: 3}
   m_PrefabInstance: {fileID: 1904427121}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1905940974
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1905940976}
-  - component: {fileID: 1905940975}
-  m_Layer: 0
-  m_Name: Puzzle Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1905940975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905940974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 129f1358b990d544ea844e1c838f7edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.PuzzleManager
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  PuzzleList:
-  - {fileID: 11400000, guid: 938d0d554b601604eb78e52024493cc4, type: 2}
-  - {fileID: 11400000, guid: 072aed0c17c91064ab9b1cae2b84d6c4, type: 2}
-  PuzzleCount: 0
-  PuzzleActive: 0
-  IsSolving: 0
-  IsPuzzleSolved: 0
-  SolutionInterval: 0000000000000000
-  TutorialNPCs: []
---- !u!4 &1905940976
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905940974}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.05421, y: 1.77469, z: 6.66123}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1921823279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32501,7 +32439,7 @@ PrefabInstance:
     - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: TriggerExitAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1905940975}
+      objectReference: {fileID: 0}
     - target: {fileID: 3637646587545351719, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: TriggerExitAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseDoor
@@ -33794,7 +33732,6 @@ SceneRoots:
   - {fileID: 198045677}
   - {fileID: 1160397356}
   - {fileID: 1269008920}
-  - {fileID: 1905940976}
   - {fileID: 1647985906}
   - {fileID: 915032561}
   - {fileID: 877785672}

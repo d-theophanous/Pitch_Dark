@@ -177,7 +177,7 @@ namespace Daniel.Master
 
         public void OnDebug()
         {
-            GameManager.Instance.DebugCurInteractable();
+
         }
 
         #endregion

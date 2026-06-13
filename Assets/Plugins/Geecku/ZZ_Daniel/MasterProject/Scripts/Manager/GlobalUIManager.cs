@@ -49,10 +49,12 @@ namespace Daniel.Master
 
         //- for debugging public
         public Camera CurCamera;
+        public bool IsSolving;
 
         #region Add and Close UI
         public void ChangeMainCamera(Camera new_main)
         {
+            Debug.Log("change main camera with argument");
             if (new_main == null) return;
             if (CurCamera != null)
                 CurCamera.depth = -1;
@@ -62,10 +64,12 @@ namespace Daniel.Master
         }
         public void ChangeMainCamera()
         {
+            Debug.Log("change main camera no argument");
             ChangeMainCamera(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>());
         }
         public void ToggleUI(UI_Group ui, bool is_additive = true)
         {
+            Debug.Log("toggle_ui:" + ui);
             GameObject tmp = GetGameObjectFromEnum(ui);
 
             //- ugly code
@@ -84,7 +88,11 @@ namespace Daniel.Master
             }
             else if (ui == UI_Group.PUZZLE)
             {
-                PuzzeList[GameManager.Instance.PlayerIdx].SetActive(!CurUIList.Contains(ui));                
+                if (IsSolving)
+                    PuzzeList[0].SetActive(!CurUIList.Contains(ui));
+                else
+                    PuzzeList[1].SetActive(!CurUIList.Contains(ui));
+
             }
             else if (ui == UI_Group.SETTINGS_GENERAL)
                 AudioManager.Instance.PlaySFX(SFX.OPEN_UI);

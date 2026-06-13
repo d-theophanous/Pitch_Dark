@@ -45,7 +45,6 @@ namespace Daniel.Master
         }
         public void EndDialogue()
         {
-            Debug.Log("in end dialogue");
             if (ImproviseAfter)
             {
                 GameManager.Instance.SetGameState(GameState.IMPROVISING);

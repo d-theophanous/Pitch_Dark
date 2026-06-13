@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: c60aea9eee49086468801da01885ae41, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 7223895054663811157
   m_TableData:
   - m_Id: 642347589353472
     m_Localized: Host
@@ -102,6 +103,17 @@ MonoBehaviour:
     m_Localized: Choose the genre you like
     m_Metadata:
       m_Items: []
+  - m_Id: 21334380872122368
+    m_Localized: '{0}.Input'
+    m_Metadata:
+      m_Items:
+      - rid: 7223895054663811157
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 7223895054663811157
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 21334380872122368

@@ -144,17 +144,6 @@ namespace Daniel.Master
             GlobalUIManager.Instance.ToggleUI(UI_Group.GENRE_SELECTION, false);
             SetGameLanguage(language);
         }
-        private void SwitchSceneToFirstInList()
-        {
-            if (SceneList.Count == 0 || SceneList[0] == "") return;
-            StartCoroutine(SwitchScene(SceneList[0]));
-        }
-        private IEnumerator SwitchScene(string scene_name)
-        {
-            SceneManager.LoadScene(scene_name, LoadSceneMode.Additive);
-            yield return new WaitForEndOfFrame();
-            GlobalUIManager.Instance.ChangeMainCamera();
-        }
 
         #region Update Event Handling
         public List<EventHandler> MovementEvents;
@@ -221,12 +210,6 @@ namespace Daniel.Master
             PlayerIsGateReady = true;
             //- ToDo UI
             Debug.Log("player gate ready");
-        }
-
-        public void SolveCurrentPuzzle()
-        {
-            PuzzleManager.Instance.StartSolvingPuzzle();
-            SetGameState(GameState.SOLVING_PUZZLE);
         }
         #endregion
 
