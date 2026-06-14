@@ -9,6 +9,7 @@ namespace Daniel.Master
         [SerializeField] private Animator DoorAnimator;
         [SerializeField] private BoxCollider DoorTrigger;
         [SerializeField] private GameObject NavMeshObstacle;
+        public Transform AfterPuzzlePosition;
         public NPCScript DoorNPC;
         public NPCScript TutorialNPC;
         public override void ActivatePrompt()

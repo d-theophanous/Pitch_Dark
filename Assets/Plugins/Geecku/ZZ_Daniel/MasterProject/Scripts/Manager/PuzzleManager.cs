@@ -2,6 +2,7 @@ using Geecku.GlobalMangers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Localization.Components;
 
@@ -14,6 +15,7 @@ namespace Daniel.Master
         [SerializeField] private LocalizeStringEvent InputNumberStringEvent;
         [SerializeField] private int DeductionPoints;
         [SerializeField] private int SuccessPoints;
+        [SerializeField] private GameObject BlackBackground;
 
         private List<Puzzle> PuzzleList = new();
         private Puzzle CurPuzzle;
@@ -104,10 +106,11 @@ namespace Daniel.Master
                 GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
                 PuzzleIdx++;
                 CurCamera.gameObject.SetActive(false);
-                CurDoor.DoorNPC.ActivateSecondDialogue();
                 IsSolving = false;
                 CurPuzzle.OnEndAction?.Invoke();
                 InputManager.Instance.PlayerInput.ActivateInput();
+
+                StartCoroutine(PlayDoorSequence());
             };
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR, action);
         }
@@ -150,13 +153,18 @@ namespace Daniel.Master
                     GlobalUIManager.Instance.SetScore(DeductionPoints);
                 });
             }
-            //- setze bei group auf zweites element und lies vor 
         }
         public void OnReceiveSolutionInput(bool was_correct)
         {
             if (was_correct)
             {
-                AudioManager.Instance.PlaySFX(SFX.CORRECT);
+                Action action = null;
+                if (SolutionIdx >= CurPuzzle.Intervals.Count - 1)
+                {
+                    action = () => { PuzzleSolved(); };
+                }
+                AudioManager.Instance.PlaySFX(SFX.CORRECT, action);
+                SolutionIdx++;
                 GlobalUIManager.Instance.SetScore(SuccessPoints);
             }
             else
@@ -260,6 +268,21 @@ namespace Daniel.Master
         {
             if (CurDoor != null)
                 CurDoor.ToggleDoor(false);
+        }
+        public IEnumerator PlayDoorSequence()
+        {
+            InputManager.Instance.PlayerInput.DeactivateInput();
+            BlackBackground.SetActive(true);
+            GameManager.Instance.Player.TeleportCharacter(CurDoor.AfterPuzzlePosition.position);
+            GameManager.Instance.Player.TeleportNPCsToPlayer();
+
+            AudioManager.Instance.PlaySFX(SFX.CLOSE_DOOR, () =>
+            {
+                InputManager.Instance.PlayerInput.ActivateInput();
+                BlackBackground.SetActive(false);
+                CurDoor.DoorNPC.ActivateSecondDialogue();
+            });
+            yield return null;
         }
         #endregion
     }

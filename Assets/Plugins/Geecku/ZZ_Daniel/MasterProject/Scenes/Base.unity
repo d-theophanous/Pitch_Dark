@@ -3061,7 +3061,7 @@ MonoBehaviour:
   UICamera: {fileID: 431464747}
   MagTexture: {fileID: 8400000, guid: 7f53748a1e4b43340be7c019faedee52, type: 2}
   Settings: {fileID: 2090360789}
-  ScreenCanvas: {fileID: 1641795572}
+  ScreenCanvas: {fileID: 1990461413}
   MagnifierSize: 0
   MagnifierZoom: 0
   MagnifierMoveSpeed: 100
@@ -5777,6 +5777,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &959557803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959557806}
+  - component: {fileID: 959557805}
+  - component: {fileID: 959557804}
+  m_Layer: 0
+  m_Name: BG_Sequence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &959557804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959557803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &959557805
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959557803}
+  m_CullTransparentMesh: 1
+--- !u!224 &959557806
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959557803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1641795573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &962870362
 GameObject:
   m_ObjectHideFlags: 0
@@ -6452,6 +6527,7 @@ MonoBehaviour:
   NotesVolume: 1
   TTSVolume: 1
   ChangeLines: 0
+  UnlockedIntervalList: 
 --- !u!4 &1026959046
 Transform:
   m_ObjectHideFlags: 0
@@ -8636,7 +8712,7 @@ MonoBehaviour:
   ScoreString: {fileID: 973435014}
   CurUIList: 
   CurCamera: {fileID: 0}
-  IsSolving: 0
+  ThisPlayerSolves: 0
 --- !u!4 &1244242017
 Transform:
   m_ObjectHideFlags: 0
@@ -10633,7 +10709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1641795573
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10647,6 +10723,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1990461414}
+  - {fileID: 959557806}
   m_Father: {fileID: 173866052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12810,6 +12887,7 @@ MonoBehaviour:
   InputNumberStringEvent: {fileID: 1819151068}
   DeductionPoints: -10
   SuccessPoints: 50
+  BlackBackground: {fileID: 959557803}
   PuzzleIdx: 0
   PuzzleActive: 0
   IsSolving: 0
@@ -13367,12 +13445,12 @@ GameObject:
   - component: {fileID: 1990461416}
   - component: {fileID: 1990461415}
   m_Layer: 0
-  m_Name: Background
+  m_Name: BG_Blind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1990461414
 RectTransform:
   m_ObjectHideFlags: 0

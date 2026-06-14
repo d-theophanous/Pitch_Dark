@@ -223,6 +223,7 @@ namespace Daniel.Master
             //- ToDo UI
             Debug.Log("player gate ready");
         }
+
         #endregion
 
         #region Networking
@@ -394,7 +395,7 @@ namespace Daniel.Master
                         Debug.Log("not rumbling");
                         Rumbler.Instance.StopRumble();
                     }
-                    else if (content == 1)
+                    else if (content == 1 && GameManager.Instance.State == GameState.PLAYING)
                     {
                         Rumbler.Instance.StartRumble();
                         Debug.Log("rumbling");
