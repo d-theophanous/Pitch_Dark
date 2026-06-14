@@ -17,7 +17,7 @@ namespace Daniel.Master
         private Puzzle CurPuzzle;
         private bool ThisPlayerSolves;
 
-        private List<Interval> SolutionSequence;
+        private List<Interval> SolutionSequence => CurPuzzle.Intervals;
         private int SolutionIdx;
 
         private DoorScript CurDoor;
@@ -31,6 +31,7 @@ namespace Daniel.Master
         protected override void Start()
         {
             SetUpPuzzleList();
+            Debug.Log("lenth: " + Enum.GetNames(typeof(Language)).Length);
         }
         private void SetUpPuzzleList()
         {
@@ -62,37 +63,20 @@ namespace Daniel.Master
 
         public void CheckPuzzle(Interval interval)
         {
-            StartCoroutine(CheckPuzzleCoroutine(interval));
-        }
-
-        //- ToDo (opt) Beide Puzzle check funktion generalisieren etc.
-        private IEnumerator CheckPuzzleCoroutine(Interval interval)
-        {
             if (interval == SolutionSequence[SolutionIdx])
             {
-                AudioManager.Instance.PlaySFX(SFX.CORRECT, () => 
-                {
-                    AdvancePuzzle();
-                });
+                AdvancePuzzle(true);
+                //- ToDo uncomment for multiplayer version
+                //GameManager.Instance.ClientSend_AdvanceSequence(true);
             }
             else
             {
-                AudioManager.Instance.PlaySFX(SFX.WRONG);
+                AdvancePuzzle(false);
+                //- ToDo uncomment for multiplayer version
+                //GameManager.Instance.ClientSend_AdvanceSequence(false);
             }
-                //InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Disable();
-                //yield return new WaitForSeconds(1f);
-                //if (interval == CurPuzzle.SolutionInterval)
-                //{
-                //    AudioManager.Instance.PlaySFX(SFX.CORRECT, () => { PuzzleSolved(); });
-                //}
-                //else
-                //{
-                //    AudioManager.Instance.PlaySFX(SFX.WRONG);
-                //    InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
-
-                //}
-                yield return null;
         }
+
 
         #region Puzzle Logic
         public void StartPuzzle()
@@ -112,20 +96,62 @@ namespace Daniel.Master
                 PuzzleIdx++;
                 CurCamera.gameObject.SetActive(false);
                 CurDoor.DoorNPC.ActivateSecondDialogue();
+                IsSolving = false;
             };
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR, action);
         }
-        public void AdvancePuzzle()
-        {
-            if ()
 
-            if (ThisPlayerSolves)
-            {
-                
-            }
-        }
-        public void EndPuzzle()
+        //- this will only be called by player who solves?
+        public void AdvancePuzzle(bool was_correct)
         {
+            if (was_correct)
+            {
+                Action action;
+                //- if the final sequence was solved correctly
+                if (SolutionIdx >= CurPuzzle.Intervals.Count - 1)
+                {
+                    action = () => { PuzzleSolved(); };
+                }
+                //- if a sequence was solved correctly
+                else
+                {
+                    action = () =>
+                    {
+                        SolutionIdx++;
+                        SetNumber(SolutionIdx + 1, CurPuzzle.PasswordLength);
+                        //- Increase points? ToDo
+                        PuzzleSolveUI.ElementGroup.SetCurElement(1);
+                        var cur_element = PuzzleSolveUI.ElementGroup.GetCurElement();
+                        cur_element.AudioIndex++;
+                        cur_element.Activate();
+                    };
+                }
+                AudioManager.Instance.PlaySFX(SFX.CORRECT, action);
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX(SFX.WRONG, () =>
+                {
+                    PuzzleSolveUI.ElementGroup.SetCurElement(1);
+                    var cur_element = PuzzleSolveUI.ElementGroup.GetCurElement();
+                    cur_element.Activate();
+                    //- Deduct points
+                });
+            }
+            //- setze bei group auf zweites element und lies vor 
+        }
+        public void OnReceiveSolutionInput(bool was_correct)
+        {
+            if (was_correct)
+            {
+                AudioManager.Instance.PlaySFX(SFX.CORRECT);
+                //- ToDo add points?
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX(SFX.WRONG);
+                //- ToDo deduct points
+            }
         }
         public void SetUpPuzzle()
         {
@@ -146,7 +172,7 @@ namespace Daniel.Master
             GlobalUIManager.Instance.IsSolving = true;
 
             //- Set UI
-            SetNumber(1);
+            SetNumber(1, CurPuzzle.PasswordLength);
             PuzzleSolveUI.ButtonList[0].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.PRIME));
             PuzzleSolveUI.ButtonList[1].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.FIFTH));
             PuzzleSolveUI.ButtonList[2].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.OCTAVE));
@@ -187,9 +213,9 @@ namespace Daniel.Master
                     PuzzleSolutionUI.ElementGroup.AddElement(button);
             }
         }
-        public void SetNumber(int number)
+        public void SetNumber(int first_number, int second_number)
         {
-            InputNumberStringEvent.StringReference.Arguments = new object[] { number };
+            InputNumberStringEvent.StringReference.Arguments = new object[] { first_number, second_number };
             InputNumberStringEvent.RefreshString();
         }
         public void SetInterval(Interval interval, LocalizeStringEvent string_event)

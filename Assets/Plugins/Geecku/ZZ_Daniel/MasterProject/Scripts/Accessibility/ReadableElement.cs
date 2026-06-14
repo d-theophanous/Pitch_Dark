@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 namespace Daniel.Master
@@ -12,13 +13,15 @@ namespace Daniel.Master
         [SerializeField] protected TMP_Text Text;
         //- ToDo opt
         [SerializeField] protected List<AudioClip> AudioList;
-        protected AudioClip Audio => AudioList[(int)GameManager.Language];
+        protected AudioClip Audio => AudioList[(int)GameManager.Language + AudioIndex * Enum.GetNames(typeof(Language)).Length];
         //- anstelle von Label vlt Dictonary mit englishem Text als Key
         //- sprach triple oder so als value
         protected UI_Element Element;
         protected bool IsHighlighted = false;
 
         public int Ordernumber;
+        //- quite ugly :) 
+        public int AudioIndex = 0;
 
         private void Start()
         {
@@ -61,7 +64,8 @@ namespace Daniel.Master
             }
         }
         protected void ReadText()
-        {
+        { 
+            Debug.Log("index: " + (int)GameManager.Language + AudioIndex * Enum.GetNames(typeof(Language)).Length + " list count: " + AudioList.Count);
             if (Audio == null) return;
             AudioManager.Instance.PlayReadableElement(Audio.name);
         }

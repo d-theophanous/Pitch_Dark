@@ -574,15 +574,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""PlayThird"",
-                    ""type"": ""Button"",
-                    ""id"": ""94d7b248-71ee-44f3-ab9e-414b00b2002c"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""PlayFifth"",
                     ""type"": ""Button"",
                     ""id"": ""9237756f-61c2-462c-8c97-45aae7615b07"",
@@ -646,28 +637,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""56a8a41b-e0c9-4275-9236-a698287ad7d9"",
-                    ""path"": ""<Keyboard>/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard"",
-                    ""action"": ""PlayThird"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3fcb969d-07cd-4748-8fa4-db0186904d1a"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Controller"",
-                    ""action"": ""PlayThird"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""2990ad37-ede4-40ef-9b56-5d726df4a506"",
                     ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
@@ -680,7 +649,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""32aab06b-9341-4a2a-901c-4a773990204a"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Controller"",
@@ -702,7 +671,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b4119065-7f47-48da-8b0e-ab9fbf62d8e4"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Controller"",
@@ -1062,7 +1031,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_Improvisation = asset.FindActionMap("Improvisation", throwIfNotFound: true);
         m_Improvisation_PlayRoot = m_Improvisation.FindAction("PlayRoot", throwIfNotFound: true);
         m_Improvisation_ImprovTest = m_Improvisation.FindAction("ImprovTest", throwIfNotFound: true);
-        m_Improvisation_PlayThird = m_Improvisation.FindAction("PlayThird", throwIfNotFound: true);
         m_Improvisation_PlayFifth = m_Improvisation.FindAction("PlayFifth", throwIfNotFound: true);
         m_Improvisation_PlayOctave = m_Improvisation.FindAction("PlayOctave", throwIfNotFound: true);
         m_Improvisation_SwitchInstrument = m_Improvisation.FindAction("SwitchInstrument", throwIfNotFound: true);
@@ -1481,7 +1449,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     private List<IImprovisationActions> m_ImprovisationActionsCallbackInterfaces = new List<IImprovisationActions>();
     private readonly InputAction m_Improvisation_PlayRoot;
     private readonly InputAction m_Improvisation_ImprovTest;
-    private readonly InputAction m_Improvisation_PlayThird;
     private readonly InputAction m_Improvisation_PlayFifth;
     private readonly InputAction m_Improvisation_PlayOctave;
     private readonly InputAction m_Improvisation_SwitchInstrument;
@@ -1504,10 +1471,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Improvisation/ImprovTest".
         /// </summary>
         public InputAction @ImprovTest => m_Wrapper.m_Improvisation_ImprovTest;
-        /// <summary>
-        /// Provides access to the underlying input action "Improvisation/PlayThird".
-        /// </summary>
-        public InputAction @PlayThird => m_Wrapper.m_Improvisation_PlayThird;
         /// <summary>
         /// Provides access to the underlying input action "Improvisation/PlayFifth".
         /// </summary>
@@ -1552,9 +1515,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @ImprovTest.started += instance.OnImprovTest;
             @ImprovTest.performed += instance.OnImprovTest;
             @ImprovTest.canceled += instance.OnImprovTest;
-            @PlayThird.started += instance.OnPlayThird;
-            @PlayThird.performed += instance.OnPlayThird;
-            @PlayThird.canceled += instance.OnPlayThird;
             @PlayFifth.started += instance.OnPlayFifth;
             @PlayFifth.performed += instance.OnPlayFifth;
             @PlayFifth.canceled += instance.OnPlayFifth;
@@ -1581,9 +1541,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @ImprovTest.started -= instance.OnImprovTest;
             @ImprovTest.performed -= instance.OnImprovTest;
             @ImprovTest.canceled -= instance.OnImprovTest;
-            @PlayThird.started -= instance.OnPlayThird;
-            @PlayThird.performed -= instance.OnPlayThird;
-            @PlayThird.canceled -= instance.OnPlayThird;
             @PlayFifth.started -= instance.OnPlayFifth;
             @PlayFifth.performed -= instance.OnPlayFifth;
             @PlayFifth.canceled -= instance.OnPlayFifth;
@@ -2134,13 +2091,6 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnImprovTest(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "PlayThird" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnPlayThird(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "PlayFifth" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

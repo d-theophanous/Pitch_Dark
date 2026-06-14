@@ -78,9 +78,21 @@ namespace Daniel.Master
             CurElementIdx++;
             ElementList[CurElementIdx].ToggleHighlight();
         }
+        public void SetCurElement(int index)
+        {
+            if (index < 0 || ElementList.Count - 1 >= index)
+                return;
+            ElementList[CurElementIdx].ToggleHighlight();
+            CurElementIdx = index;
+            ElementList[CurElementIdx].ToggleHighlight();
+        }
         public void RepeatCurElement()
         {
             ElementList[CurElementIdx].Repeat();
+        }
+        public ReadableElement GetCurElement()
+        {
+            return ElementList[CurElementIdx];
         }
     }
 }

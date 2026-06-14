@@ -1086,6 +1086,7 @@ MonoBehaviour:
   Text: {fileID: 915032561}
   AudioList: []
   Ordernumber: 0
+  AudioIndex: 0
 --- !u!114 &203200586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1981,14 +1982,14 @@ PrefabInstance:
     - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 453830235}
+      objectReference: {fileID: 1433731246}
     - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SolveCurrentPuzzle
+      value: OnPlayOctave
       objectReference: {fileID: 0}
     - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Daniel.Master.GameManager, Assembly-CSharp-firstpass
+      value: Daniel.Master.InputManager, Assembly-CSharp-firstpass
       objectReference: {fileID: 0}
     - target: {fileID: 5710808220582153002, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_Name
@@ -7472,7 +7473,7 @@ PrefabInstance:
     - target: {fileID: 969609881490790117, guid: 0b77b2e60e477d8459be565ad92765e5, type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 969609881490790117, guid: 0b77b2e60e477d8459be565ad92765e5, type: 3}
     - target: {fileID: 2516810237364552308, guid: 0b77b2e60e477d8459be565ad92765e5, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7540,7 +7541,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: AudioList.Array.size
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: 'AudioList.Array.data[0]'
@@ -7549,9 +7550,33 @@ PrefabInstance:
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: 'AudioList.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: 6e1f54d8dcc9eb24192c5c36a183b781, type: 3}
+      objectReference: {fileID: 8300000, guid: 465c9d4a2b94df742bbaa35e7c95c96e, type: 3}
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: 'AudioList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 465c9d4a2b94df742bbaa35e7c95c96e, type: 3}
+    - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
+      propertyPath: 'AudioList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e1f54d8dcc9eb24192c5c36a183b781, type: 3}
+    - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
+      propertyPath: 'AudioList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e1f54d8dcc9eb24192c5c36a183b781, type: 3}
+    - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
+      propertyPath: 'AudioList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e1f54d8dcc9eb24192c5c36a183b781, type: 3}
+    - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
+      propertyPath: 'AudioList.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8afc06e4c40669e4880523d28cfc8cc8, type: 3}
+    - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
+      propertyPath: 'AudioList.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8afc06e4c40669e4880523d28cfc8cc8, type: 3}
+    - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
+      propertyPath: 'AudioList.Array.data[8]'
       value: 
       objectReference: {fileID: 8300000, guid: 8afc06e4c40669e4880523d28cfc8cc8, type: 3}
     - target: {fileID: 3832338113460869256, guid: 10db27538397beb469aca32f7283630a, type: 3}
@@ -8896,14 +8921,14 @@ PrefabInstance:
     - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 453830235}
+      objectReference: {fileID: 1433731246}
     - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SolveCurrentPuzzle
+      value: OnPlayRoot
       objectReference: {fileID: 0}
     - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Daniel.Master.GameManager, Assembly-CSharp-firstpass
+      value: Daniel.Master.InputManager, Assembly-CSharp-firstpass
       objectReference: {fileID: 0}
     - target: {fileID: 5710808220582153002, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_Name
@@ -9605,6 +9630,7 @@ MonoBehaviour:
   Text: {fileID: 1239990017}
   AudioList: []
   Ordernumber: 0
+  AudioIndex: 0
 --- !u!114 &1421767328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11596,14 +11622,14 @@ PrefabInstance:
     - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 453830235}
+      objectReference: {fileID: 1433731246}
     - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SolveCurrentPuzzle
+      value: OnPlayFifth
       objectReference: {fileID: 0}
     - target: {fileID: 2457105068514776734, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Daniel.Master.GameManager, Assembly-CSharp-firstpass
+      value: Daniel.Master.InputManager, Assembly-CSharp-firstpass
       objectReference: {fileID: 0}
     - target: {fileID: 5710808220582153002, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_Name

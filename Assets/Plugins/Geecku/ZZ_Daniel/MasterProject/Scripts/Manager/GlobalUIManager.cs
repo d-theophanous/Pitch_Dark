@@ -54,7 +54,6 @@ namespace Daniel.Master
         #region Add and Close UI
         public void ChangeMainCamera(Camera new_main)
         {
-            Debug.Log("change main camera with argument");
             if (new_main == null) return;
             if (CurCamera != null)
                 CurCamera.depth = -1;
@@ -64,12 +63,10 @@ namespace Daniel.Master
         }
         public void ChangeMainCamera()
         {
-            Debug.Log("change main camera no argument");
             ChangeMainCamera(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>());
         }
         public void ToggleUI(UI_Group ui, bool is_additive = true)
         {
-            Debug.Log("toggle_ui:" + ui);
             GameObject tmp = GetGameObjectFromEnum(ui);
 
             //- ugly code

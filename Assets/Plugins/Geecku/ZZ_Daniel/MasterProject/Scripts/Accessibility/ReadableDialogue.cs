@@ -70,6 +70,8 @@ namespace Daniel.Master
         {
             index = 0;
             NextLine();
+            ContinuePressed = false;
+            DialogueManager.Instance.ContinueWithDialogue = false;
         }
         private IEnumerator TypeLine()
         {
@@ -83,6 +85,7 @@ namespace Daniel.Master
         }
         private bool NextLine()
         {
+            Debug.Log("next Line");
             if (index <= Lines.Length - 1)
             {
                 if (ActionDic.ContainsKey(index))
@@ -99,6 +102,7 @@ namespace Daniel.Master
             else
             {
                 DialogueManager.Instance.EndDialogue();
+                ContinuePressed = false;
                 if (ActionDic.ContainsKey(index))
                 {
                     ActionDic[index]?.Invoke();

@@ -488,15 +488,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PlayThird",
-                    "type": "Button",
-                    "id": "94d7b248-71ee-44f3-ab9e-414b00b2002c",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "PlayFifth",
                     "type": "Button",
                     "id": "9237756f-61c2-462c-8c97-45aae7615b07",
@@ -560,28 +551,6 @@
                 },
                 {
                     "name": "",
-                    "id": "56a8a41b-e0c9-4275-9236-a698287ad7d9",
-                    "path": "<Keyboard>/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard",
-                    "action": "PlayThird",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3fcb969d-07cd-4748-8fa4-db0186904d1a",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Controller",
-                    "action": "PlayThird",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "2990ad37-ede4-40ef-9b56-5d726df4a506",
                     "path": "<Keyboard>/c",
                     "interactions": "",
@@ -594,7 +563,7 @@
                 {
                     "name": "",
                     "id": "32aab06b-9341-4a2a-901c-4a773990204a",
-                    "path": "<Gamepad>/buttonNorth",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Controller",
@@ -616,7 +585,7 @@
                 {
                     "name": "",
                     "id": "b4119065-7f47-48da-8b0e-ab9fbf62d8e4",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Controller",

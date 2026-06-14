@@ -104,7 +104,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21334380872122368
-    m_Localized: '{0}.Invoer'
+    m_Localized: Invoer {0}/{1}
     m_Metadata:
       m_Items:
       - rid: 7223895054663811156

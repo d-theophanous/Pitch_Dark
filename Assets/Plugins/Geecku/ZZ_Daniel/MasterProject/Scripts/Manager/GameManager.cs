@@ -224,6 +224,8 @@ namespace Daniel.Master
         private const ushort PlayerGateIDClient = 1001;
         private const ushort DirectionCheckIDServer = 1002;
         private const ushort DirectionCheckIDClient = 1003;
+        private const ushort AdvancePuzzleIDClient = 1004;
+        private const ushort AdvancePuzzleIDServer = 1005;
 
         #region Template functions for sending other player a message
         public void ClientSend_()
@@ -301,6 +303,47 @@ namespace Daniel.Master
         #endregion
 
         #region Messages
+        //- Player advanced level
+        public void ClientSend_AdvanceSequence(bool was_correct)
+        {
+            Message msg = Message.Create(MessageSendMode.Reliable, AdvancePuzzleIDServer);
+            msg.AddBool(was_correct);
+            NetworkManager.Client.Send(msg);
+        }
+        [MessageHandler(AdvancePuzzleIDServer)]
+        private static void ServerReceive_AdvanceSequence(ushort client_id, Message msg)
+        {
+            var correct = msg.GetBool();
+            Message new_msg = Message.Create(MessageSendMode.Reliable, AdvancePuzzleIDClient);
+            NetworkManager.Server.MsgHandler.MessageIndex++;
+            new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
+            new_msg.AddBool(correct);
+            NetworkManager.Server.SendToAll(new_msg);
+        }
+        [MessageHandler(AdvancePuzzleIDClient)]
+        private static void ClientReceive_SequenceInfo(ushort client_id, Message msg)
+        {
+
+            Action action;
+            if (client_id == NetworkManager.Client.LocalClient.ID)
+            {
+                action = () =>
+                {
+                    var correct = msg.GetBool();
+                    PuzzleManager.Instance.AdvancePuzzle(correct);
+                };
+            }
+            else
+            {
+                action = () =>
+                {
+                    var correct = msg.GetBool();
+                    PuzzleManager.Instance.OnReceiveSolutionInput(correct);
+                };
+            }
+            ClientMessageHandler.Handle(msg, action);
+        }
+
         //- Player helps other person navigate
         public void ClientSend_DirectionCheck(ushort content)
         {
