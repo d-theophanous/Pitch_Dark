@@ -46,6 +46,7 @@ namespace Daniel.Master
         }
         public void ActivateCurElement()
         {
+            Debug.Log("cur_element_idx: " + CurElementIdx + ", ElementListCount: " +  ElementList.Count);
             ElementList[CurElementIdx].Activate();
         }
         public void ReturnCurElement()
@@ -78,13 +79,17 @@ namespace Daniel.Master
             CurElementIdx++;
             ElementList[CurElementIdx].ToggleHighlight();
         }
-        public void SetCurElement(int index)
+        public void SetCurElement(int index, bool toggle_highlight = true)
         {
             if (index < 0 || ElementList.Count - 1 < index)
                 return;
-            ElementList[CurElementIdx].ToggleHighlight();
+            if (toggle_highlight)
+            {
+                ElementList[CurElementIdx].ToggleHighlight();
+                CurElementIdx = index;
+                ElementList[CurElementIdx].ToggleHighlight();
+            }
             CurElementIdx = index;
-            ElementList[CurElementIdx].ToggleHighlight();
         }
         public void RepeatCurElement()
         {

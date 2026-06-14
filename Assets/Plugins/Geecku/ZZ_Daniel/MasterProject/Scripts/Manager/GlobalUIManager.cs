@@ -54,7 +54,7 @@ namespace Daniel.Master
 
         //- for debugging public
         public Camera CurCamera;
-        public bool IsSolving;
+        public bool ThisPlayerSolves;
 
         //- score
         private int Score;
@@ -100,7 +100,7 @@ namespace Daniel.Master
             }
             else if (ui == UI_Group.PUZZLE)
             {
-                if (IsSolving)
+                if (ThisPlayerSolves)
                     PuzzeList[0].SetActive(!CurUIList.Contains(ui));
                 else
                     PuzzeList[1].SetActive(!CurUIList.Contains(ui));
@@ -125,7 +125,7 @@ namespace Daniel.Master
             if (CurUIList.Count == 0)
             {
                 ChangeMainCamera(UICamera);
-                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("UI");
+                InputManager.Instance.SwitchCurrentActionMap("UI");
             }
             GameObject tmp = GetGameObjectFromEnum(ui);
             tmp.SetActive(true);
@@ -147,7 +147,6 @@ namespace Daniel.Master
             if (CurUIList.Count == 0)
             {
                 ChangeMainCamera();
-                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
             }
             else
                 StartCoroutine(

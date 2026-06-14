@@ -49,7 +49,7 @@ namespace Daniel.Master
             {
                 GameManager.Instance.SetGameState(GameState.IMPROVISING);
                 GlobalUIManager.Instance.ToggleUI(UI_Group.IMPROVISATION, false);
-                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Improvisation");
+                InputManager.Instance.SwitchCurrentActionMap("Improvisation");
                 AudioManager.Instance.StartImprovisation();
                 PuzzleManager.Instance.IsSolving = false;
             }
@@ -67,7 +67,6 @@ namespace Daniel.Master
         public void CleanUpDialogue()
         {
             CurNPCCamera.gameObject.SetActive(false);
-            InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
             GameManager.Instance.SetGameState(GameState.PLAYING);
         }
         public void UpdateDialogue()

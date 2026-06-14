@@ -37,7 +37,11 @@ namespace Daniel.Master
         private void SetUpPuzzleList()
         {
             //- 1.Puzzle
-            Puzzle puzzle_1 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE }, 2);
+            Puzzle puzzle_1 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE }, 2, () => 
+            {
+                AudioManager.Instance.UnlockInterval(Interval.PRIME);
+                AudioManager.Instance.UnlockInterval(Interval.OCTAVE);
+            });
 
             //- 2.Puzzle
             Puzzle puzzle_2 = new Puzzle(false, new() { Interval.PRIME, Interval.OCTAVE }, 3);
@@ -64,6 +68,9 @@ namespace Daniel.Master
 
         public void CheckPuzzle(Interval interval)
         {
+            Debug.Log("solution index: " + SolutionIdx);
+            Debug.Log("input: " + interval + ", Lösung: " + SolutionSequence[SolutionIdx]);
+            
             InputManager.Instance.PlayerInput.DeactivateInput();
             if (interval == SolutionSequence[SolutionIdx])
             {
@@ -99,6 +106,7 @@ namespace Daniel.Master
                 CurCamera.gameObject.SetActive(false);
                 CurDoor.DoorNPC.ActivateSecondDialogue();
                 IsSolving = false;
+                CurPuzzle.OnEndAction?.Invoke();
                 InputManager.Instance.PlayerInput.ActivateInput();
             };
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR, action);
@@ -124,10 +132,8 @@ namespace Daniel.Master
                         SetNumber(SolutionIdx + 1, CurPuzzle.PasswordLength);
                         GlobalUIManager.Instance.SetScore(SuccessPoints);
 
+                        PuzzleSolveUI.ElementGroup.GetCurElement().AudioIndex++;
                         PuzzleSolveUI.ElementGroup.SetCurElement(1);
-                        var cur_element = PuzzleSolveUI.ElementGroup.GetCurElement();
-                        cur_element.AudioIndex++;
-                        cur_element.Activate();
                         InputManager.Instance.PlayerInput.ActivateInput();
                     };
                 }
@@ -175,7 +181,7 @@ namespace Daniel.Master
         private void SetUpSolveUI()
         {
             ThisPlayerSolves = true;
-            GlobalUIManager.Instance.IsSolving = true;
+            GlobalUIManager.Instance.ThisPlayerSolves = true;
 
             //- Set UI
             SetNumber(1, CurPuzzle.PasswordLength);
@@ -196,7 +202,7 @@ namespace Daniel.Master
         private void SetUpSolutionUI()
         {
             ThisPlayerSolves = false;
-            GlobalUIManager.Instance.IsSolving = false;
+            GlobalUIManager.Instance.ThisPlayerSolves = false;
 
             for (int i = 0; i < PuzzleSolutionUI.ButtonList.Count; i++)
             {

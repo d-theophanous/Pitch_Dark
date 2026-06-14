@@ -65,7 +65,6 @@ namespace Daniel.Master
         }
         protected void ReadText()
         { 
-            Debug.Log("index: " + (int)GameManager.Language + AudioIndex * Enum.GetNames(typeof(Language)).Length + " list count: " + AudioList.Count);
             if (Audio == null) return;
             AudioManager.Instance.PlayReadableElement(Audio.name);
         }

@@ -23,47 +23,43 @@ namespace Daniel.Master
             }
             PlayerInput.actions.FindActionMap("UI").Enable();                  
         }
-
+        public void SwitchCurrentActionMap(string new_map)
+        {
+            foreach (var action_map in PlayerInput.actions.actionMaps)
+            {
+                action_map.Disable();
+            }
+            PlayerInput.actions.FindActionMap(new_map).Enable();
+        }
         #region Input Triggers
 
         #region Music and Improvisation
-        public void OnImprovTest(InputValue value)
-        {
-            if (PlayerInput.currentActionMap.name == "Improvisation")
-            {
-                PlayerInput.SwitchCurrentActionMap("Player");
-                AudioManager.Instance.StopImprovisation();
-            }
-            else
-            {
-                PlayerInput.SwitchCurrentActionMap("Improvisation");
-                AudioManager.Instance.StartImprovisation();
-            }
-        }
         public void OnPlayRoot()
         {
+            Debug.Log("on play prime");
             if (PuzzleManager.Instance.IsSolving)
                 PuzzleManager.Instance.CheckPuzzle(Interval.PRIME);
-            else
+            else if (AudioManager.Instance.UnlockedIntervalList.Contains(Interval.PRIME))
                 AudioManager.Instance.PlayNote(Note.LOW_C);
         }
         public void OnPlayFifth()
         {
+            Debug.Log("on play fifth");
             if (PuzzleManager.Instance.IsSolving)
                 PuzzleManager.Instance.CheckPuzzle(Interval.FIFTH);
-            else
+            else if (AudioManager.Instance.UnlockedIntervalList.Contains(Interval.FIFTH))
                 AudioManager.Instance.PlayNote(Note.LOW_G);
         }
         public void OnPlayOctave()
         {
+            Debug.Log("on play octave");
             if (PuzzleManager.Instance.IsSolving)
                 PuzzleManager.Instance.CheckPuzzle(Interval.OCTAVE);
-            else
+            else if (AudioManager.Instance.UnlockedIntervalList.Contains(Interval.OCTAVE))
                 AudioManager.Instance.PlayNote(Note.HIGH_C);
         }
         public void OnSwitchInstrument(InputValue value)
         {
-            Debug.Log("input:" + (int)value.Get<Vector2>().x);
             AudioManager.Instance.SwitchInstrument((int)value.Get<Vector2>().x);
         }
         #endregion

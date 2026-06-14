@@ -152,12 +152,12 @@ namespace Daniel.Master
         {
             if (segment == null) return;
             GameManager.Instance.UpdateEvent += UpdateTutorialManager;
-            InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Tutorial");
+            InputManager.Instance.SwitchCurrentActionMap("Tutorial");
             SwitchSegment(segment);
         }
         public void EndSegment()
         {
-            InputManager.Instance.PlayerInput.SwitchCurrentActionMap("UI");
+            InputManager.Instance.SwitchCurrentActionMap("UI");
             CurrentSegment = null;
         }
         public void SwitchSegment(TutorialSegment segment)
@@ -173,7 +173,6 @@ namespace Daniel.Master
             GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
             GameManager.Instance.SetGameState(GameState.PLAYING);
-            InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Player");
 
             //- ToDo wait for other player but for now this is fine
             //- eigentlich auch dass man hier durch Tür läuft
@@ -199,7 +198,7 @@ namespace Daniel.Master
                     return;
                 }
                 GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
-                InputManager.Instance.PlayerInput.SwitchCurrentActionMap("Tutorial");
+                InputManager.Instance.SwitchCurrentActionMap("Tutorial");
                 CurrentSegment = TutorialSegmentList[SegmentIndex];
                 CurrentSegment.OnStartSegment();
                 SegmentIndex++;

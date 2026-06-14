@@ -53,10 +53,11 @@ namespace Daniel.Master
                     new_group = GenreGroup;
                     break;
                 case UI_Group.PUZZLE:
-                    if (GlobalUIManager.Instance.IsSolving)
+                    if (GlobalUIManager.Instance.ThisPlayerSolves)
                         new_group = PuzzleList[0];
                     else
                         new_group = PuzzleList[1];
+                    new_group.SetCurElement(1, false);
                     break;
                 default:
                     new_group = null;

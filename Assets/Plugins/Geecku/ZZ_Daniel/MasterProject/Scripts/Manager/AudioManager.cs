@@ -388,6 +388,8 @@ namespace Daniel.Master
         EventInstance ImprovTrackEventInstance;
         EventInstance NoteEventInstance;
         private List<Instrument> UnlockedInstrumentList = new();
+        public List<Interval> UnlockedIntervalList = new();
+
         private Instrument CurInstrument;
         public void StartImprovisation()
         {
@@ -438,8 +440,16 @@ namespace Daniel.Master
             SetGenre(genre);
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT, false);
         }
+        public void UnlockInterval(Interval interval)
+        {
+            if (UnlockedIntervalList.Contains(interval))
+                return;
+            UnlockedIntervalList.Add(interval);
+        }
         public void UnlockInstrument(Instrument instrument)
         {
+            if (UnlockedInstrumentList.Contains(instrument))
+                return;
             //- unlock and add to track
             UnlockedInstrumentList.Add(instrument);
             ImprovTrackEventInstance.setParameterByName(instrument.ToString(), 1f);

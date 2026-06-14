@@ -54,6 +54,14 @@ namespace Daniel.Master
         public event EventHandler UpdateEvent;
         protected override void Update()
         {
+            //Debug.Log(
+            //    "Player: " + InputManager.Instance.PlayerInput.actions.actionMaps[0].enabled
+            //    + ", UI: " + InputManager.Instance.PlayerInput.actions.actionMaps[1].enabled
+            //    + ", Improvisation: " + InputManager.Instance.PlayerInput.actions.actionMaps[2].enabled
+            //    + ", General: " + InputManager.Instance.PlayerInput.actions.actionMaps[3].enabled
+            //    + ", Dialogue: " + InputManager.Instance.PlayerInput.actions.actionMaps[4].enabled
+            //    + ", Tutorial: " + InputManager.Instance.PlayerInput.actions.actionMaps[5].enabled
+            //    );
             switch (State)
             {
                 case GameState.PLAYING:
@@ -85,6 +93,8 @@ namespace Daniel.Master
             {
                 case GameState.PLAYING:
                     UnsubscribeMovementEvents();
+                    InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Disable();
+                    InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
                     break;
                 case GameState.CONNECT:
                     break;
@@ -105,6 +115,8 @@ namespace Daniel.Master
                 case GameState.PLAYING:
                     Debug.Log("gamestate switch to playing");
                     SubscribeMovementEvents();
+                    InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
+                    InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
                     break;
                 case GameState.CONNECT:
                     break;
