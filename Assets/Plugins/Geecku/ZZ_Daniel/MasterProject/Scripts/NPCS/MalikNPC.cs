@@ -13,6 +13,7 @@ namespace Daniel.Master
             if (GameManager.Instance.SkipTutorial)
                 SetFollowing(true);
             ImproviseAfterSecondDialogue = false;
+            IsFollowingFromStart = true;
         }
         private void SetUpDialogueActions()
         {

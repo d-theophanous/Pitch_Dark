@@ -9,6 +9,7 @@ namespace Daniel.Master
     {
         [SerializeField] private Animator Animator;
         protected bool ImproviseAfterSecondDialogue;
+        protected bool IsFollowingFromStart;
 
         [Header("Follow Settings")]
         public float StopDistance = 4f;
@@ -112,7 +113,8 @@ namespace Daniel.Master
         {
             GameManager.Instance.Player.ResetMovement();
             DialogueManager.Instance.SetCurrentNPC(this);
-            ToggleFollowing();
+            if (!IsFollowingFromStart)
+                ToggleFollowing();
             LookAtPlayer();
             //- nur zum Testen?
             //- ToDo 

@@ -4521,7 +4521,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:c60aea9eee49086468801da01885ae41
     m_TableEntryReference:
-      m_KeyId: 5856140980305920
+      m_KeyId: 21691581235118080
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -6193,7 +6193,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:c60aea9eee49086468801da01885ae41
     m_TableEntryReference:
-      m_KeyId: 5856140980305920
+      m_KeyId: 21691581235118080
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -8633,6 +8633,7 @@ MonoBehaviour:
   Genre_Settings: {fileID: 245704727}
   Language_Settings: {fileID: 1988244407}
   Controls_Settings: {fileID: 1879370443}
+  ScoreString: {fileID: 973435014}
   CurUIList: 
   CurCamera: {fileID: 0}
   IsSolving: 0
@@ -12807,6 +12808,8 @@ MonoBehaviour:
   PuzzleSolveUI: {fileID: 201302638}
   PuzzleSolutionUI: {fileID: 97740477}
   InputNumberStringEvent: {fileID: 1819151068}
+  DeductionPoints: -10
+  SuccessPoints: 50
   PuzzleIdx: 0
   PuzzleActive: 0
   IsSolving: 0

@@ -80,7 +80,7 @@ namespace Daniel.Master
         }
         public void SetCurElement(int index)
         {
-            if (index < 0 || ElementList.Count - 1 >= index)
+            if (index < 0 || ElementList.Count - 1 < index)
                 return;
             ElementList[CurElementIdx].ToggleHighlight();
             CurElementIdx = index;

@@ -108,6 +108,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 7223895054663811157
+  - m_Id: 21691581235118080
+    m_Localized: 'Score: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 7223895054663811157
   references:
     version: 2
     RefIds:
@@ -117,3 +122,4 @@ MonoBehaviour:
         m_Entries: 
         m_SharedEntries:
         - id: 21334380872122368
+        - id: 21691581235118080

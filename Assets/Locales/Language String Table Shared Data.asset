@@ -109,6 +109,10 @@ MonoBehaviour:
     m_Key: solve_puzzle
     m_Metadata:
       m_Items: []
+  - m_Id: 21691581235118080
+    m_Key: score
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

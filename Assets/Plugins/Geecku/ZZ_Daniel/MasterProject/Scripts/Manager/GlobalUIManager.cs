@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
 namespace Daniel.Master
@@ -44,12 +45,26 @@ namespace Daniel.Master
         [SerializeField] private GameObject Language_Settings;
         [SerializeField] private GameObject Controls_Settings;
 
+        [Header("Score UIs")]
+        [SerializeField] private LocalizeStringEvent ScoreString;
+
+
         //- for debugging public
         public List<UI_Group> CurUIList = new();
 
         //- for debugging public
         public Camera CurCamera;
         public bool IsSolving;
+
+        //- score
+        private int Score;
+
+        protected override void Start()
+        {
+            base.Start();
+            ScoreString.StringReference.Arguments = new object[] { Score };
+            ScoreString.RefreshString();
+        }
 
         #region Add and Close UI
         public void ChangeMainCamera(Camera new_main)
@@ -240,6 +255,13 @@ namespace Daniel.Master
         }
         #endregion
 
+        public void SetScore(int value)
+        {
+            Score += value;
+            //- ToDo read out?
+            ScoreString.StringReference.Arguments = new object[] { Score };
+            ScoreString.RefreshString();
+        }
         private IEnumerator ToggleReadableElementGroup(UI_Group ui, bool activate_settings)
         {
             yield return new WaitForEndOfFrame();

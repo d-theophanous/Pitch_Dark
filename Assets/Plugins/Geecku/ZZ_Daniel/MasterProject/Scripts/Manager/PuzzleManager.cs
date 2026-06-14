@@ -12,6 +12,8 @@ namespace Daniel.Master
         [SerializeField] private PuzzleUI PuzzleSolveUI;
         [SerializeField] private PuzzleUI PuzzleSolutionUI;
         [SerializeField] private LocalizeStringEvent InputNumberStringEvent;
+        [SerializeField] private int DeductionPoints;
+        [SerializeField] private int SuccessPoints;
 
         private List<Puzzle> PuzzleList = new();
         private Puzzle CurPuzzle;
@@ -31,7 +33,6 @@ namespace Daniel.Master
         protected override void Start()
         {
             SetUpPuzzleList();
-            Debug.Log("lenth: " + Enum.GetNames(typeof(Language)).Length);
         }
         private void SetUpPuzzleList()
         {
@@ -63,6 +64,7 @@ namespace Daniel.Master
 
         public void CheckPuzzle(Interval interval)
         {
+            InputManager.Instance.PlayerInput.DeactivateInput();
             if (interval == SolutionSequence[SolutionIdx])
             {
                 AdvancePuzzle(true);
@@ -97,6 +99,7 @@ namespace Daniel.Master
                 CurCamera.gameObject.SetActive(false);
                 CurDoor.DoorNPC.ActivateSecondDialogue();
                 IsSolving = false;
+                InputManager.Instance.PlayerInput.ActivateInput();
             };
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR, action);
         }
@@ -119,11 +122,13 @@ namespace Daniel.Master
                     {
                         SolutionIdx++;
                         SetNumber(SolutionIdx + 1, CurPuzzle.PasswordLength);
-                        //- Increase points? ToDo
+                        GlobalUIManager.Instance.SetScore(SuccessPoints);
+
                         PuzzleSolveUI.ElementGroup.SetCurElement(1);
                         var cur_element = PuzzleSolveUI.ElementGroup.GetCurElement();
                         cur_element.AudioIndex++;
                         cur_element.Activate();
+                        InputManager.Instance.PlayerInput.ActivateInput();
                     };
                 }
                 AudioManager.Instance.PlaySFX(SFX.CORRECT, action);
@@ -135,7 +140,8 @@ namespace Daniel.Master
                     PuzzleSolveUI.ElementGroup.SetCurElement(1);
                     var cur_element = PuzzleSolveUI.ElementGroup.GetCurElement();
                     cur_element.Activate();
-                    //- Deduct points
+                    InputManager.Instance.PlayerInput.ActivateInput();
+                    GlobalUIManager.Instance.SetScore(DeductionPoints);
                 });
             }
             //- setze bei group auf zweites element und lies vor 
@@ -145,12 +151,12 @@ namespace Daniel.Master
             if (was_correct)
             {
                 AudioManager.Instance.PlaySFX(SFX.CORRECT);
-                //- ToDo add points?
+                GlobalUIManager.Instance.SetScore(SuccessPoints);
             }
             else
             {
                 AudioManager.Instance.PlaySFX(SFX.WRONG);
-                //- ToDo deduct points
+                GlobalUIManager.Instance.SetScore(DeductionPoints);
             }
         }
         public void SetUpPuzzle()
