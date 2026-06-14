@@ -214,14 +214,20 @@ namespace Daniel.Master
         private void OtherPlayerGateReady()
         {
             OtherPlayerIsGateReady = true;
-            Debug.Log("other player ready");
+            CheckBothPlayersReady();
         }
         public bool PlayerIsGateReady { get; private set; }
         private void PlayerGateReady()
         {
             PlayerIsGateReady = true;
-            //- ToDo UI
-            Debug.Log("player gate ready");
+            CheckBothPlayersReady();
+        }
+        public void CheckBothPlayersReady()
+        {
+            if (OtherPlayerIsGateReady && PlayerIsGateReady)
+            {
+                PuzzleManager.Instance.StartPuzzle();
+            }
         }
 
         #endregion
@@ -298,7 +304,7 @@ namespace Daniel.Master
 
         public void WaitingForPlayer()
         {
-            State = GameState.CONNECT;
+            SetGameState(GameState.CONNECT);
             Content.transform.parent.gameObject.SetActive(true);
             UpdatePlayerWaitingUI(PlayerCountWaiting);
         }
@@ -330,30 +336,26 @@ namespace Daniel.Master
             Message new_msg = Message.Create(MessageSendMode.Reliable, AdvancePuzzleIDClient);
             NetworkManager.Server.MsgHandler.MessageIndex++;
             new_msg.AddInt(NetworkManager.Server.MsgHandler.MessageIndex);
+            new_msg.AddUShort(client_id);
             new_msg.AddBool(correct);
             NetworkManager.Server.SendToAll(new_msg);
         }
         [MessageHandler(AdvancePuzzleIDClient)]
-        private static void ClientReceive_SequenceInfo(ushort client_id, Message msg)
+        private static void ClientReceive_SequenceInfo(Message msg)
         {
-
-            Action action;
-            if (client_id == NetworkManager.Client.LocalClient.ID)
+            Action action = () =>
             {
-                action = () =>
+                var client_id = msg.GetUShort();
+                var correct = msg.GetBool();
+                if (client_id == NetworkManager.Client.LocalClient.ID)
                 {
-                    var correct = msg.GetBool();
                     PuzzleManager.Instance.AdvancePuzzle(correct);
-                };
-            }
-            else
-            {
-                action = () =>
+                }
+                else
                 {
-                    var correct = msg.GetBool();
                     PuzzleManager.Instance.OnReceiveSolutionInput(correct);
-                };
-            }
+                }
+            };
             ClientMessageHandler.Handle(msg, action);
         }
 
@@ -383,22 +385,22 @@ namespace Daniel.Master
             {
                 var client_id = msg.GetUShort();
                 var content = msg.GetUShort();
-                Debug.Log("content in client receive: " + content);
+                //Debug.Log("content in client receive: " + content);
                 if (client_id == NetworkManager.Client.LocalClient.ID)
                 {
-                    Debug.Log("sent: " + content);
+                    //Debug.Log("sent: " + content);
                 }
                 else
                 {
                     if (content == 0)
                     {
-                        Debug.Log("not rumbling");
+                        //Debug.Log("not rumbling");
                         Rumbler.Instance.StopRumble();
                     }
-                    else if (content == 1 && GameManager.Instance.State == GameState.PLAYING)
+                    else if (content == 1 && DirectionChecker.Instance.CanReceiveDirectionInfo)
                     {
                         Rumbler.Instance.StartRumble();
-                        Debug.Log("rumbling");
+                        //Debug.Log("rumbling");
                     }
                 }
             };            
@@ -423,22 +425,18 @@ namespace Daniel.Master
         [MessageHandler(PlayerGateIDClient)]
         private static void ClientReceive_PlayerAtGate(Message msg)
         {
-            var client_id = msg.GetUShort();
-            Action action;
-            if (client_id == NetworkManager.Client.LocalClient.ID)
+            Action action = () =>
             {
-                action = () =>
+                var client_id = msg.GetUShort();
+                if (client_id == NetworkManager.Client.LocalClient.ID)
                 {
                     Instance.PlayerGateReady();
-                };
-            }
-            else
-            {
-                action = () =>
+                }
+                else
                 {
                     Instance.OtherPlayerGateReady();
-                };
-            }
+                }
+            };
             ClientMessageHandler.Handle(msg, action);
         }
         #endregion

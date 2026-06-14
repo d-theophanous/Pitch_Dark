@@ -11,6 +11,9 @@ namespace Daniel.Master
             base.Start();
             SetUpTutorialSegments();
             ImproviseAfterSecondDialogue = true;
+
+            //- ToDo for game with tutorial comment / delte!
+            tag = "Untagged";
         }
         public override void ActivatePrompt()
         {

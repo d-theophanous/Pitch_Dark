@@ -9,7 +9,8 @@ namespace Daniel.Master
         [SerializeField] private Animator DoorAnimator;
         [SerializeField] private BoxCollider DoorTrigger;
         [SerializeField] private GameObject NavMeshObstacle;
-        public Transform AfterPuzzlePosition;
+        public Transform AfterPuzzlePositionNPC;
+        public Transform AfterPuzzlePositionPlayer;
         public NPCScript DoorNPC;
         public NPCScript TutorialNPC;
         public override void ActivatePrompt()
@@ -21,8 +22,10 @@ namespace Daniel.Master
 
             AudioManager.Instance.StopInteractable(); //-   ToDo
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
+            GameManager.Instance.ClientSend_PlayerAtGate();
             tag = "Untagged";
             GameManager.Instance.Player.CurrentInteractable = null;
+            DirectionChecker.Instance.StopDirectionChecking();
         }
         public override void EnterInteractionRange()
         {

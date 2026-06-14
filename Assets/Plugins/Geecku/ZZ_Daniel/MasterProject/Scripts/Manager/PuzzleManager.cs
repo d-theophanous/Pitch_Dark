@@ -38,7 +38,6 @@ namespace Daniel.Master
         }
         private void SetUpPuzzleList()
         {
-            //- 1.Puzzle
             Puzzle puzzle_1 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE }, 2, () => 
             {
                 AudioManager.Instance.UnlockInterval(Interval.PRIME);
@@ -76,15 +75,15 @@ namespace Daniel.Master
             InputManager.Instance.PlayerInput.DeactivateInput();
             if (interval == SolutionSequence[SolutionIdx])
             {
-                AdvancePuzzle(true);
+                //AdvancePuzzle(true);
                 //- ToDo uncomment for multiplayer version
-                //GameManager.Instance.ClientSend_AdvanceSequence(true);
+                GameManager.Instance.ClientSend_AdvanceSequence(true);
             }
             else
             {
-                AdvancePuzzle(false);
+                //AdvancePuzzle(false);
                 //- ToDo uncomment for multiplayer version
-                //GameManager.Instance.ClientSend_AdvanceSequence(false);
+                GameManager.Instance.ClientSend_AdvanceSequence(false);
             }
         }
 
@@ -92,6 +91,7 @@ namespace Daniel.Master
         #region Puzzle Logic
         public void StartPuzzle()
         {
+            DirectionChecker.Instance.CanReceiveDirectionInfo = false;
             if (CurDoor.TutorialNPC == null)
                 SetUpPuzzle();
             else
@@ -124,6 +124,7 @@ namespace Daniel.Master
                 //- if the final sequence was solved correctly
                 if (SolutionIdx >= CurPuzzle.Intervals.Count - 1)
                 {
+                    GlobalUIManager.Instance.SetScore(SuccessPoints);
                     action = () => { PuzzleSolved(); };
                 }
                 //- if a sequence was solved correctly
@@ -135,7 +136,7 @@ namespace Daniel.Master
                         SetNumber(SolutionIdx + 1, CurPuzzle.PasswordLength);
                         GlobalUIManager.Instance.SetScore(SuccessPoints);
 
-                        PuzzleSolveUI.ElementGroup.GetCurElement().AudioIndex++;
+                        PuzzleSolveUI.ElementGroup.GetElement(1).AudioIndex++;
                         PuzzleSolveUI.ElementGroup.SetCurElement(1);
                         InputManager.Instance.PlayerInput.ActivateInput();
                     };
@@ -193,11 +194,11 @@ namespace Daniel.Master
 
             //- Set UI
             SetNumber(1, CurPuzzle.PasswordLength);
-            PuzzleSolveUI.ButtonList[0].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.PRIME));
-            PuzzleSolveUI.ButtonList[1].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.FIFTH));
-            PuzzleSolveUI.ButtonList[2].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.OCTAVE));
+            PuzzleSolveUI.ElementList[0].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.PRIME));
+            PuzzleSolveUI.ElementList[1].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.FIFTH));
+            PuzzleSolveUI.ElementList[2].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.OCTAVE));
             
-            foreach (var button in PuzzleSolveUI.ButtonList)
+            foreach (var button in PuzzleSolveUI.ElementList)
             {
                 if (!button.gameObject.activeSelf && PuzzleSolveUI.ElementGroup.GetElements().Contains(button))
                 {
@@ -212,18 +213,19 @@ namespace Daniel.Master
             ThisPlayerSolves = false;
             GlobalUIManager.Instance.ThisPlayerSolves = false;
 
-            for (int i = 0; i < PuzzleSolutionUI.ButtonList.Count; i++)
+            for (int i = 0; i < PuzzleSolutionUI.ElementList.Count; i++)
             {
-                if (CurPuzzle.Intervals.Count - 1 <= i)
+                if (CurPuzzle.Intervals.Count - 1 >= i)
                 {
-                    PuzzleSolutionUI.ButtonList[i].gameObject.SetActive(true);
-                    SetInterval(CurPuzzle.Intervals[i], PuzzleSolutionUI.ButtonList[i].GetComponent<LocalizeStringEvent>());
+                    PuzzleSolutionUI.ElementList[i].gameObject.SetActive(true);
+                    SetInput(i + 1, PuzzleSolutionUI.ElementList[i].GetComponent<LocalizeStringEvent>());
+                    //- ToDo setze dass audio richtig
                 }
                 else
-                    PuzzleSolutionUI.ButtonList[i].gameObject.SetActive(false);
+                    PuzzleSolutionUI.ElementList[i].gameObject.SetActive(false);
             }
 
-            foreach (var button in PuzzleSolutionUI.ButtonList)
+            foreach (var button in PuzzleSolutionUI.ElementList)
             {
                 if (!button.gameObject.activeSelf && PuzzleSolutionUI.ElementGroup.GetElements().Contains(button))
                 {
@@ -238,23 +240,10 @@ namespace Daniel.Master
             InputNumberStringEvent.StringReference.Arguments = new object[] { first_number, second_number };
             InputNumberStringEvent.RefreshString();
         }
-        public void SetInterval(Interval interval, LocalizeStringEvent string_event)
+        public void SetInput(int number, LocalizeStringEvent string_event)
         {
-            //- vlt eher großer abstand instead of octave i.e.
-            switch (interval)
-            {
-                case Interval.PRIME:
-                    string_event.StringReference.SetReference("Language String Table", "prime");
-                    break;
-                case Interval.FIFTH:
-                    string_event.StringReference.SetReference("Language String Table", "fifth");
-                    break;
-                case Interval.OCTAVE:
-                    string_event.StringReference.SetReference("Language String Table", "octave");
-                    break;
-                default:
-                    break;
-            }
+            string_event.StringReference.Arguments = new object[] { number };
+            string_event.RefreshString();
         }
         #endregion
 
@@ -273,8 +262,8 @@ namespace Daniel.Master
         {
             InputManager.Instance.PlayerInput.DeactivateInput();
             BlackBackground.SetActive(true);
-            GameManager.Instance.Player.TeleportCharacter(CurDoor.AfterPuzzlePosition.position);
-            GameManager.Instance.Player.TeleportNPCsToPlayer();
+            GameManager.Instance.Player.TeleportCharacter(CurDoor.AfterPuzzlePositionPlayer.position);
+            GameManager.Instance.Player.TeleportNPCsToPlayer(CurDoor.AfterPuzzlePositionNPC);
 
             AudioManager.Instance.PlaySFX(SFX.CLOSE_DOOR, () =>
             {

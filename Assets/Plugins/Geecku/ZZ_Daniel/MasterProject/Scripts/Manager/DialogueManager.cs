@@ -36,6 +36,7 @@ namespace Daniel.Master
         }
         private void SetUpDialogue(DialogueContainer data, Dictionary<int, Action> action_dic)
         {
+            Debug.Log("set up dialogue");
             Dialogue.SetUp(data, TextSpeed, action_dic);
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE, false);
             GameManager.Instance.SetGameState(GameState.DIALOGUE);

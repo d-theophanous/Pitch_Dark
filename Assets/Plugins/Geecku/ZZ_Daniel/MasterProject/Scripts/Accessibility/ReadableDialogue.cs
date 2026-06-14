@@ -85,7 +85,6 @@ namespace Daniel.Master
         }
         private bool NextLine()
         {
-            Debug.Log("next Line");
             if (index <= Lines.Length - 1)
             {
                 if (ActionDic.ContainsKey(index))

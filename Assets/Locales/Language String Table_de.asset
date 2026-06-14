@@ -72,21 +72,25 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5857130869604352
-    m_Localized: Prime
+    m_Localized: Gleiche Ton (Prime)
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 7223895054663811158
   - m_Id: 5857152348635136
-    m_Localized: Terz
+    m_Localized: '{0}.Eingabe: Terz'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 7223895054663811158
   - m_Id: 5857174888824832
-    m_Localized: Quinte
+    m_Localized: "Mittelgro\xDFer Abstand (Quinte)"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 7223895054663811158
   - m_Id: 5857193863856128
-    m_Localized: Oktave
+    m_Localized: "Gro\xDFer Abstand (Oktave)"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 7223895054663811158
   - m_Id: 6766540001296384
     m_Localized: "W\xE4hle aus, was auf dich zutrifft"
     m_Metadata:
@@ -113,6 +117,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 7223895054663811158
+  - m_Id: 21334316598607872
+    m_Localized: "L\xF6sungssequenz\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21822507381620736
+    m_Localized: "{0} L\xF6sungsinterval"
+    m_Metadata:
+      m_Items:
+      - rid: 7223895054663811158
   references:
     version: 2
     RefIds:
@@ -123,3 +136,8 @@ MonoBehaviour:
         m_SharedEntries:
         - id: 21334380872122368
         - id: 21691581235118080
+        - id: 5857193863856128
+        - id: 5857174888824832
+        - id: 5857152348635136
+        - id: 5857130869604352
+        - id: 21822507381620736

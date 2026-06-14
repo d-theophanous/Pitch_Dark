@@ -46,7 +46,8 @@ namespace Daniel.Master
         [SerializeField] private GameObject Controls_Settings;
 
         [Header("Score UIs")]
-        [SerializeField] private LocalizeStringEvent ScoreString;
+        [SerializeField] private LocalizeStringEvent ScoreString1;
+        [SerializeField] private LocalizeStringEvent ScoreString2;
 
 
         //- for debugging public
@@ -57,13 +58,15 @@ namespace Daniel.Master
         public bool ThisPlayerSolves;
 
         //- score
-        private int Score;
+        private int Score = 0;
 
         protected override void Start()
         {
             base.Start();
-            ScoreString.StringReference.Arguments = new object[] { Score };
-            ScoreString.RefreshString();
+            ScoreString1.StringReference.Arguments = new object[] { Score };
+            ScoreString1.RefreshString();
+            ScoreString2.StringReference.Arguments = new object[] { Score };
+            ScoreString2.RefreshString();
         }
 
         #region Add and Close UI
@@ -147,6 +150,7 @@ namespace Daniel.Master
             if (CurUIList.Count == 0)
             {
                 ChangeMainCamera();
+                InputManager.Instance.PlayerInput.actions.FindActionMap("UI").Disable();
             }
             else
                 StartCoroutine(
@@ -258,8 +262,10 @@ namespace Daniel.Master
         {
             Score += value;
             //- ToDo read out?
-            ScoreString.StringReference.Arguments = new object[] { Score };
-            ScoreString.RefreshString();
+            ScoreString1.StringReference.Arguments = new object[] { Score };
+            ScoreString1.RefreshString();
+            ScoreString2.StringReference.Arguments = new object[] { Score };
+            ScoreString2.RefreshString();
         }
         private IEnumerator ToggleReadableElementGroup(UI_Group ui, bool activate_settings)
         {

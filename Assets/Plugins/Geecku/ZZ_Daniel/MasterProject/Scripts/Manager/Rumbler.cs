@@ -58,7 +58,7 @@ public enum RumblePattern
         }
         public void StartRumble(float duration)
         {
-            if (IsRumbling)
+            if (IsRumbling || Gamepad == null)
                 return;
             IsRumbling = true;
             StopAllCoroutines();
@@ -66,7 +66,7 @@ public enum RumblePattern
         }
         public void StartRumble()
         {
-            if (IsRumbling)
+            if (IsRumbling || Gamepad == null)
                 return;
             IsRumbling = true;
             StopAllCoroutines();

@@ -20,8 +20,7 @@ namespace Daniel.Master
             Dictionary<int, Action> dialogue_1_dic = new();
             dialogue_1_dic.Add(DialogueList[0].DialogueList[0].Lines.Count, () =>
             {
-                DirectionChecker.Instance.StartDirectionChecking(
-                    DirectionChecker.Instance.FirstDestination);
+                DirectionChecker.Instance.StartDirectionChecking();
                 DialogueManager.Instance.ContinueWithDialogue = true;
             });
 

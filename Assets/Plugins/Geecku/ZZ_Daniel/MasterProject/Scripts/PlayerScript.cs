@@ -86,11 +86,11 @@ namespace Daniel.Master
                 return;
             CurrentInteractable.ActivatePrompt();
         }
-        public void TeleportNPCsToPlayer()
+        public void TeleportNPCsToPlayer(Transform position)
         {
             foreach (var npc in NPCFollowerList)
             {
-                npc.Agent.Warp(transform.position);
+                npc.Agent.Warp(position.position);
             }
         }
 

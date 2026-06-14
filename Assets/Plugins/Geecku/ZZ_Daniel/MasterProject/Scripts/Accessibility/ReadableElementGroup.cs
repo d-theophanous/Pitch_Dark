@@ -46,7 +46,6 @@ namespace Daniel.Master
         }
         public void ActivateCurElement()
         {
-            Debug.Log("cur_element_idx: " + CurElementIdx + ", ElementListCount: " +  ElementList.Count);
             ElementList[CurElementIdx].Activate();
         }
         public void ReturnCurElement()
@@ -98,6 +97,12 @@ namespace Daniel.Master
         public ReadableElement GetCurElement()
         {
             return ElementList[CurElementIdx];
+        }
+        public ReadableElement GetElement(int index)
+        {
+            if (index < 0 || index >= ElementList.Count)
+                return null;
+            return ElementList[index];
         }
     }
 }

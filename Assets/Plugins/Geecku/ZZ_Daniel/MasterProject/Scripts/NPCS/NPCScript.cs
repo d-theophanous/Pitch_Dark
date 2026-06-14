@@ -111,6 +111,7 @@ namespace Daniel.Master
         }
         public override void ActivatePrompt()
         {
+            Debug.Log("in activate prompt");
             GameManager.Instance.Player.ResetMovement();
             DialogueManager.Instance.SetCurrentNPC(this);
             if (!IsFollowingFromStart)
@@ -134,6 +135,7 @@ namespace Daniel.Master
             //- ToDo
             if (ActionDicList.Count < 2)
             {
+                Debug.Log("in ugly if");
                 ActionDicList.Add(new());
             }
 

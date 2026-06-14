@@ -407,6 +407,7 @@ namespace Daniel.Master
             }
             DialogueManager.Instance.CleanUpDialogue();
             GlobalUIManager.Instance.ToggleUI(UI_Group.IMPROVISATION);
+            DirectionChecker.Instance.StartDirectionChecking();
         }
         public void StopImprovisation()
         {

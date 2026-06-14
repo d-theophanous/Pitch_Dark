@@ -177,7 +177,7 @@ namespace Daniel.Master
             //- ToDo wait for other player but for now this is fine
             //- eigentlich auch dass man hier durch Tür läuft
             GameManager.Instance.Player.SpawnPlayerAtStart();
-            GameManager.Instance.Player.TeleportNPCsToPlayer();
+            GameManager.Instance.Player.TeleportNPCsToPlayer(GameManager.Instance.Player.transform);
 
             //- NPC walks to you
             AfterTutorialNPC.SetFollowing(true);
