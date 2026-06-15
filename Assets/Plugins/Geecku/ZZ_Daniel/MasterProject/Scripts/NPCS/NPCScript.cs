@@ -14,7 +14,7 @@ namespace Daniel.Master
         [Header("Follow Settings")]
         public float StopDistance = 4f;
         public float UpdateRate = 0.1f; // seconds between destination updates
-        public float Pitch;
+        public float Pitch = 0;
 
         [Header("State")]
         public bool IsFollowing = false;

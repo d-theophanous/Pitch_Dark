@@ -72,6 +72,7 @@ namespace Daniel.Master
             seg_1.RequiredButtonDic.Add(TutorialButton.X,
                 seg_1_button_info);
             seg_1.StartAction = () => {
+                Debug.Log("start action");
                 AudioManager.Instance.PlayDialogue(200, 0, () => { seg_1_button_info.SpeechOver = true; }); 
             };
             seg_1.EndAction = () =>
@@ -81,6 +82,7 @@ namespace Daniel.Master
             Dictionary<int, Action> dialogue_1_dic = new();
             dialogue_1_dic.Add(0, () =>
             {
+                Debug.Log("henry 85");
                 TutorialManager.Instance.StartSegment(seg_1);
             });
 

@@ -92,10 +92,11 @@ namespace Daniel.Master
         }
         public void PlayDialogue(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE, float pitch = 0)
         {
+            UnityEngine.Debug.Log("key: " + key);
             StopDialogue();
             LastDialogueInfo = (key, tone);
             currentDialogueInstance.setParameterByNameWithLabel("Tone", tone.ToString());
-            currentDialogueInstance.setPitch(pitch);
+            currentDialogueInstance.setParameterByName("VoicePitch", pitch);
 
             // Pin the key string in memory and pass a pointer through the user data
             GCHandle stringHandle = GCHandle.Alloc(key);
