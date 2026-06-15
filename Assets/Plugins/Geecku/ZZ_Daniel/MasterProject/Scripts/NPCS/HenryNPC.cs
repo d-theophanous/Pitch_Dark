@@ -12,7 +12,8 @@ namespace Daniel.Master
             SetUpTutorialSegments();
             ImproviseAfterSecondDialogue = true;
 
-            //tag = "Untagged";
+            if (GameManager.Instance.SkipTutorial)
+                tag = "Untagged";
         }
         public override void ActivatePrompt()
         {

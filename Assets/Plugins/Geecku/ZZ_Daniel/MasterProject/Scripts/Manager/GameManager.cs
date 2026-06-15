@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
@@ -546,10 +547,17 @@ namespace Daniel.Master
         }
         public void DebugSkipGate()
         {
+            if (SkipTutorial)
+                //- ugly but works
+                GameManager.Instance.CurrentGateReadyAction = () => { PuzzleManager.Instance.StartPuzzle(); };
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
             CurrentGateReadyAction?.Invoke();
             Debug.Log("gate game mamanger 549");
             OtherPlayerIsGateReady = PlayerIsGateReady = false;
+        }
+        public void DebugSolvePuzzle()
+        {
+            PuzzleManager.Instance.PuzzleSolved();
         }
         #endregion
     }

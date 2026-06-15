@@ -370,6 +370,15 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DebugUI"",
+                    ""type"": ""Button"",
+                    ""id"": ""33591a1f-3e67-4d7c-905a-58b87d907c05"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -546,6 +555,28 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Controller"",
                     ""action"": ""Repeat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4f780173-f6e5-43b7-9788-3571a7247326"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard;Controller"",
+                    ""action"": ""DebugUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9ccff5d-2672-4d90-9741-9fd10eed0008"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DebugUI"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1027,6 +1058,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
         m_UI_Back = m_UI.FindAction("Back", throwIfNotFound: true);
         m_UI_Repeat = m_UI.FindAction("Repeat", throwIfNotFound: true);
+        m_UI_DebugUI = m_UI.FindAction("DebugUI", throwIfNotFound: true);
         // Improvisation
         m_Improvisation = asset.FindActionMap("Improvisation", throwIfNotFound: true);
         m_Improvisation_PlayRoot = m_Improvisation.FindAction("PlayRoot", throwIfNotFound: true);
@@ -1292,6 +1324,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_Click;
     private readonly InputAction m_UI_Back;
     private readonly InputAction m_UI_Repeat;
+    private readonly InputAction m_UI_DebugUI;
     /// <summary>
     /// Provides access to input actions defined in input action map "UI".
     /// </summary>
@@ -1331,6 +1364,10 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "UI/Repeat".
         /// </summary>
         public InputAction @Repeat => m_Wrapper.m_UI_Repeat;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/DebugUI".
+        /// </summary>
+        public InputAction @DebugUI => m_Wrapper.m_UI_DebugUI;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1378,6 +1415,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Repeat.started += instance.OnRepeat;
             @Repeat.performed += instance.OnRepeat;
             @Repeat.canceled += instance.OnRepeat;
+            @DebugUI.started += instance.OnDebugUI;
+            @DebugUI.performed += instance.OnDebugUI;
+            @DebugUI.canceled += instance.OnDebugUI;
         }
 
         /// <summary>
@@ -1410,6 +1450,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Repeat.started -= instance.OnRepeat;
             @Repeat.performed -= instance.OnRepeat;
             @Repeat.canceled -= instance.OnRepeat;
+            @DebugUI.started -= instance.OnDebugUI;
+            @DebugUI.performed -= instance.OnDebugUI;
+            @DebugUI.canceled -= instance.OnDebugUI;
         }
 
         /// <summary>
@@ -2069,6 +2112,13 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRepeat(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "DebugUI" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDebugUI(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Improvisation" which allows adding and removing callbacks.

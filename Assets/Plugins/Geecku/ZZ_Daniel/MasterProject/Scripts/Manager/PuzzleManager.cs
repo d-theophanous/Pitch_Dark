@@ -97,7 +97,8 @@ namespace Daniel.Master
             else
                 CurDoor.TutorialNPC.ActivateSecondDialogue();
         }
-        private void PuzzleSolved()
+        //- for debug public TODo
+        public void PuzzleSolved()
         {
             CurDoor.ToggleDoor(true);
             Action action = () =>
@@ -115,7 +116,7 @@ namespace Daniel.Master
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR, action);
         }
 
-        //- this will only be called by player who solves?
+        //- player who solves
         public void AdvancePuzzle(bool was_correct)
         {
             if (was_correct)
@@ -155,6 +156,7 @@ namespace Daniel.Master
                 });
             }
         }
+        //- player who has solution
         public void OnReceiveSolutionInput(bool was_correct)
         {
             if (was_correct)
@@ -269,7 +271,8 @@ namespace Daniel.Master
             {
                 InputManager.Instance.PlayerInput.ActivateInput();
                 BlackBackground.SetActive(false);
-                CurDoor.DoorNPC.ActivateSecondDialogue();
+                if (CurDoor != null)
+                    CurDoor.DoorNPC.ActivateSecondDialogue();
                 CurDoor.ToggleDoor(false);
             });
             yield return null;

@@ -52,13 +52,13 @@ namespace Daniel.Master
 
             if (IsOnRightPath())
             {
-                //- hier anstelle die network funktion aufrufen
-                GameManager.Instance.ClientSend_DirectionCheck(1);
-                //Rumbler.Instance.StartRumble();
+                //- hier anstelle die network funktion aufrufen ToDO
+                //GameManager.Instance.ClientSend_DirectionCheck(1);
+                Rumbler.Instance.StartRumble();
             }
             else
-                //Rumbler.Instance.StopRumble();
-                GameManager.Instance.ClientSend_DirectionCheck(0);
+                Rumbler.Instance.StopRumble();
+                //GameManager.Instance.ClientSend_DirectionCheck(0);
         }
         #endregion
 

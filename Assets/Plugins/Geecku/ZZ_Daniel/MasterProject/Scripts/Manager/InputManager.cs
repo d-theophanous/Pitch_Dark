@@ -1,5 +1,6 @@
 using Daniel.Master;
 using Geecku.GlobalMangers;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -96,6 +97,10 @@ namespace Daniel.Master
                 else
                     TTSManager.Instance.SwitchToPreviousElement();
             }
+        }
+        public void OnDebugUI()
+        {
+            GameManager.Instance.DebugSolvePuzzle();
         }
 
 

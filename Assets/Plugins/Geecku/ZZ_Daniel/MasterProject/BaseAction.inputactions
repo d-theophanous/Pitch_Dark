@@ -284,6 +284,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DebugUI",
+                    "type": "Button",
+                    "id": "33591a1f-3e67-4d7c-905a-58b87d907c05",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -460,6 +469,28 @@
                     "processors": "",
                     "groups": ";Controller",
                     "action": "Repeat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4f780173-f6e5-43b7-9788-3571a7247326",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard;Controller",
+                    "action": "DebugUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f9ccff5d-2672-4d90-9741-9fd10eed0008",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DebugUI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
