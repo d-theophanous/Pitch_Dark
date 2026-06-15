@@ -270,6 +270,7 @@ namespace Daniel.Master
                 InputManager.Instance.PlayerInput.ActivateInput();
                 BlackBackground.SetActive(false);
                 CurDoor.DoorNPC.ActivateSecondDialogue();
+                CurDoor.ToggleDoor(false);
             });
             yield return null;
         }

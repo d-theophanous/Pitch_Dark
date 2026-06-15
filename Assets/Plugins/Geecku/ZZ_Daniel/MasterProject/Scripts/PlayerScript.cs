@@ -62,12 +62,18 @@ namespace Daniel.Master
             //- CurRotationIdx is very unflexible this way
             if (GameManager.Instance.PlayerNumber == 1)
             {
-                tmp = Player1Spawn;
+                if (GameManager.Instance.SkipTutorial)
+                    tmp = PlayerStartSpawnList[0];
+                else
+                    tmp = Player1Spawn;
                 CurRotationIdx = 1;
             }
             else
             {
-                tmp = Player2Spawn;
+                if (GameManager.Instance.SkipTutorial)
+                    tmp = PlayerStartSpawnList[1];
+                else
+                    tmp = Player2Spawn;
                 CurRotationIdx = 1;
             }
 

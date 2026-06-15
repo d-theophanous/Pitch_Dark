@@ -71,6 +71,7 @@ namespace Daniel.Master
         public Transform SegmentSpawnExit;
         public Transform SegmentSpawnDoor;
 
+        [SerializeField] private TutorialDoorScript TutorialDoor;
         [SerializeField] private NPCScript StartNPC;
         public NPCScript AfterTutorialNPC;
 
@@ -184,6 +185,7 @@ namespace Daniel.Master
         public void OnReceiveTutorialEnd()
         {
             StartCoroutine(PuzzleManager.Instance.PlayTutorialDoorSequence());
+            TutorialDoor.ToggleDoor(false);
             GameManager.Instance.CurrentGateReadyAction = () => { PuzzleManager.Instance.StartPuzzle(); };
         }
         public void ToggleStatus(bool switch_to_dialogue)
