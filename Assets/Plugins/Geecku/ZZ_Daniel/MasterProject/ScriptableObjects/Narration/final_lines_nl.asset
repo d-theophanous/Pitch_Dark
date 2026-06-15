@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd12a18dafdb74ab8b1dd16427d1e6, type: 3}
+  m_Name: final_lines_nl
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::NarrationScriptData
+  lines:
+  - Tekst
+  - Knop
+  - Je hebt het spel uitgespeeld, bedankt voor het spelen
+  - Dialoog
+  - Bewegen
+  - Puzzel
+  - Je bevindt je nu in de dialoogmodus. Wanneer je van modus wisselt, laat het spel
+    je weten in welke modus je zit door Tekst te zeggen als er tekst op het scherm
+    staat, of Bewegen als je kunt bewegen. Wanneer het spel op je invoer wacht, hoor
+    je dit geluid. Druk op X, de onderste van de vier knoppen aan de rechterkant
+    van je controller, om door te gaan.
+  - resterende deuren
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - Probeer de vier knoppen aan de rechterkant van je controller in te drukken terwijl
+    de muziek speelt. Hoe meer intervallen je ontgrendelt, hoe meer je kunt spelen
+  - Oplossing interval
+  - Eerste
+  - Tweede
+  - Derde
+  - Vierde
+  - Score
+  - Invoer
+  - Dezelfde noot, prime
+  - Middelgrote afstand, kwint
+  - Grote afstand, octaaf
+  - filmpje
+  - Aan je rechterkant achterin heb je twee knoppen. Druk op de voorste om te reageren
+  - Je bevindt je nu in een kamer met een uitgang. Zoek de deur waarmee je kunt communiceren
+    en druk vervolgens op de rechterknop.
+  - Hallo?
+  - Is er iemand?
+  - O, gelukkig, je beweegt. Ben je gewond?
+  - Rustig aan, rustig aan. Ik help je wel overeind.
+  - Het is hier zo donker, ik ben blij dat ik niet over je heen ben gestruikeld
+  - "En er is niemand anders in de buurt. Alleen wij twee\xEBn voorlopig."
+  - Je vriend is daar ergens, dat weet ik gewoon. Hetzelfde geldt voor de rest van
+    mijn band.
+  - Kom op, ik help je wel. Laten we gaan.
+  - Wacht even, heb je het echt open gekregen?!
+  - "Ok\xE9, dat... voelt eigenlijk heel fijn. Ik krijg er zin van om iets te spelen."
+  - Kom op, probeer het eens. Gebruik wat je net hebt geleerd! Zing gewoon met ons
+    mee
+  - Hallooo?! Is er iemand?!
+  - "Oh, Henry! En... een nieuw gezicht, hoi! Ok\xE9, goed, meer mensen, minder eng."
+  - Kijk eens, de gids heeft me dit ding gegeven. Het hoort te vibreren als we richting
+    de uitgang gaan.
+  - Behalve dat het gewoon vibreert wanneer het daar zin in heeft. Superhandig, bedankt.
+  - Hier, neem jij het maar. Misschien kun je erachter komen hoe het werkt. Ik ga
+    mee!
+  - Ooh, een muziekpuzzel! Daar heb ik wel verstand van. Je kijkt een beetje verloren,
+    laat me het even uitleggen!
+  - Dus, een interval is gewoon de afstand tussen twee noten.
+  - Afhankelijk van hoe ver die noten uit elkaar liggen, krijgt het interval een
+    andere naam.
+  - De kleinste afstand? Dat heet de prime.
+  - Letterlijk dezelfde noot twee keer gespeeld, dus het verschil is eigenlijk niets.
+  - "Nu het tegenovergestelde \u2014 de grootste afstand is het octaaf."
+  - De twee noten liggen ver uit elkaar, alsof... als de eerste noot bij je voeten
+    lag, de tweede helemaal bij je hoofd zou liggen.
+  - "Ok\xE9, er is hier dus een reeks intervallen, maar waar moeten we die eigenlijk
+    invoeren?"
+  - En nog belangrijker, waar is de daadwerkelijke oplossing? De deur wil een reeks,
+    maar ik zie er nergens een...
+  - "H\xE9, kijk eens wie we daar hebben! Dat werd tijd, ik begon al te denken dat
+    ik dit hele doolhof in mijn eentje zou moeten oplossen."
+  - Ik heb deze deur al lang geleden gevonden. Hij wil gewoon niet open. Ik word
+    gek.
+  - Er is een reeks intervallen voor nodig. Ik weet de kwinte, die is makkelijk.
+  - Een middelgroot interval tussen de twee noten. Luister, het klinkt zo!
+  - "Ok\xE9, jouw beurt. Verpest dit niet, we zijn nu een team."
+  - HA! Ik heb nooit aan je getwijfeld!
+  - En nu heb ik ook de prime en de octaaf te pakken. Geef me vijf minuten met die
+    twee en speel mee!

@@ -26,18 +26,18 @@ namespace Daniel.Master
         {
             CurNPCCamera.gameObject.SetActive(true);
             ImproviseAfter = improvise;
-            SetUpDialogue(data, action_dic);
+            SetUpDialogue(data, action_dic, CurNPC.Pitch);
         }
         public void StartTutorialDialogue(DialogueContainer data)
         {
             GlobalUIManager.Instance.PlayerViewCamera.gameObject.SetActive(true);
             TutorialAfter = true;
-            SetUpDialogue(data, null);
+            SetUpDialogue(data, null, 0);
         }
-        private void SetUpDialogue(DialogueContainer data, Dictionary<int, Action> action_dic)
+        private void SetUpDialogue(DialogueContainer data, Dictionary<int, Action> action_dic, float pitch)
         {
             Debug.Log("set up dialogue");
-            Dialogue.SetUp(data, TextSpeed, action_dic);
+            Dialogue.SetUp(data, TextSpeed, action_dic, pitch);
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE, false);
             GameManager.Instance.SetGameState(GameState.DIALOGUE);
 

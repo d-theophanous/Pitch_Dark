@@ -18,14 +18,16 @@ namespace Daniel.Master
         private Dictionary<int, Action> ActionDic;
         private Action DefaultAction = () => { DialogueManager.Instance.ContinueWithDialogue = true; };
         private Action CurrentAction;
+        private float CurrentPitch;
 
-        public void SetUp(DialogueContainer data, float text_speed, Dictionary<int, Action> action_dic)
+        public void SetUp(DialogueContainer data, float text_speed, Dictionary<int, Action> action_dic, float pitch)
         {
             CurDialog = data;
             CurDialogData = CurDialog.DialogueList[GetChangedLanguageInt((int)GameManager.Language)];
             Text.text = String.Empty;
             Lines = CurDialogData.Lines.ToArray();
             TextSpeed = text_speed;
+            CurrentPitch = pitch;
 
             if (action_dic == null)
                 ActionDic = new();
@@ -93,7 +95,7 @@ namespace Daniel.Master
                     CurrentAction = DefaultAction;
                     Text.text = string.Empty;
                 AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
-                    CurrentAction, CurDialog.Tones[index]);
+                    CurrentAction, CurDialog.Tones[index], CurrentPitch);
 
                 StartCoroutine(TypeLine());
                 return true;

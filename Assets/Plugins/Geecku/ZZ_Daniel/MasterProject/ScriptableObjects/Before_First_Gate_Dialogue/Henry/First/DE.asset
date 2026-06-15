@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
+  m_Name: DE
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
+  DialogueNumber: 0
+  Language: DE
+  Lines:
+  - Oh, Gott sei Dank, du bewegst dich. Bist du verletzt?
+  - Ganz ruhig, ganz ruhig. Ich helfe dir auf.
+  - "Es ist so dunkel hier drin, gut, dass ich nicht \xFCber dich gestolpert bin"
+  - Und es ist sonst niemand hier... nur wir beide im Moment.
+  - "Dein Freund ist irgendwo da drau\xDFen, das wei\xDF ich einfach. Genauso wie
+    der Rest meiner Band."
+  - Komm schon, ich passe auf dich auf. Auf gehts

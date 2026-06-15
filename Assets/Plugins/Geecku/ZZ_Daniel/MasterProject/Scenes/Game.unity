@@ -7607,7 +7607,7 @@ PrefabInstance:
     - target: {fileID: 6379473852384688255, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: DoorNPC
       value: 
-      objectReference: {fileID: 1668810937}
+      objectReference: {fileID: 1668810942}
     - target: {fileID: 6379473852384688255, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: TutorialNPC
       value: 
@@ -8231,7 +8231,7 @@ Transform:
   m_GameObject: {fileID: 430324108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -38, y: -1, z: -8.4}
+  m_LocalPosition: {x: -33.05, y: -1, z: -8.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9504,11 +9504,12 @@ MonoBehaviour:
   Animator: {fileID: 529402866}
   StopDistance: 2.5
   UpdateRate: 0.1
+  Pitch: 0
   IsFollowing: 0
   Agent: {fileID: 529402867}
   DialogueList:
-  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
-  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
+  - {fileID: 11400000, guid: 72e9a5a2076ec2e42b9a6ac852cda217, type: 2}
+  - {fileID: 11400000, guid: b162347b2641b8945940cd7a19d50bf2, type: 2}
   Parent: {fileID: 529402865}
   NPCCamera: {fileID: 529402868}
 --- !u!1001 &530211068
@@ -25221,11 +25222,12 @@ MonoBehaviour:
   Animator: {fileID: 1354979633}
   StopDistance: 2.5
   UpdateRate: 0.1
+  Pitch: 0
   IsFollowing: 0
   Agent: {fileID: 1354979634}
   DialogueList:
-  - {fileID: 11400000, guid: ad5b93e3ecfacb74998461e19de960ae, type: 2}
-  - {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
+  - {fileID: 11400000, guid: 42522786b4bb9ce4bb810140dd327054, type: 2}
+  - {fileID: 11400000, guid: 20c52052d2620454e9a639d303db390c, type: 2}
   Parent: {fileID: 1354979632}
   NPCCamera: {fileID: 1354979635}
 --- !u!1001 &1355685740
@@ -30505,27 +30507,65 @@ PrefabInstance:
       propertyPath: 'DialogueList2.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 0d7aaf2c99bfa574dbf005b665996a22, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 766992885882807819, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1346516546967338, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1668810942}
   m_SourcePrefab: {fileID: 100100000, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
---- !u!114 &1668810937 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 766992885882807819, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
+--- !u!95 &1668810937 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95367897037393900, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
   m_PrefabInstance: {fileID: 1668810936}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9259f0c03367d3045a8fe12b97c3e605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.NPCScript
 --- !u!4 &1668810938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4994131331870096, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
   m_PrefabInstance: {fileID: 1668810936}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &1668810939 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 195994042306656126, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
+  m_PrefabInstance: {fileID: 1668810936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1668810940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1346516546967338, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
+  m_PrefabInstance: {fileID: 1668810936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1668810941 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4885524368459591632, guid: 6fe9da35877ef5842995a054e927e9f3, type: 3}
+  m_PrefabInstance: {fileID: 1668810936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1668810942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668810940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640a27afac9959141ae92213b39d0916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.AnnaNPC
+  IsOneTimeUse: 0
+  ObjectsToBeOutlined: []
+  Animator: {fileID: 1668810937}
+  StopDistance: 2.5
+  UpdateRate: 0.1
+  Pitch: 0
+  IsFollowing: 0
+  Agent: {fileID: 1668810939}
+  DialogueList:
+  - {fileID: 11400000, guid: 9587fca4f595b5046ae44a10c64af3c2, type: 2}
+  - {fileID: 11400000, guid: dbcff874b897aa54db5ca5e794796561, type: 2}
+  Parent: {fileID: 1668810938}
+  NPCCamera: {fileID: 1668810941}
 --- !u!1001 &1670872370
 PrefabInstance:
   m_ObjectHideFlags: 0

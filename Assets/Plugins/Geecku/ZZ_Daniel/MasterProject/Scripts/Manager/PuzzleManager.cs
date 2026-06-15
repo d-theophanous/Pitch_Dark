@@ -113,6 +113,7 @@ namespace Daniel.Master
 
                 StartCoroutine(PlayDoorSequence());
             };
+            AudioManager.Instance.NextGenre();
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR, action);
         }
 
@@ -271,7 +272,7 @@ namespace Daniel.Master
             {
                 InputManager.Instance.PlayerInput.ActivateInput();
                 BlackBackground.SetActive(false);
-                if (CurDoor != null)
+                if (CurDoor != null && CurDoor.DoorNPC != null)
                     CurDoor.DoorNPC.ActivateSecondDialogue();
                 CurDoor.ToggleDoor(false);
             });

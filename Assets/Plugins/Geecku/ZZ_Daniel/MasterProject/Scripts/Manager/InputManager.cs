@@ -107,7 +107,8 @@ namespace Daniel.Master
         //- default = TAB
         public void OnSettings(InputValue value)
         {
-            GlobalUIManager.Instance.ToggleUI(UI_Group.SETTINGS_GENERAL);
+            Debug.Log("options disabled");
+            //GlobalUIManager.Instance.ToggleUI(UI_Group.SETTINGS_GENERAL);
         }
         //- Magnifier
         public void OnMagnify(InputValue value)

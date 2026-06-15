@@ -90,10 +90,11 @@ public class InteractionColliderScript : MonoBehaviour
                 AudioManager.Instance.StopWallScratch();
                 AudioManager.Instance.StartFaceWall();
             }
+            //- case wenn beides?
             else
             {
                 AudioManager.Instance.StartWallScratch();
-                AudioManager.Instance.StartFaceWall();
+                //AudioManager.Instance.StartFaceWall();
             }
         }
         else

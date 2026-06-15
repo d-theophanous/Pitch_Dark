@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 namespace Daniel.Master
 {
@@ -26,6 +27,8 @@ namespace Daniel.Master
         #endregion
 
         private List<EventInstance> EventInstanceList;
+        public int GenreCount;
+        private int GenreIdx => GenreCount % Enum.GetNames(typeof(Genre)).Length;
 
         //- ToDo opt, for now all of the readable element narrations are in the 
         //- SFX bank which is not optimal
@@ -49,6 +52,7 @@ namespace Daniel.Master
 
             //- Dialogue Callback
             dialogueCallback = new EVENT_CALLBACK(DialogueEventCallback);
+            TTSCallback = dialogueCallback;
 
             //- Set up events
             SetUpEvents();
@@ -86,11 +90,12 @@ namespace Daniel.Master
         {
             RuntimeManager.PlayOneShot(reference, world_pos);
         }
-        public void PlayDialogue(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE)
+        public void PlayDialogue(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE, float pitch = 0)
         {
             StopDialogue();
             LastDialogueInfo = (key, tone);
             currentDialogueInstance.setParameterByNameWithLabel("Tone", tone.ToString());
+            currentDialogueInstance.setPitch(pitch);
 
             // Pin the key string in memory and pass a pointer through the user data
             GCHandle stringHandle = GCHandle.Alloc(key);
@@ -102,18 +107,18 @@ namespace Daniel.Master
                 StartCoroutine(WaitForEnd(currentDialogueInstance, on_complete));
         }
         public bool ChangeLines;
-        public void PlayDialogue(int dialogue, int line, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE)
+        public void PlayDialogue(int dialogue, int line, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE, float pitch = 0)
         {
             string key = Helper.GetLanguageString() + "_" + dialogue 
                 + "_" + line;
-            PlayDialogue(key, on_complete, tone);
+            PlayDialogue(key, on_complete, tone, pitch);
         }
-        public void PlayDialogue2(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE)
+        public void PlayDialogue2(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE, float pitch = 0)
         {
             if (key == "")
                 return;
             string tmp = Helper.GetLanguageString() + "_" + key;
-            PlayDialogue(tmp, on_complete, tone);
+            PlayDialogue(tmp, on_complete, tone, pitch);
         }
         public void StopDialogue()
         {
@@ -142,6 +147,7 @@ namespace Daniel.Master
             ImprovTrackEventInstance = CreateEventInstance(FMODEvents.Instance.ImprovisationTrack);
             NoteEventInstance = CreateEventInstance(FMODEvents.Instance.Note);
             currentDialogueInstance = CreateEventInstance(FMODEvents.Instance.Dialogue);
+            CurrentTTSInstance = CreateEventInstance(FMODEvents.Instance.TTSEvent);
             WallScratchEvent = CreateEventInstance(FMODEvents.Instance.WallScratchEvent);
             WallFaceEvent = CreateEventInstance(FMODEvents.Instance.WallFaceEvent);
             FootstepEvent = CreateEventInstance(FMODEvents.Instance.FootstepEvent);
@@ -149,17 +155,27 @@ namespace Daniel.Master
         }
 
         #region Accessibility
-        public void PlayReadableElement(string key)
-        {
-            EventInstance instance = RuntimeManager.CreateInstance(FMODEvents.Instance.OneShotEvent);
-            instance.setUserData(GCHandle.ToIntPtr(GCHandle.Alloc(key)));
-            instance.start();
-            instance.release();
+        EventInstance CurrentTTSInstance;
+        public void PlayReadableElement(string key, UI_Element element)
+        {            
+            StopTTS();
 
-            instance.setCallback(ProgrammerSoundCallback,
-                EVENT_CALLBACK_TYPE.CREATE_PROGRAMMER_SOUND |
-                EVENT_CALLBACK_TYPE.DESTROY_PROGRAMMER_SOUND);
+            CurrentTTSInstance.setParameterByNameWithLabel("Element", element.ToString());
+            // Pin the key string in memory and pass a pointer through the user data
+            GCHandle stringHandle = GCHandle.Alloc(key);
+            CurrentTTSInstance.setUserData(GCHandle.ToIntPtr(stringHandle));
+
+            CurrentTTSInstance.setCallback(TTSCallback);
+            CurrentTTSInstance.start();
         }
+        public void StopTTS()
+        {
+            if (CurrentTTSInstance.isValid())
+            {
+                CurrentTTSInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            }
+        }
+        private EVENT_CALLBACK TTSCallback;
         #endregion
 
         #region Footsteps
@@ -436,10 +452,10 @@ namespace Daniel.Master
         {
             ImprovTrackEventInstance.setParameterByNameWithLabel("Genre", ((Genre)genre).ToString());
         }
-        public void SetInitialGenre(int genre)
+        public void NextGenre()
         {
-            SetGenre(genre);
-            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT, false);
+            GenreCount++;
+            ImprovTrackEventInstance.setParameterByNameWithLabel("Genre", ((Genre)GenreIdx).ToString());
         }
         public void UnlockInterval(Interval interval)
         {

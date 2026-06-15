@@ -2445,7 +2445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6329030984631959873, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 6329030984631959873, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3192,7 +3192,7 @@ MonoBehaviour:
   - Connect_M
   ConnectScript: {fileID: 1729751770}
   Player: {fileID: 0}
-  SkipTutorial: 1
+  SkipTutorial: 0
   StartTutorial: 0
   PlayerIdx: 0
   DebugInteractable: {fileID: 0}
@@ -6643,6 +6643,7 @@ MonoBehaviour:
   DialogueVolume: 1
   NotesVolume: 1
   TTSVolume: 1
+  GenreCount: 0
   ChangeLines: 0
   UnlockedIntervalList: 
 --- !u!4 &1026959046
@@ -8849,7 +8850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6329030984631959873, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 6329030984631959873, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_SizeDelta.y
@@ -10375,6 +10376,13 @@ MonoBehaviour:
       Data3: 1862771862
       Data4: -1074534492
     Path: event:/Interactable2
+  <TTSEvent>k__BackingField:
+    Guid:
+      Data1: -877136139
+      Data2: 1245737402
+      Data3: 835846816
+      Data4: -399291447
+    Path: event:/TTS/TTSEvent
 --- !u!4 &1584220755
 Transform:
   m_ObjectHideFlags: 0
@@ -11763,7 +11771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6329030984631959873, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 6329030984631959873, guid: 217fa1dafb2938b45a803e7b572cfb71, type: 3}
       propertyPath: m_SizeDelta.y

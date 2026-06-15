@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd12a18dafdb74ab8b1dd16427d1e6, type: 3}
+  m_Name: final_lines_de
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::NarrationScriptData
+  lines:
+  - Text
+  - Button
+  - "Du hast das Spiel abgeschlossen, vielen Dank f\xFCrs Spielen"
+  - Dialog
+  - Bewegung
+  - "R\xE4tsel"
+  - "Du befindest dich jetzt im Dialogmodus. Wenn du den Modus wechselst, teilt dir
+    das Spiel mit, in welchem Modus du dich gerade befindest, indem es entweder Text
+    sagt, wenn Text auf dem Bildschirm zu sehen ist, oder Bewegung, wenn du dich
+    bewegen kannst. Wenn das Spiel auf deine Eingabe wartet, h\xF6rst du diesen Ton.
+    Dr\xFCcke X, die unterste der vier Tasten auf der rechten Seite deines Controllers,
+    um fortzufahren."
+  - "verbleibende T\xFCren"
+  - 0
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - "Versuche, die vier Tasten auf der rechten Seite deines Controllers zu dr\xFCcken,
+    w\xE4hrend die Musik spielt. Je mehr Intervalle du freischaltest, desto mehr
+    kannst du spielen"
+  - "Intervall-L\xF6sung"
+  - Erste
+  - Zweite
+  - Dritte
+  - Vierte
+  - Punktestand
+  - Eingabe
+  - Gleiche Note, Prime
+  - Mittlerer Abstand, Quinte
+  - "Gro\xDFer Abstand, Oktave"
+  - Zwischensequenz
+  - "Auf deiner rechten Seite hinten befinden sich zwei Tasten. Dr\xFCcke die vordere,
+    um zu interagieren"
+  - "Du befindest dich nun in einem Raum mit einem Ausgang. Finde die T\xFCr, mit
+    der du interagieren kannst, und dr\xFCcke dann die rechte Taste."
+  - Hallo?
+  - Ist da jemand?
+  - Oh, Gott sei Dank, du bewegst dich. Bist du verletzt?
+  - Ganz ruhig, ganz ruhig. Ich helfe dir auf.
+  - "Es ist so dunkel hier drin, gut, dass ich nicht \xFCber dich gestolpert bin"
+  - Und es ist sonst niemand hier... nur wir beide im Moment.
+  - "Dein Freund ist irgendwo da drau\xDFen, das wei\xDF ich einfach. Genauso wie
+    der Rest meiner Band."
+  - Komm schon, ich passe auf dich auf. Auf gehts
+  - "Moment mal, du hast es tats\xE4chlich aufbekommen?!"
+  - Okay, da bessert sich meine Laune direkt. Da bekomme ich richtig Lust, was zu
+    spielen.
+  - "Na los, probier\u2019s mal. Wende an, was du gerade gelernt hast! Sing einfach
+    mit"
+  - Hallooo?! Ist da jemand?!
+  - Oh, Henry! Und... ein neues Gesicht, hallo! Okay, gut, mehr Leute, weniger unheimlich.
+  - "Schau mal, der Reiseleiter hat mir das hier gegeben. Es soll vibrieren, wenn
+    wir uns dem Ausgang n\xE4hern."
+  - Nur dass es einfach vibriert, wann immer es ihm passt. Super hilfreich, danke.
+  - Hier, nimm du es. Vielleicht hast du ja eine Idee, wie es funktioniert. Ich folge
+    dir!
+  - "Ooh, ein Musikr\xE4tsel! Davon verstehe ich was. Du siehst ein bisschen verwirrt
+    aus, ich erkl\xE4re es dir!"
+  - Also, ein Intervall ist einfach der Abstand zwischen zwei Noten.
+  - Je nachdem, wie weit diese Noten auseinanderliegen, bekommt das Intervall einen
+    anderen Namen.
+  - Der kleinste Abstand? Das nennt man die Prime.
+  - Im Grunde dieselbe Note, die zweimal gespielt wird, also ist der Abstand praktisch
+    null.
+  - "Nun das Gegenteil \u2013 der gr\xF6\xDFte Abstand ist die Oktave."
+  - "Die beiden T\xF6ne liegen weit auseinander, so als ob der erste Ton bei deinen
+    F\xFC\xDFen w\xE4re und der zweite ganz oben bei deinem Kopf."
+  - "Okay, hier gibt es also eine Intervallfolge, aber wo geben wir die \xFCberhaupt
+    ein?"
+  - "Und noch wichtiger: Wo ist die eigentliche L\xF6sung? Die T\xFCr will eine Folge,
+    aber ich sehe nirgendwo eine \u2026"
+  - "Na, wer ist denn das! Das wurde auch Zeit, ich dachte schon, ich m\xFCsste dieses
+    ganze Labyrinth alleine l\xF6sen."
+  - "Diese T\xFCr habe ich schon vor Ewigkeiten gefunden. Sie l\xE4sst sich einfach
+    nicht \xF6ffnen. Ich werde noch verr\xFCckt."
+  - "Es braucht eine Tonfolgenfolge. Die Quinte kenne ich \u2013 die ist einfach."
+  - "Ein mittlerer Abstand zwischen den beiden T\xF6nen. H\xF6r mal, es klingt so!"
+  - "Okay, du bist dran. Vermassel das blo\xDF nicht, wir sind jetzt ein Team."
+  - HA! Ich habe nie an dir gezweifelt!
+  - "Und jetzt habe ich auch die Prime und die Oktave herausgefunden. Gib mir f\xFCnf
+    Minuten Zeit damit und spiel mit!"

@@ -66,7 +66,7 @@ namespace Daniel.Master
         protected void ReadText()
         { 
             if (Audio == null) return;
-            AudioManager.Instance.PlayReadableElement(Audio.name);
+            AudioManager.Instance.PlayReadableElement(Audio.name, Element);
         }
         public void SetParent(ReadableElementGroup parent) { Parent = parent; }
 

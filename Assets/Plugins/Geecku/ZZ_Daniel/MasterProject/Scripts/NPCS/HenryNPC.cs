@@ -11,6 +11,7 @@ namespace Daniel.Master
             base.Start();
             SetUpTutorialSegments();
             ImproviseAfterSecondDialogue = true;
+            Pitch = -2f;
 
             if (GameManager.Instance.SkipTutorial)
                 tag = "Untagged";

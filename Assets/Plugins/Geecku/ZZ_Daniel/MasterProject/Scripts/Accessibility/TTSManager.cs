@@ -112,6 +112,6 @@ namespace Daniel.Master
     //- for narration of what the person is hovering over
     public enum UI_Element
     {
-        BUTTON, TEXT
+        BUTTON, TEXT, DIALOGUE
     }
 }

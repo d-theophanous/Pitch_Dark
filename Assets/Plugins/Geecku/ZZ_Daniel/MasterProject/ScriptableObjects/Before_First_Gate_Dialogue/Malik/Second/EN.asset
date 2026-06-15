@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb8abeb8477f3d47aac6a4d0e488fcf, type: 3}
+  m_Name: EN
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Daniel.Master.DialogueData
+  DialogueNumber: 3
+  Language: EN
+  Lines:
+  - Ooh, a music puzzle! Now THIS I know about. You look a little lost, let me break
+    it down!
+  - So, an interval is just the distance between two notes.
+  - Depending on how far apart those notes are, the interval gets a different name.
+  - Smallest distance? That's called the prime.
+  - Literally the same note played twice, so the gap is basically nothing.
+  - Now the opposite. The biggest gap is the octave.
+  - The two notes way far apart, like... if the first note was on your feet, the
+    second would be all the way at your head.
