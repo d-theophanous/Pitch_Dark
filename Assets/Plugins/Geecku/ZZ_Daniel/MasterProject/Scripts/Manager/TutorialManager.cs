@@ -72,7 +72,7 @@ namespace Daniel.Master
         public Transform SegmentSpawnDoor;
 
         [SerializeField] private NPCScript StartNPC;
-        [SerializeField] private NPCScript AfterTutorialNPC;
+        public NPCScript AfterTutorialNPC;
 
         #region MonoBehaviour commons
         protected override void Start()
@@ -82,6 +82,9 @@ namespace Daniel.Master
 
             //- send NPC to you
             StartNPC.SetFollowing(true);
+
+            //- set the first action for the gate
+            GameManager.Instance.CurrentGateReadyAction = () => { OnReceiveTutorialEnd(); };
 
             //- Testing
             //StartTutorial();
@@ -123,7 +126,6 @@ namespace Daniel.Master
             {
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Tutorial").Disable();
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
-                //- opt ToDo "Filmsequenz" zuerst wie man durch Tür läuft und Tüt sich schließt
                 ToggleStatus(true);
             };
             TutorialSegmentList.Add(seg_5);
@@ -172,15 +174,17 @@ namespace Daniel.Master
         {
             GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
-            GameManager.Instance.SetGameState(GameState.PLAYING);
+            //GameManager.Instance.SetGameState(GameState.PLAYING);
+            //- schicke message raus
 
-            //- ToDo wait for other player but for now this is fine
-            //- eigentlich auch dass man hier durch Tür läuft
-            GameManager.Instance.Player.SpawnPlayerAtStart();
-            GameManager.Instance.Player.TeleportNPCsToPlayer(GameManager.Instance.Player.transform);
-
-            //- NPC walks to you
-            AfterTutorialNPC.SetFollowing(true);
+            Debug.Log("gate tutorial manager 180");
+            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
+            GameManager.Instance.ClientSend_PlayerAtGate();
+        }
+        public void OnReceiveTutorialEnd()
+        {
+            StartCoroutine(PuzzleManager.Instance.PlayTutorialDoorSequence());
+            GameManager.Instance.CurrentGateReadyAction = () => { PuzzleManager.Instance.StartPuzzle(); };
         }
         public void ToggleStatus(bool switch_to_dialogue)
         {

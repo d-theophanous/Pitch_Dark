@@ -273,6 +273,23 @@ namespace Daniel.Master
             });
             yield return null;
         }
+        public IEnumerator PlayTutorialDoorSequence()
+        {
+            InputManager.Instance.PlayerInput.DeactivateInput();
+            BlackBackground.SetActive(true);
+            GameManager.Instance.Player.SpawnPlayerAtStart();
+            GameManager.Instance.Player.TeleportNPCsToPlayer(GameManager.Instance.Player.transform);
+            
+
+            AudioManager.Instance.PlaySFX(SFX.CLOSE_DOOR, () =>
+            {
+                InputManager.Instance.PlayerInput.ActivateInput();
+                BlackBackground.SetActive(false);
+                TutorialManager.Instance.AfterTutorialNPC.SetFollowing(true);
+                GameManager.Instance.SetGameState(GameState.PLAYING);
+            });
+            yield return null;
+        }
         #endregion
     }
     public enum Interval

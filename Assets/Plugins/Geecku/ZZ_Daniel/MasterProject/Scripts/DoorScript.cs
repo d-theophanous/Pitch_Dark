@@ -21,6 +21,7 @@ namespace Daniel.Master
             //emitter.gameObject.SetActive(false);
 
             AudioManager.Instance.StopInteractable(); //-   ToDo
+            Debug.Log("gate door script 24");
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
             GameManager.Instance.ClientSend_PlayerAtGate();
             tag = "Untagged";
@@ -50,7 +51,6 @@ namespace Daniel.Master
             }
             else
             {
-                AudioManager.Instance.PlaySFX(SFX.CLOSE_DOOR);
                 NavMeshObstacle.SetActive(true);
                 DoorAnimator.SetBool("open_door", false);
                 DoorAnimator.SetBool("close_door", true);

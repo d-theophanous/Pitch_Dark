@@ -12,8 +12,7 @@ namespace Daniel.Master
             SetUpTutorialSegments();
             ImproviseAfterSecondDialogue = true;
 
-            //- ToDo for game with tutorial comment / delte!
-            tag = "Untagged";
+            //tag = "Untagged";
         }
         public override void ActivatePrompt()
         {

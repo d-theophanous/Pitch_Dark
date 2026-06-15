@@ -56,6 +56,7 @@ namespace Daniel.Master
             }
             else if (TutorialAfter)
             {
+                Debug.Log("ja dialogue after ist problem");
                 TutorialManager.Instance.ToggleStatus(false);
                 GlobalUIManager.Instance.PlayerViewCamera.gameObject.SetActive(false);
             }

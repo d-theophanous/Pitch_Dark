@@ -1,6 +1,7 @@
-using UnityEngine;
-using FMODUnity;
 using FMOD;
+using FMODUnity;
+using UnityEngine;
+using UnityEngine.AI;
 
 namespace Daniel.Master
 {
@@ -11,6 +12,7 @@ namespace Daniel.Master
         public override void ActivatePrompt()
         {
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR);
+            DialogueManager.Instance.TutorialAfter = false;
             TutorialManager.Instance.TriggerSegmentComplete();
             tag = "Untagged";
             //StudioEventEmitter emitter = gameObject.GetComponentInChildren<StudioEventEmitter>();
@@ -18,6 +20,7 @@ namespace Daniel.Master
             //emitter.gameObject.SetActive(false);
 
             AudioManager.Instance.StopInteractable();
+            ToggleDoor(true);
         }
         public override void EnterInteractionRange()
         {
@@ -28,6 +31,20 @@ namespace Daniel.Master
         {
             base.ExitInteractionRange();
             AudioManager.Instance.StopInteractable();
+        }
+        public void ToggleDoor(bool open)
+        {
+            if (open)
+            {
+                AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR);
+                DoorAnimator.SetBool("open_door", true);
+                DoorAnimator.SetBool("close_door", false);
+            }
+            else
+            {
+                DoorAnimator.SetBool("open_door", false);
+                DoorAnimator.SetBool("close_door", true);
+            }
         }
     }
 }

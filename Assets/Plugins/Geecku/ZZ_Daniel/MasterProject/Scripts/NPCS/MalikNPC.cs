@@ -18,6 +18,11 @@ namespace Daniel.Master
         private void SetUpDialogueActions()
         {
             Dictionary<int, Action> dialogue_1_dic = new();
+            dialogue_1_dic.Add(0, () =>
+            {
+                DialogueManager.Instance.TutorialAfter = false; 
+                DialogueManager.Instance.ContinueWithDialogue = true;
+            });
             dialogue_1_dic.Add(DialogueList[0].DialogueList[0].Lines.Count, () =>
             {
                 DirectionChecker.Instance.StartDirectionChecking();

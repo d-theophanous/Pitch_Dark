@@ -1096,8 +1096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36b70e827ee77f44a624c729ce5a12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1Spawn: {fileID: 511532032}
-  Player2Spawn: {fileID: 511532032}
+  Player1Spawn: {fileID: 430324109}
+  Player2Spawn: {fileID: 430324109}
   PlayerStartSpawnList:
   - {fileID: 511532032}
   - {fileID: 511532032}
@@ -20486,7 +20486,7 @@ MonoBehaviour:
   IsOneTimeUse: 0
   ObjectsToBeOutlined: []
   Animator: {fileID: 1354979633}
-  StopDistance: 3
+  StopDistance: 2.5
   UpdateRate: 0.1
   IsFollowing: 0
   Agent: {fileID: 1354979634}

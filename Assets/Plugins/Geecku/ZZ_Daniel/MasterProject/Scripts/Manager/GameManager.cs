@@ -117,6 +117,7 @@ namespace Daniel.Master
                     SubscribeMovementEvents();
                     InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
                     InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
+                    InputManager.Instance.PlayerInput.actions.FindActionMap("UI").Disable();
                     break;
                 case GameState.CONNECT:
                     break;
@@ -207,9 +208,10 @@ namespace Daniel.Master
         }
         public void QuitWaitingForPuzzle()
         {
-            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
+            //GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
             //- Send other player message of cancelation
         }
+        public Action CurrentGateReadyAction;
         public bool OtherPlayerIsGateReady { get; private set; }
         private void OtherPlayerGateReady()
         {
@@ -226,7 +228,10 @@ namespace Daniel.Master
         {
             if (OtherPlayerIsGateReady && PlayerIsGateReady)
             {
-                PuzzleManager.Instance.StartPuzzle();
+                GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
+                CurrentGateReadyAction?.Invoke();
+                Debug.Log("gate game m anager 231");
+                OtherPlayerIsGateReady = PlayerIsGateReady = false;
             }
         }
 
@@ -541,7 +546,10 @@ namespace Daniel.Master
         }
         public void DebugSkipGate()
         {
-            PuzzleManager.Instance.StartPuzzle();
+            GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
+            CurrentGateReadyAction?.Invoke();
+            Debug.Log("gate game mamanger 549");
+            OtherPlayerIsGateReady = PlayerIsGateReady = false;
         }
         #endregion
     }
