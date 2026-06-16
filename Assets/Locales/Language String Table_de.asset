@@ -126,6 +126,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 7223895054663811158
+  - m_Id: 22386373136924672
+    m_Localized: "Du hast das Spiel abgeschlossen, vielen Dank f\xFCrs Spielen"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

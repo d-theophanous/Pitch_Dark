@@ -126,6 +126,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 7223895054663811157
+  - m_Id: 22386373136924672
+    m_Localized: 'You completed the game, thank you for playing
+
+'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

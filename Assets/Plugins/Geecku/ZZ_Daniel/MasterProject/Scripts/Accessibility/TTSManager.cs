@@ -114,4 +114,8 @@ namespace Daniel.Master
     {
         BUTTON, TEXT, DIALOGUE
     }
+    public enum ScreenInfo
+    {
+        DIALOGUE, PUZZLE, MOVING
+    }
 }

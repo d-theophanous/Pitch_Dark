@@ -20,5 +20,6 @@ namespace Daniel.Master
         [field: SerializeField] public EventReference FootstepEvent { get; private set; }
         [field: SerializeField] public EventReference InteractableEvent { get; private set; }
         [field: SerializeField] public EventReference TTSEvent { get; private set; }
+        [field: SerializeField] public EventReference ScreenInfoEvent { get; private set; }
     }
 }

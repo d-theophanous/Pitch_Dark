@@ -1,8 +1,8 @@
 using Geecku.GlobalMangers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Localization.Components;
 using UnityEngine.UI;
@@ -130,6 +130,7 @@ namespace Daniel.Master
                 ChangeMainCamera(UICamera);
                 InputManager.Instance.SwitchCurrentActionMap("UI");
             }
+
             GameObject tmp = GetGameObjectFromEnum(ui);
             tmp.SetActive(true);
             CurUIList.Add(ui);
@@ -270,10 +271,19 @@ namespace Daniel.Master
         private IEnumerator ToggleReadableElementGroup(UI_Group ui, bool activate_settings)
         {
             yield return new WaitForEndOfFrame();
-            if (activate_settings)
+
+            if (!activate_settings)
+                yield break;
+
+            Action action = () =>
             {
-                TTSManager.Instance.SwitchReadableElementGroup(ui);
-            }
+                 TTSManager.Instance.SwitchReadableElementGroup(ui);
+            };
+
+            if (ui == UI_Group.PUZZLE)
+                AudioManager.Instance.PlayScreenInfo(ScreenInfo.PUZZLE, action);
+            else
+                action.Invoke();
         }
     }
     //- this is not very efficient but oh well...

@@ -6,7 +6,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
@@ -119,6 +118,7 @@ namespace Daniel.Master
                     InputManager.Instance.PlayerInput.actions.FindActionMap("Improvisation").Enable();
                     InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
                     InputManager.Instance.PlayerInput.actions.FindActionMap("UI").Disable();
+                    AudioManager.Instance.PlayScreenInfo(ScreenInfo.MOVING);
                     break;
                 case GameState.CONNECT:
                     break;

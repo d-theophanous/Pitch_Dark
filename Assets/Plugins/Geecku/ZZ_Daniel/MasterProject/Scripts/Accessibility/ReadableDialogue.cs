@@ -70,10 +70,14 @@ namespace Daniel.Master
         }
         public void StartDialogue()
         {
-            index = 0;
-            NextLine();
-            ContinuePressed = false;
-            DialogueManager.Instance.ContinueWithDialogue = false;
+            Action action = () =>
+            {
+                index = 0;
+                NextLine();
+                ContinuePressed = false;
+                DialogueManager.Instance.ContinueWithDialogue = false;
+            };
+            AudioManager.Instance.PlayScreenInfo(ScreenInfo.DIALOGUE, action);
         }
         private IEnumerator TypeLine()
         {

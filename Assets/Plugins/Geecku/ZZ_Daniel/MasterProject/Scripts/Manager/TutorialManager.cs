@@ -70,6 +70,7 @@ namespace Daniel.Master
         public bool IsDialogue;
         public Transform SegmentSpawnExit;
         public Transform SegmentSpawnDoor;
+        public bool TutorialPlays;
 
         [SerializeField] private TutorialDoorScript TutorialDoor;
         [SerializeField] private NPCScript StartNPC;
@@ -149,12 +150,14 @@ namespace Daniel.Master
                 return;
 
             GameManager.Instance.UpdateEvent += UpdateTutorialManager;
+            TutorialPlays = true;
             ToggleStatus(true);
         }
         public void StartSegment(TutorialSegment segment)
         {
             if (segment == null) return;
             GameManager.Instance.UpdateEvent += UpdateTutorialManager;
+            TutorialPlays = true;
             InputManager.Instance.SwitchCurrentActionMap("Tutorial");
             SwitchSegment(segment);
         }
@@ -166,6 +169,7 @@ namespace Daniel.Master
         public void SwitchSegment(TutorialSegment segment)
         {
             GameManager.Instance.UpdateEvent += UpdateTutorialManager;
+            TutorialPlays = true;
             CurrentSegment = segment;
             CurrentSegment.OnStartSegment();
         }
@@ -174,6 +178,7 @@ namespace Daniel.Master
         private void EndTutorial()
         {
             GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
+            TutorialPlays = false;
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
             //GameManager.Instance.SetGameState(GameState.PLAYING);
             //- schicke message raus

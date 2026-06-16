@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.InputSystem;
 
 namespace Daniel.Master
 {
@@ -72,7 +73,7 @@ namespace Daniel.Master
             DialogueBus.setVolume(DialogueVolume);
             TTSBus.setVolume(TTSVolume);
         }
-        private IEnumerator WaitForEnd(EventInstance instance, Action onComplete)
+        private IEnumerator WaitForEnd(EventInstance instance, Action onComplete, bool release_at_end = false)
         {
             PLAYBACK_STATE state;
             do
@@ -81,6 +82,9 @@ namespace Daniel.Master
                 instance.getPlaybackState(out state);
             }
             while (state != PLAYBACK_STATE.STOPPED);
+
+            if (release_at_end)
+                instance.release();
 
             onComplete?.Invoke();
         }
@@ -157,11 +161,26 @@ namespace Daniel.Master
 
         #region Accessibility
         EventInstance CurrentTTSInstance;
+        //- for scene switches
+        public void PlayScreenInfo(ScreenInfo info, Action on_complete = null)
+        {
+            if (TutorialManager.Instance.TutorialPlays)
+                return;
+            EventInstance instance = RuntimeManager.CreateInstance(FMODEvents.Instance.ScreenInfoEvent);
+            string key = Helper.GetLanguageString() + "_" + info.ToString();
+            instance.setParameterByNameWithLabel("ScreenInfo", key);
+            instance.start();
+
+            if (on_complete == null)
+                instance.release();
+            else
+                StartCoroutine(WaitForEnd(instance, on_complete, true));
+        }
         public void PlayReadableElement(string key, UI_Element element)
         {            
             StopTTS();
-
-            CurrentTTSInstance.setParameterByNameWithLabel("Element", element.ToString());
+            string parameter = Helper.GetLanguageString() + "_" + element.ToString();
+            CurrentTTSInstance.setParameterByNameWithLabel("Element", parameter);
             // Pin the key string in memory and pass a pointer through the user data
             GCHandle stringHandle = GCHandle.Alloc(key);
             CurrentTTSInstance.setUserData(GCHandle.ToIntPtr(stringHandle));
