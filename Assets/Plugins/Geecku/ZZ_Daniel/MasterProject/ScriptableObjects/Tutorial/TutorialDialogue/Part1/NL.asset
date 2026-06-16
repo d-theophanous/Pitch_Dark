@@ -24,7 +24,6 @@ MonoBehaviour:
   - Nog een ding.
   - Als je in de buurt bent van een object waarmee je kunt interageren, klinkt dit
     geluid zolang je ermee kunt interageren.
-  - Druk op de achterste rechterknop aan de rechterkant om vervolgens met het object
-    te interageren.
-  - Je bevindt je nu in een ruimte met een uitgang. Zoek de deur waarmee je kunt
-    interageren en druk vervolgens op de rechterknop aan de achterkant.
+  - Aan je rechterkant achterin heb je twee knoppen. Druk op de voorste om te reageren
+  - Je bevindt je nu in een kamer met een uitgang. Zoek de deur waarmee je kunt communiceren
+    en druk vervolgens op de rechterknop.

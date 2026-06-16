@@ -22,6 +22,8 @@ namespace Daniel.Master
         public int Ordernumber;
         //- quite ugly :) 
         public int AudioIndex = 0;
+        public Interval Interval = Interval.NONE;
+        public Number Number = Number.NONE;
 
         private void Start()
         {
@@ -52,21 +54,25 @@ namespace Daniel.Master
         public virtual void Repeat() { }
         public virtual void Return()
         {
-            if (Parent != null)
-            {
-                TTSManager.Instance.SwitchReadableElementGroup(Parent.Parent);
-                AudioManager.Instance.PlaySFX(SFX.GO_BACK);
-            }
-            else
-            {
-                AudioManager.Instance.PlaySFX(SFX.NO_MORE_ELEMENTS);
-                Debug.Log("readable element doesnt have a parent");
-            }
+            //- ToDo for final version with settings?
+
+            AudioManager.Instance.PlaySFX(SFX.NO_MORE_ELEMENTS);
+            Debug.Log("readable element doesnt have a parent");
+            //if (Parent != null)
+            //{
+            //    TTSManager.Instance.SwitchReadableElementGroup(Parent.Parent);
+            //    AudioManager.Instance.PlaySFX(SFX.GO_BACK);
+            //}
+            //else
+            //{
+            //    AudioManager.Instance.PlaySFX(SFX.NO_MORE_ELEMENTS);
+            //    Debug.Log("readable element doesnt have a parent");
+            //}
         }
         protected void ReadText()
         { 
             if (Audio == null) return;
-            AudioManager.Instance.PlayReadableElement(Audio.name, Element);
+            AudioManager.Instance.PlayReadableElement(Audio.name, Element, Interval, Number);
         }
         public void SetParent(ReadableElementGroup parent) { Parent = parent; }
 

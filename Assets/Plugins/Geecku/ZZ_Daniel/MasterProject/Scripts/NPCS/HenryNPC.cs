@@ -117,8 +117,19 @@ namespace Daniel.Master
                 TutorialManager.Instance.StartSegment(seg_4);
             });
 
+            Dictionary<int, Action> dialogue_2_dic = new();
+            dialogue_2_dic.Add(DialogueList[1].DialogueList[0].Lines.Count - 1, () =>
+            {
+                string key = Helper.GetLanguageString() + "_improv_buttons";
+                AudioManager.Instance.PlayDialogue(key, () =>
+                {
+                    DialogueManager.Instance.ContinueWithDialogue = true;
+                    DialogueManager.Instance.Dialogue.Activate();
+                });
+            });
 
             ActionDicList.Add(dialogue_1_dic);
+            ActionDicList.Add(dialogue_2_dic);
         }
     }
 }

@@ -144,6 +144,7 @@ namespace Daniel.Master
         {
             if (CurUIList.Count == 0)
                 return;
+            AudioManager.Instance.StopTTS();
 
             GetGameObjectFromEnum(ui).SetActive(false);
             CurUIList.Remove(ui);

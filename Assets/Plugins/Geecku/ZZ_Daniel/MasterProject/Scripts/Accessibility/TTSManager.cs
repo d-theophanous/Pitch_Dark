@@ -116,6 +116,6 @@ namespace Daniel.Master
     }
     public enum ScreenInfo
     {
-        DIALOGUE, PUZZLE, MOVING
+        DIALOGUE, PUZZLE, MOVING, CUTSCENE
     }
 }

@@ -37,7 +37,6 @@ namespace Daniel.Master
         #region Music and Improvisation
         public void OnPlayRoot()
         {
-            Debug.Log("on play prime");
             if (PuzzleManager.Instance.IsSolving)
                 PuzzleManager.Instance.CheckPuzzle(Interval.PRIME);
             else if (AudioManager.Instance.UnlockedIntervalList.Contains(Interval.PRIME))
@@ -45,7 +44,6 @@ namespace Daniel.Master
         }
         public void OnPlayFifth()
         {
-            Debug.Log("on play fifth");
             if (PuzzleManager.Instance.IsSolving)
                 PuzzleManager.Instance.CheckPuzzle(Interval.FIFTH);
             else if (AudioManager.Instance.UnlockedIntervalList.Contains(Interval.FIFTH))
@@ -53,7 +51,6 @@ namespace Daniel.Master
         }
         public void OnPlayOctave()
         {
-            Debug.Log("on play octave");
             if (PuzzleManager.Instance.IsSolving)
                 PuzzleManager.Instance.CheckPuzzle(Interval.OCTAVE);
             else if (AudioManager.Instance.UnlockedIntervalList.Contains(Interval.OCTAVE))

@@ -20,6 +20,7 @@ namespace Daniel.Master
         private List<Puzzle> PuzzleList = new();
         private Puzzle CurPuzzle;
         private bool ThisPlayerSolves;
+        private int RemainingDoorCount = 6;
 
         private List<Interval> SolutionSequence => CurPuzzle.Intervals;
         private int SolutionIdx;
@@ -38,26 +39,27 @@ namespace Daniel.Master
         }
         private void SetUpPuzzleList()
         {
-            Puzzle puzzle_1 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE }, 2, () => 
+            //- ToDo change to true
+            Puzzle puzzle_1 = new Puzzle(false, new() { Interval.OCTAVE, Interval.PRIME }, 2, () => 
             {
                 AudioManager.Instance.UnlockInterval(Interval.PRIME);
                 AudioManager.Instance.UnlockInterval(Interval.OCTAVE);
             });
 
             //- 2.Puzzle
-            Puzzle puzzle_2 = new Puzzle(false, new() { Interval.PRIME, Interval.OCTAVE }, 3);
+            Puzzle puzzle_2 = new Puzzle(false, new() { Interval.PRIME, Interval.OCTAVE, Interval.OCTAVE }, 3);
 
             //- 3.Puzzle
-            Puzzle puzzle_3 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH }, 3);
+            Puzzle puzzle_3 = new Puzzle(true, new() { Interval.OCTAVE, Interval.FIFTH, Interval.PRIME }, 3);
             
             //- 4.Puzzle
-            Puzzle puzzle_4 = new Puzzle(false, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH }, 4);
+            Puzzle puzzle_4 = new Puzzle(false, new() { Interval.FIFTH, Interval.PRIME, Interval.FIFTH, Interval.OCTAVE }, 4);
 
             //- 5.Puzzle
             Puzzle puzzle_5 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH }, 4);
 
             //- 6.Puzzle
-            Puzzle puzzle_6 = new Puzzle(false, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH }, 4);
+            Puzzle puzzle_6 = new Puzzle(false, new() { Interval.FIFTH, Interval.FIFTH, Interval.OCTAVE, Interval.PRIME }, 4);
 
             PuzzleList.Add(puzzle_1);
             PuzzleList.Add(puzzle_2);
@@ -106,6 +108,7 @@ namespace Daniel.Master
                 //- close UI, open door and activate the dialogue
                 GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE);
                 PuzzleIdx++;
+                RemainingDoorCount--;
                 CurCamera.gameObject.SetActive(false);
                 IsSolving = false;
                 CurPuzzle.OnEndAction?.Invoke();
@@ -135,7 +138,10 @@ namespace Daniel.Master
                     action = () =>
                     {
                         SolutionIdx++;
-                        SetNumber(SolutionIdx + 1, CurPuzzle.PasswordLength);
+                        SetNumber(SolutionIdx + 1);
+                        int number = (int)PuzzleSolveUI.Label.Number;
+                        number++;
+                        PuzzleSolveUI.Label.Number = (Number)number;
                         GlobalUIManager.Instance.SetScore(SuccessPoints);
 
                         PuzzleSolveUI.ElementGroup.GetElement(1).AudioIndex++;
@@ -196,7 +202,9 @@ namespace Daniel.Master
             GlobalUIManager.Instance.ThisPlayerSolves = true;
 
             //- Set UI
-            SetNumber(1, CurPuzzle.PasswordLength);
+            SetNumber(1);
+            PuzzleSolveUI.Label.Number = Number.FIRST;
+
             PuzzleSolveUI.ElementList[0].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.PRIME));
             PuzzleSolveUI.ElementList[1].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.FIFTH));
             PuzzleSolveUI.ElementList[2].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.OCTAVE));
@@ -222,7 +230,7 @@ namespace Daniel.Master
                 {
                     PuzzleSolutionUI.ElementList[i].gameObject.SetActive(true);
                     SetInput(i + 1, PuzzleSolutionUI.ElementList[i].GetComponent<LocalizeStringEvent>());
-                    //- ToDo setze dass audio richtig
+                    PuzzleSolutionUI.ElementList[i].Interval = CurPuzzle.Intervals[i];
                 }
                 else
                     PuzzleSolutionUI.ElementList[i].gameObject.SetActive(false);
@@ -238,9 +246,9 @@ namespace Daniel.Master
                     PuzzleSolutionUI.ElementGroup.AddElement(button);
             }
         }
-        public void SetNumber(int first_number, int second_number)
+        public void SetNumber(int first_number)
         {
-            InputNumberStringEvent.StringReference.Arguments = new object[] { first_number, second_number };
+            InputNumberStringEvent.StringReference.Arguments = new object[] { first_number };
             InputNumberStringEvent.RefreshString();
         }
         public void SetInput(int number, LocalizeStringEvent string_event)
@@ -268,13 +276,20 @@ namespace Daniel.Master
             GameManager.Instance.Player.TeleportCharacter(CurDoor.AfterPuzzlePositionPlayer.position);
             GameManager.Instance.Player.TeleportNPCsToPlayer(CurDoor.AfterPuzzlePositionNPC);
 
-            AudioManager.Instance.PlaySFX(SFX.CLOSE_DOOR, () =>
+            AudioManager.Instance.PlayScreenInfo(ScreenInfo.CUTSCENE, () =>
             {
-                InputManager.Instance.PlayerInput.ActivateInput();
-                BlackBackground.SetActive(false);
-                if (CurDoor != null && CurDoor.DoorNPC != null)
-                    CurDoor.DoorNPC.ActivateSecondDialogue();
-                CurDoor.ToggleDoor(false);
+                AudioManager.Instance.PlaySFX(SFX.DOOR_SEQUENCE, () =>
+                {
+                    string key = Helper.GetLanguageString() + "_doors_remaining";
+                    AudioManager.Instance.PlayReadableElement(key, UI_Element.DIALOGUE, Interval.NONE, (Number)RemainingDoorCount - 1, () =>
+                    {
+                        InputManager.Instance.PlayerInput.ActivateInput();
+                        BlackBackground.SetActive(false);
+                        if (CurDoor != null && CurDoor.DoorNPC != null)
+                            CurDoor.DoorNPC.ActivateSecondDialogue();
+                        CurDoor.ToggleDoor(false);
+                    });
+                });
             });
             yield return null;
         }
@@ -299,7 +314,7 @@ namespace Daniel.Master
     }
     public enum Interval
     {
-        PRIME, THIRD, FIFTH, OCTAVE
+        PRIME, THIRD, FIFTH, OCTAVE, NONE
     }
     public class Puzzle
     {

@@ -568,4 +568,8 @@ namespace Daniel.Master
     {
         ENGLISH, GERMAN, DUTCH
     }
+    public enum Number
+    {
+        ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, FIRST, SECOND, THIRD, FOURTH, NONE
+    }
 }

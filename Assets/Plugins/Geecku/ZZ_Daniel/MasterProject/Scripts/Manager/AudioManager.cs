@@ -7,7 +7,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using UnityEngine.Analytics;
 using UnityEngine.InputSystem;
 
 namespace Daniel.Master
@@ -51,9 +50,10 @@ namespace Daniel.Master
         {
             base.Start();
 
-            //- Dialogue Callback
+            //- Dialogue and other Callbacks
             dialogueCallback = new EVENT_CALLBACK(DialogueEventCallback);
             TTSCallback = dialogueCallback;
+            NumberCallback = dialogueCallback;
 
             //- Set up events
             SetUpEvents();
@@ -88,6 +88,8 @@ namespace Daniel.Master
 
             onComplete?.Invoke();
         }
+        
+        //- opt: stop instance function instead of stop dialogue stop audio etc
 
         #region Play Audio
         public void PlayOneShot(EventReference reference, Vector3 world_pos)
@@ -96,7 +98,6 @@ namespace Daniel.Master
         }
         public void PlayDialogue(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE, float pitch = 0)
         {
-            UnityEngine.Debug.Log("key: " + key);
             StopDialogue();
             LastDialogueInfo = (key, tone);
             currentDialogueInstance.setParameterByNameWithLabel("Tone", tone.ToString());
@@ -157,10 +158,40 @@ namespace Daniel.Master
             WallFaceEvent = CreateEventInstance(FMODEvents.Instance.WallFaceEvent);
             FootstepEvent = CreateEventInstance(FMODEvents.Instance.FootstepEvent);
             InteractableEvent = CreateEventInstance(FMODEvents.Instance.InteractableEvent);
+            CurrentNumberInstance = CreateEventInstance(FMODEvents.Instance.NumberEvent);
         }
 
         #region Accessibility
+        EventInstance CurrentNumberInstance;
+        private EVENT_CALLBACK NumberCallback;
         EventInstance CurrentTTSInstance;
+        private EVENT_CALLBACK TTSCallback;
+
+        //- for numbered input 
+        public void PlayNumberInput(Number number, string key, Action on_complete = null)
+        {
+            StopNumberInput();
+            CurrentNumberInstance.setParameterByNameWithLabel("Language", GameManager.Language.ToString());
+            CurrentNumberInstance.setParameterByNameWithLabel("Number", number.ToString());
+
+            // Pin the key string in memory and pass a pointer through the user data
+            GCHandle stringHandle = GCHandle.Alloc(key);
+            CurrentNumberInstance.setUserData(GCHandle.ToIntPtr(stringHandle));
+
+            CurrentNumberInstance.setCallback(NumberCallback);
+            CurrentNumberInstance.start();
+
+            if (on_complete != null)
+                StartCoroutine(WaitForEnd(CurrentNumberInstance, on_complete));
+        }
+        private void StopNumberInput()
+        {
+            if (CurrentNumberInstance.isValid())
+            {
+                CurrentNumberInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            }
+        }
+
         //- for scene switches
         public void PlayScreenInfo(ScreenInfo info, Action on_complete = null)
         {
@@ -176,17 +207,24 @@ namespace Daniel.Master
             else
                 StartCoroutine(WaitForEnd(instance, on_complete, true));
         }
-        public void PlayReadableElement(string key, UI_Element element)
+        public void PlayReadableElement(string key, UI_Element element, Interval interval = Interval.NONE, Number number = Number.NONE, Action on_complete = null)
         {            
             StopTTS();
+            UnityEngine.Debug.Log("remaining doors: " + number);
             string parameter = Helper.GetLanguageString() + "_" + element.ToString();
             CurrentTTSInstance.setParameterByNameWithLabel("Element", parameter);
+            CurrentTTSInstance.setParameterByNameWithLabel("Language", GameManager.Language.ToString());
+            CurrentTTSInstance.setParameterByNameWithLabel("Interval", interval.ToString());
+            CurrentTTSInstance.setParameterByNameWithLabel("Number", number.ToString());
             // Pin the key string in memory and pass a pointer through the user data
             GCHandle stringHandle = GCHandle.Alloc(key);
             CurrentTTSInstance.setUserData(GCHandle.ToIntPtr(stringHandle));
 
             CurrentTTSInstance.setCallback(TTSCallback);
             CurrentTTSInstance.start();
+
+            if (on_complete != null)
+                StartCoroutine(WaitForEnd(CurrentTTSInstance, on_complete));
         }
         public void StopTTS()
         {
@@ -195,7 +233,6 @@ namespace Daniel.Master
                 CurrentTTSInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             }
         }
-        private EVENT_CALLBACK TTSCallback;
         #endregion
 
         #region Footsteps
@@ -278,6 +315,9 @@ namespace Daniel.Master
                     break;
                 case SFX.OPEN_DOOR:
                     tmp = "open_door";
+                    break;
+                case SFX.DOOR_SEQUENCE:
+                    tmp = "door_sequence";
                     break;
                 default:
                     break;
@@ -544,6 +584,6 @@ namespace Daniel.Master
     public enum SFX
     {
         CORRECT, GO_BACK, MAGNIFY, SWITCH_ELEMENT, NO_MORE_ELEMENTS, REPEAT_SOUND,
-        SELECT_OPTION, CLOSE_UI, OPEN_UI, WRONG, CLOSE_DOOR, OPEN_DOOR
+        SELECT_OPTION, CLOSE_UI, OPEN_UI, WRONG, CLOSE_DOOR, OPEN_DOOR, DOOR_SEQUENCE
     }
 }
