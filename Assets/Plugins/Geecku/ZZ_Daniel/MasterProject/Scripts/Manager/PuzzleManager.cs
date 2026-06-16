@@ -39,8 +39,7 @@ namespace Daniel.Master
         }
         private void SetUpPuzzleList()
         {
-            //- ToDo change to true
-            Puzzle puzzle_1 = new Puzzle(false, new() { Interval.OCTAVE, Interval.PRIME }, 2, () => 
+            Puzzle puzzle_1 = new Puzzle(true, new() { Interval.OCTAVE, Interval.PRIME }, 2, () => 
             {
                 AudioManager.Instance.UnlockInterval(Interval.PRIME);
                 AudioManager.Instance.UnlockInterval(Interval.OCTAVE);
@@ -68,7 +67,6 @@ namespace Daniel.Master
             PuzzleList.Add(puzzle_5);
             PuzzleList.Add(puzzle_6);
         }
-
         public void CheckPuzzle(Interval interval)
         {
             Debug.Log("solution index: " + SolutionIdx);
@@ -88,7 +86,6 @@ namespace Daniel.Master
                 GameManager.Instance.ClientSend_AdvanceSequence(false);
             }
         }
-
 
         #region Puzzle Logic
         public void StartPuzzle()
@@ -188,7 +185,7 @@ namespace Daniel.Master
             IsSolving = true;
             CurCamera.gameObject.SetActive(true);
             CurPuzzle = PuzzleList[PuzzleIdx];
-            Debug.Log("cur puzzle:" + CurPuzzle);
+
             if (CurPuzzle.Player1Solves && GameManager.Instance.PlayerNumber == 1)
                 SetUpSolveUI();
             else
@@ -287,6 +284,8 @@ namespace Daniel.Master
                         BlackBackground.SetActive(false);
                         if (CurDoor != null && CurDoor.DoorNPC != null)
                             CurDoor.DoorNPC.ActivateSecondDialogue();
+                        else
+                            GameManager.Instance.SetGameState(GameState.PLAYING);
                         CurDoor.ToggleDoor(false);
                     });
                 });

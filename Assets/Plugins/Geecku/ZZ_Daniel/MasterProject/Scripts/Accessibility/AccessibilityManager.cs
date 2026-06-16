@@ -18,7 +18,7 @@ namespace Daniel.Master
         [SerializeField] Canvas Settings;
 
         [Header("Screen Space Canvas")]
-        [SerializeField] GameObject ScreenCanvas;
+        [SerializeField] public GameObject BlackBackground;
 
         [SerializeField] int MagnifierSize;
         [SerializeField] int MagnifierZoom; 
@@ -54,7 +54,7 @@ namespace Daniel.Master
             switch (mode)
             {
                 case AccessibilityMode.BLIND:
-                    ScreenCanvas.SetActive(true);
+                    BlackBackground.SetActive(true);
                     break;
                 case AccessibilityMode.NONE:
                     break;

@@ -196,14 +196,13 @@ namespace Daniel.Master
             yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
 
+            if (PlayerIdx == 1)
+                AccessibilityManager.Instance.BlackBackground.SetActive(true);
+
             if (SkipTutorial)
             {
                 Debug.Log("ja in skip tutorial");
                 SetGameState(GameState.PLAYING);
-            }
-            else
-            {
-
             }
         }
         public void QuitWaitingForPuzzle()

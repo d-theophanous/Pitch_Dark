@@ -99,7 +99,7 @@ namespace Daniel.Master
         public void PlayDialogue(string key, Action on_complete, Message_Tone tone = Message_Tone.CONTINUE, float pitch = 0)
         {
             StopDialogue();
-            LastDialogueInfo = (key, tone);
+            LastDialogueInfo = (key, tone, pitch);
             currentDialogueInstance.setParameterByNameWithLabel("Tone", tone.ToString());
             currentDialogueInstance.setParameterByName("VoicePitch", pitch);
 
@@ -133,11 +133,11 @@ namespace Daniel.Master
                 currentDialogueInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             }
         }
-        private (string, Message_Tone) LastDialogueInfo;
+        private (string, Message_Tone, float) LastDialogueInfo;
         public void RepeatLastDialogue()
         {
             if (LastDialogueInfo.Item1 != null)
-                PlayDialogue(LastDialogueInfo.Item1, null, LastDialogueInfo.Item2);
+                PlayDialogue(LastDialogueInfo.Item1, null, LastDialogueInfo.Item2, LastDialogueInfo.Item3);
         }
 
         #endregion
@@ -266,14 +266,15 @@ namespace Daniel.Master
             EventInstance instance = RuntimeManager.CreateInstance(FMODEvents.Instance.OneShotEvent);
             instance.setUserData(GCHandle.ToIntPtr(GCHandle.Alloc(key)));
             instance.start();
-            instance.release();
 
             instance.setCallback(ProgrammerSoundCallback,
                 EVENT_CALLBACK_TYPE.CREATE_PROGRAMMER_SOUND |
                 EVENT_CALLBACK_TYPE.DESTROY_PROGRAMMER_SOUND);
 
-            if (on_complete != null)
-                StartCoroutine(WaitForEnd(instance, on_complete));
+            if (on_complete == null)
+                instance.release();
+            else
+                StartCoroutine(WaitForEnd(instance, on_complete, true));
         }
         private string GetStringFromEnum(SFX sfx)
         {

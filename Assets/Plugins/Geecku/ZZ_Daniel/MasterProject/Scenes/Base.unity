@@ -2672,15 +2672,15 @@ PrefabInstance:
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: 'AudioList.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 465c9d4a2b94df742bbaa35e7c95c96e, type: 3}
+      objectReference: {fileID: 8300000, guid: c2aa6ff85d716214fb50603a756c6196, type: 3}
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: 'AudioList.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: 6e1f54d8dcc9eb24192c5c36a183b781, type: 3}
+      objectReference: {fileID: 8300000, guid: 979306e4e114aa545af8e7838a045183, type: 3}
     - target: {fileID: 2850913441197159186, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: 'AudioList.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: 8afc06e4c40669e4880523d28cfc8cc8, type: 3}
+      objectReference: {fileID: 8300000, guid: 121245771015fba42862c130d1c32984, type: 3}
     - target: {fileID: 3832338113460869256, guid: 10db27538397beb469aca32f7283630a, type: 3}
       propertyPath: m_Name
       value: Heading
@@ -3574,7 +3574,7 @@ MonoBehaviour:
   UICamera: {fileID: 431464747}
   MagTexture: {fileID: 8400000, guid: 7f53748a1e4b43340be7c019faedee52, type: 2}
   Settings: {fileID: 2090360789}
-  ScreenCanvas: {fileID: 1990461413}
+  BlackBackground: {fileID: 1990461413}
   MagnifierSize: 0
   MagnifierZoom: 0
   MagnifierMoveSpeed: 100
