@@ -8621,6 +8621,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4286745562648571866, guid: 4963b55652180e946b10fda98efef25e, type: 3}
   m_PrefabInstance: {fileID: 394010626}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &394010629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379473852384688255, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+  m_PrefabInstance: {fileID: 394010626}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9eb34fd5a94a044fbc49a9107c0916d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Geecku.DoorScript
 --- !u!1001 &403570432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10870,6 +10881,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 1230662500443188, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534416179401668, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1845965385828732, guid: 8f625856cbd911745b6dab1569936428, type: 3}
       propertyPath: m_Name
       value: Malik
@@ -10918,6 +10937,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23215602384254268, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1fe53eadf8cd1c04c90bea345ca58191, type: 2}
     - target: {fileID: 2602750065473651525, guid: 8f625856cbd911745b6dab1569936428, type: 3}
       propertyPath: DialogueList.Array.size
       value: 1
@@ -10934,6 +10957,10 @@ PrefabInstance:
       propertyPath: 'DialogueList2.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 67edac80a5d00ae46bb8f7a5cddd6f93, type: 2}
+    - target: {fileID: 6000828045704552694, guid: 8f625856cbd911745b6dab1569936428, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8163187063491280318, guid: 8f625856cbd911745b6dab1569936428, type: 3}
     - {fileID: 2602750065473651525, guid: 8f625856cbd911745b6dab1569936428, type: 3}
@@ -15661,7 +15688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4505972164671442001, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.66
+      value: 2.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505972164671442001, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: 4595640275928593753, guid: 4963b55652180e946b10fda98efef25e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28604,6 +28635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Henry
       objectReference: {fileID: 0}
+    - target: {fileID: 1719476748288236, guid: 0b4e224ea20b38e4aa5bda640d4b5a3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4597833198957512, guid: 0b4e224ea20b38e4aa5bda640d4b5a3b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48.39
@@ -34927,6 +34962,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dbcff874b897aa54db5ca5e794796561, type: 2}
   Parent: {fileID: 1668810938}
   NPCCamera: {fileID: 1668810941}
+  Door: {fileID: 394010629}
 --- !u!1001 &1670872370
 PrefabInstance:
   m_ObjectHideFlags: 0

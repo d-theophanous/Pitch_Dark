@@ -16,6 +16,7 @@ namespace Daniel.Master
         [SerializeField] private ReadableElementGroup PlayerGroup;
         [SerializeField] private ReadableElementGroup AccessibilityGroup;
         [SerializeField] private ReadableElementGroup GenreGroup;
+        [SerializeField] private ReadableElementGroup EndScreenGroup;
         [SerializeField] private List<ReadableElementGroup> PuzzleList;
 
         public ReadableElementGroup CurrentGroup;
@@ -51,6 +52,9 @@ namespace Daniel.Master
                     break;
                 case UI_Group.GENRE_SELECTION:
                     new_group = GenreGroup;
+                    break;
+                case UI_Group.END_SCREEN:
+                    new_group = EndScreenGroup;
                     break;
                 case UI_Group.PUZZLE:
                     if (GlobalUIManager.Instance.ThisPlayerSolves)

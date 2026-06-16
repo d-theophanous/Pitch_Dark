@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
@@ -23,6 +24,7 @@ namespace Daniel.Master
         public bool SkipTutorial;
         [HideInInspector] public bool StartTutorial;
 
+        [SerializeField] private LocalizeStringEvent EndScore;
         private GameState State;
         public static Language Language;
 
@@ -204,6 +206,11 @@ namespace Daniel.Master
                 Debug.Log("ja in skip tutorial");
                 SetGameState(GameState.PLAYING);
             }
+        }
+        public void EndGame()
+        {
+            EndScore.StringReference.Arguments = new object[] { GlobalUIManager.Instance.Score };
+            EndScore.RefreshString();
         }
         public void QuitWaitingForPuzzle()
         {
@@ -550,7 +557,6 @@ namespace Daniel.Master
                 GameManager.Instance.CurrentGateReadyAction = () => { PuzzleManager.Instance.StartPuzzle(); };
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
             CurrentGateReadyAction?.Invoke();
-            Debug.Log("gate game mamanger 549");
             OtherPlayerIsGateReady = PlayerIsGateReady = false;
         }
         public void DebugSolvePuzzle()

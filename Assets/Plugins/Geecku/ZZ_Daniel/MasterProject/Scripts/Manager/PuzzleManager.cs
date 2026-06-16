@@ -206,6 +206,12 @@ namespace Daniel.Master
             PuzzleSolveUI.ElementList[1].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.FIFTH));
             PuzzleSolveUI.ElementList[2].gameObject.SetActive(CurPuzzle.Intervals.Contains(Interval.OCTAVE));
             
+            //- to make sure its in right order
+            foreach (var button in PuzzleSolveUI.ElementList)
+            {
+                PuzzleSolveUI.ElementGroup.RemoveElement(button);
+            }
+            //- then add the right ones
             foreach (var button in PuzzleSolveUI.ElementList)
             {
                 if (!button.gameObject.activeSelf && PuzzleSolveUI.ElementGroup.GetElements().Contains(button))

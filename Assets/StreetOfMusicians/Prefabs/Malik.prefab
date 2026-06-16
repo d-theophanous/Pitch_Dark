@@ -343,6 +343,7 @@ MonoBehaviour:
   Animator: {fileID: 95067426829382730}
   StopDistance: 2.5
   UpdateRate: 0.1
+  Pitch: 0
   IsFollowing: 0
   Agent: {fileID: 195740760260531914}
   DialogueList: []
@@ -764,7 +765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4702270185219334
 Transform:
   m_ObjectHideFlags: 0
@@ -940,6 +941,7 @@ Transform:
   - {fileID: 4688767942645228}
   - {fileID: 4347661334243284}
   - {fileID: 4702270185219334}
+  - {fileID: 4423825330120762}
   - {fileID: 4233301579907748}
   m_Father: {fileID: 4784273847331806}
   m_LocalEulerAnglesHint: {x: 0, y: -0.38841057, z: 0}
@@ -2379,7 +2381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4423825330120762
 Transform:
   m_ObjectHideFlags: 0
@@ -2388,12 +2390,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534416179401668}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.593488, z: 0}
+  m_LocalRotation: {x: -0.49999815, y: -0.50000185, z: 0.49999902, w: 0.50000095}
+  m_LocalPosition: {x: -0.124, y: 0, z: 0.141}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4533756464451846}
+  m_Father: {fileID: 4643291355680920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33026675238480980
 MeshFilter:
@@ -2428,7 +2430,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1fe53eadf8cd1c04c90bea345ca58191, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3411,7 +3413,6 @@ Transform:
   - {fileID: 4009642432221170}
   - {fileID: 4888269128631944}
   - {fileID: 4620408825937508}
-  - {fileID: 4423825330120762}
   - {fileID: 4523768266439276}
   - {fileID: 4509254489489200}
   - {fileID: 4311750972366210}

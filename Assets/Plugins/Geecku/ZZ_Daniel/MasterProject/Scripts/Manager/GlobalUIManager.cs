@@ -36,6 +36,7 @@ namespace Daniel.Master
         [SerializeField] private GameObject PlayerSelection;
         [SerializeField] private GameObject AccessibilitySelection;
         [SerializeField] private GameObject GenreSelection;
+        [SerializeField] private GameObject EndScreen;
         [SerializeField] private List<GameObject> PuzzeList; //-    List with Solve and Solution UI
 
         [Header("Settings References")]
@@ -58,7 +59,7 @@ namespace Daniel.Master
         public bool ThisPlayerSolves;
 
         //- score
-        private int Score = 0;
+        public int Score = 0;
 
         protected override void Start()
         {
@@ -199,6 +200,9 @@ namespace Daniel.Master
                 case UI_Group.GENRE_SELECTION:
                     tmp = GenreSelection;
                     break;
+                case UI_Group.END_SCREEN:
+                    tmp = EndScreen;
+                    break;
                 default:
                     break;
             }
@@ -292,7 +296,7 @@ namespace Daniel.Master
     {
         LANGUAGE_SELECTION, NETWORK_CONNECT, MAIN_MENU, SETTINGS_GENERAL, NETWORK_GATE,
         DIALOGUE, PUZZLE, NONE, IMPROVISATION, PLAYER_SELECTION, ACCESSIBILITY_SELECTION,
-        GENRE_SELECTION
+        GENRE_SELECTION, END_SCREEN
     }
     public enum Settings
     {

@@ -56,18 +56,22 @@ namespace Daniel.Master
 
             float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
 
+            if (AudioManager.Instance.IsImprovising)
+                return;
             if (distanceToPlayer > StopDistance)
             {
                 Agent.isStopped = false;
                 Agent.SetDestination(Player.position);
                 Animator.SetBool("IsWalking", true);
                 Animator.SetBool("IsPlaying", false);
+                Animator.SetBool("IsIdle", false);
             }
             else
             {
                 Agent.isStopped = true;
                 Animator.SetBool("IsWalking", false);
-                Animator.SetBool("IsPlaying", true);
+                Animator.SetBool("IsPlaying", false);
+                Animator.SetBool("IsIdle", true);
                 Agent.ResetPath();
             }
         }
@@ -84,7 +88,8 @@ namespace Daniel.Master
                 Agent.isStopped = true;
                 Agent.ResetPath();
                 Animator.SetBool("IsWalking", false);
-                Animator.SetBool("IsPlaying", true);
+                Animator.SetBool("IsIdle", true);
+                Animator.SetBool("IsPlaying", false);
             }
             else
             {
@@ -148,11 +153,15 @@ namespace Daniel.Master
         //- gerade egal, weil die eh die ganze Zeit spielen haha
         public void StartPlay()
         {
-
+            Animator.SetBool("IsWalking", false);
+            Animator.SetBool("IsIdle", false);
+            Animator.SetBool("IsPlaying", true);
         }
         public void StopPlay()
         {
-
+            Animator.SetBool("IsWalking", false);
+            Animator.SetBool("IsIdle", true);
+            Animator.SetBool("IsPlaying", false);
         }
         protected void LookAtPlayer()
         {

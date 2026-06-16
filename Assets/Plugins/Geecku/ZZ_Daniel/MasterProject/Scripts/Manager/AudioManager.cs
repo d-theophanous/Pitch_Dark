@@ -210,7 +210,6 @@ namespace Daniel.Master
         public void PlayReadableElement(string key, UI_Element element, Interval interval = Interval.NONE, Number number = Number.NONE, Action on_complete = null)
         {            
             StopTTS();
-            UnityEngine.Debug.Log("remaining doors: " + number);
             string parameter = Helper.GetLanguageString() + "_" + element.ToString();
             CurrentTTSInstance.setParameterByNameWithLabel("Element", parameter);
             CurrentTTSInstance.setParameterByNameWithLabel("Language", GameManager.Language.ToString());
@@ -464,12 +463,18 @@ namespace Daniel.Master
         #region Improvisation
         EventInstance ImprovTrackEventInstance;
         EventInstance NoteEventInstance;
+        public bool IsImprovising;
         private List<Instrument> UnlockedInstrumentList = new();
         public List<Interval> UnlockedIntervalList = new();
 
         private Instrument CurInstrument;
         public void StartImprovisation()
         {
+            foreach (var npc in GameManager.Instance.Player.NPCFollowerList)
+            {
+                npc.StartPlay();
+            }
+            IsImprovising = true;
             ImprovTrackEventInstance.start();
             StartCoroutine(StartImprovisationCoroutine());
         }
@@ -481,6 +486,11 @@ namespace Daniel.Master
             {
                 yield return null;
                 ImprovTrackEventInstance.getPlaybackState(out tmp);
+            }
+            IsImprovising = false;
+            foreach (var npc in GameManager.Instance.Player.NPCFollowerList)
+            {
+                npc.StopPlay();
             }
             DialogueManager.Instance.CleanUpDialogue();
             GlobalUIManager.Instance.ToggleUI(UI_Group.IMPROVISATION);
