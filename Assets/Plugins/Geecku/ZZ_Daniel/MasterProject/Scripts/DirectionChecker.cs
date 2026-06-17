@@ -50,14 +50,14 @@ namespace Daniel.Master
 
             if (IsOnRightPath())
             {
-                if (NetworkManager.Instance._Client.IsInConnection)
+                if (NetworkManager.Client.IsInConnection)
                     GameManager.Instance.ClientSend_DirectionCheck(1);
                 else
                     Rumbler.Instance.StartRumble();
             }
             else
             {
-                if (NetworkManager.Instance._Client.IsInConnection)
+                if (NetworkManager.Client.IsInConnection)
                     GameManager.Instance.ClientSend_DirectionCheck(0);
                 else
                     Rumbler.Instance.StopRumble();
