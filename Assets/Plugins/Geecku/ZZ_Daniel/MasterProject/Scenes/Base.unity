@@ -3481,7 +3481,7 @@ MonoBehaviour:
   - Connect_M
   ConnectScript: {fileID: 1729751770}
   Player: {fileID: 0}
-  SkipTutorial: 1
+  SkipTutorial: 0
   StartTutorial: 0
   EndScore: {fileID: 395416246}
   GameFinished: 0
