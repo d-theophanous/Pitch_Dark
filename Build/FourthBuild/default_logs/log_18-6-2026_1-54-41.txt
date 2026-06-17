@@ -1,0 +1,1250 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Host
+	
+MLog>> Server: Started on port 64000.
+	
+MLog>> Client: Connecting to 127.0.0.1:64000...
+	
+MLog>> Client: Connected successfully.
+	
+MLog>> Server: Client 1 (127.0.0.1:57680) connected successfully.
+	
+MLog>> Client: Client ready with msg-index '0'.
+	
+MLog>> Server: Client 2 (192.168.178.52:50763) connected successfully.
+	
+MLog>> Client: Client [2] connected.
+	
+MLog>> Game started :))
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> ja in skip tutorial
+	
+MLog>> gamestate switch to playing
+	
+MLog>> in activate prompt
+	
+MLog>> set up dialogue
+	
+MLog>> gamestate switch to playing
+	
+MLog>> start direction check
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> rumbling fr
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> rumbling fr
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> rumbling fr
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> rumbling fr
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> rumbling fr
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> rumbling fr
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> rumbling fr
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> rumbling fr
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> start rumble
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Quit
+	
