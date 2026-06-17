@@ -27,13 +27,18 @@ public enum RumblePattern
         private bool IsRumbling;
         private Gamepad Gamepad;
         private PlayerInput PlayerInput;
-        public (float, float) DefaultRumbleFrequency = (0.1f, 0.1f);
+        public (float, float) DefaultRumbleFrequency = (0.9f, 0.9f);
 
         protected override void Awake()
         {
             base.Awake();
             PlayerInput = InputManager.Instance.PlayerInput;
             Gamepad = GetGamepad();
+        }
+        protected override void Update()
+        {
+            base.Update();
+
         }
         public void RumbleConstant(float low, float high, float duration)
         {
@@ -66,8 +71,10 @@ public enum RumblePattern
         }
         public void StartRumble()
         {
+            Debug.Log("start rumble");
             if (IsRumbling || Gamepad == null)
                 return;
+            Debug.Log("rumbling fr");
             IsRumbling = true;
             StopAllCoroutines();
             StartCoroutine(RumbleEndless());
