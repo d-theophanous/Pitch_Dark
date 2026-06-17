@@ -25,7 +25,7 @@ public enum RumblePattern
         //private float highStep;
         //private float rumbleStep;
         private bool IsRumbling;
-        private Gamepad Gamepad;
+        private Gamepad Gamepad => GetGamepad();
         private PlayerInput PlayerInput;
         public (float, float) DefaultRumbleFrequency = (0.9f, 0.9f);
 
@@ -33,7 +33,6 @@ public enum RumblePattern
         {
             base.Awake();
             PlayerInput = InputManager.Instance.PlayerInput;
-            Gamepad = GetGamepad();
         }
         protected override void Update()
         {
@@ -96,30 +95,12 @@ public enum RumblePattern
         }
 
         // Private helpers
-
         private Gamepad GetGamepad()
         {
-            return Gamepad.all.FirstOrDefault(g => PlayerInput.devices.Any(d => d.deviceId == g.deviceId));
+            var fromPlayerInput = Gamepad.all.FirstOrDefault(g =>
+                PlayerInput.devices.Any(d => d.deviceId == g.deviceId));
 
-            #region Linq Query Equivalent Logic
-            //Gamepad gamepad = null;
-            //foreach (var g in Gamepad.all)
-            //{
-            //    foreach (var d in _playerInput.devices)
-            //    {
-            //        if(d.deviceId == g.deviceId)
-            //        {
-            //            gamepad = g;
-            //            break;
-            //        }
-            //    }
-            //    if(gamepad != null)
-            //    {
-            //        break;
-            //    }
-            //}
-            //return gamepad;
-            #endregion
+            return fromPlayerInput ?? Gamepad.current;
         }
-}
+    }
     }
