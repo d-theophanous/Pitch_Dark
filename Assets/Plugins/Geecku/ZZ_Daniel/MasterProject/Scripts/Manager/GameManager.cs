@@ -402,10 +402,6 @@ namespace Daniel.Master
                 //Debug.Log("content in client receive: " + content);
                 if (client_id == NetworkManager.Client.LocalClient.ID)
                 {
-                    //Debug.Log("sent: " + content);
-                }
-                else
-                {
                     if (content == 0)
                     {
                         //Debug.Log("not rumbling");
@@ -416,6 +412,9 @@ namespace Daniel.Master
                         Rumbler.Instance.StartRumble();
                         //Debug.Log("rumbling");
                     }
+                }
+                else
+                {
                 }
             };            
             ClientMessageHandler.Handle(msg, action);

@@ -54,11 +54,17 @@ namespace Daniel.Master
 
             if (IsOnRightPath())
             {
-                Rumbler.Instance.StartRumble();
+                if (NetworkManager.Client.IsInConnection)
+                    GameManager.Instance.ClientSend_DirectionCheck(1);
+                else
+                    Rumbler.Instance.StartRumble();
             }
             else
             {
-                Rumbler.Instance.StopRumble();
+                if (NetworkManager.Client.IsInConnection)
+                    GameManager.Instance.ClientSend_DirectionCheck(0);
+                else
+                    Rumbler.Instance.StopRumble();
             }
         }
         #endregion
