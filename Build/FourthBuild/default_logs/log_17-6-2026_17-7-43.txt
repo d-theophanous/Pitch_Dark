@@ -1,0 +1,70 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Game started :))
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> set up dialogue
+	
+MLog>> start action
+	
+MLog>> x
+	
+MLog>> gamestate switch to playing
+	
+MLog>> x
+	
+MLog>> set up dialogue
+	
+MLog>> ja dialogue after ist problem
+	
+MLog>> start last semgent
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up dialogue
+	
+MLog>> ja dialogue after ist problem
+	
+MLog>> gamestate switch to playing
+	
+MLog>> in activate prompt
+	
+MLog>> set up dialogue
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up dialogue
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> set up dialogue
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> Quit
+	

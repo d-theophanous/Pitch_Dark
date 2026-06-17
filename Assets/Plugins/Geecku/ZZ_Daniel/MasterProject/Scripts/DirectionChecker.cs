@@ -11,7 +11,7 @@ namespace Daniel.Master
 {
     public class DirectionChecker : Singleton<DirectionChecker>
     {
-        private const float PathUpdateRate = 1f;
+        private const float PathUpdateRate = 0.5f;
         private float AccumulatedTime = PathUpdateRate;
 
         [SerializeField] private NavMeshAgent PlayerNavMesh;
@@ -59,10 +59,10 @@ namespace Daniel.Master
             else
             {
                 Rumbler.Instance.StopRumble();
-                if (NetworkManager.Client.IsInConnection)
-                    GameManager.Instance.ClientSend_DirectionCheck(0);
-                else
-                    Rumbler.Instance.StopRumble();
+                //if (NetworkManager.Client.IsInConnection)
+                //    GameManager.Instance.ClientSend_DirectionCheck(0);
+                //else
+                //    Rumbler.Instance.StopRumble();
             }
         }
         #endregion
@@ -138,7 +138,7 @@ namespace Daniel.Master
                 //- if the player already is very close to the new current waypoint
                 //- skip this waypoint
                 int index = 0;
-                while (Vector3.Distance(FinalWaypoints[index], PlayerPos) <= (WayPointRadius + 0.5f)
+                while (Vector3.Distance(FinalWaypoints[index], PlayerPos) <= (1f)
                     && index < FinalWaypoints.Count - 1)
                     index++;
                 FinalWaypoints.RemoveRange(0, index);

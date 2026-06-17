@@ -1,0 +1,224 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Host
+	
+MLog>> Server: Started on port 64000.
+	
+MLog>> Client: Connecting to 127.0.0.1:64000...
+	
+MLog>> Client: Connected successfully.
+	
+MLog>> Server: Client 1 (127.0.0.1:57521) connected successfully.
+	
+MLog>> Client: Client ready with msg-index '0'.
+	
+MLog>> Server: Client 2 (172.20.10.2:49953) connected successfully.
+	
+MLog>> Client: Client [2] connected.
+	
+MLog>> Game started :))
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> set up dialogue
+	
+MLog>> start action
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up dialogue
+	
+MLog>> ja dialogue after ist problem
+	
+MLog>> start last semgent
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up dialogue
+	
+MLog>> ja dialogue after ist problem
+	
+MLog>> gamestate switch to playing
+	
+MLog>> in activate prompt
+	
+MLog>> set up dialogue
+	
+MLog>> gamestate switch to playing
+	
+MLog>> Server: Client 2 (172.20.10.2:49953) disconnected: Poor Connection.
+	
+MLog>> Client: Client [2] disconnected.
+	
+MLog>> set up dialogue
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> solution index: 0
+	
+MLog>> input: PRIME, Lösung: OCTAVE
+	
+MLog>> readable element doesnt have a parent
+	
+MLog>> solution index: 0
+	
+MLog>> input: OCTAVE, Lösung: OCTAVE
+	
+MLog>> solution index: 1
+	
+MLog>> input: OCTAVE, Lösung: PRIME
+	
+MLog>> solution index: 1
+	
+MLog>> input: PRIME, Lösung: PRIME
+	
+MLog>> set up dialogue
+	
+MLog>> no more next elements
+	
+MLog>> no more previous elements
+	
+MLog>> no more previous elements
+	
+MLog>> no more next elements
+	
+MLog>> no more previous elements
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> gamestate switch to playing
+	
+MLog>> in activate prompt
+	
+MLog>> set up dialogue
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> solution index: 0
+	
+MLog>> input: OCTAVE, Lösung: OCTAVE
+	
+MLog>> no more previous elements
+	
+MLog>> solution index: 1
+	
+MLog>> input: OCTAVE, Lösung: FIFTH
+	
+MLog>> solution index: 1
+	
+MLog>> input: FIFTH, Lösung: FIFTH
+	
+MLog>> solution index: 2
+	
+MLog>> input: FIFTH, Lösung: PRIME
+	
+MLog>> solution index: 2
+	
+MLog>> input: PRIME, Lösung: PRIME
+	
+MLog>> set up dialogue
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> solution index: 0
+	
+MLog>> input: FIFTH, Lösung: PRIME
+	
+MLog>> solution index: 0
+	
+MLog>> input: FIFTH, Lösung: PRIME
+	
+MLog>> solution index: 0
+	
+MLog>> input: PRIME, Lösung: PRIME
+	
+MLog>> solution index: 1
+	
+MLog>> input: PRIME, Lösung: OCTAVE
+	
+MLog>> solution index: 1
+	
+MLog>> input: OCTAVE, Lösung: OCTAVE
+	
+MLog>> solution index: 1
+	
+MLog>> input: FIFTH, Lösung: OCTAVE
+	
+MLog>> solution index: 2
+	
+MLog>> input: OCTAVE, Lösung: FIFTH
+	
+MLog>> solution index: 2
+	
+MLog>> input: FIFTH, Lösung: FIFTH
+	
+MLog>> solution index: 3
+	
+MLog>> input: PRIME, Lösung: PRIME
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> solution index: 0
+	
+MLog>> input: FIFTH, Lösung: FIFTH
+	
+MLog>> solution index: 1
+	
+MLog>> input: OCTAVE, Lösung: OCTAVE
+	
+MLog>> solution index: 2
+	
+MLog>> input: FIFTH, Lösung: FIFTH
+	
+MLog>> new readable element group ist null
+	
+MLog>> gamestate switch to playing
+	
+MLog>> Quit
+	
