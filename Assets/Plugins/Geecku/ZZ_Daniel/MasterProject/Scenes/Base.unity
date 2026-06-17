@@ -3066,6 +3066,9 @@ MonoBehaviour:
   Ordernumber: 0
   Interval: 4
   Number: 13
+  buttonHighlightColor: {r: 1, g: 0, b: 0, a: 1}
+  frameColor: {r: 1, g: 0, b: 0, a: 1}
+  frameThickness: 3
 --- !u!114 &395416246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11834,6 +11837,9 @@ MonoBehaviour:
   Ordernumber: 0
   Interval: 4
   Number: 13
+  buttonHighlightColor: {r: 1, g: 0, b: 0, a: 1}
+  frameColor: {r: 1, g: 0, b: 0, a: 1}
+  frameThickness: 3
 --- !u!114 &1763660777
 MonoBehaviour:
   m_ObjectHideFlags: 0

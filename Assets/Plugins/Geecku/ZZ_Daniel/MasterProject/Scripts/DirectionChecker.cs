@@ -1,32 +1,34 @@
 using Geecku.DefaultNetworking;
 using Geecku.GlobalMangers;
+using JetBrains.Annotations;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Daniel.Master
 {
+    [System.Serializable]
+    public class DestinationWaypoints
+    {
+        public Transform Destination;
+        public List<Transform> Waypoints;
+        public List<int> WayPointValueList;
+    }
+
     public class DirectionChecker : Singleton<DirectionChecker>
     {
+        [SerializeField] private List<DestinationWaypoints> DestinationWaypointsList;
+
+        private Vector3 PlayerPos => GameManager.Instance.Player.transform.position;
+
+        private const float WayPointRadius = 2.2f;
         private const float PathUpdateRate = 0.5f;
         private float AccumulatedTime = PathUpdateRate;
 
-        [SerializeField] private NavMeshAgent PlayerNavMesh;
-        [SerializeField] private Transform Destination;
-        [SerializeField] private GameObject FloorParent;
-        private Vector3 PlayerPos => GameManager.Instance.Player.transform.position;
-        private NavMeshPath CurPath;
-        private Vector3[] Waypoints;
-        private List<Vector3> FinalWaypoints = new();
-        private Transform[] FloorTransformList;
-        private Vector3 CurWaypoint;
-        private const float WayPointRadius = 2.2f;
-
-        public List<Transform> DestinationList;
-        private int DestinationIdx;
+        // Current destination state
+        private DestinationWaypoints CurrentDestinationWaypoints;
+        private Vector3 CurrentWaypointPos;
+        private int CurrentWaypointListIdx = 0;
 
         public bool CanReceiveDirectionInfo;
 
@@ -34,16 +36,18 @@ namespace Daniel.Master
         protected override void Start()
         {
             base.Start();
-            CurPath = new NavMeshPath();
         }
+
         public void UpdateDirectionChecker(object sender, System.EventArgs e)
         {
+            if (CurrentDestinationWaypoints == null) return;
+
             if (AccumulatedTime >= PathUpdateRate)
             {
-                CalculatePath();
+                UpdateWaypointIndex();
                 AccumulatedTime = 0f;
             }
-            else 
+            else
             {
                 AccumulatedTime += Time.deltaTime;
             }
@@ -51,151 +55,139 @@ namespace Daniel.Master
             if (IsOnRightPath())
             {
                 Rumbler.Instance.StartRumble();
-                //if (NetworkManager.Client.IsInConnection)
-                //    GameManager.Instance.ClientSend_DirectionCheck(1);
-                //else
-                //    Rumbler.Instance.StartRumble();
             }
             else
             {
                 Rumbler.Instance.StopRumble();
-                //if (NetworkManager.Client.IsInConnection)
-                //    GameManager.Instance.ClientSend_DirectionCheck(0);
-                //else
-                //    Rumbler.Instance.StopRumble();
             }
         }
         #endregion
 
         #region Public Functions
-        public void SetDestination(Transform new_destination)
-        {
-            Destination = new_destination;
-        }
         public void StartDirectionChecking()
-        {
+        {            
+            if (CurrentWaypointListIdx >= DestinationWaypointsList.Count)
+            {
+                Debug.LogWarning("DirectionChecker: destination index out of range.");
+                return;
+            }
+
+            CurrentDestinationWaypoints = DestinationWaypointsList[CurrentWaypointListIdx];
+            CurrentWaypointPos = CurrentDestinationWaypoints.Waypoints[0].position;
             CanReceiveDirectionInfo = true;
             GameManager.Instance.UpdateEvent += UpdateDirectionChecker;
-            SetDestination(DestinationList[DestinationIdx]);
-            DestinationIdx++;
+
+            CurrentWaypointListIdx++;
         }
+
         public void StopDirectionChecking()
         {
             GameManager.Instance.UpdateEvent -= UpdateDirectionChecker;
+            CanReceiveDirectionInfo = false;
         }
         #endregion
 
+        #region Waypoint Logic
+
+        /// <summary>
+        /// Checks all waypoints and finds the furthest one the player has reached,
+        /// accounting for backwards movement.
+        /// </summary>
+        
+        private void UpdateWaypointIndex()
+        {
+            var waypoints = CurrentDestinationWaypoints.Waypoints;
+            if (waypoints == null || waypoints.Count == 0) return;
+
+            List<(Transform, int)> CurrentClosestWaypoints = new();
+
+            for (int i = 0; i < waypoints.Count; i++)
+            {
+                float dist = Vector3.Distance(PlayerPos, waypoints[i].position);
+
+                if (!HasClearLineOfSight(waypoints[i].position))
+                    continue; // skip waypoints behind walls
+                Debug.Log(waypoints[i].name + "has clear line of sight");
+
+                CurrentClosestWaypoints.Add((CurrentDestinationWaypoints.Waypoints[i], CurrentDestinationWaypoints.WayPointValueList[i]));
+            }
+            List<(Transform, int)> value_list = SortByValueDescending(CurrentClosestWaypoints);
+            List<(Transform, int)> player_pos_list = SortByDistanceToPlayer(CurrentClosestWaypoints);
+
+            CurrentWaypointPos = value_list[0].Item1.position;
+        }
+        private List<(Transform, int)> SortByDistanceToPlayer(List<(Transform, int)> waypoints)
+        {
+            return waypoints.OrderBy(w => Vector3.Distance(PlayerPos, w.Item1.position)).ToList();
+        }
+        private List<(Transform, int)> SortByValueDescending(List<(Transform, int)> waypoints)
+        {
+            return waypoints.OrderByDescending(w => w.Item2).ToList();
+        }
+
         private bool IsOnRightPath()
         {
-            if (!GameManager.Instance.Player.IsMoving)
-                return false;
-            if (FinalWaypoints.Count > 0 &&
-                Vector3.Distance(PlayerPos, CurWaypoint) < WayPointRadius)
+            if (!GameManager.Instance.Player.IsMoving) return false;
+
+            var waypoints = CurrentDestinationWaypoints?.Waypoints;
+            if (waypoints == null || waypoints.Count == 0) return false;
+
+            var targetPos = CurrentWaypointPos;
+            var targetFlat = new Vector3(targetPos.x, PlayerPos.y, targetPos.z);
+            var vecToTarget = targetFlat - PlayerPos;
+
+            if (vecToTarget.sqrMagnitude < 0.01f) return false;
+
+            var angle = Vector3.Angle(vecToTarget, GameManager.Instance.Player.WalkDirection);
+            return angle <= GetAllowedAngle(vecToTarget) / 2f;
+        }
+
+        private float GetAllowedAngle(Vector3 vecToTarget)
+        {
+            var targetPos = CurrentWaypointPos;
+            var perpendicularVec = Vector3.Cross(vecToTarget, Vector3.up).normalized;
+            var posA = targetPos + perpendicularVec * WayPointRadius;
+            var posB = targetPos - perpendicularVec * WayPointRadius;
+            return Vector3.Angle(posB - PlayerPos, posA - PlayerPos);
+        }
+        private bool HasClearLineOfSight(Vector3 waypointPos)
+        {
+            var direction = waypointPos - PlayerPos;
+            float distance = direction.magnitude;
+
+            RaycastHit[] hits = Physics.RaycastAll(PlayerPos, direction.normalized, distance);
+            foreach (var hit in hits)
             {
-                FinalWaypoints.RemoveAt(0);
-                if (FinalWaypoints.Count > 0)
-                    CurWaypoint = FinalWaypoints[0];
-                else
+                if (hit.collider.CompareTag("Wall"))
                     return false;
             }
-            //- get angle between walk direction and vector to target
-            var cur_waypoint = new Vector3(CurWaypoint.x, PlayerPos.y, CurWaypoint.z);
-            var vec_to_target = cur_waypoint - PlayerPos;
-            var angle = Vector3.Angle(vec_to_target, GameManager.Instance.Player.WalkDirection);
-
-            //- check if angle is in threshold
-            if (angle <= GetAllowedAngle(vec_to_target) / 2)
-            {
-                return true;
-            }
-            return false;
+            return true;
         }
-
-        Vector3 TestA;
-        Vector3 TestB;
-        private float GetAllowedAngle(Vector3 vec_to_target)
-        {
-            var perpendicular_vec = Vector3.Cross(vec_to_target, Vector3.up).normalized;
-            var pos_a = CurWaypoint + perpendicular_vec * WayPointRadius;
-            var pos_b = CurWaypoint - perpendicular_vec * WayPointRadius;
-            TestA = pos_a;
-            TestB = pos_b;
-            var vec_a = pos_a - PlayerPos;
-            var vec_b = pos_b - PlayerPos;
-            return Vector3.Angle(vec_b, vec_a);
-        }
-        private void CalculatePath()
-        {
-            FloorTransformList = FloorParent.GetComponentsInChildren<Transform>();
-            // Calculate the NavMesh path from player to door
-            bool path_found = NavMesh.CalculatePath(
-                PlayerPos, Destination.position, NavMesh.AllAreas, CurPath);
-
-            if (path_found)
-            {
-                Waypoints = CurPath.corners;
-                FillWayPoints();
-                //- if the player already is very close to the new current waypoint
-                //- skip this waypoint
-                int index = 0;
-                while (Vector3.Distance(FinalWaypoints[index], PlayerPos) <= (1f)
-                    && index < FinalWaypoints.Count - 1)
-                    index++;
-                FinalWaypoints.RemoveRange(0, index);
-                CurWaypoint = FinalWaypoints[0];
-            }
-        }
-        private void FillWayPoints()
-        {
-            FinalWaypoints.Clear();
-
-            foreach (Vector3 waypoint in Waypoints)
-            {
-                FinalWaypoints.Add(GetClosestFloor(waypoint).position);
-            }
-        }
-        private Transform GetClosestFloor(Vector3 waypoint)
-        {
-            int correct_idx = 0;
-            for (int j = 1; j < FloorTransformList.Length; j++)
-            {
-                if (Vector3.Distance(FloorTransformList[j].position, waypoint) 
-                    < Vector3.Distance(FloorTransformList[correct_idx].position, waypoint))
-                {
-                    correct_idx = j;
-                }
-            }
-            var return_transform = FloorTransformList[correct_idx];
-            var tmp_list = FloorTransformList.ToList();
-            tmp_list.RemoveAt(correct_idx);
-            FloorTransformList = tmp_list.ToArray();
-            return return_transform;
-        }
+        #endregion
 
         private void OnDrawGizmosSelected()
         {
-            foreach (var item in FinalWaypoints)
+            if (CurrentDestinationWaypoints == null) return;
+            var waypoints = CurrentDestinationWaypoints.Waypoints;
+            if (waypoints == null) return;
+
+            for (int i = 0; i < waypoints.Count; i++)
             {
-                Gizmos.DrawSphere(item, 1f);
-            }
-            Gizmos.color = Color.black;
-            foreach (var item in Waypoints)
-            {
-                Gizmos.DrawSphere(item, 1f);
+                Gizmos.color = (Vector3.Distance(waypoints[i].position,CurrentWaypointPos) < 0.5f) ? Color.green : Color.red;
+                Gizmos.DrawWireSphere(waypoints[i].position, WayPointRadius);
+
+                if (i < waypoints.Count - 1)
+                {
+                    Gizmos.color = Color.yellow;
+                    Gizmos.DrawLine(waypoints[i].position, waypoints[i + 1].position);
+                }
             }
 
-            var cur_waypoint = new Vector3(CurWaypoint.x, PlayerPos.y, CurWaypoint.z);
-            var vec_to_target = cur_waypoint - PlayerPos;
-            var angle = Vector3.Angle(vec_to_target, GameManager.Instance.Player.WalkDirection);
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(PlayerPos, PlayerPos + vec_to_target);
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(PlayerPos, PlayerPos + GameManager.Instance.Player.WalkDirection.normalized * 4); 
-            Gizmos.color = Color.blue;
-            Gizmos.DrawLine(PlayerPos, TestA);
-            Gizmos.DrawLine(PlayerPos, TestB);
-            Gizmos.color = Color.purple;
-            Gizmos.DrawSphere(CurWaypoint, 1f);
+            if (!Application.isPlaying) return;
+            var targetPos = CurrentWaypointPos;
+            var targetFlat = new Vector3(targetPos.x, PlayerPos.y, targetPos.z);
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawLine(PlayerPos, targetFlat);
         }
-    }    
+    }
 }

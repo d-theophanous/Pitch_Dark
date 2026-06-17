@@ -206,6 +206,10 @@ namespace Daniel.Master
             {
                 Debug.Log("ja in skip tutorial");
                 SetGameState(GameState.PLAYING);
+                DirectionChecker.Instance.StartDirectionChecking();
+                DirectionChecker.Instance.StopDirectionChecking();
+                DirectionChecker.Instance.StartDirectionChecking();
+
             }
         }
         public void EndGame()
