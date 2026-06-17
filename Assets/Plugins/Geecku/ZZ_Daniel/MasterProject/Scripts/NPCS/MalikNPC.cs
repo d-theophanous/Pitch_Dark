@@ -6,13 +6,17 @@ namespace Daniel.Master
 {
     public class MalikNPC : NPCScript
     {
+        protected override void Awake()
+        {
+            base.Awake();
+            Pitch = -1;
+        }
         protected override void Start()
         {
             base.Start();
             SetUpDialogueActions();
             if (GameManager.Instance.SkipTutorial)
                 SetFollowing(true);
-            Pitch = -1;
             ImproviseAfterSecondDialogue = false;
             IsFollowingFromStart = true;
         }

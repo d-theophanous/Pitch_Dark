@@ -23,17 +23,21 @@ namespace Daniel.Master
         [SerializeField] protected List<DialogueContainer> DialogueList;
         [SerializeField] private Transform Parent;
         [SerializeField] private Camera NPCCamera;
+        [SerializeField] private FMODUnity.StudioEventEmitter Emitter;
         private float UpdateTimer;
         private Transform Player;
         protected List<Dictionary<int, Action>> ActionDicList = new(); //-  I am going insane
 
-        void Awake()
+        protected virtual void Awake()
         {
             Player = GameManager.Instance.Player.transform;
         }
         protected virtual void Start()
         {
-            Agent.speed = GameManager.Instance.Player.PlayerSpeed - 1.5f;
+            Agent.speed = GameManager.Instance.Player.PlayerSpeed - 1.5f; 
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(Emitter.EventInstance, transform);
+            Emitter.EventInstance.setParameterByNameWithLabel("Language", GameManager.Language.ToString());
+            Emitter.EventInstance.setParameterByName("VoicePitch", Pitch);
         }   
         //- (LP) ToDo GameManager Update steuern lassen?
         void Update()

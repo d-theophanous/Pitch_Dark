@@ -77,7 +77,10 @@ namespace Daniel.Master
                 ContinuePressed = false;
                 DialogueManager.Instance.ContinueWithDialogue = false;
             };
-            AudioManager.Instance.PlayScreenInfo(ScreenInfo.DIALOGUE, action);
+            if (TutorialManager.Instance.TutorialPlays)
+                action.Invoke();
+            else
+                AudioManager.Instance.PlayScreenInfo(ScreenInfo.DIALOGUE, action);
         }
         private IEnumerator TypeLine()
         {

@@ -6,12 +6,16 @@ namespace Daniel.Master
 {
     public class HenryNPC : NPCScript
     {
+        protected override void Awake()
+        {
+            base.Awake();
+            Pitch = -2f;
+        }
         protected override void Start()
         {
             base.Start();
             SetUpTutorialSegments();
             ImproviseAfterSecondDialogue = true;
-            Pitch = -2f;
 
             if (GameManager.Instance.SkipTutorial)
                 tag = "Untagged";

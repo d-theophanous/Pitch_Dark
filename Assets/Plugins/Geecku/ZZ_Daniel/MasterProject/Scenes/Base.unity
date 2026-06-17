@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.382
+  m_FogDensity: 0.9
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -3481,7 +3481,7 @@ MonoBehaviour:
   - Connect_M
   ConnectScript: {fileID: 1729751770}
   Player: {fileID: 0}
-  SkipTutorial: 1
+  SkipTutorial: 0
   StartTutorial: 0
   EndScore: {fileID: 395416246}
   GameFinished: 0

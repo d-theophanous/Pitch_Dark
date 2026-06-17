@@ -7,10 +7,14 @@ namespace Daniel.Master
     public class AnnaNPC : NPCScript
     {
         public DoorScript Door;
+        protected override void Awake()
+        {
+            base.Awake();
+            Pitch = 1f;
+        }
         protected override void Start()
         {
             base.Start();
-            Pitch = 1f;
             SetUpSegments();
             ImproviseAfterSecondDialogue = true;
         }

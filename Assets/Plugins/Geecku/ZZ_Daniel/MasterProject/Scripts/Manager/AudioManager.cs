@@ -27,7 +27,7 @@ namespace Daniel.Master
         #endregion
 
         private List<EventInstance> EventInstanceList;
-        public int GenreCount;
+        public int GenreCount = -1;
         private int GenreIdx => GenreCount % Enum.GetNames(typeof(Genre)).Length;
 
         //- ToDo opt, for now all of the readable element narrations are in the 
@@ -62,7 +62,7 @@ namespace Daniel.Master
             CurInstrument = Instrument.None;
             UnlockInstrument(Instrument.Vocals);
             SetInstrument((int)Instrument.Vocals);
-            SetGenre(0);
+            NextGenre();
         }
         public void UpdateAudio()
         {
@@ -476,6 +476,7 @@ namespace Daniel.Master
                 npc.StartPlay();
             }
             IsImprovising = true;
+            ImprovTrackEventInstance.setParameterByName("VoicePitch", 0f);
             ImprovTrackEventInstance.start();
             StartCoroutine(StartImprovisationCoroutine());
         }
