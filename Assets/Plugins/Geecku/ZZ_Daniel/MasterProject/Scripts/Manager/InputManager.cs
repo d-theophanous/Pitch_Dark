@@ -171,9 +171,10 @@ namespace Daniel.Master
 
         #endregion
 
-        public void OnDebug()
+        public void OnDebug2()
         {
-
+            AccessibilityManager.Instance.BlackBackground.SetActive(
+                !AccessibilityManager.Instance.BlackBackground.activeSelf);
         }
 
         #endregion
