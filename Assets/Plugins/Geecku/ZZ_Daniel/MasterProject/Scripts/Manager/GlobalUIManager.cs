@@ -49,6 +49,7 @@ namespace Daniel.Master
         [Header("Score UIs")]
         [SerializeField] private LocalizeStringEvent ScoreString1;
         [SerializeField] private LocalizeStringEvent ScoreString2;
+        public GameObject ToggleScore;
 
 
         //- for debugging public
@@ -145,7 +146,6 @@ namespace Daniel.Master
         {
             if (CurUIList.Count == 0)
                 return;
-            AudioManager.Instance.StopTTS();
 
             GetGameObjectFromEnum(ui).SetActive(false);
             CurUIList.Remove(ui);

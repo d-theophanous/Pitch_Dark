@@ -154,6 +154,24 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Debug3"",
+                    ""type"": ""Button"",
+                    ""id"": ""e8106718-aa07-4c2f-8455-55b50e96834f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Debug4"",
+                    ""type"": ""Button"",
+                    ""id"": ""885d765e-e128-45c5-bff8-e1d6ab395f31"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -332,6 +350,50 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""action"": ""Debug2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b51ea1d0-40d2-416a-89ca-eed2ce358629"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard;Controller"",
+                    ""action"": ""Debug3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4bb0d224-96c0-4fc1-a0a8-fbda4fc0e6bd"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""26e544a1-072c-483a-b2ef-cbca76290d03"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller;Keyboard"",
+                    ""action"": ""Debug4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8e82fafc-d420-4e5e-b066-829085092a77"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -410,6 +472,33 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Debug2"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab3e20f1-f64c-4a62-87c6-57c7768ac329"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Debug3"",
+                    ""type"": ""Button"",
+                    ""id"": ""d9d40e31-8843-44ce-a860-d27167e221ac"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Debug4"",
+                    ""type"": ""Button"",
+                    ""id"": ""a593ae45-4325-4d2d-a0ea-ecdfe4c95be6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -432,6 +521,72 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard"",
                     ""action"": ""Settings"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ffb7d52e-2a37-462b-bd3f-dbaa46473f94"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller;Keyboard"",
+                    ""action"": ""Debug4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df215f51-28ed-4993-ba0f-89b5ae8cc832"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""11ef4e24-3a0f-4ec6-9f4e-152f03a9d17a"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard;Controller"",
+                    ""action"": ""Debug3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d7698786-1424-4c28-ac83-f07426509064"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dd1e16a3-6659-4376-adc6-9e5618e2c838"",
+                    ""path"": ""<Keyboard>/o"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard;Controller"",
+                    ""action"": ""Debug2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""89e6d584-62e3-4c13-abf0-8041b8459e52"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1081,6 +1236,8 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_Player_ImprovTest = m_Player.FindAction("ImprovTest", throwIfNotFound: true);
         m_Player_Debug = m_Player.FindAction("Debug", throwIfNotFound: true);
         m_Player_Debug2 = m_Player.FindAction("Debug2", throwIfNotFound: true);
+        m_Player_Debug3 = m_Player.FindAction("Debug3", throwIfNotFound: true);
+        m_Player_Debug4 = m_Player.FindAction("Debug4", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Settings = m_UI.FindAction("Settings", throwIfNotFound: true);
@@ -1091,6 +1248,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_UI_Back = m_UI.FindAction("Back", throwIfNotFound: true);
         m_UI_Repeat = m_UI.FindAction("Repeat", throwIfNotFound: true);
         m_UI_DebugUI = m_UI.FindAction("DebugUI", throwIfNotFound: true);
+        m_UI_Debug2 = m_UI.FindAction("Debug2", throwIfNotFound: true);
+        m_UI_Debug3 = m_UI.FindAction("Debug3", throwIfNotFound: true);
+        m_UI_Debug4 = m_UI.FindAction("Debug4", throwIfNotFound: true);
         // Improvisation
         m_Improvisation = asset.FindActionMap("Improvisation", throwIfNotFound: true);
         m_Improvisation_PlayRoot = m_Improvisation.FindAction("PlayRoot", throwIfNotFound: true);
@@ -1205,6 +1365,8 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_ImprovTest;
     private readonly InputAction m_Player_Debug;
     private readonly InputAction m_Player_Debug2;
+    private readonly InputAction m_Player_Debug3;
+    private readonly InputAction m_Player_Debug4;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1244,6 +1406,14 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Debug2".
         /// </summary>
         public InputAction @Debug2 => m_Wrapper.m_Player_Debug2;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Debug3".
+        /// </summary>
+        public InputAction @Debug3 => m_Wrapper.m_Player_Debug3;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Debug4".
+        /// </summary>
+        public InputAction @Debug4 => m_Wrapper.m_Player_Debug4;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1291,6 +1461,12 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Debug2.started += instance.OnDebug2;
             @Debug2.performed += instance.OnDebug2;
             @Debug2.canceled += instance.OnDebug2;
+            @Debug3.started += instance.OnDebug3;
+            @Debug3.performed += instance.OnDebug3;
+            @Debug3.canceled += instance.OnDebug3;
+            @Debug4.started += instance.OnDebug4;
+            @Debug4.performed += instance.OnDebug4;
+            @Debug4.canceled += instance.OnDebug4;
         }
 
         /// <summary>
@@ -1323,6 +1499,12 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Debug2.started -= instance.OnDebug2;
             @Debug2.performed -= instance.OnDebug2;
             @Debug2.canceled -= instance.OnDebug2;
+            @Debug3.started -= instance.OnDebug3;
+            @Debug3.performed -= instance.OnDebug3;
+            @Debug3.canceled -= instance.OnDebug3;
+            @Debug4.started -= instance.OnDebug4;
+            @Debug4.performed -= instance.OnDebug4;
+            @Debug4.canceled -= instance.OnDebug4;
         }
 
         /// <summary>
@@ -1368,6 +1550,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_Back;
     private readonly InputAction m_UI_Repeat;
     private readonly InputAction m_UI_DebugUI;
+    private readonly InputAction m_UI_Debug2;
+    private readonly InputAction m_UI_Debug3;
+    private readonly InputAction m_UI_Debug4;
     /// <summary>
     /// Provides access to input actions defined in input action map "UI".
     /// </summary>
@@ -1411,6 +1596,18 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "UI/DebugUI".
         /// </summary>
         public InputAction @DebugUI => m_Wrapper.m_UI_DebugUI;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/Debug2".
+        /// </summary>
+        public InputAction @Debug2 => m_Wrapper.m_UI_Debug2;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/Debug3".
+        /// </summary>
+        public InputAction @Debug3 => m_Wrapper.m_UI_Debug3;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/Debug4".
+        /// </summary>
+        public InputAction @Debug4 => m_Wrapper.m_UI_Debug4;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1461,6 +1658,15 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @DebugUI.started += instance.OnDebugUI;
             @DebugUI.performed += instance.OnDebugUI;
             @DebugUI.canceled += instance.OnDebugUI;
+            @Debug2.started += instance.OnDebug2;
+            @Debug2.performed += instance.OnDebug2;
+            @Debug2.canceled += instance.OnDebug2;
+            @Debug3.started += instance.OnDebug3;
+            @Debug3.performed += instance.OnDebug3;
+            @Debug3.canceled += instance.OnDebug3;
+            @Debug4.started += instance.OnDebug4;
+            @Debug4.performed += instance.OnDebug4;
+            @Debug4.canceled += instance.OnDebug4;
         }
 
         /// <summary>
@@ -1496,6 +1702,15 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @DebugUI.started -= instance.OnDebugUI;
             @DebugUI.performed -= instance.OnDebugUI;
             @DebugUI.canceled -= instance.OnDebugUI;
+            @Debug2.started -= instance.OnDebug2;
+            @Debug2.performed -= instance.OnDebug2;
+            @Debug2.canceled -= instance.OnDebug2;
+            @Debug3.started -= instance.OnDebug3;
+            @Debug3.performed -= instance.OnDebug3;
+            @Debug3.canceled -= instance.OnDebug3;
+            @Debug4.started -= instance.OnDebug4;
+            @Debug4.performed -= instance.OnDebug4;
+            @Debug4.canceled -= instance.OnDebug4;
         }
 
         /// <summary>
@@ -2105,6 +2320,20 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDebug2(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Debug3" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDebug3(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Debug4" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDebug4(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
@@ -2169,6 +2398,27 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDebugUI(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Debug2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDebug2(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Debug3" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDebug3(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Debug4" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDebug4(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Improvisation" which allows adding and removing callbacks.

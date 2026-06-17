@@ -196,6 +196,8 @@ namespace Daniel.Master
         }
         private IEnumerator AsyncStartGame()
         {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_CONNECT);
 
@@ -206,10 +208,6 @@ namespace Daniel.Master
             {
                 Debug.Log("ja in skip tutorial");
                 SetGameState(GameState.PLAYING);
-                DirectionChecker.Instance.StartDirectionChecking();
-                DirectionChecker.Instance.StopDirectionChecking();
-                DirectionChecker.Instance.StartDirectionChecking();
-
             }
         }
         public void EndGame()

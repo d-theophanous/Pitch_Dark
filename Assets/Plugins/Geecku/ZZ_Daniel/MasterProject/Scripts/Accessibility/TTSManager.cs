@@ -69,6 +69,7 @@ namespace Daniel.Master
             }
             if (CurrentGroup != null)
             {
+                AudioManager.Instance.StopTTS();
                 CurrentGroup.DeactivateGroup();
             }
             if (new_group == null)

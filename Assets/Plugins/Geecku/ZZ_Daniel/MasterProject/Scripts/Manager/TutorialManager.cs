@@ -122,6 +122,7 @@ namespace Daniel.Master
             {
                 Debug.Log("start last semgent");
                 GameManager.Instance.SetGameState(GameState.PLAYING);
+                TutorialDoor.tag = "Interactable";
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Tutorial").Enable();
                 InputManager.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
             };

@@ -3,12 +3,14 @@ using Geecku.GlobalMangers;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Localization.Components;
 
 namespace Daniel.Master
 {
     public class InputManager : PersistantDSingleton<InputManager>
     {
         public PlayerInput PlayerInput;
+        public LocalizeStringEvent ToggleEvent;
 
         protected override void Awake()
         {
@@ -175,6 +177,16 @@ namespace Daniel.Master
         {
             AccessibilityManager.Instance.BlackBackground.SetActive(
                 !AccessibilityManager.Instance.BlackBackground.activeSelf);
+        }
+        public void OnDebug3()
+        {
+            ToggleEvent.StringReference.Arguments = new object[] { GlobalUIManager.Instance.Score, PuzzleManager.Instance.TotalMistakes };
+            ToggleEvent.RefreshString();
+            GlobalUIManager.Instance.ToggleScore.SetActive(!GlobalUIManager.Instance.ToggleScore.activeSelf);
+        }
+        public void OnDebug4()
+        {
+            GameManager.Instance.DebugSkipGate();
         }
 
         #endregion

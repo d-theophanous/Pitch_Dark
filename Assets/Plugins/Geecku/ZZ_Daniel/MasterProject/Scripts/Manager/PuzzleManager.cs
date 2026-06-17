@@ -206,7 +206,8 @@ namespace Daniel.Master
             CurCamera.gameObject.SetActive(true);
             CurPuzzle = PuzzleList[PuzzleIdx];
 
-            if (CurPuzzle.Player1Solves && GameManager.Instance.PlayerNumber == 1)
+            if (CurPuzzle.Player1Solves && GameManager.Instance.PlayerNumber == 1 ||
+                !CurPuzzle.Player1Solves && GameManager.Instance.PlayerNumber == 2)
                 SetUpSolveUI();
             else
                 SetUpSolutionUI();
@@ -315,6 +316,7 @@ namespace Daniel.Master
                             InputManager.Instance.SwitchCurrentActionMap("Improvisation");
                             AudioManager.Instance.StartImprovisation();
                             PuzzleManager.Instance.IsSolving = false;
+                            CurDoor.DoorNPC.GetCamera().gameObject.SetActive(true);
                         }
                         else if (CurDoor != null && CurDoor.DoorNPC != null)
                             CurDoor.DoorNPC.ActivateSecondDialogue();
