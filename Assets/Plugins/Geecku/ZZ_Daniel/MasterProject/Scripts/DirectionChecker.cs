@@ -33,10 +33,6 @@ namespace Daniel.Master
         public bool CanReceiveDirectionInfo;
 
         #region MonoBehaviour Commons
-        protected override void Start()
-        {
-            base.Start();
-        }
 
         public void UpdateDirectionChecker(object sender, System.EventArgs e)
         {
@@ -54,6 +50,7 @@ namespace Daniel.Master
 
             if (IsOnRightPath())
             {
+                Debug.Log("isonrightpath");
                 if (NetworkManager.Client.IsInConnection)
                     GameManager.Instance.ClientSend_DirectionCheck(1);
                 else
@@ -61,6 +58,7 @@ namespace Daniel.Master
             }
             else
             {
+                Debug.Log("ison wrong path");
                 if (NetworkManager.Client.IsInConnection)
                     GameManager.Instance.ClientSend_DirectionCheck(0);
                 else
@@ -71,7 +69,8 @@ namespace Daniel.Master
 
         #region Public Functions
         public void StartDirectionChecking()
-        {            
+        {
+            Debug.Log("start direction check");
             if (CurrentWaypointListIdx >= DestinationWaypointsList.Count)
             {
                 Debug.LogWarning("DirectionChecker: destination index out of range.");

@@ -4,3 +4,33 @@ MLog>> Network: Loaded
 	
 MLog>> Engine: Started
 	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Host
+	
+MLog>> Server: Started on port 64000.
+	
+MLog>> Client: Connecting to 127.0.0.1:64000...
+	
+MLog>> Client: Connected successfully.
+	
+MLog>> Server: Client 1 (127.0.0.1:52395) connected successfully.
+	
+MLog>> Client: Client ready with msg-index '0'.
+	
+MLog>> Host
+	
+MLog>> Server: Started on port 64000.
+	
+MLog>> Client: Connecting to 127.0.0.1:64000...
+	
+MLog>> Client: Disconnected from Server. Manual exit.
+	
+MLog>> Client ID [1] is already registered
+	
+MLog>> Quit
+	
