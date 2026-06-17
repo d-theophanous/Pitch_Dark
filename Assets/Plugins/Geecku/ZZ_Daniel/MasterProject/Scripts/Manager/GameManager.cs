@@ -398,7 +398,7 @@ namespace Daniel.Master
                 var client_id = msg.GetUShort();
                 var content = msg.GetUShort();
                 //Debug.Log("content in client receive: " + content);
-                if (client_id == NetworkManager.Instance._Client.LocalClient.ID)
+                if (client_id == NetworkManager.Client.LocalClient.ID)
                 {
                     //Debug.Log("sent: " + content);
                 }
