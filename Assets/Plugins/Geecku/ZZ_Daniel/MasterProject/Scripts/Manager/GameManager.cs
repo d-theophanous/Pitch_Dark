@@ -399,18 +399,19 @@ namespace Daniel.Master
             {
                 var client_id = msg.GetUShort();
                 var content = msg.GetUShort();
-                //Debug.Log("content in client receive: " + content);
+                Debug.Log("content in client receive: " + content);
                 if (client_id == NetworkManager.Client.LocalClient.ID)
                 {
                     if (content == 0)
                     {
-                        //Debug.Log("not rumbling");
+                        Debug.Log("not rumbling");
                         Rumbler.Instance.StopRumble();
                     }
-                    else if (content == 1 && DirectionChecker.Instance.CanReceiveDirectionInfo)
+                    else if (content == 1)
                     {
-                        Rumbler.Instance.StartRumble();
-                        //Debug.Log("rumbling");
+                        //1 && DirectionChecker.Instance.CanReceiveDirectionInfo
+                        Rumbler.Instance.RumbleConstant(0.1f,0.1f,20f);
+                        Debug.Log("rumbling");
                     }
                 }
                 else
