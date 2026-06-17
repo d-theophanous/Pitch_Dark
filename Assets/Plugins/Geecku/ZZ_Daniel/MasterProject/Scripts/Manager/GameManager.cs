@@ -219,13 +219,13 @@ namespace Daniel.Master
         }
         public Action CurrentGateReadyAction;
         public bool OtherPlayerIsGateReady { get; private set; }
-        private void OtherPlayerGateReady()
+        public void OtherPlayerGateReady()
         {
             OtherPlayerIsGateReady = true;
             CheckBothPlayersReady();
         }
         public bool PlayerIsGateReady { get; private set; }
-        private void PlayerGateReady()
+        public void PlayerGateReady()
         {
             PlayerIsGateReady = true;
             CheckBothPlayersReady();
@@ -236,7 +236,6 @@ namespace Daniel.Master
             {
                 GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
                 CurrentGateReadyAction?.Invoke();
-                Debug.Log("gate game m anager 231");
                 OtherPlayerIsGateReady = PlayerIsGateReady = false;
             }
         }

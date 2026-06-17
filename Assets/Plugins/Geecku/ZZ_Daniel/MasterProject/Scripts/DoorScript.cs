@@ -1,4 +1,5 @@
 using FMODUnity;
+using Geecku.DefaultNetworking;
 using UnityEngine;
 
 namespace Daniel.Master
@@ -16,13 +17,17 @@ namespace Daniel.Master
         public override void ActivatePrompt()
         {
             PuzzleManager.Instance.SetCurrentDoor(this);
-            //StudioEventEmitter emitter = gameObject.GetComponentInChildren<StudioEventEmitter>();
-            //emitter.Stop();
-            //emitter.gameObject.SetActive(false);
 
-            AudioManager.Instance.StopInteractable(); //-   ToDo
+            AudioManager.Instance.StopInteractable();
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
-            GameManager.Instance.ClientSend_PlayerAtGate();
+
+            if (NetworkManager.Instance._Client.IsInConnection)
+                GameManager.Instance.ClientSend_PlayerAtGate();
+            else
+            {
+                GameManager.Instance.PlayerGateReady();
+                GameManager.Instance.OtherPlayerGateReady();
+            }
             tag = "Untagged";
             GameManager.Instance.Player.CurrentInteractable = null;
             DirectionChecker.Instance.StopDirectionChecking();

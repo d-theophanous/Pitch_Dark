@@ -82,7 +82,6 @@ namespace Daniel.Master
             Dictionary<int, Action> dialogue_1_dic = new();
             dialogue_1_dic.Add(0, () =>
             {
-                Debug.Log("henry 85");
                 TutorialManager.Instance.StartSegment(seg_1);
             });
 

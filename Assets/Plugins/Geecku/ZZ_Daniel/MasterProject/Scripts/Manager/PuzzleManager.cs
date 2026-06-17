@@ -1,3 +1,4 @@
+using Geecku.DefaultNetworking;
 using Geecku.GlobalMangers;
 using System;
 using System.Collections;
@@ -20,7 +21,7 @@ namespace Daniel.Master
         private List<Puzzle> PuzzleList = new();
         private Puzzle CurPuzzle;
         private bool ThisPlayerSolves;
-        private int RemainingDoorCount = 6;
+        private int RemainingDoorCount = 7;
 
         private List<Interval> SolutionSequence => CurPuzzle.Intervals;
         private int SolutionIdx;
@@ -49,8 +50,13 @@ namespace Daniel.Master
             Puzzle puzzle_2 = new Puzzle(false, new() { Interval.PRIME, Interval.OCTAVE, Interval.OCTAVE }, 3);
 
             //- 3.Puzzle
-            Puzzle puzzle_3 = new Puzzle(true, new() { Interval.OCTAVE, Interval.FIFTH, Interval.PRIME }, 3);
-            
+            Puzzle puzzle_3 = new Puzzle(true, new() { Interval.OCTAVE, Interval.FIFTH, Interval.PRIME }, 3, () =>
+            {
+                AudioManager.Instance.UnlockInterval(Interval.FIFTH);
+                AudioManager.Instance.UnlockInstrument(Instrument.Guitar);
+                AudioManager.Instance.UnlockInstrument(Instrument.Piano);
+            });
+
             //- 4.Puzzle
             Puzzle puzzle_4 = new Puzzle(false, new() { Interval.FIFTH, Interval.PRIME, Interval.FIFTH, Interval.OCTAVE }, 4);
 
@@ -60,12 +66,19 @@ namespace Daniel.Master
             //- 6.Puzzle
             Puzzle puzzle_6 = new Puzzle(false, new() { Interval.FIFTH, Interval.FIFTH, Interval.OCTAVE, Interval.PRIME }, 4);
 
+            //- 6.Puzzle
+            Puzzle puzzle_7 = new Puzzle(true, new() { Interval.FIFTH, Interval.OCTAVE, Interval.FIFTH }, 3, () =>
+            {
+                AudioManager.Instance.UnlockInstrument(Instrument.Violin);
+            });
+
             PuzzleList.Add(puzzle_1);
             PuzzleList.Add(puzzle_2);
             PuzzleList.Add(puzzle_3);
             PuzzleList.Add(puzzle_4);
             PuzzleList.Add(puzzle_5);
             PuzzleList.Add(puzzle_6);
+            PuzzleList.Add(puzzle_7);
         }
         public void CheckPuzzle(Interval interval)
         {
@@ -75,15 +88,17 @@ namespace Daniel.Master
             InputManager.Instance.PlayerInput.DeactivateInput();
             if (interval == SolutionSequence[SolutionIdx])
             {
-                //AdvancePuzzle(true);
-                //- ToDo uncomment for multiplayer version
-                GameManager.Instance.ClientSend_AdvanceSequence(true);
+                if (NetworkManager.Instance._Client.IsInConnection)
+                    GameManager.Instance.ClientSend_AdvanceSequence(true);
+                else
+                    AdvancePuzzle(true);
             }
             else
             {
-                //AdvancePuzzle(false);
-                //- ToDo uncomment for multiplayer version
-                GameManager.Instance.ClientSend_AdvanceSequence(false);
+                if (NetworkManager.Instance._Client.IsInConnection)
+                    GameManager.Instance.ClientSend_AdvanceSequence(false);
+                else
+                    AdvancePuzzle(false);
             }
         }
 
@@ -124,10 +139,11 @@ namespace Daniel.Master
             {
                 Action action;
                 //- if the final sequence was solved correctly
-                if (SolutionIdx >= CurPuzzle.Intervals.Count - 1)
+                if (SolutionIdx > CurPuzzle.Intervals.Count - 1)
                 {
                     GlobalUIManager.Instance.SetScore(SuccessPoints);
                     action = () => { PuzzleSolved(); };
+                    SolutionIdx = 0;
                 }
                 //- if a sequence was solved correctly
                 else
@@ -141,7 +157,6 @@ namespace Daniel.Master
                         PuzzleSolveUI.Label.Number = (Number)number;
                         GlobalUIManager.Instance.SetScore(SuccessPoints);
 
-                        PuzzleSolveUI.ElementGroup.GetElement(1).AudioIndex++;
                         PuzzleSolveUI.ElementGroup.SetCurElement(1);
                         InputManager.Instance.PlayerInput.ActivateInput();
                     };
@@ -190,7 +205,7 @@ namespace Daniel.Master
                 SetUpSolveUI();
             else
                 SetUpSolutionUI();
-
+            Debug.Log("set up puzzle");
             GlobalUIManager.Instance.ToggleUI(UI_Group.PUZZLE, false);
         }
         private void SetUpSolveUI()
@@ -291,7 +306,10 @@ namespace Daniel.Master
                         if (CurDoor != null && CurDoor.DoorNPC != null)
                             CurDoor.DoorNPC.ActivateSecondDialogue();
                         else
+                        {
                             GameManager.Instance.SetGameState(GameState.PLAYING);
+                            DirectionChecker.Instance.StartDirectionChecking();
+                        }
                         CurDoor.ToggleDoor(false);
                     });
                 });

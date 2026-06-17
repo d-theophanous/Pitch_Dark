@@ -1,3 +1,4 @@
+using Geecku.DefaultNetworking;
 using Geecku.GlobalMangers;
 using System;
 using System.Collections;
@@ -180,12 +181,15 @@ namespace Daniel.Master
             GameManager.Instance.UpdateEvent -= UpdateTutorialManager;
             TutorialPlays = false;
             GlobalUIManager.Instance.ToggleUI(UI_Group.DIALOGUE);
-            //GameManager.Instance.SetGameState(GameState.PLAYING);
-            //- schicke message raus
 
-            Debug.Log("gate tutorial manager 180");
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
-            GameManager.Instance.ClientSend_PlayerAtGate();
+            if (NetworkManager.Instance._Client.IsInConnection)
+                GameManager.Instance.ClientSend_PlayerAtGate();
+            else
+            {
+                GameManager.Instance.PlayerGateReady();
+                GameManager.Instance.OtherPlayerGateReady();
+            }
         }
         public void OnReceiveTutorialEnd()
         {

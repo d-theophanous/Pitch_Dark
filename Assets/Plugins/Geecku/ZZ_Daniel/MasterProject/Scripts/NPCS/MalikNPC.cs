@@ -16,6 +16,11 @@ namespace Daniel.Master
             ImproviseAfterSecondDialogue = false;
             IsFollowingFromStart = true;
         }
+        public override void ActivatePrompt()
+        {
+            base.ActivatePrompt();
+            GameManager.Instance.CurrentGateReadyAction = () => { PuzzleManager.Instance.StartPuzzle(); };
+        }
         private void SetUpDialogueActions()
         {
             Dictionary<int, Action> dialogue_1_dic = new();

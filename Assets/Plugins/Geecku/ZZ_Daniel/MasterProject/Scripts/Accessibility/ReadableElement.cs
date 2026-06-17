@@ -13,7 +13,7 @@ namespace Daniel.Master
         [SerializeField] protected TMP_Text Text;
         //- ToDo opt
         [SerializeField] protected List<AudioClip> AudioList;
-        protected AudioClip Audio => AudioList[(int)GameManager.Language + AudioIndex * Enum.GetNames(typeof(Language)).Length];
+        protected AudioClip Audio => AudioList[(int)GameManager.Language];
         //- anstelle von Label vlt Dictonary mit englishem Text als Key
         //- sprach triple oder so als value
         protected UI_Element Element;
@@ -21,7 +21,6 @@ namespace Daniel.Master
 
         public int Ordernumber;
         //- quite ugly :) 
-        public int AudioIndex = 0;
         public Interval Interval = Interval.NONE;
         public Number Number = Number.NONE;
 

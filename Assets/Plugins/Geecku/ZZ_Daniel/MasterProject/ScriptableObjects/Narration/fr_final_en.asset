@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: fr_final_en
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::NarrationScriptData
   lines:
-  - 3
-  - Solution Sequence
-  - Cutscene
-  - 0
+  - You can now press the left and right arrow buttons on the left side of your controller
+    to try the instruments of the band members during improvisation
