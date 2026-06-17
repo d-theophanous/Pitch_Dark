@@ -1158,7 +1158,6 @@ MonoBehaviour:
   Text: {fileID: 915032561}
   AudioList: []
   Ordernumber: 0
-  AudioIndex: 0
   Interval: 4
   Number: 13
 --- !u!114 &203200586
@@ -3065,7 +3064,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bf653150173855744a67a42f1c930290, type: 3}
   - {fileID: 8300000, guid: 85e3bfe5c58f33d44ba7e1919edc84fa, type: 3}
   Ordernumber: 0
-  AudioIndex: 0
   Interval: 4
   Number: 13
 --- !u!114 &395416246
@@ -3084,7 +3082,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:c60aea9eee49086468801da01885ae41
     m_TableEntryReference:
-      m_KeyId: 21691581235118080
+      m_KeyId: 22621398910550016
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -3485,7 +3483,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   SkipTutorial: 1
   StartTutorial: 0
-  EndScore: {fileID: 0}
+  EndScore: {fileID: 395416246}
+  GameFinished: 0
   PlayerIdx: 0
   DebugInteractable: {fileID: 0}
   MaxPlayerCount: 2
@@ -6975,6 +6974,7 @@ MonoBehaviour:
   TTSVolume: 1
   GenreCount: 0
   ChangeLines: 0
+  IsImprovising: 0
   UnlockedIntervalList: 
 --- !u!4 &1026959046
 Transform:
@@ -9906,7 +9906,6 @@ MonoBehaviour:
   Text: {fileID: 1239990017}
   AudioList: []
   Ordernumber: 0
-  AudioIndex: 0
   Interval: 4
   Number: 13
 --- !u!114 &1421767328
@@ -11833,7 +11832,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 93d277fa36f2867478f67083be2efca4, type: 3}
   - {fileID: 8300000, guid: e2e16008b6011d944bf8993575238f79, type: 3}
   Ordernumber: 0
-  AudioIndex: 0
   Interval: 4
   Number: 13
 --- !u!114 &1763660777
@@ -13536,6 +13534,7 @@ MonoBehaviour:
   PuzzleActive: 0
   IsSolving: 0
   IsPuzzleSolved: 0
+  TotalMistakes: 0
 --- !u!4 &1905940976
 Transform:
   m_ObjectHideFlags: 0

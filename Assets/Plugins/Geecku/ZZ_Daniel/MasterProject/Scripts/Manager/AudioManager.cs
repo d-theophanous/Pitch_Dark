@@ -62,6 +62,7 @@ namespace Daniel.Master
             CurInstrument = Instrument.None;
             UnlockInstrument(Instrument.Vocals);
             SetInstrument((int)Instrument.Vocals);
+            SetGenre(0);
         }
         public void UpdateAudio()
         {
@@ -492,9 +493,13 @@ namespace Daniel.Master
             {
                 npc.StopPlay();
             }
+            NextGenre();
             DialogueManager.Instance.CleanUpDialogue();
             GlobalUIManager.Instance.ToggleUI(UI_Group.IMPROVISATION);
-            DirectionChecker.Instance.StartDirectionChecking();
+            if (GameManager.Instance.GameFinished)
+                GameManager.Instance.EndGame();
+            else
+                DirectionChecker.Instance.StartDirectionChecking();
         }
         public void StopImprovisation()
         {
@@ -581,7 +586,7 @@ namespace Daniel.Master
     }
     public enum Genre
     {
-        EDM, HipHop, Pop, Jazz, Mystic
+        EDM, HipHop, Pop, Mystic
     }
     public enum Note
     {

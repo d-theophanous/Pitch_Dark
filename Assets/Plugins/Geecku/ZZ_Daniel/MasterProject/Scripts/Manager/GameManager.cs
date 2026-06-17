@@ -27,6 +27,7 @@ namespace Daniel.Master
         [SerializeField] private LocalizeStringEvent EndScore;
         private GameState State;
         public static Language Language;
+        public bool GameFinished;
 
         //- Player 1 and Player 2
         public int PlayerNumber => PlayerIdx + 1;
@@ -209,8 +210,9 @@ namespace Daniel.Master
         }
         public void EndGame()
         {
-            EndScore.StringReference.Arguments = new object[] { GlobalUIManager.Instance.Score };
+            EndScore.StringReference.Arguments = new object[] { GlobalUIManager.Instance.Score , PuzzleManager.Instance.TotalMistakes};
             EndScore.RefreshString();
+            GlobalUIManager.Instance.ToggleUI(UI_Group.END_SCREEN);
         }
         public void QuitWaitingForPuzzle()
         {

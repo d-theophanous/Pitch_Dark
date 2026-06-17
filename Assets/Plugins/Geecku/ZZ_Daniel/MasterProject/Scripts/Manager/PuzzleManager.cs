@@ -33,6 +33,7 @@ namespace Daniel.Master
         public bool IsSolving;
         public bool IsPuzzleSolved;
         private Camera CurCamera;
+        public int TotalMistakes;
 
         protected override void Start()
         {
@@ -61,7 +62,7 @@ namespace Daniel.Master
             Puzzle puzzle_4 = new Puzzle(false, new() { Interval.FIFTH, Interval.PRIME, Interval.FIFTH, Interval.OCTAVE }, 4);
 
             //- 5.Puzzle
-            Puzzle puzzle_5 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH }, 4);
+            Puzzle puzzle_5 = new Puzzle(true, new() { Interval.PRIME, Interval.OCTAVE, Interval.FIFTH, Interval.PRIME }, 4);
 
             //- 6.Puzzle
             Puzzle puzzle_6 = new Puzzle(false, new() { Interval.FIFTH, Interval.FIFTH, Interval.OCTAVE, Interval.PRIME }, 4);
@@ -114,7 +115,12 @@ namespace Daniel.Master
         //- for debug public TODo
         public void PuzzleSolved()
         {
+            SolutionIdx = 0;
             CurDoor.ToggleDoor(true);
+            if (PuzzleIdx == PuzzleList.Count - 1)
+            {
+                GameManager.Instance.GameFinished = true;
+            }
             Action action = () =>
             {
                 //- close UI, open door and activate the dialogue
@@ -128,7 +134,6 @@ namespace Daniel.Master
 
                 StartCoroutine(PlayDoorSequence());
             };
-            AudioManager.Instance.NextGenre();
             AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR, action);
         }
 
@@ -139,11 +144,10 @@ namespace Daniel.Master
             {
                 Action action;
                 //- if the final sequence was solved correctly
-                if (SolutionIdx > CurPuzzle.Intervals.Count - 1)
+                if (SolutionIdx + 1 >= CurPuzzle.Intervals.Count)
                 {
                     GlobalUIManager.Instance.SetScore(SuccessPoints);
                     action = () => { PuzzleSolved(); };
-                    SolutionIdx = 0;
                 }
                 //- if a sequence was solved correctly
                 else
@@ -167,6 +171,7 @@ namespace Daniel.Master
             {
                 AudioManager.Instance.PlaySFX(SFX.WRONG, () =>
                 {
+                    TotalMistakes++;
                     PuzzleSolveUI.ElementGroup.SetCurElement(1);
                     var cur_element = PuzzleSolveUI.ElementGroup.GetCurElement();
                     cur_element.Activate();
@@ -303,7 +308,15 @@ namespace Daniel.Master
                     {
                         InputManager.Instance.PlayerInput.ActivateInput();
                         BlackBackground.SetActive(false);
-                        if (CurDoor != null && CurDoor.DoorNPC != null)
+                        if (GameManager.Instance.GameFinished)
+                        {
+                            GameManager.Instance.SetGameState(GameState.IMPROVISING);
+                            GlobalUIManager.Instance.ToggleUI(UI_Group.IMPROVISATION, false);
+                            InputManager.Instance.SwitchCurrentActionMap("Improvisation");
+                            AudioManager.Instance.StartImprovisation();
+                            PuzzleManager.Instance.IsSolving = false;
+                        }
+                        else if (CurDoor != null && CurDoor.DoorNPC != null)
                             CurDoor.DoorNPC.ActivateSecondDialogue();
                         else
                         {

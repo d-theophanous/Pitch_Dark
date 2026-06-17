@@ -130,6 +130,11 @@ MonoBehaviour:
     m_Localized: Je hebt het spel uitgespeeld, bedankt voor het spelen
     m_Metadata:
       m_Items: []
+  - m_Id: 22621398910550016
+    m_Localized: 'Uitslag: {0}, Fouten: {1}'
+    m_Metadata:
+      m_Items:
+      - rid: 7223895054663811156
   references:
     version: 2
     RefIds:
@@ -145,3 +150,4 @@ MonoBehaviour:
         - id: 5857152348635136
         - id: 5857130869604352
         - id: 21822507381620736
+        - id: 22621398910550016
