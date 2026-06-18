@@ -32,10 +32,10 @@ namespace Daniel.Master
             {
                 DialogueManager.Instance.TutorialAfter = false; 
                 DialogueManager.Instance.ContinueWithDialogue = true;
+                DirectionChecker.Instance.StartDirectionChecking();
             });
             dialogue_1_dic.Add(DialogueList[0].DialogueList[0].Lines.Count, () =>
             {
-                DirectionChecker.Instance.StartDirectionChecking();
                 DialogueManager.Instance.ContinueWithDialogue = true;
             });
 
