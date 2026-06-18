@@ -62,6 +62,7 @@ public enum RumblePattern
         }
         public void StartRumble(float duration)
         {
+            Debug.Log($"StartRumble called — IsRumbling: {IsRumbling}, Gamepad: {GetGamepad()}");
             if (IsRumbling || Gamepad == null)
                 return;
             IsRumbling = true;
