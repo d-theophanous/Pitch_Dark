@@ -1,0 +1,72 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <e5d2ff9b5a674640bfc830a3048a934b>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <e5d2ff9b5a674640bfc830a3048a934b>:0)
+	Daniel.Master.ConnectScript.Host () (at <e5d2ff9b5a674640bfc830a3048a934b>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <e5d2ff9b5a674640bfc830a3048a934b>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnClick()
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> Host
+	
+MLog>> SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	System.Net.Sockets.Socket.Bind (System.Net.EndPoint localEP) (at <4ab730ba11da409a808c38ba439d80c8>:0)
+	Riptide.Transports.Udp.UdpPeer.OpenSocket (System.Net.IPAddress listenAddress, System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Transports.Udp.UdpServer.Start (System.UInt16 port) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Server.Start (System.UInt16 port, System.UInt16 maxClientCount, System.Byte messageHandlerGroupId, System.Boolean useMessageHandlers) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ServerManager.StartPeer () (at <e5d2ff9b5a674640bfc830a3048a934b>:0)
+	Geecku.DefaultNetworking.NetworkManager.StartServer () (at <e5d2ff9b5a674640bfc830a3048a934b>:0)
+	Daniel.Master.ConnectScript.Host () (at <e5d2ff9b5a674640bfc830a3048a934b>:0)
+	UnityEngine.Events.InvokableCall.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.Events.UnityEvent.Invoke () (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	Daniel.Master.ReadableButton+<ActivateCoroutine>d__3.MoveNext () (at <e5d2ff9b5a674640bfc830a3048a934b>:0)
+	UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <55414492de1b4ea49d9e70ec0f16c4e9>:0)
+	UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+	Daniel.Master.ReadableButton:Activate()
+	Daniel.Master.ReadableElementGroup:ActivateCurElement()
+	Daniel.Master.TTSManager:ActivateCurElement()
+	Daniel.Master.InputManager:OnClick()
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> no more previous elements
+	
+MLog>> Host
+	
+MLog>> Server: Started on port 64000.
+	
+MLog>> Client: Connecting to 127.0.0.1:64000...
+	
+MLog>> Client: Connected successfully.
+	
+MLog>> Client: Disconnected from Server: Poor Connection.
+	
+MLog>> Quit
+	
