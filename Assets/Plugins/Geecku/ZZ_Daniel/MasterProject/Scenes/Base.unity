@@ -3690,7 +3690,7 @@ MonoBehaviour:
   - Connect_M
   ConnectScript: {fileID: 1729751770}
   Player: {fileID: 0}
-  SkipTutorial: 1
+  SkipTutorial: 0
   StartTutorial: 0
   EndScore: {fileID: 395416246}
   GameFinished: 0
@@ -7747,7 +7747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1113316105
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7774,7 +7774,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113316104}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d6ae356d706a7b4bbe3425ade9cc030, type: 3}
   m_Name: 
