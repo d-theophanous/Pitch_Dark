@@ -6,6 +6,7 @@ namespace Daniel.Master
 {
     public class MalikNPC : NPCScript
     {
+        public DoorScript Door;
         protected override void Awake()
         {
             base.Awake();
@@ -42,7 +43,8 @@ namespace Daniel.Master
             Dictionary<int, Action> dialogue_2_dic = new();
             dialogue_2_dic.Add(DialogueList[1].DialogueList[0].Lines.Count, () =>
             {
-                PuzzleManager.Instance.SetUpPuzzle();
+                Door.TutorialNPC = null;
+                Door.ActivatePrompt();
             });
 
             ActionDicList.Add(dialogue_1_dic);

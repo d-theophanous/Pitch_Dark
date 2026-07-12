@@ -370,21 +370,4 @@ namespace Daniel.Master
             OnEndAction = on_end_action;
         }
     }    
-    /*
-     * So was wie
-     * puzzle 
-     * wie viele lösungseingaben
-     * welche intervalle
-     * action für wenn fertig?
-     * lösungseingaben sollen random sein aber ähnlich häufig die intervalle vorkommen
-     * lassen
-     * 
-     * puzzle1: 2 lösungen, prime und oktave
-     * 
-     * PuzzleContainer
-     * drei buttons
-     * element group
-     * label
-     *  
-     */
 }

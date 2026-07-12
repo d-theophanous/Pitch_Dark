@@ -11821,6 +11821,7 @@ MonoBehaviour:
   Parent: {fileID: 529402865}
   NPCCamera: {fileID: 529402868}
   Emitter: {fileID: 529402871}
+  Door: {fileID: 748668367}
 --- !u!114 &529402871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16870,6 +16871,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7613687411510550139, guid: 4963b55652180e946b10fda98efef25e, type: 3}
   m_PrefabInstance: {fileID: 748668365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &748668367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379473852384688255, guid: 4963b55652180e946b10fda98efef25e, type: 3}
+  m_PrefabInstance: {fileID: 748668365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9eb34fd5a94a044fbc49a9107c0916d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::Geecku.DoorScript
 --- !u!1001 &750031692
 PrefabInstance:
   m_ObjectHideFlags: 0

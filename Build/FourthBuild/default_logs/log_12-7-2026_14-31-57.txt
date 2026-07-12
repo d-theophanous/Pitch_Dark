@@ -1,0 +1,454 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Client: Connecting to 192.168.100.128:64000...
+	
+MLog>> 64000
+	
+MLog>> Client: Connection Failed: NoConnection
+	
+MLog>> in asdjf
+	
+MLog>> Client: Connecting to 192.168.100.128:64000...
+	
+MLog>> 64000
+	
+MLog>> Client: Connected successfully.
+	
+MLog>> Game started :))
+	
+MLog>> Client: Client ready with msg-index '0'.
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> set up dialogue
+	
+MLog>> start action
+	
+MLog>> x
+	
+MLog>> no more previous elements
+	
+MLog>> no more next elements
+	
+MLog>> no more previous elements
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up dialogue
+	
+MLog>> ja dialogue after ist problem
+	
+MLog>> start last semgent
+	
+MLog>> gamestate switch to playing
+	
+MLog>> x
+	
+MLog>> set up dialogue
+	
+MLog>> ja dialogue after ist problem
+	
+MLog>> gamestate switch to playing
+	
+MLog>> in activate prompt
+	
+MLog>> set up dialogue
+	
+MLog>> start direction check
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> gamestate switch to playing
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> set up dialogue
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.PuzzleManager.OnReceiveSolutionInput (System.Boolean was_correct) (at <038753987b18441fbbe740bcb4704225>:0)
+	Daniel.Master.GameManager+<>c__DisplayClass60_0.<ClientReceive_SequenceInfo>b__0 () (at <038753987b18441fbbe740bcb4704225>:0)
+	Geecku.DefaultNetworking.Common.MessageHandlers.ClientMessageHandler.HandleAction (System.Int32 msg_index, System.Action action) (at <038753987b18441fbbe740bcb4704225>:0)
+	Geecku.DefaultNetworking.Common.MessageHandlers.ClientMessageHandler.Handle (Riptide.Message msg, System.Action action) (at <038753987b18441fbbe740bcb4704225>:0)
+	Daniel.Master.GameManager.ClientReceive_SequenceInfo (Riptide.Message msg) (at <038753987b18441fbbe740bcb4704225>:0)
+	Riptide.Client.OnMessageReceived (Riptide.Message message) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Client.Handle (Riptide.Message message, Riptide.Transports.MessageHeader header, Riptide.Connection connection) (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Peer.HandleMessages () (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Riptide.Client.Update () (at <ded26d46b77d49b1ab06d1ec7e352741>:0)
+	Geecku.DefaultNetworking.ClientManager.FixedUpdate () (at <038753987b18441fbbe740bcb4704225>:0)
+	
+MLog>> Client received msg out of order '7'.
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> Client: Disconnected from Server: Timed out.
+	
+MLog>> Quit
+	
