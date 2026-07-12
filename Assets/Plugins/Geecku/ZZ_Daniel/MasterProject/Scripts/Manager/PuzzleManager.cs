@@ -87,6 +87,7 @@ namespace Daniel.Master
             Debug.Log("input: " + interval + ", Lösung: " + SolutionSequence[SolutionIdx]);
             
             InputManager.Instance.PlayerInput.DeactivateInput();
+            AudioManager.Instance.StopTTS();
             if (interval == SolutionSequence[SolutionIdx])
             {
                 if (NetworkManager.Instance._Client.IsInConnection)

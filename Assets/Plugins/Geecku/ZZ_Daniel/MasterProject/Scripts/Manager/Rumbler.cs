@@ -62,7 +62,6 @@ public enum RumblePattern
         }
         public void StartRumble(float duration)
         {
-            Debug.Log($"StartRumble called — IsRumbling: {IsRumbling}, Gamepad: {GetGamepad()}");
             if (IsRumbling || Gamepad == null)
                 return;
             IsRumbling = true;
@@ -71,10 +70,8 @@ public enum RumblePattern
         }
         public void StartRumble()
         {
-            Debug.Log($"StartRumble called — IsRumbling: {IsRumbling}, Gamepad: {GetGamepad()}");
             if (IsRumbling || Gamepad == null)
                 return;
-            Debug.Log("rumbling fr");
             IsRumbling = true;
             StopAllCoroutines();
             StartCoroutine(RumbleEndless());
@@ -98,17 +95,8 @@ public enum RumblePattern
         // Private helpers
         private Gamepad GetGamepad()
         {
-            Debug.Log($"Gamepad.all count: {Gamepad.all.Count}");
-            Debug.Log($"PlayerInput.devices count: {PlayerInput.devices.Count}");
-            foreach (var d in PlayerInput.devices)
-                Debug.Log($"PlayerInput device: {d.name}, id: {d.deviceId}");
-            foreach (var g in Gamepad.all)
-                Debug.Log($"Gamepad.all entry: {g.name}, id: {g.deviceId}");
-
             var fromPlayerInput = Gamepad.all.FirstOrDefault(g =>
                 PlayerInput.devices.Any(d => d.deviceId == g.deviceId));
-
-            Debug.Log($"fromPlayerInput: {fromPlayerInput}, Gamepad.current: {Gamepad.current}");
 
             return fromPlayerInput ?? Gamepad.current;
         }

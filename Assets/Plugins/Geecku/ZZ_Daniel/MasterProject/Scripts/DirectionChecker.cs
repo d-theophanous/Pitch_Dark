@@ -47,8 +47,6 @@ namespace Daniel.Master
             {
                 AccumulatedTime += Time.deltaTime;
             }
-            Debug.Log($"IsOnRightPath: {IsOnRightPath()}, IsMoving: {GameManager.Instance.Player.IsMoving}, CurrentWaypointPos: {CurrentWaypointPos}");
-
             if (IsOnRightPath())
             {
                     Rumbler.Instance.StartRumble();
