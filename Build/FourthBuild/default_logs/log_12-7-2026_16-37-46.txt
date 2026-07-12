@@ -1,0 +1,719 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Client: Connecting to 192.168.100.128:64000...
+	
+MLog>> 64000
+	
+MLog>> Client: Connected successfully.
+	
+MLog>> Game started :))
+	
+MLog>> Client: Client ready with msg-index '0'.
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> set up dialogue
+	
+MLog>> start action
+	
+MLog>> x
+	
+MLog>> NullReferenceException: Object reference not set to an instance of an object
+	Daniel.Master.PuzzleManager.PuzzleSolved () (at <1910c352afca4138879c8a277a8c1938>:0)
+	Daniel.Master.GameManager.DebugSolvePuzzle () (at <1910c352afca4138879c8a277a8c1938>:0)
+	Daniel.Master.InputManager.OnDebugUI () (at <1910c352afca4138879c8a277a8c1938>:0)
+	UnityEngine.InputSystem.LowLevel.<>c__DisplayClass7_0:<set_onUpdate>b__0(NativeInputUpdateType, NativeInputEventBuffer*)
+	UnityEngineInternal.Input.NativeInputSystem:NotifyUpdate(NativeInputUpdateType, IntPtr)
+	
+MLog>> gamestate switch to playing
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> set up dialogue
+	
+MLog>> ja dialogue after ist problem
+	
+MLog>> start last semgent
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up dialogue
+	
+MLog>> ja dialogue after ist problem
+	
+MLog>> gamestate switch to playing
+	
+MLog>> in activate prompt
+	
+MLog>> set up dialogue
+	
+MLog>> start direction check
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> gamestate switch to playing
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypointhas clear line of sight
+	
+MLog>> Waypoint_1has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> Waypoint_2has clear line of sight
+	
+MLog>> Waypoint_3has clear line of sight
+	
+MLog>> set up dialogue
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up puzzle
+	
+MLog>> Quit
+	

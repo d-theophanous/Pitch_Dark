@@ -100,7 +100,7 @@ namespace Daniel.Master
                     CurrentAction = ActionDic[index];
                 else
                     CurrentAction = DefaultAction;
-                    Text.text = string.Empty;
+                Text.text = string.Empty;
                 AudioManager.Instance.PlayDialogue(CurDialogData.DialogueNumber, index,
                     CurrentAction, CurDialog.Tones[index], CurrentPitch);
 
