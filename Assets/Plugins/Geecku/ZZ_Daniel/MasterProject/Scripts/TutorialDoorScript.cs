@@ -11,7 +11,6 @@ namespace Daniel.Master
 
         public override void ActivatePrompt()
         {
-            AudioManager.Instance.PlaySFX(SFX.OPEN_DOOR);
             DialogueManager.Instance.TutorialAfter = false;
             TutorialManager.Instance.TriggerSegmentComplete();
             tag = "Untagged";

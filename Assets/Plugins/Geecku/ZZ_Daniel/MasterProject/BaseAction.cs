@@ -172,6 +172,15 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Console"",
+                    ""type"": ""Button"",
+                    ""id"": ""602bdb09-4078-435f-8e14-39da62fce138"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -392,6 +401,17 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Debug4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e3eae792-02c5-47ef-8ed9-2ba6f66c1508"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard;Controller"",
+                    ""action"": ""Console"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1238,6 +1258,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         m_Player_Debug2 = m_Player.FindAction("Debug2", throwIfNotFound: true);
         m_Player_Debug3 = m_Player.FindAction("Debug3", throwIfNotFound: true);
         m_Player_Debug4 = m_Player.FindAction("Debug4", throwIfNotFound: true);
+        m_Player_Console = m_Player.FindAction("Console", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Settings = m_UI.FindAction("Settings", throwIfNotFound: true);
@@ -1367,6 +1388,7 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Debug2;
     private readonly InputAction m_Player_Debug3;
     private readonly InputAction m_Player_Debug4;
+    private readonly InputAction m_Player_Console;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1414,6 +1436,10 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Debug4".
         /// </summary>
         public InputAction @Debug4 => m_Wrapper.m_Player_Debug4;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Console".
+        /// </summary>
+        public InputAction @Console => m_Wrapper.m_Player_Console;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1467,6 +1493,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Debug4.started += instance.OnDebug4;
             @Debug4.performed += instance.OnDebug4;
             @Debug4.canceled += instance.OnDebug4;
+            @Console.started += instance.OnConsole;
+            @Console.performed += instance.OnConsole;
+            @Console.canceled += instance.OnConsole;
         }
 
         /// <summary>
@@ -1505,6 +1534,9 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
             @Debug4.started -= instance.OnDebug4;
             @Debug4.performed -= instance.OnDebug4;
             @Debug4.canceled -= instance.OnDebug4;
+            @Console.started -= instance.OnConsole;
+            @Console.performed -= instance.OnConsole;
+            @Console.canceled -= instance.OnConsole;
         }
 
         /// <summary>
@@ -2334,6 +2366,13 @@ public partial class @BaseAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDebug4(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Console" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnConsole(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

@@ -228,6 +228,7 @@ namespace Daniel.Master
         {
             if (OtherPlayerIsGateReady && PlayerIsGateReady)
             {
+                Debug.Log("In ChecKBOthPlayersReady True");
                 GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
                 CurrentGateReadyAction?.Invoke();
                 OtherPlayerIsGateReady = PlayerIsGateReady = false;
@@ -414,6 +415,7 @@ namespace Daniel.Master
         //- Player ready at door
         public void ClientSend_PlayerAtGate()
         {
+            Debug.Log("Client Send Playe At Gate");
             Message msg = Message.Create(MessageSendMode.Reliable, PlayerGateIDServer);
             NetworkManager.Client.Send(msg);
         }
@@ -434,10 +436,12 @@ namespace Daniel.Master
                 var client_id = msg.GetUShort();
                 if (client_id == NetworkManager.Client.LocalClient.ID)
                 {
+                    Debug.Log("Player receive Self At Gate");
                     Instance.PlayerGateReady();
                 }
                 else
                 {
+                    Debug.Log("Player receive Other At Gate");
                     Instance.OtherPlayerGateReady();
                 }
             };

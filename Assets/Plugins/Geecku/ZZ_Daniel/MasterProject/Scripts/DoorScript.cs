@@ -21,6 +21,7 @@ namespace Daniel.Master
             AudioManager.Instance.StopInteractable();
             GlobalUIManager.Instance.ToggleUI(UI_Group.NETWORK_GATE);
 
+            Debug.Log("Connection Status: " + NetworkManager.Instance._Client.IsInConnection);
             if (NetworkManager.Instance._Client.IsInConnection)
                 GameManager.Instance.ClientSend_PlayerAtGate();
             else

@@ -103,7 +103,6 @@ namespace Daniel.Master
 
                 if (!HasClearLineOfSight(waypoints[i].position))
                     continue; // skip waypoints behind walls
-                Debug.Log(waypoints[i].name + "has clear line of sight");
 
                 CurrentClosestWaypoints.Add((CurrentDestinationWaypoints.Waypoints[i], CurrentDestinationWaypoints.WayPointValueList[i]));
             }

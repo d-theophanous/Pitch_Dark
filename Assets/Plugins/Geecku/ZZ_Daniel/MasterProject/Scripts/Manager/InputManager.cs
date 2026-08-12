@@ -11,6 +11,7 @@ namespace Daniel.Master
     {
         public PlayerInput PlayerInput;
         public LocalizeStringEvent ToggleEvent;
+        public InGameConsole Console;
 
         protected override void Awake()
         {
@@ -65,7 +66,10 @@ namespace Daniel.Master
         #endregion
 
         #region Settings and UI
-
+        public void OnConsole()
+        {
+            Console.ToggleConsole();
+        }
         public void OnClick()
         {
             TTSManager.Instance.ActivateCurElement();
