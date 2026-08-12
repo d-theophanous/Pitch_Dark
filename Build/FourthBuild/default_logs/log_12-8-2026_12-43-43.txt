@@ -1,0 +1,88 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Host
+	
+MLog>> Server: Started on port 64000.
+	
+MLog>> Client: Connecting to 127.0.0.1:64000...
+	
+MLog>> Client: Connected successfully.
+	
+MLog>> Server: Client 1 (127.0.0.1:62899) connected successfully.
+	
+MLog>> Client: Client ready with msg-index '0'.
+	
+MLog>> Server: Client 2 (192.168.100.114:53010) connected successfully.
+	
+MLog>> Client: Client [2] connected.
+	
+MLog>> Game started :))
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> set up dialogue
+	
+MLog>> start action
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up dialogue
+	
+MLog>> start last semgent
+	
+MLog>> gamestate switch to playing
+	
+MLog>> set up dialogue
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> gamestate switch to playing
+	
+MLog>> in activate prompt
+	
+MLog>> set up dialogue
+	
+MLog>> start direction check
+	
+MLog>> Server: Client 2 (192.168.100.114:53010) disconnected: Timed out.
+	
+MLog>> Client: Client [2] disconnected.
+	
+MLog>> Quit
+	

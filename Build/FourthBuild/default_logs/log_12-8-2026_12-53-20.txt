@@ -1,0 +1,286 @@
+MLog>> Engine: Loaded [Alpha 0.0.0]
+	
+MLog>> Network: Loaded
+	
+MLog>> Engine: Started
+	
+MLog>> Network: GameMessage loaded.
+	
+MLog>> Network: Started
+	
+MLog>> Network: GameMessage started.
+	
+MLog>> Host
+	
+MLog>> Server: Started on port 64000.
+	
+MLog>> Client: Connecting to 127.0.0.1:64000...
+	
+MLog>> Client: Connected successfully.
+	
+MLog>> Server: Client 1 (127.0.0.1:58290) connected successfully.
+	
+MLog>> Client: Client ready with msg-index '0'.
+	
+MLog>> Server: Client 2 (192.168.100.114:50588) connected successfully.
+	
+MLog>> Client: Client [2] connected.
+	
+MLog>> Game started :))
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> Failed to create agent because there is no valid NavMesh
+	
+MLog>> set up dialogue
+	
+MLog>> start action
+	
+MLog>> x
+	
+MLog>> gamestate switch to playing
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> x
+	
+MLog>> set up dialogue
+	
+MLog>> start last semgent
+	
+MLog>> gamestate switch to playing
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> set up dialogue
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> gamestate switch to playing
+	
+MLog>> in activate prompt
+	
+MLog>> set up dialogue
+	
+MLog>> start direction check
+	
+MLog>> gamestate switch to playing
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> set up dialogue
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> gamestate switch to playing
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> set up puzzle
+	
+MLog>> solution index: 0
+	
+MLog>> input: OCTAVE, Lösung: OCTAVE
+	
+MLog>> solution index: 1
+	
+MLog>> input: PRIME, Lösung: PRIME
+	
+MLog>> set up dialogue
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> gamestate switch to playing
+	
+MLog>> start direction check
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> set up puzzle
+	
+MLog>> gamestate switch to playing
+	
+MLog>> start direction check
+	
+MLog>> in activate prompt
+	
+MLog>> set up dialogue
+	
+MLog>> gamestate switch to playing
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> set up puzzle
+	
+MLog>> solution index: 0
+	
+MLog>> input: OCTAVE, Lösung: OCTAVE
+	
+MLog>> solution index: 1
+	
+MLog>> input: FIFTH, Lösung: FIFTH
+	
+MLog>> solution index: 2
+	
+MLog>> input: PRIME, Lösung: PRIME
+	
+MLog>> set up dialogue
+	
+MLog>> new readable element group ist null
+	
+MLog>> new readable element group ist null
+	
+MLog>> gamestate switch to playing
+	
+MLog>> start direction check
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> set up puzzle
+	
+MLog>> gamestate switch to playing
+	
+MLog>> start direction check
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> set up puzzle
+	
+MLog>> solution index: 0
+	
+MLog>> input: PRIME, Lösung: PRIME
+	
+MLog>> solution index: 1
+	
+MLog>> input: OCTAVE, Lösung: OCTAVE
+	
+MLog>> solution index: 2
+	
+MLog>> input: FIFTH, Lösung: FIFTH
+	
+MLog>> solution index: 3
+	
+MLog>> input: PRIME, Lösung: PRIME
+	
+MLog>> gamestate switch to playing
+	
+MLog>> start direction check
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> set up puzzle
+	
+MLog>> no more next elements
+	
+MLog>> no more next elements
+	
+MLog>> gamestate switch to playing
+	
+MLog>> start direction check
+	
+MLog>> Connection Status: True
+	
+MLog>> Client Send Playe At Gate
+	
+MLog>> Player receive Self At Gate
+	
+MLog>> Player receive Other At Gate
+	
+MLog>> In ChecKBOthPlayersReady True
+	
+MLog>> set up puzzle
+	
+MLog>> solution index: 0
+	
+MLog>> input: FIFTH, Lösung: FIFTH
+	
+MLog>> solution index: 1
+	
+MLog>> input: OCTAVE, Lösung: OCTAVE
+	
+MLog>> solution index: 2
+	
+MLog>> input: FIFTH, Lösung: FIFTH
+	
+MLog>> new readable element group ist null
+	
+MLog>> gamestate switch to playing
+	
+MLog>> Server: Client 2 (192.168.100.114:50588) disconnected: Poor Connection.
+	
+MLog>> Client: Client [2] disconnected.
+	
+MLog>> Quit
+	
